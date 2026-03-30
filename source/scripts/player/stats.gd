@@ -14,6 +14,16 @@ var weaponType:String;
 var item:String;
 var itemType:String;
 
+# animation data
+var idleLeft:String;
+var idleRight:String;
+var runLeft:String;
+var runRight:String;
+var attackLeft:String;
+var attackRight:String;
+var dodgeLeft:String;
+var dodgeRight:String;
+
 # vars for general data
 var playerX:int;
 var playerY:int;
@@ -102,6 +112,23 @@ func loadCharJSON():
 
 		if "element" in data:
 			element = data.element;
+			
+		if "idleLeft" in data:
+			idleLeft = data.idleLeft;
+		if "idleRight" in data:
+			idleRight = data.idleRight;
+		if "runLeft" in data:
+			runLeft = data.runLeft;
+		if "runRight" in data:
+			runRight = data.runRight;
+		if "attackLeft" in data:
+			attackLeft = data.attackLeft;
+		if "attackRight" in data:
+			attackRight = data.attackRight;
+		if "dodgeLeft" in data:
+			dodgeLeft = data.dodgeLeft;
+		if "dodgeRight" in data:
+			dodgeRight = data.dodgeRight;
 
 	else:
 		print("File does not exist.");
