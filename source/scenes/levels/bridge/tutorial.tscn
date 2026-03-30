@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c1rwcf3f6n3ww"]
+
+[ext_resource type="Script" uid="uid://dxbcmp1iep6rb" path="res://source/scripts/levels/bridge/tutorial.gd" id="1_xoycb"]
+[ext_resource type="PackedScene" uid="uid://bimx1pu04h7ls" path="res://source/scenes/props/tutorial/floor.tscn" id="2_122ua"]
+[ext_resource type="PackedScene" uid="uid://d0466dwog7ukr" path="res://source/scenes/player/player.tscn" id="3_cgh68"]
+
+[node name="Tutorial" type="Node2D" unique_id=616210905]
+script = ExtResource("1_xoycb")
+
+[node name="Floor" parent="." unique_id=622707432 instance=ExtResource("2_122ua")]
+position = Vector2(4152, 1138)
+scale = Vector2(4.3600025, 1)
+
+[node name="Player" parent="." unique_id=1975751171 instance=ExtResource("3_cgh68")]
+position = Vector2(195, 245)

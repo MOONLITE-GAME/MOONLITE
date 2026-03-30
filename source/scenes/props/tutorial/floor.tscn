@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bimx1pu04h7ls"]
+
+[ext_resource type="Texture2D" uid="uid://dx2wcjp307qhg" path="res://assets/levels/bridge/images/tutorial/floor.png" id="1_unk2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unk2m"]
+size = Vector2(1917, 227)
+
+[node name="Floor" type="StaticBody2D" unique_id=622707432]
+
+[node name="Floor" type="Sprite2D" parent="." unique_id=560933064]
+texture = ExtResource("1_unk2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831234492]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_unk2m")

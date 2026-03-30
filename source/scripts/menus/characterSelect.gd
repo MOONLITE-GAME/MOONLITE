@@ -33,6 +33,10 @@ func _process(_delta: float) -> void:
 		$Arrow2.modulate = Color("00ffff");
 	else:
 		$Arrow2.modulate = Color("ffffff");
+		
+	if Input.is_action_just_pressed("uiSELECT"):
+		Stats.character = chr;
+		get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");
 
 # TODO: make json loading more efficient in a function or something so we don't have to repeat this shit 
 func loadCharData(character:String):

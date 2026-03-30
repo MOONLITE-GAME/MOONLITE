@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d0466dwog7ukr"]
+
+[ext_resource type="Script" uid="uid://fgnxdqefplmo" path="res://source/scripts/player/player.gd" id="1_kb210"]
+[ext_resource type="SpriteFrames" uid="uid://bwr2bhtuo6u28" path="res://assets/shared/images/characters/playable/moonlite.xml" id="1_uevig"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uevig"]
+radius = 97.0
+height = 488.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1975751171]
+scale = Vector2(0.879999, 0.879999)
+script = ExtResource("1_kb210")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=118235366]
+position = Vector2(240, 0)
+sprite_frames = ExtResource("1_uevig")
+animation = &"idle right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=466554286]
+position = Vector2(-18, 3)
+shape = SubResource("CapsuleShape2D_uevig")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=99910279]
