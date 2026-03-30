@@ -40,4 +40,4 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiSELECT"):
 		saveFile = "user://Save" + str(curButton) + ".json";
 		# put load game function here
-		get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
+		get_tree().change_scene_to_file("res://source/scenes/menus/titleScreen.tscn");

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dhqdnl16d6jll"]
 
 [ext_resource type="Texture2D" uid="uid://drp665nfyfkkj" path="res://assets/images/menus/purp.png" id="1_fh34g"]
+[ext_resource type="Texture2D" uid="uid://d2awtxg6065dr" path="res://assets/images/menus/logo.png" id="2_nwa14"]
 
 [node name="MainMenu" type="Control" unique_id=1096639473]
 layout_mode = 3
@@ -21,5 +22,10 @@ offset_bottom = 540.0
 color = Color(0.28627452, 0.011764706, 0.5372549, 1)
 
 [node name="purp" type="Sprite2D" parent="." unique_id=1072281407]
-position = Vector2(-20, 5)
+position = Vector2(-568, 5)
 texture = ExtResource("1_fh34g")
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=292178732]
+position = Vector2(-564.00024, -390.99994)
+scale = Vector2(0.6297297, 0.62972975)
+texture = ExtResource("2_nwa14")
