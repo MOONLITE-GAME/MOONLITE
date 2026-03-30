@@ -1,7 +1,6 @@
 extends Control
 
 var curButton:int = 1;
-var saveFile:String;
 
 func _ready() -> void:
 	MusicEngine.loadSong("recordKeeper");
@@ -38,7 +37,7 @@ func _process(_delta: float) -> void:
 				$save1.play("save1 hover");
 				curButton = 1;
 	if Input.is_action_just_pressed("uiSELECT"):
-		saveFile = "user://Save" + str(curButton) + ".json";
-		# put load game function here
+		Stats.savePath = "user://Save" + str(curButton) + ".json";
+		Stats.loadStats();
 		MusicEngine.stopMusic();
 		get_tree().change_scene_to_file("res://source/scenes/menus/titleScreen.tscn");
