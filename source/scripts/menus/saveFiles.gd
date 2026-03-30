@@ -1,6 +1,7 @@
 extends Control
 
 var curButton:int = 1;
+var saveFile:String;
 
 func _ready() -> void:
 	pass;
@@ -36,3 +37,7 @@ func _process(_delta: float) -> void:
 				$save3.play_backwards("save3 hover");
 				$save1.play("save1 hover");
 				curButton = 1;
+	if Input.is_action_just_pressed("uiSELECT"):
+		saveFile = "user://Save" + str(curButton) + ".json";
+		# put load game function here
+		get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");

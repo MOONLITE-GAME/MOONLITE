@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/image="uid://b5xf8qnqb02tm"
 config/icon="uid://ce11qb3g0xn1b"
 
+[audio]
+
+buses/default_bus_layout="uid://bk1gmfmvp6ejl"
+
 [display]
 
 window/size/viewport_width=1920
