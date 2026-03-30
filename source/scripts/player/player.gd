@@ -16,6 +16,7 @@ func _ready() -> void:
 	if Stats.playerY != 0:
 		position.y = Stats.playerY;
 	loadChar();
+	getWeapon();
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -48,8 +49,44 @@ func _physics_process(delta: float) -> void:
 		dir = "Left";
 	elif Input.is_action_just_pressed("Right"):
 		dir = "Right";
+		
+	if Input.is_action_just_pressed("BasicAttack") and Stats.attacking == false:
+		Stats.attacking = true;
+		$AudioStreamPlayer.stream = $Weapon.baseAttackSound;
+		$AudioStreamPlayer.play();
+		match dir:
+			"Left":
+				$AnimatedSprite2D.play(Stats.attackLeft);
+			"Right":
+				$AnimatedSprite2D.play(Stats.attackRight);
+		$Weapon.baseAttack();
+
+		if $Weapon.affectsVelocity == true:
+			if dir == "Left":
+				velocity.x = $Weapon.velocityX;
+				velocity.y = $Weapon.velocityY;
+			if dir == "Right":
+				velocity.x = -$Weapon.velocityX;
+				velocity.y = $Weapon.velocityY;
+
+			await get_tree().create_timer($Weapon.velocityTime).timeout;
+			velocity.x = 0;
+			velocity.y = 0;
+
+		else:
+			await get_tree().create_timer($Weapon.attackCooldown).timeout;
+
+		Stats.attacking = false;
 	
 func loadChar():
 	Stats.loadCharJSON();
 	$AnimatedSprite2D.sprite_frames = load(Stats.assetPath);
 	print("Now Playing as: " + Stats.character);
+	
+func getWeapon():
+	print(Stats.weapon);
+	match Stats.weapon:
+		"Dark Sword":
+			$Weapon.set_script(load("res://source/scripts/items/weapons/darkSword.gd"));
+			
+	$Weapon._ready();
