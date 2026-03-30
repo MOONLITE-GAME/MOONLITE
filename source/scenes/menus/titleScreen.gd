@@ -2,6 +2,7 @@ extends Control
 
 func _ready() -> void:
 	MusicEngine.loadSong("titleScreen");
+	$versionNum.text = "v" + ProjectSettings.get_setting("application/config/version");
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiSELECT"):

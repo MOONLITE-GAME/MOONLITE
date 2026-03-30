@@ -33,7 +33,7 @@ color = Color(0, 0, 0, 1)
 [node name="logo" type="Sprite2D" parent="." unique_id=1779367738]
 texture = ExtResource("1_t3gsy")
 
-[node name="Label" type="Label" parent="." unique_id=458005146]
+[node name="pressAnything" type="Label" parent="." unique_id=458005146]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -49,3 +49,20 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_kqhqx")
 theme_override_font_sizes/font_size = 50
 text = "PRESS ANYTHING TO CONTINUE"
+
+[node name="versionNum" type="Label" parent="." unique_id=1738962376]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -932.0
+offset_top = 484.5
+offset_right = -844.0
+offset_bottom = 507.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_kqhqx")
+theme_override_font_sizes/font_size = 25
+text = "v0.0.1"
