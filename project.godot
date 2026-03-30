@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="MOONLITE"
+run/main_scene="uid://d3yy05k4icstv"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="uid://b5xf8qnqb02tm"
+config/icon="uid://ce11qb3g0xn1b"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/vsync/vsync_mode=0
 
 [physics]
 
