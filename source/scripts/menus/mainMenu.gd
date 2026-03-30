@@ -40,3 +40,38 @@ func _process(delta: float) -> void:
 			$text.text = "THE ANSWER IS DIVINE INTELLECT";
 		12:
 			$text.text = "NOT FUNDED BY THE IDF";
+			
+	if Input.is_action_just_pressed("uiDOWN"):
+		match curButton:
+			1:
+				$AudioStreamPlayer.play();
+				$play.play_backwards("hover");
+				$options.play("hover");
+				curButton = 2;
+			2:
+				$AudioStreamPlayer.play();
+				$options.play_backwards("hover");
+				$extras.play("hover");
+				curButton = 3;
+			3:
+				$AudioStreamPlayer.play();
+				$extras.play_backwards("hover");
+				$play.play("hover");
+				curButton = 1;
+	if Input.is_action_just_pressed("uiUP"):
+		match curButton:
+			1:
+				$AudioStreamPlayer.play();
+				$play.play_backwards("hover");
+				$extras.play("hover");
+				curButton = 3;
+			2:
+				$AudioStreamPlayer.play();
+				$options.play_backwards("hover");
+				$play.play("hover");
+				curButton = 1;
+			3:
+				$AudioStreamPlayer.play();
+				$extras.play_backwards("hover");
+				$options.play("hover");
+				curButton = 2;

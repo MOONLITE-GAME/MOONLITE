@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="extras.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="basic0000" x="368" y="146" width="312" height="142" frameX="-6" frameY="2" frameWidth="364" frameHeight="180"/>
+	<SubTexture name="hover0001" x="0" y="334" width="296" height="135" frameX="-6" frameY="2" frameWidth="364" frameHeight="180"/>
+	<SubTexture name="hover0002" x="368" y="0" width="319" height="146" frameX="-1" frameY="-5" frameWidth="364" frameHeight="180"/>
+	<SubTexture name="hover0003" x="368" y="0" width="319" height="146" frameX="-1" frameY="-5" frameWidth="364" frameHeight="180"/>
+	<SubTexture name="hover0004" x="0" y="171" width="349" height="163" frameX="2" frameY="-11" frameWidth="364" frameHeight="180"/>
+	<SubTexture name="hover0005" x="0" y="0" width="368" height="171" frameX="2" frameY="-11" frameWidth="364" frameHeight="180"/>
+</TextureAtlas>

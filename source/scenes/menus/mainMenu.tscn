@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://drp665nfyfkkj" path="res://assets/images/menus/purp.png" id="1_fh34g"]
 [ext_resource type="Texture2D" uid="uid://d2awtxg6065dr" path="res://assets/images/menus/logo.png" id="2_nwa14"]
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="3_h1l53"]
+[ext_resource type="SpriteFrames" uid="uid://c47v0374ke0p" path="res://assets/images/menus/play.xml" id="5_5baup"]
+[ext_resource type="SpriteFrames" uid="uid://clg86p02v2qsp" path="res://assets/images/menus/options.xml" id="6_hah2e"]
+[ext_resource type="SpriteFrames" uid="uid://dm8fkdeg7jp4" path="res://assets/images/menus/extras.xml" id="7_fg8t5"]
+[ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="8_th02w"]
 
 [node name="MainMenu" type="Control" unique_id=1096639473]
 layout_mode = 3
@@ -50,3 +54,23 @@ offset_bottom = 497.0
 theme_override_fonts/font = ExtResource("3_h1l53")
 theme_override_font_sizes/font_size = 75
 text = "This is some dope ass text"
+
+[node name="extras" type="AnimatedSprite2D" parent="." unique_id=1525199067]
+position = Vector2(-596, 224)
+sprite_frames = ExtResource("7_fg8t5")
+animation = &"basic"
+
+[node name="options" type="AnimatedSprite2D" parent="." unique_id=1421202323]
+position = Vector2(-596, 56)
+sprite_frames = ExtResource("6_hah2e")
+animation = &"basic"
+
+[node name="play" type="AnimatedSprite2D" parent="." unique_id=14595198]
+position = Vector2(-596, -120)
+sprite_frames = ExtResource("5_5baup")
+animation = &"hover"
+autoplay = "hover"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1357520103]
+stream = ExtResource("8_th02w")
+bus = &"SFX"
