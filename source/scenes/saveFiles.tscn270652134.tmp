@@ -77,4 +77,3 @@ text = "CHOOSE A SAVE FILE"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=257566454]
 stream = ExtResource("7_netcm")
-bus = &"SFX"
