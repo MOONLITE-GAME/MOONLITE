@@ -10,6 +10,6 @@ func loadSound(soundName):
 	print("Song Loaded!");
 	play();
 
-func stopMusic():
+func stopAudio():
 	stream = null;
 	stop();
