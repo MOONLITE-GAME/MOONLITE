@@ -20,6 +20,10 @@ config/icon="uid://ce11qb3g0xn1b"
 
 buses/default_bus_layout="uid://bk1gmfmvp6ejl"
 
+[autoload]
+
+AudioEngine="*uid://crunyoff7twqb"
+
 [display]
 
 window/size/viewport_width=1920
