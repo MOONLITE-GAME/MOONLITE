@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://3gn50hxjqb1j"]
+
+[ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="1_1vk54"]
+[ext_resource type="Script" uid="uid://bjy8mkamh82je" path="res://source/scripts/menus/characterSelect.gd" id="1_s2ff4"]
+[ext_resource type="Texture2D" uid="uid://38eyywovghhp" path="res://assets/images/menus/arrow.png" id="3_n5tpk"]
+
+[node name="CharacterSelect" type="Control" unique_id=1411044065]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2ff4")
+
+[node name="bgPurp" type="ColorRect" parent="." unique_id=1898953646]
+layout_mode = 0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0.28627452, 0.011764706, 0.5372549, 1)
+
+[node name="blackBar" type="ColorRect" parent="." unique_id=179486725]
+layout_mode = 0
+offset_left = -960.0
+offset_top = 390.0
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0, 0, 0, 1)
+
+[node name="blackBar2" type="ColorRect" parent="." unique_id=1796903995]
+layout_mode = 0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = -390.0
+color = Color(0, 0, 0, 1)
+
+[node name="CHARACTERSELECT" type="Label" parent="." unique_id=2060809201]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -349.0
+offset_top = -490.5
+offset_right = 349.0
+offset_bottom = -437.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1vk54")
+theme_override_font_sizes/font_size = 75
+text = "CHARACTER SELECT"
+
+[node name="charName" type="Label" parent="." unique_id=1949055615]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = 437.5
+offset_right = 304.0
+offset_bottom = 490.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1vk54")
+theme_override_font_sizes/font_size = 75
+text = "CHARACTER NAME"
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=776164468]
+position = Vector2(-865, 0)
+texture = ExtResource("3_n5tpk")
+
+[node name="Arrow2" type="Sprite2D" parent="." unique_id=1818201491]
+position = Vector2(865, 0)
+rotation = 3.1415927
+texture = ExtResource("3_n5tpk")

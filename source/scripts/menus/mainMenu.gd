@@ -75,3 +75,7 @@ func _process(delta: float) -> void:
 				$extras.play_backwards("hover");
 				$options.play("hover");
 				curButton = 2;
+	if Input.is_action_just_pressed("uiSELECT"):
+		match curButton:
+			1:
+				get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
