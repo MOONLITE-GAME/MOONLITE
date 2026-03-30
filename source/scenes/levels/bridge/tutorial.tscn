@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dxbcmp1iep6rb" path="res://source/scripts/levels/bridge/tutorial.gd" id="1_xoycb"]
 [ext_resource type="PackedScene" uid="uid://bimx1pu04h7ls" path="res://source/scenes/props/tutorial/floor.tscn" id="2_122ua"]
-[ext_resource type="PackedScene" uid="uid://d0466dwog7ukr" path="res://source/scenes/player/player.tscn" id="3_cgh68"]
+[ext_resource type="PackedScene" uid="uid://0plg3jli2b86" path="res://source/scenes/player/player.tscn" id="3_cgh68"]
 
 [node name="Tutorial" type="Node2D" unique_id=616210905]
 script = ExtResource("1_xoycb")
