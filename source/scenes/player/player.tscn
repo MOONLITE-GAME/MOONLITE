@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d0466dwog7ukr"]
+[gd_scene format=3 uid="uid://0plg3jli2b86"]
 
 [ext_resource type="Script" uid="uid://fgnxdqefplmo" path="res://source/scripts/player/player.gd" id="1_kb210"]
 [ext_resource type="SpriteFrames" uid="uid://bwr2bhtuo6u28" path="res://assets/shared/images/characters/playable/moonlite.xml" id="1_uevig"]

@@ -1,5 +1,13 @@
 {
 	"name": "MOONLITE",
 	"element": "Magic",
-	"path": "res://assets/shared/images/characters/playable/moonlite.xml"
+	"path": "res://assets/shared/images/characters/playable/moonlite.xml",
+	"idle left": "idle left",
+	"idle right": "idle right",
+	"run left": "run left",
+	"run right": "run right",
+	"attack left": "attack left",
+	"attack right": "attack right",
+	"dodge left": "dodge left",
+	"dodge right": "dodge right"
 }
