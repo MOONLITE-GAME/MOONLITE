@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://bk1gmfmvp6ejl"
 [autoload]
 
 AudioEngine="*uid://crunyoff7twqb"
+MusicEngine="*uid://dv6is2lkh8fq"
 
 [display]
 

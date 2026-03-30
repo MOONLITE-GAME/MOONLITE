@@ -3,29 +3,12 @@ extends AudioStreamPlayer
 var dataPath:String;
 var assetPath:String;
 
-func loadSong(songName):
-	dataPath = "res://assets/data/songs/" + songName + ".json";
+func loadSound(soundName):
+	assetPath = "res://assets/sounds/" + soundName + ".ogg";
 
-	if FileAccess.file_exists(dataPath):
-		var file = FileAccess.open(dataPath, FileAccess.READ);
-		var json_string = file.get_as_text();
-		var json = JSON.new();
-		var parse_result = json.parse(json_string);
-
-		if not parse_result == OK:
-			print("Parse Error -- ", json.get_error_message());
-
-		var data = json.get_data();
-
-		if "Path" in data:
-			assetPath = data.Path;
-
-		stream = load(assetPath);
-		print("Song Loaded!");
-		play();
-
-	else:
-		print("Song does not exist!");
+	stream = load(assetPath);
+	print("Song Loaded!");
+	play();
 
 func stopMusic():
 	stream = null;
