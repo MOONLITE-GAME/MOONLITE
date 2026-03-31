@@ -3,12 +3,12 @@
 importer="com.what-is-a-git.godot-sparrow-importer"
 type="SpriteFrames"
 uid="uid://clg86p02v2qsp"
-path="res://.godot/imported/options.xml-c04a2ec71bdd7ae980c2116888b6c17a.res"
+path="res://.godot/imported/options.xml-a9d30d2b2b82f03c4b2c458f5cbd3f31.res"
 
 [deps]
 
-source_file="res://assets/images/menus/options.xml"
-dest_files=["res://.godot/imported/options.xml-c04a2ec71bdd7ae980c2116888b6c17a.res"]
+source_file="res://assets/images/menus/mainMenu/options.xml"
+dest_files=["res://.godot/imported/options.xml-a9d30d2b2b82f03c4b2c458f5cbd3f31.res"]
 
 [params]
 

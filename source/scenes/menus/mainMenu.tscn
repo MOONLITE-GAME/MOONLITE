@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://qbydevetvdcn" path="res://source/scripts/menus/mainMenu.gd" id="1_dkpco"]
 [ext_resource type="Texture2D" uid="uid://drp665nfyfkkj" path="res://assets/images/menus/purp.png" id="1_fh34g"]
-[ext_resource type="Texture2D" uid="uid://d2awtxg6065dr" path="res://assets/images/menus/logo.png" id="2_nwa14"]
+[ext_resource type="Texture2D" uid="uid://d2awtxg6065dr" path="res://assets/images/menus/mainMenu/logo.png" id="2_nwa14"]
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="3_h1l53"]
-[ext_resource type="SpriteFrames" uid="uid://c47v0374ke0p" path="res://assets/images/menus/play.xml" id="5_5baup"]
-[ext_resource type="SpriteFrames" uid="uid://clg86p02v2qsp" path="res://assets/images/menus/options.xml" id="6_hah2e"]
-[ext_resource type="SpriteFrames" uid="uid://dm8fkdeg7jp4" path="res://assets/images/menus/extras.xml" id="7_fg8t5"]
+[ext_resource type="SpriteFrames" uid="uid://c47v0374ke0p" path="res://assets/images/menus/mainMenu/play.xml" id="5_5baup"]
+[ext_resource type="SpriteFrames" uid="uid://clg86p02v2qsp" path="res://assets/images/menus/mainMenu/options.xml" id="6_hah2e"]
+[ext_resource type="SpriteFrames" uid="uid://dm8fkdeg7jp4" path="res://assets/images/menus/mainMenu/extras.xml" id="7_fg8t5"]
 [ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="8_th02w"]
 
 [node name="MainMenu" type="Control" unique_id=1096639473]

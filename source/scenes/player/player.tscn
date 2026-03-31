@@ -39,3 +39,7 @@ metadata/_custom_type_script = "uid://cmeu8n4ljkex5"
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=850096116 instance=ExtResource("5_h4f0s")]
 visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2

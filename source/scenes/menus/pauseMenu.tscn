@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://dxidxd1nnsv6n"]
 
 [ext_resource type="Script" uid="uid://5nrcikqpq61i" path="res://source/scripts/menus/pause.gd" id="1_r32j8"]
+[ext_resource type="Texture2D" uid="uid://gwiry6njecp8" path="res://assets/images/menus/pause/black.png" id="2_ujp8j"]
+[ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="3_neq3a"]
 
 [node name="PauseMenu" type="Control" unique_id=850096116]
 process_mode = 3
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
 grow_vertical = 2
 script = ExtResource("1_r32j8")
 
@@ -28,3 +29,39 @@ grow_vertical = 2
 color = Color(0.28627452, 0.011764706, 0.5372549, 0.6666667)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=3931945]
+
+[node name="BLACk" type="Sprite2D" parent="." unique_id=1935721088]
+position = Vector2(-704, 0)
+texture = ExtResource("2_ujp8j")
+
+[node name="black" type="ColorRect" parent="." unique_id=679299276]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = -390.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="pauseText" type="Label" parent="." unique_id=2133704875]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -490.5
+offset_right = 135.0
+offset_bottom = -437.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_neq3a")
+theme_override_font_sizes/font_size = 75
+text = "PAUSED"
