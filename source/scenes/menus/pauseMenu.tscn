@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://5nrcikqpq61i" path="res://source/scripts/menus/pause.gd" id="1_r32j8"]
 [ext_resource type="Texture2D" uid="uid://gwiry6njecp8" path="res://assets/images/menus/pause/black.png" id="2_ujp8j"]
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="3_neq3a"]
+[ext_resource type="SpriteFrames" uid="uid://borx58d2jhbbr" path="res://assets/images/menus/pause/resume.xml" id="4_evub7"]
+[ext_resource type="SpriteFrames" uid="uid://dwhrprmhn57wl" path="res://assets/images/menus/pause/mainMenu.xml" id="5_j7o66"]
+[ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="6_x4d6k"]
 
 [node name="PauseMenu" type="Control" unique_id=850096116]
 process_mode = 3
@@ -65,3 +68,18 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_neq3a")
 theme_override_font_sizes/font_size = 75
 text = "PAUSED"
+
+[node name="resume" type="AnimatedSprite2D" parent="." unique_id=560084480]
+position = Vector2(-632, -232)
+sprite_frames = ExtResource("4_evub7")
+animation = &"hover"
+autoplay = "hover"
+
+[node name="mainMenu" type="AnimatedSprite2D" parent="." unique_id=1944657725]
+position = Vector2(-632, 0)
+sprite_frames = ExtResource("5_j7o66")
+animation = &"basic"
+
+[node name="uiSounds" type="AudioStreamPlayer" parent="." unique_id=1688344321]
+stream = ExtResource("6_x4d6k")
+bus = &"SFX"
