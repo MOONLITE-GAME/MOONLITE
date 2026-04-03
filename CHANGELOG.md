@@ -27,6 +27,8 @@ THE SECOND ALPHA RELEASE: NEW ENGINE REWRITE, ART, MUSIC, ETC.
 - Company Name
 - Position of Various HUD Elements!
 - Crates can now be destroyed!
+- Playable Character animations are now data driven!
+- New Font on Credits Menu!
 
 ### Removed
 - A few crates from the tutorial area
