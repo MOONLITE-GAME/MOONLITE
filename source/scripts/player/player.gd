@@ -20,7 +20,13 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += get_gravity() * delta;
+		
+		if not Stats.attacking:
+			if dir == "Left":
+				$AnimatedSprite2D.play(Stats.dodgeLeft);
+			else:
+				$AnimatedSprite2D.play(Stats.dodgeRight);
 
 	SPEED = moveSpeed;
 	
