@@ -79,3 +79,7 @@ func _process(delta: float) -> void:
 		match curButton:
 			1:
 				get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
+			2:
+				pass;
+			3:
+				get_tree().change_scene_to_file("res://source/scenes/menus/credits.tscn");
