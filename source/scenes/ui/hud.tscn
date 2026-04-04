@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://by33aufkkc2tt"]
+
+[ext_resource type="Script" uid="uid://bu7oxha01hjdt" path="res://source/scripts/player/hud.gd" id="1_4dksr"]
+[ext_resource type="Texture2D" uid="uid://bcgoilswewuir" path="res://assets/shared/images/hud/bar.png" id="1_fpkba"]
+[ext_resource type="Texture2D" uid="uid://dafstmbgowjl2" path="res://assets/shared/images/hud/weaponIcons/sword.png" id="2_3etg8"]
+[ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="3_y50ka"]
+[ext_resource type="Texture2D" uid="uid://ce11qb3g0xn1b" path="res://icon.png" id="4_jm11n"]
+[ext_resource type="Texture2D" uid="uid://l6p6ruvw6pkm" path="res://assets/shared/images/hud/healthbar.png" id="5_oh3fd"]
+[ext_resource type="Texture2D" uid="uid://dvhgfe7mmtoa6" path="res://assets/shared/images/hud/healthbarFrame.png" id="6_4dksr"]
+
+[node name="Hud" type="Control" unique_id=242897047]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -872.0
+offset_bottom = -872.0
+script = ExtResource("1_4dksr")
+
+[node name="Bar" type="Sprite2D" parent="." unique_id=970580621]
+position = Vector2(1217, 977)
+rotation = 3.1415927
+scale = Vector2(2.934375, 1)
+texture = ExtResource("1_fpkba")
+
+[node name="weaponIcon" type="Sprite2D" parent="." unique_id=1681191280]
+position = Vector2(1304.2, 1004.5)
+texture = ExtResource("2_3etg8")
+
+[node name="weaponName" type="Label" parent="." unique_id=491609771]
+layout_mode = 0
+offset_left = 1434.35
+offset_top = 965.05005
+offset_right = 1874.35
+offset_bottom = 1031.05
+theme_override_fonts/font = ExtResource("3_y50ka")
+theme_override_font_sizes/font_size = 75
+text = "DARK SWORD"
+
+[node name="charIcon" type="Sprite2D" parent="." unique_id=547058232]
+position = Vector2(169.94975, 993.81274)
+scale = Vector2(0.28677958, 0.28336582)
+texture = ExtResource("4_jm11n")
+
+[node name="healthBar" type="TextureProgressBar" parent="." unique_id=343461020]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 876.25
+offset_right = 183.0
+offset_bottom = 1004.25
+scale = Vector2(1.797, 1.797)
+rounded = true
+fill_mode = 5
+texture_under = ExtResource("5_oh3fd")
+texture_over = ExtResource("6_4dksr")
+texture_progress = ExtResource("5_oh3fd")
+tint_under = Color(0, 0, 0, 1)
+tint_over = Color(0.18039216, 0.14901961, 0.21568628, 1)
+tint_progress = Color(0.6, 0, 1, 1)
+
+[node name="charName" type="Label" parent="." unique_id=1381846407]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 965.05005
+offset_right = 647.0
+offset_bottom = 1031.05
+theme_override_fonts/font = ExtResource("3_y50ka")
+theme_override_font_sizes/font_size = 75
+text = "MOONLITE"

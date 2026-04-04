@@ -15,6 +15,10 @@ func _ready() -> void:
 		position.x = Stats.playerX;
 	if Stats.playerY != 0:
 		position.y = Stats.playerY;
+	if Stats.maxHealth == 0:
+		Stats.maxHealth = 100;
+		Stats.health = 100;
+		Stats.saveStats();
 	loadChar();
 	getWeapon();
 

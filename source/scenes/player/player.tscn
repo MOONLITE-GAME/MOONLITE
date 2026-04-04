@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bwwscuo1vocsh" path="res://source/scripts/items/weapons/baseWeapon.gd" id="3_ysf2y"]
 [ext_resource type="Script" uid="uid://cmeu8n4ljkex5" path="res://source/scripts/items/basicItem.gd" id="4_h4f0s"]
 [ext_resource type="PackedScene" uid="uid://dxidxd1nnsv6n" path="res://source/scenes/menus/pauseMenu.tscn" id="5_h4f0s"]
+[ext_resource type="PackedScene" uid="uid://by33aufkkc2tt" path="res://source/scenes/ui/hud.tscn" id="6_xmlsf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uevig"]
 radius = 97.0
@@ -36,6 +37,13 @@ script = ExtResource("4_h4f0s")
 metadata/_custom_type_script = "uid://cmeu8n4ljkex5"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1375169411]
+
+[node name="Hud" parent="CanvasLayer" unique_id=242897047 instance=ExtResource("6_xmlsf")]
+offset_left = 271.99997
+offset_top = -608.00006
+offset_right = 271.99997
+offset_bottom = -608.00006
+scale = Vector2(0.7, 0.7)
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=850096116 instance=ExtResource("5_h4f0s")]
 visible = false
