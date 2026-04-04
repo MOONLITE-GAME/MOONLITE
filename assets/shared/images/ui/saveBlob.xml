@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="saveBlob.png">
+	<!-- Created with Adobe Animate version 24.0.12.3 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="loading blob0000" x="0" y="0" width="207" height="205" frameX="-14" frameY="0" frameWidth="221" frameHeight="221"/>
+	<SubTexture name="loading blob0001" x="207" y="0" width="201" height="205" frameX="-20" frameY="0" frameWidth="221" frameHeight="221"/>
+	<SubTexture name="loading blob0002" x="408" y="0" width="179" height="191" frameX="-26" frameY="-28" frameWidth="221" frameHeight="221"/>
+	<SubTexture name="loading blob0003" x="587" y="0" width="179" height="185" frameX="-26" frameY="-28" frameWidth="221" frameHeight="221"/>
+	<SubTexture name="loading blob0004" x="766" y="0" width="187" height="203" frameX="-17" frameY="-18" frameWidth="221" frameHeight="221"/>
+	<SubTexture name="loading blob0005" x="0" y="205" width="181" height="203" frameX="-17" frameY="-18" frameWidth="221" frameHeight="221"/>
+	<SubTexture name="loading blob0006" x="181" y="205" width="190" height="176" frameX="0" frameY="-31" frameWidth="221" frameHeight="221"/>
+	<SubTexture name="loading blob0007" x="371" y="205" width="185" height="174" frameX="0" frameY="-33" frameWidth="221" frameHeight="221"/>
+</TextureAtlas>
