@@ -42,6 +42,8 @@ func saveStats():
 	data.maxHealth = maxHealth;
 	data.weapon = weapon;
 	data.item = item;
+	volume = AudioServer.get_bus_volume_db(Volume.index);
+	data.volume = volume;
 
 	var json_string = JSON.stringify(data);
 	file.store_string(json_string);

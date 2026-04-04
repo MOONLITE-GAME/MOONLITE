@@ -3,6 +3,7 @@ extends Control
 var curButton:int = 1;
 
 func _ready() -> void:
+	AudioServer.set_bus_volume_db(Volume.index, -10.0);
 	MusicEngine.loadSong("recordKeeper");
 
 func _process(_delta: float) -> void:
@@ -39,7 +40,6 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiSELECT"):
 		Stats.savePath = "user://Save" + str(curButton) + ".json";
 		Stats.loadStats();
-		var index = AudioServer.get_bus_index("Master");
-		AudioServer.set_bus_volume_db(index, Stats.volume);
+		AudioServer.set_bus_volume_db(Volume.index, Stats.volume);
 		MusicEngine.stopMusic();
 		get_tree().change_scene_to_file("res://source/scenes/menus/titleScreen.tscn");
