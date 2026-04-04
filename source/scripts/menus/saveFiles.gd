@@ -39,5 +39,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiSELECT"):
 		Stats.savePath = "user://Save" + str(curButton) + ".json";
 		Stats.loadStats();
+		var index = AudioServer.get_bus_index("Master");
+		AudioServer.set_bus_volume_db(index, Stats.volume);
 		MusicEngine.stopMusic();
 		get_tree().change_scene_to_file("res://source/scenes/menus/titleScreen.tscn");

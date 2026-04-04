@@ -31,6 +31,7 @@ var element:String;
 var charName:String;
 var debug:bool = true;
 var attacking:bool = false;
+var volume:float;
 
 func saveStats():
 	var file = FileAccess.open(savePath, FileAccess.WRITE);
@@ -80,6 +81,12 @@ func loadStats():
 			item = data.item;
 		else:
 			item = "";
+			saveStats();
+		
+		if "volume" in data:
+			volume = data.volume;
+		else:
+			volume = -5.0;
 			saveStats();
 
 	else:

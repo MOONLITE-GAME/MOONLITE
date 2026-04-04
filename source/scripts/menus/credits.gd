@@ -1,6 +1,6 @@
 extends Control
 
-var scrollSpeed:float = 100.0;
+var scrollSpeed:float = 75.0;
 
 func _ready() -> void:
 	MusicEngine.stopMusic();
