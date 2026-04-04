@@ -1,5 +1,9 @@
 extends Control;
 
+func _ready() -> void:
+	if OS.get_name() == "Web":
+		$ost.visible = false;
+
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://source/scenes/menus/credits.tscn");
 
