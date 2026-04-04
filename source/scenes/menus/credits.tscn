@@ -37,9 +37,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -952.0
-offset_top = 570.5
+offset_top = 583.0
 offset_right = 1012.0
-offset_bottom = 4527.5
+offset_bottom = 4675.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_krn7s")
@@ -107,6 +107,9 @@ THEIR TWITTER MUTUALS - BEING COOL
 
 
 DOGDILLON - MAKING D-MONEY CLICKER
+
+
+YOU READING THIS - PLAYING THE GAME
 
 
 TOM FULP - MAKING NEWGROUNDS
