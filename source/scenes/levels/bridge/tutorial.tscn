@@ -16,10 +16,28 @@ scale = Vector2(4.3600025, 1)
 position = Vector2(195, 245)
 
 [node name="Crate" parent="." unique_id=189451403 instance=ExtResource("4_1kgaq")]
-position = Vector2(1016, 383)
+position = Vector2(1017, 884)
 
 [node name="Crate2" parent="." unique_id=1248369434 instance=ExtResource("4_1kgaq")]
-position = Vector2(1427, 279)
+position = Vector2(1428, 780)
 
 [node name="Crate3" parent="." unique_id=393445998 instance=ExtResource("4_1kgaq")]
-position = Vector2(1114, -81)
+position = Vector2(1182, 572)
+
+[node name="Crate4" parent="." unique_id=1314429825 instance=ExtResource("4_1kgaq")]
+position = Vector2(1769, 884)
+
+[node name="Crate5" parent="." unique_id=1969226317 instance=ExtResource("4_1kgaq")]
+position = Vector2(2180, 780)
+
+[node name="Crate6" parent="." unique_id=512593508 instance=ExtResource("4_1kgaq")]
+position = Vector2(1934, 572)
+
+[node name="Crate7" parent="." unique_id=2096050251 instance=ExtResource("4_1kgaq")]
+position = Vector2(2553, 884)
+
+[node name="Crate8" parent="." unique_id=246015173 instance=ExtResource("4_1kgaq")]
+position = Vector2(2964, 780)
+
+[node name="Crate9" parent="." unique_id=1222488629 instance=ExtResource("4_1kgaq")]
+position = Vector2(2718, 572)

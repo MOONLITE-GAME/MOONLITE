@@ -6,10 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h32wt"]
 size = Vector2(233, 185)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_h32wt"]
-radius = 166.97604
+[sub_resource type="CircleShape2D" id="CircleShape2D_8wtu3"]
+radius = 128.44023
 
 [node name="Crate" type="RigidBody2D" unique_id=189451403]
+can_sleep = false
 script = ExtResource("1_8wtu3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=842620089]
@@ -24,7 +25,9 @@ shape = SubResource("RectangleShape2D_h32wt")
 [node name="Area2D" type="Area2D" parent="." unique_id=423740191]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1156600326]
-shape = SubResource("CircleShape2D_h32wt")
+position = Vector2(-3.999998, -4)
+scale = Vector2(-1.168, 1)
+shape = SubResource("CircleShape2D_8wtu3")
 
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

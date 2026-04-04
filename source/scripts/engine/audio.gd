@@ -7,7 +7,7 @@ func loadSound(soundName):
 	assetPath = "res://assets/sounds/" + soundName + ".ogg";
 
 	stream = load(assetPath);
-	print("Song Loaded!");
+	print("Sound Loaded!");
 	play();
 
 func stopAudio():
