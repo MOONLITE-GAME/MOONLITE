@@ -10,10 +10,28 @@ var songNum:int;
 var curSong:int;
 var curAlbum:int;
 var maxAlbum:int = 1;
+var arrayData;
+var mus;
 
 func _ready() -> void:
 	curAlbum = 1;
-	getAlbumData()
+	curSong = 0;
+	MusicEngine.stopMusic();
+	getAlbumData();
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("uiUP"):
+		curSong = curSong - 1;
+		if curSong < 0:
+			curSong = songNum;
+		updateSong();
+	if Input.is_action_just_pressed("uiDOWN"):
+		curSong = curSong + 1;
+		if curSong > songNum:
+			curSong = 0;
+		updateSong();
+	if Input.is_action_just_pressed("uiEXIT"):
+		get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn"); # make this extras menu when that gets in
 
 func getAlbumData():
 	# album registry
@@ -37,9 +55,24 @@ func getAlbumData():
 		if "name" in data:
 			albumName = data.name;
 		if "songs" in data:
-			songNum = data.songs;\
+			songNum = data.songs - 1; # godot starts arrays at 0, so this subtracts 1 from the total amount of songs to account for it
 			
 		$AlbumText.text = albumName;
+		
+		getSongData();
 
 func getSongData():
 	songPath = "res://assets/data/songs/albums/songList-" + album + ".txt";
+	
+	arrayData = FileAccess.get_file_as_string(songPath);
+	print(str(arrayData.split(", ")));
+	
+	updateSong();
+	
+func updateSong():
+	MusicEngine.stopMusic();
+	mus = arrayData.split(", ")[curSong];
+	print(mus);
+	MusicEngine.loadSong(mus);
+	$OSTText.text = MusicEngine.title + " - " + MusicEngine.artist;
+	$ostBar/ostText.text = "Track #" + str(curSong + 1);

@@ -2,6 +2,9 @@ extends AudioStreamPlayer
 
 var dataPath:String;
 var assetPath:String;
+var title:String;
+var artist:String;
+var bpm:int;
 
 func loadSong(songName):
 	dataPath = "res://assets/data/songs/" + songName + ".json";
@@ -19,6 +22,11 @@ func loadSong(songName):
 
 		if "Path" in data:
 			assetPath = data.Path;
+		if "Title" in data:
+			title = data.Title;
+		if "Artist" in data:
+			artist = data.Artist;
+			
 
 		stream = load(assetPath);
 		print("Song Loaded!");
