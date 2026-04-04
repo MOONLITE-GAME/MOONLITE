@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://datb8fgwhqjj4"]
+
+[ext_resource type="SpriteFrames" uid="uid://bg5hdcd7ssx0l" path="res://assets/shared/images/ui/saveBlob.xml" id="1_44g0n"]
+[ext_resource type="Script" uid="uid://bghwhby82hpdw" path="res://source/scripts/ui/saveIcon.gd" id="1_rmdwj"]
+
+[node name="SaveIcon" type="CanvasLayer" unique_id=1507098008]
+script = ExtResource("1_rmdwj")
+
+[node name="icon" type="AnimatedSprite2D" parent="." unique_id=1872238437]
+position = Vector2(1844, 1008.00006)
+scale = Vector2(0.6040724, 0.6040724)
+sprite_frames = ExtResource("1_44g0n")
+animation = &"loading blob"
+frame = 7
+frame_progress = 1.0

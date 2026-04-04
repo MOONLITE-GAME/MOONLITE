@@ -34,6 +34,7 @@ var attacking:bool = false;
 var volume:float;
 
 func saveStats():
+	SaveIcon.showIcon();
 	var file = FileAccess.open(savePath, FileAccess.WRITE);
 
 	var data = {};
@@ -49,6 +50,7 @@ func saveStats():
 	file.store_string(json_string);
 
 func loadStats():
+	SaveIcon.showIcon();
 	if FileAccess.file_exists(savePath):
 		var file = FileAccess.open(savePath, FileAccess.READ);
 		var json_string = file.get_as_text();
@@ -99,6 +101,7 @@ func loadStats():
 		saveStats();
 		
 func loadCharJSON():
+	SaveIcon.showIcon();
 	var path = charPath + character + ".json";
 	if FileAccess.file_exists(path):
 		var file = FileAccess.open(path, FileAccess.READ);

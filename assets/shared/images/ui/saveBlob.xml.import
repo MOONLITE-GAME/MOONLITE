@@ -14,5 +14,5 @@ dest_files=["res://.godot/imported/saveBlob.xml-a8f87ab41842e39e710d605d692a82af
 
 use_offsets=true
 animation_framerate=24
-animations_looped=false
+animations_looped=true
 store_external_spriteframes=false
