@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("uiEXIT"):
 		MusicEngine.stopMusic();
 		MusicEngine.loadSong("titleScreen");
-		get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
+		get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");

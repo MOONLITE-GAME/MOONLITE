@@ -82,4 +82,4 @@ func _process(delta: float) -> void:
 			2:
 				pass;
 			3:
-				get_tree().change_scene_to_file("res://source/scenes/menus/ost.tscn");
+				get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");

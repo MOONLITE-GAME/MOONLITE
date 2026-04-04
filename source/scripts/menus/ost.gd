@@ -31,7 +31,9 @@ func _process(_delta: float) -> void:
 			curSong = 0;
 		updateSong();
 	if Input.is_action_just_pressed("uiEXIT"):
-		get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn"); # make this extras menu when that gets in
+		MusicEngine.stopMusic();
+		MusicEngine.loadSong("titleScreen");
+		get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");
 
 func getAlbumData():
 	# album registry
