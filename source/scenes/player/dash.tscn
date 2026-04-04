@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ddd4cup746ov2"]
+
+[ext_resource type="Script" uid="uid://dgf5c08bcodv3" path="res://source/scripts/player/dash.gd" id="1_c1kb0"]
+
+[node name="Dash" type="Timer" unique_id=1443985469]
+script = ExtResource("1_c1kb0")

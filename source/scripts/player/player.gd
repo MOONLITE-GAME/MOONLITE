@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta;
 		
-		if not Stats.attacking:
+		if not Stats.attacking and not Dash.dodging:
 			if dir == "Left":
 				$AnimatedSprite2D.play(Stats.dodgeLeft);
 			else:
@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("Left", "Right")
 	if direction:
 		velocity.x = direction * SPEED
-		if not Stats.attacking: # TODO: add conditional for dashing when that's implemented
+		if not Stats.attacking and not Dash.dodging:
 			if dir == "Left": 
 				$AnimatedSprite2D.play(Stats.runLeft);
 			else:
@@ -49,6 +49,15 @@ func _physics_process(delta: float) -> void:
 			else:
 				$AnimatedSprite2D.play(Stats.idleRight);
 
+	if Dash.dodging:
+		match dir:
+			"Left":
+				$AnimatedSprite2D.play(Stats.dodgeLeft);
+				velocity.x = -1 * dashSpeed;
+			"Right":
+				$AnimatedSprite2D.play(Stats.dodgeRight);
+				velocity.x = 1 * dashSpeed;
+
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("Left"):
@@ -56,7 +65,7 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_pressed("Right"):
 		dir = "Right";
 		
-	if Input.is_action_just_pressed("BasicAttack") and Stats.attacking == false:
+	if Input.is_action_just_pressed("BasicAttack") and Stats.attacking == false and not Dash.dodging:
 		Stats.attacking = true;
 		$AudioStreamPlayer.stream = $Weapon.baseAttackSound;
 		$AudioStreamPlayer.play();
@@ -83,6 +92,9 @@ func _physics_process(delta: float) -> void:
 			await get_tree().create_timer($Weapon.attackCooldown).timeout;
 
 		Stats.attacking = false;
+		
+	if Input.is_action_just_pressed("Dash"):
+		Dash.dodging = true;
 	
 func loadChar():
 	Stats.loadCharJSON();
