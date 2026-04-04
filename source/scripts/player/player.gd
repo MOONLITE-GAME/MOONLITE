@@ -102,6 +102,11 @@ func loadChar():
 	print("Now Playing as: " + Stats.character);
 	
 func getWeapon():
+	if Stats.weapon == "":
+		Stats.weapon = "Dark Sword";
+		Stats.saveStats();
+		getWeapon();
+	
 	print(Stats.weapon);
 	match Stats.weapon:
 		"Dark Sword":

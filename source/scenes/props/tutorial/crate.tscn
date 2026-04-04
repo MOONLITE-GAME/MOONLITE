@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dtc7aowsdnx3l"]
+
+[ext_resource type="Texture2D" uid="uid://kdy6tlkhhaim" path="res://assets/levels/bridge/images/tutorial/crate.png" id="1_h32wt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h32wt"]
+size = Vector2(233, 185)
+
+[node name="Crate" type="RigidBody2D" unique_id=189451403]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=842620089]
+position = Vector2(-3.0517578e-05, -7.748604e-06)
+scale = Vector2(0.462406, 0.462406)
+texture = ExtResource("1_h32wt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372180384]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_h32wt")
