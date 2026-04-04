@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://dtc7aowsdnx3l"]
 
+[ext_resource type="Script" uid="uid://djrnmaxjammi3" path="res://source/scripts/props/tutorial/crate.gd" id="1_8wtu3"]
 [ext_resource type="Texture2D" uid="uid://kdy6tlkhhaim" path="res://assets/levels/bridge/images/tutorial/crate.png" id="1_h32wt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h32wt"]
 size = Vector2(233, 185)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_h32wt"]
+radius = 166.97604
+
 [node name="Crate" type="RigidBody2D" unique_id=189451403]
+script = ExtResource("1_8wtu3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=842620089]
 position = Vector2(-3.0517578e-05, -7.748604e-06)
@@ -15,3 +20,12 @@ texture = ExtResource("1_h32wt")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372180384]
 position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_h32wt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=423740191]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1156600326]
+shape = SubResource("CircleShape2D_h32wt")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
