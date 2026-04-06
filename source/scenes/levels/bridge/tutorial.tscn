@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bimx1pu04h7ls" path="res://source/scenes/props/tutorial/floor.tscn" id="2_122ua"]
 [ext_resource type="PackedScene" uid="uid://0plg3jli2b86" path="res://source/scenes/player/player.tscn" id="3_cgh68"]
 [ext_resource type="PackedScene" uid="uid://dtc7aowsdnx3l" path="res://source/scenes/props/tutorial/crate.tscn" id="4_1kgaq"]
+[ext_resource type="PackedScene" uid="uid://b72ogqmrm4gms" path="res://source/scenes/enemies/tutorial/dummy.tscn" id="5_t7sh1"]
 
 [node name="Tutorial" type="Node2D" unique_id=616210905]
 script = ExtResource("1_xoycb")
@@ -11,6 +12,10 @@ script = ExtResource("1_xoycb")
 [node name="Floor" parent="." unique_id=622707432 instance=ExtResource("2_122ua")]
 position = Vector2(4152, 1138)
 scale = Vector2(4.3600025, 1)
+
+[node name="Dummy" parent="." unique_id=789523333 instance=ExtResource("5_t7sh1")]
+position = Vector2(3996.9998, 860)
+scale = Vector2(0.72, 0.72)
 
 [node name="Player" parent="." unique_id=1975751171 instance=ExtResource("3_cgh68")]
 position = Vector2(195, 245)
