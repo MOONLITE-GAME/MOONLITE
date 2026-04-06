@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b72ogqmrm4gms"]
 
 [ext_resource type="SpriteFrames" uid="uid://dgy5ibmii4rog" path="res://assets/shared/images/characters/enemies/tutorial/dummyCombat.xml" id="1_custd"]
+[ext_resource type="Script" uid="uid://dmygr8p0ixbys" path="res://source/scripts/enemies/tutorial/dummy.gd" id="1_o31jy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_custd"]
 size = Vector2(209, 575)
@@ -9,6 +10,7 @@ size = Vector2(209, 575)
 size = Vector2(577, 648)
 
 [node name="Dummy" type="Area2D" unique_id=789523333]
+script = ExtResource("1_o31jy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1119097489]
 position = Vector2(184, -120)
@@ -25,3 +27,7 @@ shape = SubResource("RectangleShape2D_custd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=335871168]
 position = Vector2(-5.5, -101)
 shape = SubResource("RectangleShape2D_o31jy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

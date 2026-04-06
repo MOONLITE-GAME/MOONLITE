@@ -1,0 +1,7 @@
+{
+	"name": "Dummy",
+	"element": "Tech",
+	"path": "assets/shared/images/characters/enemies/dummyCombat.xml",
+	"idleLeft": "idle",
+	"hit": "hit"
+}
