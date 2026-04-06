@@ -11,10 +11,11 @@ THE SECOND ALPHA RELEASE: NEW ENGINE REWRITE, ART, MUSIC, ETC.
 - New Sprites for Moonlite!
 - Mod Support for Windows!
 - New Weapon Info on the HUD!
+- New Loadout Menu for Weapons!
 - New (but currently unused) `itemType` property to baseItem.gd!
 - New `weaponType` property to baseWeapon.gd!
 - Music to the saveFile Screen!
-- New MusicEngine for all of your music needs!
+- New MusicEngine and AudioEngine for all of your music/sound needs!
 
 ### Fixed
 - A bug where the main menu text only picks a number between 1-11 and 1-10 rather than the intended 1-12
@@ -32,6 +33,8 @@ THE SECOND ALPHA RELEASE: NEW ENGINE REWRITE, ART, MUSIC, ETC.
 
 ### Removed
 - A few crates from the tutorial area
+- Kasane Teto
+- In Game Item Menu
 - Engie Playable Character (Temporary)
 
 ## [0.0.1] - 2026-03-24
