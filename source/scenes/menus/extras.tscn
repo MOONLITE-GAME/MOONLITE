@@ -38,7 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_fmiy2")
 theme_override_font_sizes/font_size = 50
-text = "Shitty fucking chud ass extras menu placeholder LMAO"
+text = "Shitty extras menu placeholder LMAO"
 
 [node name="credits" type="Button" parent="." unique_id=1098874971]
 layout_mode = 1
