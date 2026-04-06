@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dafstmbgowjl2" path="res://assets/shared/images/hud/weaponIcons/sword.png" id="2_0nhdv"]
 [ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="3_jqt23"]
 [ext_resource type="Texture2D" uid="uid://38eyywovghhp" path="res://assets/images/menus/charSelect/arrow.png" id="4_8gaf6"]
+[ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="6_drpnl"]
 
 [node name="Loadout" type="Control" unique_id=1206592778]
 layout_mode = 3
@@ -139,3 +140,7 @@ texture = ExtResource("4_8gaf6")
 position = Vector2(865, 0)
 rotation = 3.1415927
 texture = ExtResource("4_8gaf6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=824354055]
+stream = ExtResource("6_drpnl")
+bus = &"SFX"
