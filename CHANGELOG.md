@@ -4,7 +4,7 @@ All notable changes will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.0.2] - 2026-??-??
+## [0.0.2] - 2026-04-06
 THE SECOND ALPHA RELEASE: NEW ENGINE REWRITE, ART, MUSIC, ETC.
 
 ### Added
@@ -12,11 +12,14 @@ THE SECOND ALPHA RELEASE: NEW ENGINE REWRITE, ART, MUSIC, ETC.
 - Mod Support for Windows!
 - New Weapon Info on the HUD!
 - New Loadout Menu for Weapons!
+- New Soundtrack Menu (Only on Windows)
 - New (but currently unused) `itemType` property to baseItem.gd!
 - New `weaponType` property to baseWeapon.gd!
 - Music to the saveFile Screen!
 - New MusicEngine and AudioEngine for all of your music/sound needs!
+- New Music in the Tutorial!
 - The ability to beat the shit out of Dummy
+- The ability to change the volume of the game! (Press - or +)
 
 ### Fixed
 - A bug where the main menu text only picks a number between 1-11 and 1-10 rather than the intended 1-12

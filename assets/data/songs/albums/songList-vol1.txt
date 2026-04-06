@@ -1,1 +1,1 @@
-titleScreen, recordKeeper, bopeeboMoonlite, 
+titleScreen, recordKeeper, bopeeboMoonlite, tutorial, 
