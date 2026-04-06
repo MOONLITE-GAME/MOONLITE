@@ -12,6 +12,7 @@ THE SECOND ALPHA RELEASE: NEW ENGINE REWRITE, ART, MUSIC, ETC.
 - Mod Support for Windows!
 - New Weapon Info on the HUD!
 - New Loadout Menu for Weapons!
+- New WIP Options Menu
 - New Soundtrack Menu (Only on Windows)
 - New (but currently unused) `itemType` property to baseItem.gd!
 - New `weaponType` property to baseWeapon.gd!

@@ -80,6 +80,6 @@ func _process(delta: float) -> void:
 			1:
 				get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
 			2:
-				pass;
+				get_tree().change_scene_to_file("res://source/scenes/menus/options.tscn");
 			3:
 				get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");

@@ -5,6 +5,7 @@ var savePath:String;
 var charPath:String = "res://assets/data/characters/";
 var assetPath:String;
 var character:String;
+var fullscreen:bool;
 
 # vars for character stats
 var health:int;
@@ -45,6 +46,7 @@ func saveStats():
 	data.item = item;
 	volume = AudioServer.get_bus_volume_db(Volume.index);
 	data.volume = volume;
+	data.fullscreen = fullscreen;
 
 	var json_string = JSON.stringify(data);
 	file.store_string(json_string);
@@ -92,13 +94,25 @@ func loadStats():
 		else:
 			volume = -5.0;
 			saveStats();
+			
+		if "fullscreen" in data:
+			fullscreen = data.fullscreen;
+		else:
+			fullscreen = false;
+			saveStats();
 
 	else:
 		print("No save file. Creating a new one.");
 		health = 100;
 		maxHealth = 100;
 		weapon = "Dark Sword";
+		fullscreen = false;
 		saveStats();
+		
+	if fullscreen:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN);
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED);
 		
 func loadCharJSON():
 	SaveIcon.showIcon();
