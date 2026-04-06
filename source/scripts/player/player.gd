@@ -19,6 +19,7 @@ func _ready() -> void:
 		Stats.maxHealth = 100;
 		Stats.health = 100;
 		Stats.saveStats();
+	Stats.attacking = false;
 	loadChar();
 	getWeapon();
 
@@ -115,5 +116,10 @@ func getWeapon():
 	match Stats.weapon:
 		"Dark Sword":
 			$Weapon.set_script(load("res://source/scripts/items/weapons/darkSword.gd"));
+		"Hammer of Zoomin'":
+			$Weapon.set_script(load("res://source/scripts/items/weapons/theHammerOfZoomin.gd"));
+		"Ground Pound":
+			$Weapon.set_script(load("res://source/scripts/items/weapons/groundPound.gd"));
 			
 	$Weapon._ready();
+	Stats.weaponType = $Weapon.weaponType;

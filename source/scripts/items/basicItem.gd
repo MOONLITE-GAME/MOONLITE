@@ -4,7 +4,7 @@ class_name Item extends Node;
 var stackSize:int = 64;
 var givesEffect:bool = false;
 var heals:bool = false;
-var itemSound:AudioStream = load("res://assets/shared/sounds/attack.ogg");
+var itemSound:AudioStream = load("res://assets/shared/sounds/items/weapons/sword.ogg");
 var itemType:String = "Speed Boost";
 
 # stats for items that affect velocity. For example: a weapon that sends the player flying backwards.
