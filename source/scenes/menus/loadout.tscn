@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://dyhuq7ioir43l"]
+
+[ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="1_4ap4n"]
+[ext_resource type="Script" uid="uid://b7y57o6io5w2g" path="res://source/scripts/menus/loadout.gd" id="1_5tblj"]
+[ext_resource type="Texture2D" uid="uid://dafstmbgowjl2" path="res://assets/shared/images/hud/weaponIcons/sword.png" id="2_0nhdv"]
+[ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="3_jqt23"]
+[ext_resource type="Texture2D" uid="uid://38eyywovghhp" path="res://assets/images/menus/charSelect/arrow.png" id="4_8gaf6"]
+
+[node name="Loadout" type="Control" unique_id=1206592778]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5tblj")
+
+[node name="bgPurp" type="ColorRect" parent="." unique_id=480950077]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.28627452, 0.011764706, 0.5372549, 1)
+
+[node name="blackBar" type="ColorRect" parent="." unique_id=1670754667]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = 390.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="blackBar2" type="ColorRect" parent="." unique_id=1680106916]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = -390.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="loadout" type="Label" parent="." unique_id=1557888634]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.5
+offset_top = -486.5
+offset_right = 157.5
+offset_bottom = -433.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4ap4n")
+theme_override_font_sizes/font_size = 75
+text = "LOADOUT"
+
+[node name="confirm" type="Label" parent="." unique_id=143202193]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -589.5
+offset_top = 438.5
+offset_right = 589.5
+offset_bottom = 491.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4ap4n")
+theme_override_font_sizes/font_size = 75
+text = "PRESS SPACE/ENTER TO CONFIRM"
+
+[node name="weaponIcon" type="Control" parent="." unique_id=560627531]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="sprite" type="Sprite2D" parent="weaponIcon" unique_id=940652152]
+scale = Vector2(2.0489178, 2.048918)
+texture = ExtResource("2_0nhdv")
+
+[node name="text" type="Label" parent="weaponIcon" unique_id=2032331669]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = 218.0
+offset_right = 66.0
+offset_bottom = 284.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_jqt23")
+theme_override_font_sizes/font_size = 75
+text = "CUM"
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=1562525671]
+position = Vector2(-865, 0)
+texture = ExtResource("4_8gaf6")
+
+[node name="Arrow2" type="Sprite2D" parent="." unique_id=1106180966]
+position = Vector2(865, 0)
+rotation = 3.1415927
+texture = ExtResource("4_8gaf6")

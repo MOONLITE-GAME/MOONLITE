@@ -36,7 +36,7 @@ func _process(_delta: float) -> void:
 		
 	if Input.is_action_just_pressed("uiSELECT"):
 		Stats.character = chr;
-		get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");
+		get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
 
 # TODO: make json loading more efficient in a function or something so we don't have to repeat this shit 
 func loadCharData(character:String):
