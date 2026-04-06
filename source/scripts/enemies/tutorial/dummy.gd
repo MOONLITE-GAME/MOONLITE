@@ -3,6 +3,9 @@ extends Area2D;
 # maybe in future make this the script for any static enemies
 
 var inside:bool = false;
+var dummyRNG:int;
+var voiceRNG:int;
+var rng = RandomNumberGenerator.new();
 
 # animations
 var idleLeft:String;
@@ -15,7 +18,14 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if inside:
 		if Input.is_action_just_pressed("BasicAttack") and not Stats.attacking:
+			dummyRNG = rng.randi_range(1, 2);
+			print("Dummy RNG: " + str(dummyRNG));
+			if dummyRNG == 1:
+				voiceRNG = rng.randi_range(1, 3);
+				$AudioStreamPlayer2D.stream = load("res://assets/sounds/dummyEasterEgg/hit" + str(voiceRNG) + ".ogg");
+				$AudioStreamPlayer2D.play();
 			$AnimatedSprite2D.play(hit);
+			AudioEngine.loadSound("dummyHit");
 
 func loadData(path):
 	if FileAccess.file_exists(path):

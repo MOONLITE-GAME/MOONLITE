@@ -16,6 +16,7 @@ THE SECOND ALPHA RELEASE: NEW ENGINE REWRITE, ART, MUSIC, ETC.
 - New `weaponType` property to baseWeapon.gd!
 - Music to the saveFile Screen!
 - New MusicEngine and AudioEngine for all of your music/sound needs!
+- The ability to beat the shit out of Dummy
 
 ### Fixed
 - A bug where the main menu text only picks a number between 1-11 and 1-10 rather than the intended 1-12
