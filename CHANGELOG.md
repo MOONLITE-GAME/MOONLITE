@@ -10,6 +10,7 @@ THE THIRD ALPHA RELEASE: LINUX BUILD, WEAPON ADJUSTMENTS, AND MORE
 ### Added
 - Debug Display (Press ~ or F3 to access it in game!)
 - New crate that reloads the current scene!
+- New crate that brings you to the loadout select screen!
 
 ### Changed
 - Hammer of Zoomin' has been renamed to "Rebounder"
