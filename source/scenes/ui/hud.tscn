@@ -67,6 +67,7 @@ theme_override_font_sizes/font_size = 75
 text = "MOONLITE"
 
 [node name="debugDisplay" type="Control" parent="." unique_id=515432406]
+visible = false
 anchors_preset = 0
 offset_left = -388.0
 offset_top = 1085.0

@@ -5,6 +5,13 @@ func _ready() -> void:
 	Stats.loadCharJSON();
 	updateWeapon();
 	$charName.text = Stats.charName;
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("DebugDisplay"):
+		if $debugDisplay.visible:
+			$debugDisplay.visible = false;
+		else:
+			$debugDisplay.visible = true;
 	
 func setHealth(health):
 	$healthBar.value = health;
