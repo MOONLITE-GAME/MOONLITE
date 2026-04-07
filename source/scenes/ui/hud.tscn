@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ce11qb3g0xn1b" path="res://icon.png" id="4_jm11n"]
 [ext_resource type="Texture2D" uid="uid://l6p6ruvw6pkm" path="res://assets/shared/images/hud/healthbar.png" id="5_oh3fd"]
 [ext_resource type="Texture2D" uid="uid://dvhgfe7mmtoa6" path="res://assets/shared/images/hud/healthbarFrame.png" id="6_4dksr"]
+[ext_resource type="Script" uid="uid://eiaqd56hrv22" path="res://source/scripts/player/debugDisplay.gd" id="8_hahbu"]
 
 [node name="Hud" type="Control" unique_id=242897047]
 layout_mode = 3
@@ -73,6 +74,7 @@ offset_left = -388.0
 offset_top = 1085.0
 offset_right = -348.0
 offset_bottom = 1125.0
+script = ExtResource("8_hahbu")
 
 [node name="ColorRect" type="ColorRect" parent="debugDisplay" unique_id=868912309]
 layout_mode = 0
