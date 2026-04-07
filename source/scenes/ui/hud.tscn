@@ -65,3 +65,42 @@ offset_bottom = 1031.05
 theme_override_fonts/font = ExtResource("3_y50ka")
 theme_override_font_sizes/font_size = 75
 text = "MOONLITE"
+
+[node name="debugDisplay" type="Control" parent="." unique_id=515432406]
+anchors_preset = 0
+offset_left = -388.0
+offset_top = 1085.0
+offset_right = -348.0
+offset_bottom = 1125.0
+
+[node name="ColorRect" type="ColorRect" parent="debugDisplay" unique_id=868912309]
+layout_mode = 0
+offset_right = 218.0
+offset_bottom = 144.0
+color = Color(0.38039216, 0.38039216, 0.38039216, 0.54901963)
+
+[node name="FPS" type="Label" parent="debugDisplay" unique_id=1956220043]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_y50ka")
+theme_override_font_sizes/font_size = 25
+text = "FPS:"
+
+[node name="Coordinates" type="Label" parent="debugDisplay" unique_id=314680248]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 146.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("3_y50ka")
+theme_override_font_sizes/font_size = 25
+text = "X:"
+
+[node name="EasterEggTime" type="Label" parent="debugDisplay" unique_id=675246779]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 176.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("3_y50ka")
+theme_override_font_sizes/font_size = 25
+text = "ScrnSvr:"
