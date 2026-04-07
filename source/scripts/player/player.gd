@@ -116,8 +116,8 @@ func getWeapon():
 	match Stats.weapon:
 		"Dark Sword":
 			$Weapon.set_script(load("res://source/scripts/items/weapons/darkSword.gd"));
-		"Hammer of Zoomin'":
-			$Weapon.set_script(load("res://source/scripts/items/weapons/theHammerOfZoomin.gd"));
+		"Rebounder": 
+			$Weapon.set_script(load("res://source/scripts/items/weapons/Rebounder.gd"));
 		"Ground Pound":
 			$Weapon.set_script(load("res://source/scripts/items/weapons/groundPound.gd"));
 			

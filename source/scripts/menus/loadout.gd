@@ -40,7 +40,7 @@ func _process(_delta: float) -> void:
 			Stats.weapon = "Dark Sword";
 			Stats.weaponType = "Sword"; # TODO: make this read from a script rather than just setting the value here.
 		2:
-			Stats.weapon = "Hammer of Zoomin'";
+			Stats.weapon = "Rebounder";
 			Stats.weaponType = "Hammer";
 		3:
 			Stats.weapon = "Ground Pound";
