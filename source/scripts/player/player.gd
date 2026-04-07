@@ -101,6 +101,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dash"):
 		Dash.dodging = true;
 	
+	Stats.playerX = position.x; # TODO: Make sure these don't break the game when we implement warps to other rooms.
+	Stats.playerY = position.y; # it happened with AGWYPaaB and broke some shit lmao
+	
 func loadChar():
 	Stats.loadCharJSON();
 	$AnimatedSprite2D.sprite_frames = load(Stats.assetPath);
