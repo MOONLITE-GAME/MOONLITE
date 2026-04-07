@@ -79,6 +79,8 @@ func _process(delta: float) -> void:
 		match curButton:
 			1:
 				get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
+				Stats.playerX = 0;
+				Stats.playerY = 0;
 			2:
 				get_tree().change_scene_to_file("res://source/scenes/menus/options.tscn");
 			3:

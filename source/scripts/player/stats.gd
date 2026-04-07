@@ -26,8 +26,8 @@ var dodgeLeft:String;
 var dodgeRight:String;
 
 # vars for general data
-var playerX:int;
-var playerY:int;
+var playerX:float;
+var playerY:float;
 var element:String;
 var charName:String;
 var debug:bool = true;
