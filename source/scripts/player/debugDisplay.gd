@@ -6,4 +6,4 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if $".".visible:
 		$FPS.text = "FPS: " + str(Engine.get_frames_per_second());
-		$Coordinates.text = "X:" + str(Stats.playerX) + ", Y:" + str(Stats.playerY);
+		$Coordinates.text = "X:" + str(roundf(Stats.playerX)) + ", Y:" + str(roundf(Stats.playerY));
