@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://0plg3jli2b86" path="res://source/scenes/player/player.tscn" id="3_cgh68"]
 [ext_resource type="PackedScene" uid="uid://dtc7aowsdnx3l" path="res://source/scenes/props/tutorial/crate.tscn" id="4_1kgaq"]
 [ext_resource type="PackedScene" uid="uid://b72ogqmrm4gms" path="res://source/scenes/enemies/tutorial/dummy.tscn" id="5_t7sh1"]
+[ext_resource type="PackedScene" uid="uid://c1cbfl86s4o2w" path="res://source/scenes/props/tutorial/respawnCrate.tscn" id="6_tjwqx"]
 
 [node name="Tutorial" type="Node2D" unique_id=616210905]
 script = ExtResource("1_xoycb")
@@ -46,3 +47,6 @@ position = Vector2(2964, 780)
 
 [node name="Crate9" parent="." unique_id=1222488629 instance=ExtResource("4_1kgaq")]
 position = Vector2(2718, 572)
+
+[node name="ReloadCrate" parent="." unique_id=655693080 instance=ExtResource("6_tjwqx")]
+position = Vector2(262, 877)

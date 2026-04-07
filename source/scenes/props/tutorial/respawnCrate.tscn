@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c1cbfl86s4o2w"]
+
+[ext_resource type="Script" uid="uid://cbjir4uicsihh" path="res://source/scripts/props/tutorial/reloadCrate.gd" id="1_mbtx7"]
+[ext_resource type="Texture2D" uid="uid://kdy6tlkhhaim" path="res://assets/levels/bridge/images/tutorial/crate.png" id="2_mbtx7"]
+[ext_resource type="FontFile" uid="uid://cyiuhqffedas" path="res://assets/fonts/NextUps.ttf" id="3_mbtx7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h32wt"]
+size = Vector2(233, 185)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8wtu3"]
+radius = 128.44023
+
+[node name="ReloadCrate" type="RigidBody2D" unique_id=189451403]
+can_sleep = false
+script = ExtResource("1_mbtx7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=842620089]
+position = Vector2(-3.0517578e-05, -7.748604e-06)
+scale = Vector2(0.462406, 0.462406)
+texture = ExtResource("2_mbtx7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372180384]
+position = Vector2(-0.5, -0.5)
+rotation = 3.1415927
+shape = SubResource("RectangleShape2D_h32wt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=423740191]
+rotation = 3.1415927
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1156600326]
+position = Vector2(-3.999998, -4)
+rotation = 3.1415927
+scale = Vector2(-1.168, 1)
+shape = SubResource("CircleShape2D_8wtu3")
+
+[node name="HitMeText" type="Label" parent="." unique_id=2116942339]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -139.5
+offset_right = 264.0
+offset_bottom = -116.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_mbtx7")
+theme_override_font_sizes/font_size = 25
+text = "HIT ME TO RELOAD ROOM"
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
