@@ -100,7 +100,7 @@ theme_override_fonts/font = ExtResource("3_y50ka")
 theme_override_font_sizes/font_size = 25
 text = "X:"
 
-[node name="EasterEggTime" type="Label" parent="debugDisplay" unique_id=675246779]
+[node name="InDialogue" type="Label" parent="debugDisplay" unique_id=675246779]
 layout_mode = 0
 offset_top = 96.0
 offset_right = 176.0

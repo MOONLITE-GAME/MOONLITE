@@ -30,9 +30,10 @@ func _process(_delta: float) -> void:
 			Stats.inDialogue = true;
 			Dialogic.start("dummyDialogueTutorial");
 			
-	if Dialogic.VAR.isDone == true:
+	if Dialogic.VAR.isDone == true and Stats.inDialogue:
+		Dialogic.VAR.isDone = false;
 		Stats.inDialogue = false;
-
+		
 func loadData(path):
 	if FileAccess.file_exists(path):
 		var file = FileAccess.open(path, FileAccess.READ);
