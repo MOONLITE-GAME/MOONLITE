@@ -40,7 +40,15 @@ directories/dch_directory={
 directories/dtl_directory={
 "dummyDialogueTutorial": "res://assets/data/dialogue/dummyDialogueTutorial.dtl"
 }
-layout/style_directory={}
+layout/style_directory={
+"": "res://assets/data/dialogue/styles/default.tres",
+"default": "res://assets/data/dialogue/styles/default.tres"
+}
+variables={
+"isDone": false
+}
+layout/style_list=["res://assets/data/dialogue/styles/default.tres"]
+layout/default_style="res://assets/data/dialogue/styles/default.tres"
 
 [display]
 

@@ -1,4 +1,8 @@
+set {isDone} = false
+set {isDone} = false
+set {isDone} = false
 moonlite: Dude...
 moonlite: You look hella gay...
 dummy: Kill yourself
 moonlite: Okay... \:(
+set {isDone} = true

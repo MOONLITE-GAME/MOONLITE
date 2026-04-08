@@ -33,6 +33,7 @@ var charName:String;
 var debug:bool = true;
 var attacking:bool = false;
 var volume:float;
+var inDialogue:bool = false;
 
 func saveStats():
 	SaveIcon.showIcon();

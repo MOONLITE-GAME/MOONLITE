@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta;
 		
-		if not Stats.attacking and not Dash.dodging:
+		if not Stats.attacking and not Dash.dodging and not Stats.inDialogue:
 			if dir == "Left":
 				$AnimatedSprite2D.play(Stats.dodgeLeft);
 			else:
@@ -35,11 +35,11 @@ func _physics_process(delta: float) -> void:
 
 	SPEED = moveSpeed;
 	
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
+	if Input.is_action_just_pressed("Jump") and is_on_floor() and not Stats.inDialogue:
 		velocity.y = JUMP_VELOCITY
 
 	var direction := Input.get_axis("Left", "Right")
-	if direction:
+	if direction and not Stats.inDialogue:
 		velocity.x = direction * SPEED
 		if not Stats.attacking and not Dash.dodging:
 			if dir == "Left": 
@@ -70,7 +70,7 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_pressed("Right"):
 		dir = "Right";
 		
-	if Input.is_action_just_pressed("BasicAttack") and Stats.attacking == false and not Dash.dodging:
+	if Input.is_action_just_pressed("BasicAttack") and Stats.attacking == false and not Dash.dodging and not Stats.inDialogue:
 		Stats.attacking = true;
 		$AudioStreamPlayer.stream = $Weapon.baseAttackSound;
 		$AudioStreamPlayer.play();
@@ -98,7 +98,7 @@ func _physics_process(delta: float) -> void:
 
 		Stats.attacking = false;
 		
-	if Input.is_action_just_pressed("Dash"):
+	if Input.is_action_just_pressed("Dash") and not Stats.inDialogue:
 		Dash.dodging = true;
 	
 	Stats.playerX = position.x; # TODO: Make sure these don't break the game when we implement warps to other rooms.

@@ -17,7 +17,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if inside:
-		if Input.is_action_just_pressed("BasicAttack") and not Stats.attacking:
+		if Input.is_action_just_pressed("BasicAttack") and not Stats.attacking and not Stats.inDialogue:
 			dummyRNG = rng.randi_range(1, 2);
 			print("Dummy RNG: " + str(dummyRNG));
 			if dummyRNG == 1:
@@ -26,8 +26,12 @@ func _process(_delta: float) -> void:
 				$AudioStreamPlayer2D.play();
 			$AnimatedSprite2D.play(hit);
 			AudioEngine.loadSound("dummyHit");
-		if Input.is_action_just_pressed("Interact") and not Stats.attacking:
+		if Input.is_action_just_pressed("Interact") and not Stats.attacking and not Stats.inDialogue:
+			Stats.inDialogue = true;
 			Dialogic.start("dummyDialogueTutorial");
+			
+	if Dialogic.VAR.isDone == true:
+		Stats.inDialogue = false;
 
 func loadData(path):
 	if FileAccess.file_exists(path):

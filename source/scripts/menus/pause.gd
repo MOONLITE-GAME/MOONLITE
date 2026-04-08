@@ -3,7 +3,8 @@ extends Control;
 var curButton:int = 1;
 
 func _process(_delta: float) -> void:
-	checkPauseInput();
+	if not Stats.inDialogue:
+		checkPauseInput();
 	
 	if get_tree().paused:
 		if Input.is_action_just_pressed("uiUP"):
