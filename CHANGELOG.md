@@ -12,7 +12,7 @@ THE THIRD ALPHA RELEASE: LINUX BUILD, WEAPON ADJUSTMENTS, AND MORE
 - New crate that reloads the current scene!
 - New crate that brings you to the loadout select screen!
 - New Dialogue System in Game! 
-	- This system utilizes the [Dialogic Plugin](https://github.com/dialogic-godot/dialogic);
+	- This system utilizes the [Dialogic Plugin!](https://github.com/dialogic-godot/dialogic)
 
 ### Changed
 - Hammer of Zoomin' has been renamed to "Rebounder"
