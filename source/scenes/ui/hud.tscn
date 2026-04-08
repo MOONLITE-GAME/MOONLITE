@@ -107,7 +107,7 @@ offset_right = 176.0
 offset_bottom = 140.0
 theme_override_fonts/font = ExtResource("3_y50ka")
 theme_override_font_sizes/font_size = 25
-text = "ScrnSvr:"
+text = "Dialogue"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="debugDisplay" unique_id=1745319617]
 stream = ExtResource("9_w6dlt")

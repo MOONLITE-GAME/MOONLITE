@@ -37,9 +37,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -952.0
-offset_top = 583.0
+offset_top = 568.5
 offset_right = 1012.0
-offset_bottom = 4675.0
+offset_bottom = 4705.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_krn7s")
@@ -92,6 +92,7 @@ SPECIAL THANKS
 
 CHERRYTHECOOL - GODOT SPARROW PLUGIN
 
+DIALOGIC TEAM - DIALOGIC PLUGIN
 
 
 E-DUBZNG WOULD LIKE TO THANK
