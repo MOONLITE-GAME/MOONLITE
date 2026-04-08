@@ -26,6 +26,8 @@ func _process(_delta: float) -> void:
 				$AudioStreamPlayer2D.play();
 			$AnimatedSprite2D.play(hit);
 			AudioEngine.loadSound("dummyHit");
+		if Input.is_action_just_pressed("Interact") and not Stats.attacking:
+			Dialogic.start("dummyDialogueTutorial");
 
 func loadData(path):
 	if FileAccess.file_exists(path):
