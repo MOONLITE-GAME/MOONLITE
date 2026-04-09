@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dsnx4mcn353u3"]
+
+[ext_resource type="Script" uid="uid://bknhg5e0e7c3r" path="res://source/scripts/dialogueTest.gd" id="1_25pvk"]
+
+[node name="DialogueTest" type="Node2D" unique_id=81063925]
+script = ExtResource("1_25pvk")

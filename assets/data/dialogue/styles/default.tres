@@ -14,9 +14,6 @@
 [sub_resource type="Resource" id="Resource_ieov1"]
 script = ExtResource("2_2u1ao")
 scene = ExtResource("1_ieov1")
-overrides = {
-"global_font": "\"res://assets/fonts/vcr.ttf\""
-}
 
 [sub_resource type="Resource" id="Resource_2u1ao"]
 script = ExtResource("2_2u1ao")
@@ -45,6 +42,9 @@ scene = ExtResource("9_rn0mp")
 [sub_resource type="Resource" id="Resource_5l6ed"]
 script = ExtResource("2_2u1ao")
 scene = ExtResource("10_kdtd5")
+overrides = {
+"show_close_button": "false"
+}
 
 [resource]
 script = ExtResource("11_runt6")

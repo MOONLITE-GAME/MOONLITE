@@ -38,7 +38,8 @@ directories/dch_directory={
 "moonlite": "res://assets/data/dialogue/characters/moonlite.dch"
 }
 directories/dtl_directory={
-"dummyDialogueTutorial": "res://assets/data/dialogue/dummyDialogueTutorial.dtl"
+"dummyDialogueTutorial": "res://assets/data/dialogue/dummyDialogueTutorial.dtl",
+"test": "res://assets/data/dialogue/test.dtl"
 }
 layout/style_directory={
 "": "res://assets/data/dialogue/styles/default.tres",
