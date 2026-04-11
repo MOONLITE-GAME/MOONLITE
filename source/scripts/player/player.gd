@@ -40,6 +40,7 @@ func _physics_process(delta: float) -> void:
 
 	var direction := Input.get_axis("Left", "Right")
 	if direction and not Stats.inDialogue:
+		Stats.moving = true;
 		velocity.x = direction * SPEED
 		if not Stats.attacking and not Dash.dodging:
 			if dir == "Left": 
@@ -47,6 +48,7 @@ func _physics_process(delta: float) -> void:
 			else:
 				$AnimatedSprite2D.play(Stats.runRight);
 	else:
+		Stats.moving = false;
 		velocity.x = move_toward(velocity.x, 0, SPEED);
 		if is_on_floor() and not Stats.attacking:
 			if dir == "Left":
@@ -74,11 +76,20 @@ func _physics_process(delta: float) -> void:
 		Stats.attacking = true;
 		$AudioStreamPlayer.stream = $Weapon.baseAttackSound;
 		$AudioStreamPlayer.play();
-		match dir:
-			"Left":
-				$AnimatedSprite2D.play(Stats.attackLeft);
-			"Right":
-				$AnimatedSprite2D.play(Stats.attackRight);
+		match Stats.moving:
+			true:
+				match dir:
+					"Left":
+						$AnimatedSprite2D.play(Stats.attackRunLeft);
+					"Right":
+						$AnimatedSprite2D.play(Stats.attackRunRight);
+			false:
+				match dir:
+					"Left":
+						$AnimatedSprite2D.play(Stats.attackLeft);
+					"Right":
+						$AnimatedSprite2D.play(Stats.attackRight);
+						
 		$Weapon.baseAttack();
 
 		if $Weapon.affectsVelocity == true:

@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 THE THIRD ALPHA RELEASE: LINUX BUILD, WEAPON ADJUSTMENTS, AND MORE
 
 ### Added
+- New Attack Walking Animations for Playable Characters!
 - Debug Display (Press ~ or F3 to access it in game!)
 - New crate that reloads the current scene!
 - New crate that brings you to the loadout select screen!

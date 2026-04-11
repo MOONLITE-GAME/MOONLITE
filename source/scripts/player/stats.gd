@@ -24,6 +24,8 @@ var attackLeft:String;
 var attackRight:String;
 var dodgeLeft:String;
 var dodgeRight:String;
+var attackRunLeft:String;
+var attackRunRight:String;
 
 # vars for general data
 var playerX:float;
@@ -34,6 +36,7 @@ var debug:bool = true;
 var attacking:bool = false;
 var volume:float;
 var inDialogue:bool = false;
+var moving:bool;
 
 func saveStats():
 	SaveIcon.showIcon();
@@ -156,6 +159,10 @@ func loadCharJSON():
 			dodgeLeft = data.dodgeLeft;
 		if "dodgeRight" in data:
 			dodgeRight = data.dodgeRight;
+		if "attackRunLeft" in data:
+			attackRunLeft = data.attackRunLeft;
+		if "attackRunRight" in data:
+			attackRunRight = data.attackRunRight;
 
 	else:
 		print("File does not exist.");

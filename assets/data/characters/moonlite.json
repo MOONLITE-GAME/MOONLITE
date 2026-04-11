@@ -9,5 +9,7 @@
 	"attackLeft": "attack left",
 	"attackRight": "attack right",
 	"dodgeLeft": "dodge left",
-	"dodgeRight": "dodge right"
+	"dodgeRight": "dodge right",
+	"attackRunLeft": "attack run left",
+	"attackRunRight": "attack run right"
 }
