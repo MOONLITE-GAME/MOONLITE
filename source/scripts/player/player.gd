@@ -67,9 +67,9 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	if Input.is_action_just_pressed("Left"):
+	if Input.is_action_just_pressed("Left") and not Stats.inDialogue:
 		dir = "Left";
-	elif Input.is_action_just_pressed("Right"):
+	elif Input.is_action_just_pressed("Right") and not Stats.inDialogue:
 		dir = "Right";
 		
 	if Input.is_action_just_pressed("BasicAttack") and Stats.attacking == false and not Dash.dodging and not Stats.inDialogue:

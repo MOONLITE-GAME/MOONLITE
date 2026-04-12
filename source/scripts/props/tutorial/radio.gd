@@ -3,11 +3,15 @@ extends RigidBody2D;
 var inDestructionRadius:bool = false;
 
 func _process(_delta: float) -> void:
-	if !Stats.attacking and Input.is_action_just_pressed("BasicAttack") and inDestructionRadius:
+	if !Stats.attacking and Input.is_action_just_pressed("BasicAttack") and inDestructionRadius and not Stats.inDialogue:
 		MusicEngine.stop();
+		Stats.inDialogue = true;
+		AudioEngine.loadSound("radio/radioStatic");
 		$AudioStreamPlayer2D.play();
 		$AnimatedSprite2D.play("radio");
 		await get_tree().create_timer($AudioStreamPlayer2D.stream.get_length()).timeout;
+		AudioEngine.loadSound("radio/radioStatic");
+		Stats.inDialogue = false;
 		$AudioStreamPlayer2D.stop();
 		$AnimatedSprite2D.play("radio off");
 		MusicEngine.play();

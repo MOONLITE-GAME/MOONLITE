@@ -18,7 +18,7 @@ scale = Vector2(0.462, 0.462)
 sprite_frames = ExtResource("1_65ay4")
 animation = &"radio off"
 autoplay = "radio off"
-frame_progress = 0.8496334
+frame_progress = 0.466671
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1922206798]
 position = Vector2(-1.5, 1)
