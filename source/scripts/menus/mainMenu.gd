@@ -7,6 +7,10 @@ var textSpeed:float = 350.0;
 
 func _ready() -> void:
 	rndmString = stringRNG.randi_range(1, 12);
+	Camera.limit_bottom = 10000000;
+	Camera.limit_right = 10000000;
+	Camera.limit_left = -10000000;
+	Camera.limit_top = -10000000;
 
 func _process(delta: float) -> void:
 	$text.position.x -= textSpeed * delta;
@@ -17,7 +21,7 @@ func _process(delta: float) -> void:
 
 	match rndmString:
 		1:
-			$text.text = "VERSION ALPHA 0.0.3 - WEAPON ADJUSTMENTS, INTERACTABLE OBJECTS, AND LINUX";
+			$text.text = "VERSION ALPHA 0.0.4 - PLATFORMING";
 		2:
 			$text.text = "BROUGHT TO YOU BY RED ECLIPSE STUDIO";
 		3:
