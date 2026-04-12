@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b72ogqmrm4gms" path="res://source/scenes/enemies/tutorial/dummy.tscn" id="5_t7sh1"]
 [ext_resource type="PackedScene" uid="uid://c1cbfl86s4o2w" path="res://source/scenes/props/tutorial/respawnCrate.tscn" id="6_tjwqx"]
 [ext_resource type="PackedScene" uid="uid://r0wniyac3b28" path="res://source/scenes/props/tutorial/loadoutCrate.tscn" id="7_1a1tr"]
+[ext_resource type="PackedScene" uid="uid://bmvkpdwwugwt1" path="res://source/scenes/props/tutorial/radio.tscn" id="8_1f0t5"]
 
 [node name="Tutorial" type="Node2D" unique_id=616210905]
 script = ExtResource("1_xoycb")
@@ -54,3 +55,10 @@ position = Vector2(-868, 881)
 
 [node name="ReloadCrate2" parent="." unique_id=280044963 instance=ExtResource("7_1a1tr")]
 position = Vector2(-194, 876)
+
+[node name="Crate10" parent="." unique_id=649272189 instance=ExtResource("4_1kgaq")]
+position = Vector2(3401, 633)
+
+[node name="Radio" parent="." unique_id=1376089764 instance=ExtResource("8_1f0t5")]
+position = Vector2(3395, 459)
+can_sleep = false

@@ -9,6 +9,7 @@ THE THIRD ALPHA RELEASE: LINUX BUILD, WEAPON ADJUSTMENTS, AND MORE
 
 ### Added
 - New Attack Walking Animations for Playable Characters!
+- New Radio Prop in Tutorial
 - Debug Display (Press ~ or F3 to access it in game!)
 - New crate that reloads the current scene!
 - New crate that brings you to the loadout select screen!

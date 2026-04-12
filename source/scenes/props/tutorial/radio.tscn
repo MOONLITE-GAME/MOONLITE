@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bmvkpdwwugwt1"]
+
+[ext_resource type="Script" uid="uid://bqmdqjtvw00k4" path="res://source/scripts/props/tutorial/radio.gd" id="1_4p4s8"]
+[ext_resource type="SpriteFrames" uid="uid://dpmhvjaaemsef" path="res://assets/levels/bridge/images/tutorial/radio.xml" id="1_65ay4"]
+[ext_resource type="AudioStream" uid="uid://ritlk066wina" path="res://assets/sounds/radio/radioPlaceholder.ogg" id="3_64w0t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4p4s8"]
+size = Vector2(501, 308)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_65ay4"]
+radius = 294.4962
+
+[node name="Radio" type="RigidBody2D" unique_id=1376089764]
+script = ExtResource("1_4p4s8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2142745477]
+scale = Vector2(0.462, 0.462)
+sprite_frames = ExtResource("1_65ay4")
+animation = &"radio off"
+autoplay = "radio off"
+frame_progress = 0.8496334
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1922206798]
+position = Vector2(-1.5, 1)
+scale = Vector2(0.43999732, 0.43999732)
+shape = SubResource("RectangleShape2D_4p4s8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1406741771]
+scale = Vector2(0.43999732, 0.43999732)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=544854781]
+position = Vector2(-18, -9)
+scale = Vector2(1.5600005, 0.68000007)
+shape = SubResource("CircleShape2D_65ay4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2033785300]
+stream = ExtResource("3_64w0t")
+bus = &"SFX"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

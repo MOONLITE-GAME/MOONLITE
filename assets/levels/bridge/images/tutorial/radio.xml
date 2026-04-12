@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="radio.png">
+	<!-- Created with Adobe Animate version 24.0.12.3 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="radio0000" x="0" y="0" width="519" height="314"/>
+	<SubTexture name="radio0001" x="519" y="0" width="505" height="306" frameX="-7" frameY="-4" frameWidth="519" frameHeight="314"/>
+	<SubTexture name="radio0002" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio0003" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio0004" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio0005" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio0006" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio0007" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio0008" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio0009" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio0010" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio0011" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio0012" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio0013" x="0" y="314" width="483" height="293" frameX="-18" frameY="-10" frameWidth="483" frameHeight="293"/>
+	<SubTexture name="radio off0000" x="0" y="314" width="483" height="293"/>
+</TextureAtlas>
