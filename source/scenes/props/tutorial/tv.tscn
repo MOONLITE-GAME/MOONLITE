@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c85q5v5fq0vgq"]
+
+[ext_resource type="Texture2D" uid="uid://d081qcermwgn8" path="res://assets/levels/bridge/images/tutorial/tv.png" id="1_fs3n8"]
+[ext_resource type="Script" uid="uid://844l1n25uk0o" path="res://source/scripts/props/tutorial/tv.gd" id="1_ikjhu"]
+[ext_resource type="Texture2D" uid="uid://3f8r82g0qvsw" path="res://assets/levels/bridge/images/tutorial/tvGlass.png" id="2_5wcyg"]
+[ext_resource type="VideoStream" uid="uid://caod8k38duc7s" path="res://assets/videos/easter egg video.ogv" id="3_f0ejg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wcyg"]
+size = Vector2(226.5, 183)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5wcyg"]
+radius = 147.47203
+
+[node name="Tv" type="RigidBody2D" unique_id=950352930]
+script = ExtResource("1_ikjhu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=197227018]
+offset_left = -99.0
+offset_top = -6.0
+offset_right = 70.0
+offset_bottom = 130.0
+color = Color(0.06053035, 0.06053035, 0.060530342, 1)
+
+[node name="tvBody" type="Sprite2D" parent="." unique_id=1186386647]
+scale = Vector2(0.462, 0.462)
+texture = ExtResource("1_fs3n8")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=502182514]
+offset_left = -98.00002
+offset_top = -6.0
+offset_right = 263.99997
+offset_bottom = 280.0
+scale = Vector2(0.462, 0.462)
+stream = ExtResource("3_f0ejg")
+bus = &"SFX"
+
+[node name="tvGlass" type="Sprite2D" parent="." unique_id=1145399568]
+position = Vector2(-15.000001, 60.000004)
+scale = Vector2(0.462, 0.462)
+texture = ExtResource("2_5wcyg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1993485196]
+position = Vector2(-0.25, 63)
+shape = SubResource("RectangleShape2D_5wcyg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1602275531]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1428178304]
+position = Vector2(-1, 62)
+shape = SubResource("CircleShape2D_5wcyg")
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
