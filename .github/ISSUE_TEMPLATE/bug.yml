@@ -1,0 +1,55 @@
+name: Bug Report
+description: Report a bug or an issue in the game.
+labels: ["bug"]
+title: "Bug Report: "
+body:
+  - type: dropdown
+    attributes:
+      label: Platform
+      description: Which platform are you playing on?
+      options:
+        - Newgrounds (Web/HTML5)
+        - Itch.io (Web/HTML5)
+        - Windows (Downloadable Build)
+        - Linux (Downloadable Build)
+        - Compiled from GitHub Source Code
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Browser
+      description: (Web/HTML5 users only) Which browser are you playing on?
+      options:
+        - Google Chrome
+        - Microsoft Edge
+        - Firefox
+        - Opera
+        - Safari
+        - Other (Specify in Description field)
+
+  - type: input
+    attributes:
+      label: Version
+      description: Which version are you playing on? The game version is in the bottom left corner of the title screen.
+      placeholder: ex. 0.0.2 or 0.0.3
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## Describe your bug."
+
+  - type: textarea
+    attributes:
+      label: Description (include any images, videos, errors, or crash logs)
+      description: Provide as much detail as you can. The better others understand your issue, the more they can help you!
+      placeholder: Describe your issue here...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: What steps can other people take to reliably encounter this issue?
+      placeholder: 1. Open the game...
