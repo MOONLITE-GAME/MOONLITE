@@ -16,6 +16,8 @@ THE THIRD ALPHA RELEASE: LINUX BUILD, WEAPON ADJUSTMENTS, AND MORE
 - New Dialogue System in Game! 
 	- This system utilizes the [Dialogic Plugin!](https://github.com/dialogic-godot/dialogic)
 - The Ability to Mute the Game! (Keybind is 0)
+- New `Stats.inDialogue` variable!
+	- Freezes the player's movement and actions until set to false! Perfect for cutscenes (and of course, dialogue!)
 
 ### Changed
 - Hammer of Zoomin' has been renamed to "Rebounder"
