@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://fgnxdqefplmo" path="res://source/scripts/player/player.gd" id="1_kb210"]
 [ext_resource type="SpriteFrames" uid="uid://cuo8spxrlu6ku" path="res://assets/shared/images/characters/playable/moonlite.xml" id="1_uevig"]
-[ext_resource type="Script" uid="uid://cy74lofx67fxd" path="res://source/scripts/player/camera.gd" id="3_8oeec"]
 [ext_resource type="Script" uid="uid://bwwscuo1vocsh" path="res://source/scripts/items/weapons/baseWeapon.gd" id="3_ysf2y"]
 [ext_resource type="Script" uid="uid://cmeu8n4ljkex5" path="res://source/scripts/items/basicItem.gd" id="4_h4f0s"]
 [ext_resource type="PackedScene" uid="uid://dxidxd1nnsv6n" path="res://source/scenes/menus/pauseMenu.tscn" id="5_h4f0s"]
@@ -25,9 +24,6 @@ animation = &"idle right"
 position = Vector2(-18, 3)
 shape = SubResource("CapsuleShape2D_uevig")
 debug_color = Color(0.63746715, 0.24641398, 0.9999998, 0.41960785)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=99910279]
-script = ExtResource("3_8oeec")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=217296495]
 
