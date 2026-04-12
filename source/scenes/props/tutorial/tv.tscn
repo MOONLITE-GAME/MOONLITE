@@ -3,13 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://d081qcermwgn8" path="res://assets/levels/bridge/images/tutorial/tv.png" id="1_fs3n8"]
 [ext_resource type="Script" uid="uid://844l1n25uk0o" path="res://source/scripts/props/tutorial/tv.gd" id="1_ikjhu"]
 [ext_resource type="Texture2D" uid="uid://3f8r82g0qvsw" path="res://assets/levels/bridge/images/tutorial/tvGlass.png" id="2_5wcyg"]
-[ext_resource type="VideoStream" uid="uid://caod8k38duc7s" path="res://assets/videos/easter egg video.ogv" id="3_f0ejg"]
+[ext_resource type="VideoStream" uid="uid://cm68p1vlaifgg" path="res://assets/videos/test.ogv" id="3_ikjhu"]
+[ext_resource type="FontFile" uid="uid://cyiuhqffedas" path="res://assets/fonts/NextUps.ttf" id="5_36nla"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wcyg"]
-size = Vector2(226.5, 183)
+size = Vector2(226.5, 180.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5wcyg"]
-radius = 147.47203
+radius = 226.00885
 
 [node name="Tv" type="RigidBody2D" unique_id=950352930]
 script = ExtResource("1_ikjhu")
@@ -31,7 +32,7 @@ offset_top = -6.0
 offset_right = 263.99997
 offset_bottom = 280.0
 scale = Vector2(0.462, 0.462)
-stream = ExtResource("3_f0ejg")
+stream = ExtResource("3_ikjhu")
 bus = &"SFX"
 
 [node name="tvGlass" type="Sprite2D" parent="." unique_id=1145399568]
@@ -40,7 +41,7 @@ scale = Vector2(0.462, 0.462)
 texture = ExtResource("2_5wcyg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1993485196]
-position = Vector2(-0.25, 63)
+position = Vector2(-0.25, 61.75)
 shape = SubResource("RectangleShape2D_5wcyg")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1602275531]
@@ -48,6 +49,23 @@ shape = SubResource("RectangleShape2D_5wcyg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1428178304]
 position = Vector2(-1, 62)
 shape = SubResource("CircleShape2D_5wcyg")
+
+[node name="interactText" type="Label" parent="." unique_id=968054917]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.5
+offset_top = -116.5
+offset_right = 110.5
+offset_bottom = -93.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_36nla")
+theme_override_font_sizes/font_size = 25
+text = "PRESS E OR ENTER TO INTERACT"
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

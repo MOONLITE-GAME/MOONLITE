@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 
 	match rndmString:
 		1:
-			$text.text = "VERSION ALPHA 0.0.3 - LINUX AND SOME OTHER SHIT PROBABLY";
+			$text.text = "VERSION ALPHA 0.0.3 - WEAPON ADJUSTMENTS, INTERACTABLE OBJECTS, AND LINUX";
 		2:
 			$text.text = "BROUGHT TO YOU BY RED ECLIPSE STUDIO";
 		3:

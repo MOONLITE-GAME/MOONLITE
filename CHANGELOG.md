@@ -4,12 +4,12 @@ All notable changes will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.03] - 2026-04-??
-THE THIRD ALPHA RELEASE: LINUX BUILD, WEAPON ADJUSTMENTS, AND MORE
+## [0.03] - 2026-04-11
+THE THIRD ALPHA RELEASE: LINUX BUILD, WEAPON ADJUSTMENTS, AND INTERACTABLE PROPS
 
 ### Added
 - New Attack Walking Animations for Playable Characters!
-- New Radio Prop in Tutorial
+- New Interactable Props in Tutorial
 - Debug Display (Press ~ or F3 to access it in game!)
 - New crate that reloads the current scene!
 - New crate that brings you to the loadout select screen!
