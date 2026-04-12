@@ -30,6 +30,7 @@ Volume="*uid://c73r6mshopcn2"
 SaveIcon="*uid://datb8fgwhqjj4"
 Dash="*uid://dgf5c08bcodv3"
 Dialogic="*uid://ds2q0uclmolvu"
+DebugDisplay="*uid://dtt4andy8x6y7"
 
 [dialogic]
 

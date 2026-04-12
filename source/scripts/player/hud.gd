@@ -7,12 +7,7 @@ func _ready() -> void:
 	$charName.text = Stats.charName;
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("DebugDisplay"):
-		$debugDisplay/AudioStreamPlayer.play();
-		if $debugDisplay.visible:
-			$debugDisplay.visible = false;
-		else:
-			$debugDisplay.visible = true;
+	pass;
 	
 func setHealth(health):
 	$healthBar.value = health;
