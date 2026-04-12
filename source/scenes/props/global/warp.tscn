@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://co7y7qr47o23p"]
+
+[ext_resource type="Script" uid="uid://bh3fux1r1ilfi" path="res://source/scripts/props/global/warp.gd" id="1_dr60m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkeaa"]
+size = Vector2(301, 213.85352)
+
+[node name="warp" type="Area2D" unique_id=941278625]
+script = ExtResource("1_dr60m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1955434069]
+position = Vector2(2.9802322e-08, -3.0517578e-05)
+scale = Vector2(0.6985697, 0.6985697)
+shape = SubResource("RectangleShape2D_jkeaa")
+debug_color = Color(0.23210415, 0.56168556, 0, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

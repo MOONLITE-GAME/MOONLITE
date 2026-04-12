@@ -9,9 +9,16 @@
 [ext_resource type="PackedScene" uid="uid://r0wniyac3b28" path="res://source/scenes/props/tutorial/loadoutCrate.tscn" id="7_1a1tr"]
 [ext_resource type="PackedScene" uid="uid://bmvkpdwwugwt1" path="res://source/scenes/props/tutorial/radio.tscn" id="8_1f0t5"]
 [ext_resource type="PackedScene" uid="uid://c85q5v5fq0vgq" path="res://source/scenes/props/tutorial/tv.tscn" id="9_t2m6m"]
+[ext_resource type="PackedScene" uid="uid://brtaeonitllg0" path="res://source/scenes/props/tutorial/door.tscn" id="10_efh0g"]
 
 [node name="Tutorial" type="Node2D" unique_id=616210905]
 script = ExtResource("1_xoycb")
+
+[node name="Door" parent="." unique_id=941278625 instance=ExtResource("10_efh0g")]
+position = Vector2(2279, 803)
+targetRoom = "res://source/scenes/levels/bridge/platformTest.tscn"
+targetX = 100.0
+targetY = 100.0
 
 [node name="Floor" parent="." unique_id=622707432 instance=ExtResource("2_122ua")]
 position = Vector2(4152, 1138)
