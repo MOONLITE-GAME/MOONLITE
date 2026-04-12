@@ -51,6 +51,7 @@ func saveStats():
 	volume = AudioServer.get_bus_volume_db(Volume.index);
 	data.volume = volume;
 	data.fullscreen = fullscreen;
+	data.freecam = Camera.freeCam;
 
 	var json_string = JSON.stringify(data);
 	file.store_string(json_string);
@@ -103,6 +104,12 @@ func loadStats():
 			fullscreen = data.fullscreen;
 		else:
 			fullscreen = false;
+			saveStats();
+			
+		if "freecam" in data:
+			Camera.freeCam = data.freecam;
+		else:
+			Camera.freeCam = false;
 			saveStats();
 
 	else:
