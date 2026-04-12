@@ -23,6 +23,7 @@ animation = &"idle right"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=466554286]
 position = Vector2(-18, 3)
 shape = SubResource("CapsuleShape2D_uevig")
+debug_color = Color(0.63746715, 0.24641398, 0.9999998, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=99910279]
 
