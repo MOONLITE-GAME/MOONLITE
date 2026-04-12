@@ -11,6 +11,8 @@ func _ready() -> void:
 	Camera.limit_right = 10000000;
 	Camera.limit_left = -10000000;
 	Camera.limit_top = -10000000;
+	Camera.zoom = Vector2(1,1);
+	Camera.position = Vector2(960, 540);
 
 func _process(delta: float) -> void:
 	$text.position.x -= textSpeed * delta;

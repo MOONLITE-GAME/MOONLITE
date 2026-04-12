@@ -10,7 +10,7 @@ script = ExtResource("1_w6ads")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1889839500]
 offset_right = 275.0
-offset_bottom = 144.0
+offset_bottom = 183.0
 color = Color(0.38039216, 0.38039216, 0.38039216, 0.54901963)
 
 [node name="FPS" type="Label" parent="." unique_id=260947426]
@@ -28,10 +28,18 @@ theme_override_fonts/font = ExtResource("1_km6th")
 theme_override_font_sizes/font_size = 25
 text = "X:"
 
-[node name="InDialogue" type="Label" parent="." unique_id=1497811409]
+[node name="CamCoords" type="Label" parent="." unique_id=946535579]
 offset_top = 96.0
+offset_right = 147.0
+offset_bottom = 119.0
+theme_override_fonts/font = ExtResource("1_km6th")
+theme_override_font_sizes/font_size = 25
+text = "Cam Coords"
+
+[node name="InDialogue" type="Label" parent="." unique_id=1497811409]
+offset_top = 144.0
 offset_right = 176.0
-offset_bottom = 140.0
+offset_bottom = 188.0
 theme_override_fonts/font = ExtResource("1_km6th")
 theme_override_font_sizes/font_size = 25
 text = "Dialogue"

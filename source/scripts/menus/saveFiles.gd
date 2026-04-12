@@ -6,6 +6,8 @@ func _ready() -> void:
 	AudioServer.set_bus_volume_db(Volume.index, -10.0);
 	MusicEngine.loadSong("recordKeeper");
 	Stats.savePath = "user://Save1.json";
+	Camera.zoom = Vector2(1,1);
+	Camera.position = Vector2(960, 540);
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiUP"):
