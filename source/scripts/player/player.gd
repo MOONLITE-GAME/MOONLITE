@@ -20,6 +20,7 @@ func _ready() -> void:
 		Stats.health = 100;
 		Stats.saveStats();
 	Stats.attacking = false;
+	Stats.canClimb = false;
 	loadChar();
 	getWeapon();
 

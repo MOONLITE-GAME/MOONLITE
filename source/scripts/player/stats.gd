@@ -37,6 +37,7 @@ var attacking:bool = false;
 var volume:float;
 var inDialogue:bool = false;
 var moving:bool;
+var canClimb:bool = false;
 
 func saveStats():
 	SaveIcon.showIcon();
