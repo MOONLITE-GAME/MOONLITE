@@ -26,6 +26,8 @@ var dodgeLeft:String;
 var dodgeRight:String;
 var attackRunLeft:String;
 var attackRunRight:String;
+var slideLeft:String;
+var slideRight:String;
 
 # vars for general data
 var playerX:float;
@@ -171,6 +173,10 @@ func loadCharJSON():
 			attackRunLeft = data.attackRunLeft;
 		if "attackRunRight" in data:
 			attackRunRight = data.attackRunRight;
+		if "slideLeft" in data:
+			slideLeft = data.slideLeft;
+		if "slideRight" in data:
+			slideRight = data.slideRight; 
 
 	else:
 		print("File does not exist.");
