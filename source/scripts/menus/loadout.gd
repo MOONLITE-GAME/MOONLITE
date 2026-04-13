@@ -6,6 +6,7 @@ var maxWeapon:int = 3;
 func _ready() -> void:
 	curWeapon = 1;
 	$weaponIcon/text.text = Stats.weapon;
+	Camera.position = Vector2(960, 540);
 
 func _process(_delta: float) -> void:
 	$weaponIcon/text.text = Stats.weapon;

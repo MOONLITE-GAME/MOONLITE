@@ -16,3 +16,15 @@ scale = Vector2(7.4799986, 1)
 
 [node name="ReloadCrate" parent="." unique_id=189451403 instance=ExtResource("4_gl14v")]
 position = Vector2(136, 862)
+
+[node name="Floor2" parent="." unique_id=1336654627 instance=ExtResource("2_1ncyg")]
+position = Vector2(1970, 788)
+scale = Vector2(0.48000002, 0.48000002)
+
+[node name="Floor3" parent="." unique_id=1829516737 instance=ExtResource("2_1ncyg")]
+position = Vector2(3014, 567)
+scale = Vector2(0.48000002, 0.48000002)
+
+[node name="Floor4" parent="." unique_id=1019272721 instance=ExtResource("2_1ncyg")]
+position = Vector2(4088, 91)
+scale = Vector2(0.48000002, 0.48000002)

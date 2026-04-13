@@ -3,7 +3,7 @@ extends CharacterBody2D
 var SPEED:float;
 const dashSpeed = 3000.0;
 const moveSpeed = 800.0;
-const slideSpeed = 1000.0;
+const slideSpeed = 3000.0;
 const JUMP_VELOCITY = -600.0
 const dodgeDuration = 0.2;
 var dir:String;
@@ -122,7 +122,8 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("Dash") and not Stats.inDialogue:
 		Dash.dodging = true;
-		
+	
+	# TODO: maybe don't hardcode this stuff and put it in a json file?
 	if Slide.sliding:
 		$CollisionShape2D.scale.y = 0.409;
 		$CollisionShape2D.position.y = 108.682;
