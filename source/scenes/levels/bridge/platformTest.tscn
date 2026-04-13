@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://0plg3jli2b86" path="res://source/scenes/player/player.tscn" id="1_ujdbb"]
 [ext_resource type="PackedScene" uid="uid://bimx1pu04h7ls" path="res://source/scenes/props/tutorial/floor.tscn" id="2_1ncyg"]
 [ext_resource type="PackedScene" uid="uid://c1cbfl86s4o2w" path="res://source/scenes/props/tutorial/respawnCrate.tscn" id="4_gl14v"]
+[ext_resource type="PackedScene" uid="uid://b3ocxukv16fku" path="res://source/scenes/props/tutorial/climbableFloor.tscn" id="5_sjq5b"]
 
 [node name="PlatformTest" type="Node2D" unique_id=619799371]
 script = ExtResource("1_ixnc4")
@@ -17,14 +18,14 @@ scale = Vector2(7.4799986, 1)
 [node name="ReloadCrate" parent="." unique_id=189451403 instance=ExtResource("4_gl14v")]
 position = Vector2(136, 862)
 
-[node name="Floor2" parent="." unique_id=1336654627 instance=ExtResource("2_1ncyg")]
-position = Vector2(1970, 799)
-scale = Vector2(0.40000004, 0.48000002)
+[node name="ClimbableFloor" parent="." unique_id=798359888 instance=ExtResource("5_sjq5b")]
+position = Vector2(4435, 431)
+scale = Vector2(5.640005, 1)
 
-[node name="Floor3" parent="." unique_id=1829516737 instance=ExtResource("2_1ncyg")]
-position = Vector2(3014, 521)
-scale = Vector2(0.48000002, 0.48000002)
+[node name="ClimbableFloor2" parent="." unique_id=1274407608 instance=ExtResource("5_sjq5b")]
+position = Vector2(1966, 786)
+scale = Vector2(6.0000052, 1)
 
-[node name="Floor4" parent="." unique_id=1019272721 instance=ExtResource("2_1ncyg")]
-position = Vector2(4088, 91)
-scale = Vector2(0.48000002, 0.48000002)
+[node name="ClimbableFloor3" parent="." unique_id=632215849 instance=ExtResource("5_sjq5b")]
+position = Vector2(3014, 515)
+scale = Vector2(7.040005, 1)

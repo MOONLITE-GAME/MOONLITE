@@ -35,6 +35,9 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play(Stats.dodgeLeft);
 			else:
 				$AnimatedSprite2D.play(Stats.dodgeRight);
+		
+		if Input.is_action_just_pressed("Jump") and Stats.canClimb and not Stats.inDialogue and not Slide.sliding:
+			velocity.y = JUMP_VELOCITY;
 
 	SPEED = moveSpeed;
 	
