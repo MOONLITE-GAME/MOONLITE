@@ -9,6 +9,7 @@ const dodgeDuration = 0.2;
 var dir:String;
 var defaultAFKTime:float = 60.0;
 var afkEasterEggTime:float = defaultAFKTime;
+var stuck:bool = false;
 
 func _ready() -> void:
 	dir = "Right";
@@ -30,7 +31,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta;
 		
-		if not Stats.attacking and not Dash.dodging and not Slide.sliding and not Stats.inDialogue:
+		if not Stats.attacking and not Dash.dodging and not Slide.sliding and not Stats.inDialogue and not stuck:
 			if dir == "Left":
 				$AnimatedSprite2D.play(Stats.dodgeLeft);
 			else:
@@ -38,14 +39,14 @@ func _physics_process(delta: float) -> void:
 
 	SPEED = moveSpeed;
 	
-	if Input.is_action_just_pressed("Jump") and is_on_floor() and not Stats.inDialogue:
+	if Input.is_action_just_pressed("Jump") and is_on_floor() and not Stats.inDialogue and not Slide.sliding:
 		velocity.y = JUMP_VELOCITY
 
 	var direction := Input.get_axis("Left", "Right")
 	if direction and not Stats.inDialogue:
 		Stats.moving = true;
 		velocity.x = direction * SPEED
-		if not Stats.attacking and not Dash.dodging and not Slide.sliding:
+		if not Stats.attacking and not Dash.dodging and not Slide.sliding and not stuck:
 			if dir == "Left": 
 				$AnimatedSprite2D.play(Stats.runLeft);
 			else:
@@ -53,7 +54,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		Stats.moving = false;
 		velocity.x = move_toward(velocity.x, 0, SPEED);
-		if is_on_floor() and not Stats.attacking:
+		if is_on_floor() and not Stats.attacking and not stuck:
 			if dir == "Left":
 				$AnimatedSprite2D.play(Stats.idleLeft);
 			else:
@@ -129,9 +130,22 @@ func _physics_process(delta: float) -> void:
 		$CollisionShape2D.position.y = 108.682;
 		$AnimatedSprite2D.position.y = 90.909
 	else: # TODO: change this later on if we implement anything else that changes hitbox size
-		$CollisionShape2D.scale.y = 1;
-		$CollisionShape2D.position.y = -36.773;
-		$AnimatedSprite2D.position.y = 0;
+		if stuck:
+			$CollisionShape2D.scale.y = 0.409;
+			$CollisionShape2D.position.y = 108.682;
+			if dir == "Left": 
+				$AnimatedSprite2D.play(Stats.slideLeft);
+			else: 
+				$AnimatedSprite2D.play(Stats.slideRight);
+		else:
+			$CollisionShape2D.scale.y = 1;
+			$CollisionShape2D.position.y = -36.773;
+			$AnimatedSprite2D.position.y = 0;
+		
+		if is_on_ceiling():
+			stuck = true;
+		else:
+			stuck = false;
 		
 	Stats.playerX = position.x; # TODO: Make sure these don't break the game when we implement warps to other rooms.
 	Stats.playerY = position.y; # it happened with AGWYPaaB and broke some shit lmao
