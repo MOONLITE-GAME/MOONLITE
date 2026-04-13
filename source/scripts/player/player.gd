@@ -123,11 +123,20 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dash") and not Stats.inDialogue:
 		Dash.dodging = true;
 		
+	if Slide.sliding:
+		$CollisionShape2D.scale.y = 0.409;
+		$CollisionShape2D.position.y = 108.682;
+		$AnimatedSprite2D.position.y = 90.909
+	else: # TODO: change this later on if we implement anything else that changes hitbox size
+		$CollisionShape2D.scale.y = 1;
+		$CollisionShape2D.position.y = -36.773;
+		$AnimatedSprite2D.position.y = 0;
+		
 	Stats.playerX = position.x; # TODO: Make sure these don't break the game when we implement warps to other rooms.
 	Stats.playerY = position.y; # it happened with AGWYPaaB and broke some shit lmao
 	
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Slide"):
+	if event.is_action_pressed("Slide") and not Stats.inDialogue and is_on_floor():
 		Slide.sliding = true;
 		Slide.slide();
 

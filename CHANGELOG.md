@@ -10,6 +10,8 @@ THE FORTH ALPHA RELEASE: PLATFORMING
 ### Added
 - New room with platforming stuff!
 - New Warp object!
+- New Slide Mechanic!
+	- This brings two new animations for playable characters: `slideLeft` and `slideRight`
 
 ### Changed
 - debugDisplay is now a global scene
