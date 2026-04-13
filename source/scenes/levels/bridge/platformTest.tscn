@@ -18,7 +18,7 @@ scale = Vector2(7.4799986, 1)
 position = Vector2(136, 862)
 
 [node name="Floor2" parent="." unique_id=1336654627 instance=ExtResource("2_1ncyg")]
-position = Vector2(1970, 798)
+position = Vector2(1970, 799)
 scale = Vector2(0.40000004, 0.48000002)
 
 [node name="Floor3" parent="." unique_id=1829516737 instance=ExtResource("2_1ncyg")]
