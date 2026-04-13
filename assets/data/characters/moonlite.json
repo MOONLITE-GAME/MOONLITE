@@ -12,5 +12,6 @@
 	"dodgeRight": "dodge right",
 	"attackRunLeft": "attack run left",
 	"attackRunRight": "attack run right",
-	"back": "back"
+	"slideLeft": "slide left",
+	"slideRight": "slide right"
 }
