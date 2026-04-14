@@ -1,8 +1,32 @@
 extends Control
 
-func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("uiEXIT"):
-		get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
+var page:String = "Video";
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("uiEXIT"):
+		_on_exit_pressed();
+		
+	match page:
+		"Video":
+			$"Video Settings".visible = true;
+			$"Audio Settings".visible = false;
+			$"Control Settings".visible = false;
+			$"Other Settings".visible = false;
+		"Audio":
+			$"Video Settings".visible = false;
+			$"Audio Settings".visible = true;
+			$"Control Settings".visible = false;
+			$"Other Settings".visible = false;
+		"Controls":
+			$"Video Settings".visible = false;
+			$"Audio Settings".visible = false;
+			$"Control Settings".visible = true;
+			$"Other Settings".visible = false;
+		"Other":
+			$"Video Settings".visible = false;
+			$"Audio Settings".visible = false;
+			$"Control Settings".visible = false;
+			$"Other Settings".visible = true;
 
 func _on_fullscreen_toggled(toggled_on: bool) -> void:
 	Stats.fullscreen = toggled_on;
@@ -13,6 +37,18 @@ func _on_check_box_toggled(toggled_on: bool) -> void:
 	Camera.freeCam = toggled_on;
 	Stats.saveStats();
 	Stats.loadStats();
+
+func _on_video_pressed() -> void:
+	page = "Video";
+
+func _on_audio_pressed() -> void:
+	page = "Audio";
+
+func _on_controls_pressed() -> void:
+	page = "Controls";
+
+func _on_other_pressed() -> void:
+	page = "Other";
 
 func _on_exit_pressed() -> void:
 	get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");

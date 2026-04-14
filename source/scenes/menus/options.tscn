@@ -109,6 +109,7 @@ texture_pressed = ExtResource("16_pxg2a")
 texture_hover = ExtResource("17_ft7rn")
 
 [node name="Video Settings" type="VBoxContainer" parent="." unique_id=180917000]
+visible = false
 layout_mode = 0
 offset_left = -600.0
 offset_top = -192.0
@@ -133,6 +134,70 @@ theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 75
 text = "FREECAM"
 
+[node name="Audio Settings" type="VBoxContainer" parent="." unique_id=201411520]
+visible = false
+layout_mode = 0
+offset_left = -600.0
+offset_top = -192.0
+offset_right = -560.0
+offset_bottom = -152.0
+
+[node name="Audio" type="Label" parent="Audio Settings" unique_id=152418959]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dc1t4")
+theme_override_font_sizes/font_size = 50
+text = "AUDIO SETTINGS"
+
+[node name="Label" type="Label" parent="Audio Settings" unique_id=1764126240]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
+theme_override_font_sizes/font_size = 40
+text = "There's nothing here... Nothing at all..."
+
+[node name="Control Settings" type="VBoxContainer" parent="." unique_id=643240463]
+visible = false
+layout_mode = 0
+offset_left = -600.0
+offset_top = -192.0
+offset_right = -560.0
+offset_bottom = -152.0
+
+[node name="Controls" type="Label" parent="Control Settings" unique_id=1963443129]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dc1t4")
+theme_override_font_sizes/font_size = 50
+text = "CONTROL SETTINGS"
+
+[node name="Label" type="Label" parent="Control Settings" unique_id=571480409]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
+theme_override_font_sizes/font_size = 40
+text = "There's nothing here... Nothing at all..."
+
+[node name="Other Settings" type="VBoxContainer" parent="." unique_id=856083485]
+visible = false
+layout_mode = 0
+offset_left = -600.0
+offset_top = -192.0
+offset_right = -560.0
+offset_bottom = -152.0
+
+[node name="Video" type="Label" parent="Other Settings" unique_id=1032763313]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dc1t4")
+theme_override_font_sizes/font_size = 50
+text = "OTHER SETTINGS"
+
+[node name="Label" type="Label" parent="Other Settings" unique_id=794862468]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
+theme_override_font_sizes/font_size = 40
+text = "There's nothing here... Nothing at all..."
+
+[connection signal="pressed" from="video" to="." method="_on_video_pressed"]
+[connection signal="pressed" from="audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="other" to="." method="_on_other_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="toggled" from="Video Settings/fullscreen" to="." method="_on_fullscreen_toggled"]
 [connection signal="toggled" from="Video Settings/CheckBox" to="." method="_on_check_box_toggled"]
