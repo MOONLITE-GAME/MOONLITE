@@ -1,0 +1,29 @@
+[gd_resource type="Theme" format=3 uid="uid://dfx6nngf58wpr"]
+
+[ext_resource type="Texture2D" uid="uid://cbvydhl3sp5j1" path="res://assets/images/menus/options/buttonsNormal/bar.png" id="1_0xmom"]
+[ext_resource type="Texture2D" uid="uid://b2j4gk8oewsy2" path="res://assets/images/menus/options/buttonsHover/bar.png" id="2_hseon"]
+[ext_resource type="Texture2D" uid="uid://sn7dyvpm4r4o" path="res://assets/images/menus/options/buttonsPressed/bar.png" id="3_vei30"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_x5qme"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ft7rn"]
+texture = ExtResource("1_0xmom")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nn5yq"]
+texture = ExtResource("2_hseon")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_msntg"]
+texture = ExtResource("3_vei30")
+
+[resource]
+VScrollBar/icons/decrement = SubResource("ImageTexture_x5qme")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_x5qme")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_x5qme")
+VScrollBar/icons/increment = SubResource("ImageTexture_x5qme")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_x5qme")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_x5qme")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_ft7rn")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_nn5yq")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_msntg")
+VScrollBar/styles/scroll = null
+VScrollBar/styles/scroll_focus = null

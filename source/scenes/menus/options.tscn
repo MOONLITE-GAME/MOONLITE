@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://do3nfu0i10drk" path="res://source/scripts/menus/options.gd" id="1_dc1t4"]
 [ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="1_skxkw"]
-[ext_resource type="FontFile" uid="uid://cyiuhqffedas" path="res://assets/fonts/NextUps.ttf" id="2_dc1t4"]
 [ext_resource type="Texture2D" uid="uid://d2vygug8o4lc1" path="res://assets/images/menus/options/buttonsNormal/video.png" id="3_bspxn"]
 [ext_resource type="Texture2D" uid="uid://bfonl2dc0pmyq" path="res://assets/images/menus/options/buttonsNormal/audio.png" id="4_6o5yo"]
 [ext_resource type="Texture2D" uid="uid://dl17x2016vhqh" path="res://assets/images/menus/options/buttonsPressed/video.png" id="4_dt2iu"]
@@ -19,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://832lwhjnee1v" path="res://assets/images/menus/options/buttonsHover/other.png" id="14_f0k05"]
 [ext_resource type="Texture2D" uid="uid://dklmx00fn5opr" path="res://assets/images/menus/options/buttonsPressed/exit.png" id="16_pxg2a"]
 [ext_resource type="Texture2D" uid="uid://chf5ba80743fw" path="res://assets/images/menus/options/buttonsHover/exit.png" id="17_ft7rn"]
+[ext_resource type="Theme" uid="uid://dfx6nngf58wpr" path="res://assets/themes/scrollbar.tres" id="18_ndxkh"]
 
 [node name="Options" type="Control" unique_id=1032242193]
 layout_mode = 3
@@ -108,87 +108,103 @@ texture_normal = ExtResource("7_awilf")
 texture_pressed = ExtResource("16_pxg2a")
 texture_hover = ExtResource("17_ft7rn")
 
-[node name="Video Settings" type="VBoxContainer" parent="." unique_id=180917000]
+[node name="Video Settings" type="ScrollContainer" parent="." unique_id=72996900]
 visible = false
 layout_mode = 0
 offset_left = -600.0
-offset_top = -192.0
-offset_right = 316.0
-offset_bottom = 20.0
+offset_top = -238.0
+offset_right = 594.0
+offset_bottom = 527.0
+theme = ExtResource("18_ndxkh")
 
-[node name="Video" type="Label" parent="Video Settings" unique_id=1829128668]
+[node name="VBoxContainer" type="VBoxContainer" parent="Video Settings" unique_id=1667933955]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_dc1t4")
-theme_override_font_sizes/font_size = 50
+
+[node name="Video" type="Label" parent="Video Settings/VBoxContainer" unique_id=1829128668]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
+theme_override_font_sizes/font_size = 75
 text = "VIDEO SETTINGS"
 
-[node name="fullscreen" type="CheckBox" parent="Video Settings" unique_id=1696093672]
+[node name="fullscreen" type="CheckBox" parent="Video Settings/VBoxContainer" unique_id=1696093672]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 75
 text = "FULLSCREEN"
 
-[node name="CheckBox" type="CheckBox" parent="Video Settings" unique_id=2083739700]
+[node name="freecam" type="CheckBox" parent="Video Settings/VBoxContainer" unique_id=2083739700]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 75
 text = "FREECAM"
 
-[node name="Audio Settings" type="VBoxContainer" parent="." unique_id=201411520]
+[node name="Audio Settings" type="ScrollContainer" parent="." unique_id=1981296859]
 visible = false
 layout_mode = 0
 offset_left = -600.0
-offset_top = -192.0
-offset_right = -560.0
-offset_bottom = -152.0
+offset_top = -238.0
+offset_right = 597.0
+offset_bottom = 539.0
+theme = ExtResource("18_ndxkh")
 
-[node name="Audio" type="Label" parent="Audio Settings" unique_id=152418959]
+[node name="VBoxContainer" type="VBoxContainer" parent="Audio Settings" unique_id=798788281]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_dc1t4")
-theme_override_font_sizes/font_size = 50
+
+[node name="Audio" type="Label" parent="Audio Settings/VBoxContainer" unique_id=152418959]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
+theme_override_font_sizes/font_size = 75
 text = "AUDIO SETTINGS"
 
-[node name="Label" type="Label" parent="Audio Settings" unique_id=1764126240]
+[node name="Label" type="Label" parent="Audio Settings/VBoxContainer" unique_id=1764126240]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 40
 text = "There's nothing here... Nothing at all..."
 
-[node name="Control Settings" type="VBoxContainer" parent="." unique_id=643240463]
+[node name="Control Settings" type="ScrollContainer" parent="." unique_id=206442280]
 visible = false
 layout_mode = 0
 offset_left = -600.0
-offset_top = -192.0
-offset_right = -560.0
-offset_bottom = -152.0
+offset_top = -238.0
+offset_right = 599.0
+offset_bottom = 538.0
+theme = ExtResource("18_ndxkh")
 
-[node name="Controls" type="Label" parent="Control Settings" unique_id=1963443129]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control Settings" unique_id=679435637]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_dc1t4")
-theme_override_font_sizes/font_size = 50
+
+[node name="Controls" type="Label" parent="Control Settings/VBoxContainer" unique_id=1963443129]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
+theme_override_font_sizes/font_size = 75
 text = "CONTROL SETTINGS"
 
-[node name="Label" type="Label" parent="Control Settings" unique_id=571480409]
+[node name="Label" type="Label" parent="Control Settings/VBoxContainer" unique_id=571480409]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 40
 text = "There's nothing here... Nothing at all..."
 
-[node name="Other Settings" type="VBoxContainer" parent="." unique_id=856083485]
+[node name="Other Settings" type="ScrollContainer" parent="." unique_id=1966454781]
 visible = false
 layout_mode = 0
 offset_left = -600.0
-offset_top = -192.0
-offset_right = -560.0
-offset_bottom = -152.0
+offset_top = -238.0
+offset_right = 590.0
+offset_bottom = 536.0
+theme = ExtResource("18_ndxkh")
 
-[node name="Video" type="Label" parent="Other Settings" unique_id=1032763313]
+[node name="VBoxContainer" type="VBoxContainer" parent="Other Settings" unique_id=1273442449]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_dc1t4")
-theme_override_font_sizes/font_size = 50
+
+[node name="Video" type="Label" parent="Other Settings/VBoxContainer" unique_id=1032763313]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
+theme_override_font_sizes/font_size = 75
 text = "OTHER SETTINGS"
 
-[node name="Label" type="Label" parent="Other Settings" unique_id=794862468]
+[node name="Label" type="Label" parent="Other Settings/VBoxContainer" unique_id=794862468]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 40
@@ -199,5 +215,5 @@ text = "There's nothing here... Nothing at all..."
 [connection signal="pressed" from="controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="other" to="." method="_on_other_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
-[connection signal="toggled" from="Video Settings/fullscreen" to="." method="_on_fullscreen_toggled"]
-[connection signal="toggled" from="Video Settings/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="toggled" from="Video Settings/VBoxContainer/fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="Video Settings/VBoxContainer/freecam" to="." method="_on_check_box_toggled"]

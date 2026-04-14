@@ -12,6 +12,7 @@ THE FORTH ALPHA RELEASE: PLATFORMING
 - New Warp object!
 - New Slide Mechanic!
 	- This brings two new animations for playable characters: `slideLeft` and `slideRight`
+- New Options Menu Revamp!
 
 ### Changed
 - debugDisplay is now a global scene
