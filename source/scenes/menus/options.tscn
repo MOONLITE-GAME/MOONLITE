@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bgam0rnr0j6r"]
 
 [ext_resource type="Script" uid="uid://do3nfu0i10drk" path="res://source/scripts/menus/options.gd" id="1_dc1t4"]
+[ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="1_skxkw"]
 [ext_resource type="FontFile" uid="uid://cyiuhqffedas" path="res://assets/fonts/NextUps.ttf" id="2_dc1t4"]
 [ext_resource type="Texture2D" uid="uid://d2vygug8o4lc1" path="res://assets/images/menus/options/buttonsNormal/video.png" id="3_bspxn"]
 [ext_resource type="Texture2D" uid="uid://bfonl2dc0pmyq" path="res://assets/images/menus/options/buttonsNormal/audio.png" id="4_6o5yo"]
@@ -107,41 +108,31 @@ texture_normal = ExtResource("7_awilf")
 texture_pressed = ExtResource("16_pxg2a")
 texture_hover = ExtResource("17_ft7rn")
 
-[node name="fullscreen" type="CheckBox" parent="." unique_id=1696093672]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -471.5
-offset_top = -110.5
-offset_right = 471.5
-offset_bottom = -33.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Video Settings" type="VBoxContainer" parent="." unique_id=180917000]
+layout_mode = 0
+offset_left = -600.0
+offset_top = -192.0
+offset_right = 316.0
+offset_bottom = 20.0
+
+[node name="Video" type="Label" parent="Video Settings" unique_id=1829128668]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_dc1t4")
+theme_override_font_sizes/font_size = 50
+text = "VIDEO SETTINGS"
+
+[node name="fullscreen" type="CheckBox" parent="Video Settings" unique_id=1696093672]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 75
 text = "FULLSCREEN"
 
-[node name="CheckBox" type="CheckBox" parent="." unique_id=2083739700]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -326.0
-offset_top = 33.5
-offset_right = 326.0
-offset_bottom = 110.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_dc1t4")
+[node name="CheckBox" type="CheckBox" parent="Video Settings" unique_id=2083739700]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 75
 text = "FREECAM"
 
-[connection signal="toggled" from="fullscreen" to="." method="_on_fullscreen_toggled"]
-[connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="toggled" from="Video Settings/fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="Video Settings/CheckBox" to="." method="_on_check_box_toggled"]
