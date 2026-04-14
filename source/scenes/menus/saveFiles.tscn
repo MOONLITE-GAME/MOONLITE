@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://vf1kpp7rgphe" path="res://source/scripts/menus/saveFiles.gd" id="1_4y2gq"]
 [ext_resource type="Texture2D" uid="uid://drp665nfyfkkj" path="res://assets/images/menus/purp.png" id="2_2a0hl"]
+[ext_resource type="Texture2D" uid="uid://bmk6lsocx2yp7" path="res://assets/images/menus/background.png" id="2_xr8q8"]
 [ext_resource type="SpriteFrames" uid="uid://b6ret61hpny0p" path="res://assets/images/menus/saveFiles/save1.xml" id="3_xr8q8"]
 [ext_resource type="SpriteFrames" uid="uid://dceiupp78jme4" path="res://assets/images/menus/saveFiles/save2.xml" id="4_1ajv1"]
 [ext_resource type="SpriteFrames" uid="uid://ckyr0a0ncql8k" path="res://assets/images/menus/saveFiles/save3.xml" id="5_1aatk"]
@@ -24,12 +25,17 @@ grow_vertical = 2
 script = ExtResource("1_4y2gq")
 
 [node name="bgPurp" type="ColorRect" parent="." unique_id=349210810]
+visible = false
 layout_mode = 0
 offset_left = -940.0
 offset_top = -520.0
 offset_right = 980.0
 offset_bottom = 560.0
 color = Color(0.28627452, 0.011764706, 0.5372549, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=995682157]
+position = Vector2(20, 44)
+texture = ExtResource("2_xr8q8")
 
 [node name="purp" type="Sprite2D" parent="." unique_id=60910667]
 position = Vector2(0, 25)

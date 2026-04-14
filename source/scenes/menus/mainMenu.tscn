@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://qbydevetvdcn" path="res://source/scripts/menus/mainMenu.gd" id="1_dkpco"]
 [ext_resource type="Texture2D" uid="uid://drp665nfyfkkj" path="res://assets/images/menus/purp.png" id="1_fh34g"]
 [ext_resource type="Texture2D" uid="uid://d2awtxg6065dr" path="res://assets/images/menus/mainMenu/logo.png" id="2_nwa14"]
+[ext_resource type="Texture2D" uid="uid://bmk6lsocx2yp7" path="res://assets/images/menus/background.png" id="2_wspa4"]
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="3_h1l53"]
 [ext_resource type="SpriteFrames" uid="uid://c47v0374ke0p" path="res://assets/images/menus/mainMenu/play.xml" id="5_5baup"]
 [ext_resource type="SpriteFrames" uid="uid://clg86p02v2qsp" path="res://assets/images/menus/mainMenu/options.xml" id="6_hah2e"]
@@ -21,12 +22,17 @@ grow_vertical = 2
 script = ExtResource("1_dkpco")
 
 [node name="bgPurp" type="ColorRect" parent="." unique_id=557512762]
+visible = false
 layout_mode = 0
 offset_left = -960.0
 offset_top = -540.0
 offset_right = 960.0
 offset_bottom = 540.0
 color = Color(0.28627452, 0.011764706, 0.5372549, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1824986305]
+position = Vector2(0, 24)
+texture = ExtResource("2_wspa4")
 
 [node name="purp" type="Sprite2D" parent="." unique_id=1072281407]
 position = Vector2(-568, 5)
