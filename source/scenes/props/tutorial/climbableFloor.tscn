@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://7gfdpvlcuueq" path="res://source/scripts/props/tutorial/climbableFloor.gd" id="1_e82r6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p52n"]
-size = Vector2(127, 128)
+size = Vector2(127, 126)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e82r6"]
 size = Vector2(20, 62)
@@ -16,7 +16,7 @@ script = ExtResource("1_e82r6")
 texture = ExtResource("1_5p52n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=214935537]
-position = Vector2(-0.5, 0)
+position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_5p52n")
 
 [node name="edgeLeft" type="Area2D" parent="." unique_id=880039186]

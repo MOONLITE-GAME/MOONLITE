@@ -133,7 +133,7 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.position.y = 90.909;
 	else: # TODO: change this later on if we implement anything else that changes hitbox size
 		$CollisionShape2D.scale.y = 1;
-		$CollisionShape2D.position.y = -36.773;
+		$CollisionShape2D.position.y = -45.864;
 		$AnimatedSprite2D.position.y = 0;
 		
 	if is_on_ceiling() and Slide.sliding:
