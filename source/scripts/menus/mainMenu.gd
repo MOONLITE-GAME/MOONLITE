@@ -13,6 +13,7 @@ func _ready() -> void:
 	Camera.limit_top = -10000000;
 	Camera.zoom = Vector2(1,1);
 	Camera.position = Vector2(960, 540);
+	$play.texture = load("res://assets/images/menus/mainMenu/playSelect.png");
 
 func _process(delta: float) -> void:
 	$text.position.x -= textSpeed * delta;
@@ -48,38 +49,40 @@ func _process(delta: float) -> void:
 			$text.text = "NOT FUNDED BY THE IDF";
 			
 	if Input.is_action_just_pressed("uiDOWN"):
+		$AudioStreamPlayer.play();
 		match curButton:
 			1:
-				$AudioStreamPlayer.play();
-				$play.play_backwards("hover");
-				$options.play("hover");
+				$play.texture = load("res://assets/images/menus/mainMenu/playNormal.png");
+				$options.texture = load("res://assets/images/menus/mainMenu/optionsSelect.png");
+				$extras.texture = load("res://assets/images/menus/mainMenu/extrasNormal.png");
 				curButton = 2;
 			2:
-				$AudioStreamPlayer.play();
-				$options.play_backwards("hover");
-				$extras.play("hover");
+				$play.texture = load("res://assets/images/menus/mainMenu/playNormal.png");
+				$options.texture = load("res://assets/images/menus/mainMenu/optionsNormal.png");
+				$extras.texture = load("res://assets/images/menus/mainMenu/extrasSelect.png");
 				curButton = 3;
 			3:
-				$AudioStreamPlayer.play();
-				$extras.play_backwards("hover");
-				$play.play("hover");
+				$play.texture = load("res://assets/images/menus/mainMenu/playSelect.png");
+				$options.texture = load("res://assets/images/menus/mainMenu/optionsNormal.png");
+				$extras.texture = load("res://assets/images/menus/mainMenu/extrasNormal.png");
 				curButton = 1;
 	if Input.is_action_just_pressed("uiUP"):
+		$AudioStreamPlayer.play();
 		match curButton:
 			1:
-				$AudioStreamPlayer.play();
-				$play.play_backwards("hover");
-				$extras.play("hover");
+				$play.texture = load("res://assets/images/menus/mainMenu/playNormal.png");
+				$options.texture = load("res://assets/images/menus/mainMenu/optionsNormal.png");
+				$extras.texture = load("res://assets/images/menus/mainMenu/extrasSelect.png");
 				curButton = 3;
 			2:
-				$AudioStreamPlayer.play();
-				$options.play_backwards("hover");
-				$play.play("hover");
+				$play.texture = load("res://assets/images/menus/mainMenu/playSelect.png");
+				$options.texture = load("res://assets/images/menus/mainMenu/optionsNormal.png");
+				$extras.texture = load("res://assets/images/menus/mainMenu/extrasNormal.png");
 				curButton = 1;
 			3:
-				$AudioStreamPlayer.play();
-				$extras.play_backwards("hover");
-				$options.play("hover");
+				$play.texture = load("res://assets/images/menus/mainMenu/playNormal.png");
+				$options.texture = load("res://assets/images/menus/mainMenu/optionsSelect.png");
+				$extras.texture = load("res://assets/images/menus/mainMenu/extrasNormal.png");
 				curButton = 2;
 	if Input.is_action_just_pressed("uiSELECT"):
 		match curButton:
