@@ -14,6 +14,7 @@ THE FORTH ALPHA RELEASE: PLATFORMING
 	- This brings two new animations for playable characters: `slideLeft` and `slideRight`
 - New Options Menu Revamp!
 - New Cursor Sprite!
+- New Controller Support (Doesn't fully work on all menus. This will be fixed next update!)
 
 ### Changed
 - debugDisplay is now a global scene
