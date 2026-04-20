@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7xkpg7sxytld"
-path="res://.godot/imported/menuNormal.png-7e9fc6e33b73c373ee50974d409a2b0e.ctex"
+uid="uid://bbvhtkkuo1du4"
+path="res://.godot/imported/spritemap1.png-fca042471074e9b641d6f876d77679ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/menus/pause/menuNormal.png"
-dest_files=["res://.godot/imported/menuNormal.png-7e9fc6e33b73c373ee50974d409a2b0e.ctex"]
+source_file="res://assets/images/menus/pause/moonlite/spritemap1.png"
+dest_files=["res://.godot/imported/spritemap1.png-fca042471074e9b641d6f876d77679ab.ctex"]
 
 [params]
 

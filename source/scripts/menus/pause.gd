@@ -3,7 +3,7 @@ extends Control;
 var curButton:int = 1;
 
 func _ready() -> void:
-	$ui/resume.texture = load("res://assets/images/menus/pause/resumeSelect.png");
+	$ui/selector.position.y = $ui/resume.position.y;
 
 func _process(_delta: float) -> void:
 	if not Stats.inDialogue:
@@ -14,38 +14,26 @@ func _process(_delta: float) -> void:
 			$uiSounds.play();
 			match curButton:
 				1:
-					$ui/resume.texture = load("res://assets/images/menus/pause/resumeNormal.png");
-					$ui/menu.texture = load("res://assets/images/menus/pause/menuNormal.png");
-					$ui/map.texture = load("res://assets/images/menus/pause/mapSelect.png");
+					$ui/selector.position.y = $ui/map.position.y;
 					curButton = 3;
 				2:
-					$ui/resume.texture = load("res://assets/images/menus/pause/resumeSelect.png");
-					$ui/menu.texture = load("res://assets/images/menus/pause/menuNormal.png");
-					$ui/map.texture = load("res://assets/images/menus/pause/mapNormal.png");
+					$ui/selector.position.y = $ui/resume.position.y;
 					curButton = 1;
 				3:
-					$ui/resume.texture = load("res://assets/images/menus/pause/resumeNormal.png");
-					$ui/menu.texture = load("res://assets/images/menus/pause/menuSelect.png");
-					$ui/map.texture = load("res://assets/images/menus/pause/mapNormal.png");
+					$ui/selector.position.y = $ui/menu.position.y;
 					curButton = 2;
 					
 		if Input.is_action_just_pressed("uiDOWN"):
 			$uiSounds.play();
 			match curButton:
 				1:
-					$ui/resume.texture = load("res://assets/images/menus/pause/resumeNormal.png");
-					$ui/menu.texture = load("res://assets/images/menus/pause/menuSelect.png");
-					$ui/map.texture = load("res://assets/images/menus/pause/mapNormal.png");
+					$ui/selector.position.y = $ui/menu.position.y;
 					curButton = 2;
 				2:
-					$ui/resume.texture = load("res://assets/images/menus/pause/resumeNormal.png");
-					$ui/menu.texture = load("res://assets/images/menus/pause/menuNormal.png");
-					$ui/map.texture = load("res://assets/images/menus/pause/mapSelect.png");
+					$ui/selector.position.y = $ui/map.position.y;
 					curButton = 3;
 				3:
-					$ui/resume.texture = load("res://assets/images/menus/pause/resumeSelect.png");
-					$ui/menu.texture = load("res://assets/images/menus/pause/menuNormal.png");
-					$ui/map.texture = load("res://assets/images/menus/pause/mapNormal.png");
+					$ui/selector.position.y = $ui/resume.position.y;
 					curButton = 1;
 		
 		if Input.is_action_just_pressed("uiSELECT"):
