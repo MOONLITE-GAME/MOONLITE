@@ -38,6 +38,21 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.28627452, 0.011764706, 0.5372549, 1)
 
+[node name="bg" type="ColorRect" parent="." unique_id=167652100]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6, 0, 1, 0.5019608)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=3931945]
 
 [node name="uiSounds" type="AudioStreamPlayer" parent="." unique_id=1688344321]
@@ -77,7 +92,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="selector" type="Sprite2D" parent="ui" unique_id=1695077466]
-position = Vector2(0, -256)
+position = Vector2(24, -256)
 texture = ExtResource("4_o3qc2")
 
 [node name="resume" type="Sprite2D" parent="ui" unique_id=390091268]
@@ -100,9 +115,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -960.0
-offset_top = -539.0
+offset_top = -540.0
 offset_right = 960.0
-offset_bottom = -389.0
+offset_bottom = -390.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -115,9 +130,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -112.5
-offset_top = -490.5
+offset_top = -491.5
 offset_right = 112.5
-offset_bottom = -437.5
+offset_bottom = -438.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_evub7")

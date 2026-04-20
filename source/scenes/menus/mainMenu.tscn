@@ -4,10 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://bmk6lsocx2yp7" path="res://assets/images/menus/background.png" id="2_wspa4"]
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="3_h1l53"]
 [ext_resource type="Texture2D" uid="uid://bixomq11jl8h0" path="res://assets/images/menus/mainMenu/blackBar.png" id="5_5baup"]
-[ext_resource type="Texture2D" uid="uid://cuovvvk0wwsu4" path="res://assets/images/menus/mainMenu/playNormal.png" id="6_hah2e"]
-[ext_resource type="Texture2D" uid="uid://btwfe74fa03ew" path="res://assets/images/menus/mainMenu/optionsNormal.png" id="7_fg8t5"]
+[ext_resource type="Texture2D" uid="uid://dakq1cnfaj2ix" path="res://assets/images/menus/mainMenu/play.png" id="6_th02w"]
+[ext_resource type="Texture2D" uid="uid://btmqu8rplj602" path="res://assets/images/menus/pause/selector.png" id="6_wspa4"]
+[ext_resource type="Texture2D" uid="uid://cymc43daj3234" path="res://assets/images/menus/mainMenu/options.png" id="7_wspa4"]
 [ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="8_th02w"]
-[ext_resource type="Texture2D" uid="uid://cy4kgx3txm8nw" path="res://assets/images/menus/mainMenu/extrasNormal.png" id="8_wspa4"]
+[ext_resource type="Texture2D" uid="uid://cppgtaljy6f4x" path="res://assets/images/menus/mainMenu/extras.png" id="8_v25pk"]
 
 [node name="MainMenu" type="Control" unique_id=1096639473]
 layout_mode = 3
@@ -60,18 +61,6 @@ bus = &"SFX"
 position = Vector2(-468, -61)
 texture = ExtResource("5_5baup")
 
-[node name="extras" type="Sprite2D" parent="." unique_id=1207935086]
-position = Vector2(-480, 264)
-texture = ExtResource("8_wspa4")
-
-[node name="options" type="Sprite2D" parent="." unique_id=1042511833]
-position = Vector2(-496, 0)
-texture = ExtResource("7_fg8t5")
-
-[node name="play" type="Sprite2D" parent="." unique_id=246360974]
-position = Vector2(-588, -327)
-texture = ExtResource("6_hah2e")
-
 [node name="Label" type="Label" parent="." unique_id=13988417]
 layout_mode = 0
 offset_left = 185.0
@@ -82,3 +71,20 @@ theme_override_font_sizes/font_size = 25
 text = "THIS MAIN MENU DESIGN IS NOT FINISHED LOL
 
 THIS IS JUST THE ROUGH VERSION. ADJUSTMENTS WILL BE MADE"
+
+[node name="selector" type="Sprite2D" parent="." unique_id=407314239]
+position = Vector2(-575, -245)
+scale = Vector2(1, 1.15)
+texture = ExtResource("6_wspa4")
+
+[node name="play" type="Sprite2D" parent="." unique_id=486370410]
+position = Vector2(-652, -256)
+texture = ExtResource("6_th02w")
+
+[node name="options" type="Sprite2D" parent="." unique_id=1460456201]
+position = Vector2(-564, 16)
+texture = ExtResource("7_wspa4")
+
+[node name="extras" type="Sprite2D" parent="." unique_id=332038106]
+position = Vector2(-580, 240)
+texture = ExtResource("8_v25pk")

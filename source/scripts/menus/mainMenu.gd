@@ -13,7 +13,7 @@ func _ready() -> void:
 	Camera.limit_top = -10000000;
 	Camera.zoom = Vector2(1,1);
 	Camera.position = Vector2(960, 540);
-	$play.texture = load("res://assets/images/menus/mainMenu/playSelect.png");
+	$selector.position.y = $play.position.y;
 
 func _process(delta: float) -> void:
 	$text.position.x -= textSpeed * delta;
@@ -52,37 +52,25 @@ func _process(delta: float) -> void:
 		$AudioStreamPlayer.play();
 		match curButton:
 			1:
-				$play.texture = load("res://assets/images/menus/mainMenu/playNormal.png");
-				$options.texture = load("res://assets/images/menus/mainMenu/optionsSelect.png");
-				$extras.texture = load("res://assets/images/menus/mainMenu/extrasNormal.png");
+				$selector.position.y = $options.position.y;
 				curButton = 2;
 			2:
-				$play.texture = load("res://assets/images/menus/mainMenu/playNormal.png");
-				$options.texture = load("res://assets/images/menus/mainMenu/optionsNormal.png");
-				$extras.texture = load("res://assets/images/menus/mainMenu/extrasSelect.png");
+				$selector.position.y = $extras.position.y;
 				curButton = 3;
 			3:
-				$play.texture = load("res://assets/images/menus/mainMenu/playSelect.png");
-				$options.texture = load("res://assets/images/menus/mainMenu/optionsNormal.png");
-				$extras.texture = load("res://assets/images/menus/mainMenu/extrasNormal.png");
+				$selector.position.y = $play.position.y;
 				curButton = 1;
 	if Input.is_action_just_pressed("uiUP"):
 		$AudioStreamPlayer.play();
 		match curButton:
 			1:
-				$play.texture = load("res://assets/images/menus/mainMenu/playNormal.png");
-				$options.texture = load("res://assets/images/menus/mainMenu/optionsNormal.png");
-				$extras.texture = load("res://assets/images/menus/mainMenu/extrasSelect.png");
+				$selector.position.y = $extras.position.y;
 				curButton = 3;
 			2:
-				$play.texture = load("res://assets/images/menus/mainMenu/playSelect.png");
-				$options.texture = load("res://assets/images/menus/mainMenu/optionsNormal.png");
-				$extras.texture = load("res://assets/images/menus/mainMenu/extrasNormal.png");
+				$selector.position.y = $play.position.y;
 				curButton = 1;
 			3:
-				$play.texture = load("res://assets/images/menus/mainMenu/playNormal.png");
-				$options.texture = load("res://assets/images/menus/mainMenu/optionsSelect.png");
-				$extras.texture = load("res://assets/images/menus/mainMenu/extrasNormal.png");
+				$selector.position.y = $options.position.y;
 				curButton = 2;
 	if Input.is_action_just_pressed("uiSELECT"):
 		match curButton:
