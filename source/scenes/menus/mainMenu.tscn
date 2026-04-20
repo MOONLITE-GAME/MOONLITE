@@ -71,3 +71,14 @@ texture = ExtResource("7_fg8t5")
 [node name="play" type="Sprite2D" parent="." unique_id=246360974]
 position = Vector2(-588, -327)
 texture = ExtResource("6_hah2e")
+
+[node name="Label" type="Label" parent="." unique_id=13988417]
+layout_mode = 0
+offset_left = 185.0
+offset_top = -537.0
+offset_right = 957.0
+offset_bottom = -426.0
+theme_override_font_sizes/font_size = 25
+text = "THIS MAIN MENU DESIGN IS NOT FINISHED LOL
+
+THIS IS JUST THE ROUGH VERSION. ADJUSTMENTS WILL BE MADE"

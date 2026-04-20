@@ -2,7 +2,13 @@
 
 [ext_resource type="Script" uid="uid://i28iu1p3uh0g" path="res://source/scripts/menus/extras.gd" id="1_e7uxq"]
 [ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="1_fmiy2"]
-[ext_resource type="FontFile" uid="uid://cyiuhqffedas" path="res://assets/fonts/NextUps.ttf" id="2_q6agr"]
+[ext_resource type="Texture2D" uid="uid://bmk6lsocx2yp7" path="res://assets/images/menus/background.png" id="4_6fngj"]
+[ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="5_f7bos"]
+[ext_resource type="Texture2D" uid="uid://bixomq11jl8h0" path="res://assets/images/menus/mainMenu/blackBar.png" id="5_nhmca"]
+[ext_resource type="Texture2D" uid="uid://cowy04uh70xj8" path="res://assets/images/menus/extras/creditsNormal.png" id="5_y6mr5"]
+[ext_resource type="Texture2D" uid="uid://nsyqs755al2g" path="res://assets/images/menus/extras/ostNormal.png" id="6_y6mr5"]
+[ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="8_wynr6"]
+[ext_resource type="Texture2D" uid="uid://bn62vrjy1kcvk" path="res://assets/images/menus/extras/credits.png" id="9_kpyxi"]
 
 [node name="Extras" type="Control" unique_id=273225313]
 layout_mode = 3
@@ -16,6 +22,7 @@ grow_vertical = 2
 script = ExtResource("1_e7uxq")
 
 [node name="bgPurp" type="ColorRect" parent="." unique_id=1495849276]
+visible = false
 layout_mode = 0
 offset_left = -960.0
 offset_top = -540.0
@@ -23,7 +30,12 @@ offset_right = 960.0
 offset_bottom = 540.0
 color = Color(0.28627452, 0.011764706, 0.5372549, 1)
 
+[node name="bg" type="Sprite2D" parent="." unique_id=1146750118]
+position = Vector2(0, 24)
+texture = ExtResource("4_6fngj")
+
 [node name="placeholder LMAO" type="Label" parent="." unique_id=1648000053]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -40,39 +52,48 @@ theme_override_fonts/font = ExtResource("1_fmiy2")
 theme_override_font_sizes/font_size = 50
 text = "Shitty extras menu placeholder LMAO"
 
-[node name="credits" type="Button" parent="." unique_id=1098874971]
+[node name="black bar" type="ColorRect" parent="." unique_id=409682391]
+layout_mode = 0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = -390.0
+color = Color(0, 0, 0, 1)
+
+[node name="image" type="Sprite2D" parent="." unique_id=399621831]
+position = Vector2(517, 327)
+texture = ExtResource("9_kpyxi")
+
+[node name="BlackBar" type="Sprite2D" parent="." unique_id=145763966]
+position = Vector2(-427, 61)
+scale = Vector2(1.082996, 1)
+texture = ExtResource("5_nhmca")
+
+[node name="credits" type="Sprite2D" parent="." unique_id=2102767984]
+position = Vector2(-368, -184)
+texture = ExtResource("5_y6mr5")
+
+[node name="ost" type="Sprite2D" parent="." unique_id=1208577024]
+position = Vector2(-352, 136)
+texture = ExtResource("6_y6mr5")
+
+[node name="text" type="Label" parent="." unique_id=111193624]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -204.5
-offset_top = -75.5
-offset_right = 204.5
-offset_bottom = -20.5
+offset_left = -135.0
+offset_top = -490.5
+offset_right = 135.0
+offset_bottom = -437.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_q6agr")
-theme_override_font_sizes/font_size = 50
-text = "CREDITS"
+theme_override_fonts/font = ExtResource("5_f7bos")
+theme_override_font_sizes/font_size = 75
+text = "EXTRAS"
 
-[node name="ost" type="Button" parent="." unique_id=470887979]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -99.5
-offset_top = 20.5
-offset_right = 99.5
-offset_bottom = 75.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_q6agr")
-theme_override_font_sizes/font_size = 50
-text = "OST"
-
-[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="ost" to="." method="_on_ost_pressed"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=683464275]
+stream = ExtResource("8_wynr6")
+bus = &"SFX"
