@@ -6,7 +6,7 @@ var curButton:int = 1;
 func _ready() -> void:
 	if OS.get_name() == "Web":
 		canVisitOST = false;
-	$credits.texture = load("res://assets/images/menus/extras/creditsSelect.png");
+	$selector.position.y = $credits.position.y;
 
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://source/scenes/menus/credits.tscn");
@@ -22,14 +22,12 @@ func _process(_delta: float) -> void:
 		$AudioStreamPlayer.play();
 		match curButton: 
 			1:
-				$credits.texture = load("res://assets/images/menus/extras/creditsNormal.png");
-				$ost.texture = load("res://assets/images/menus/extras/ostSelect.png");
+				$selector.position.y = $ost.position.y;
 				$image.texture = load("res://assets/images/menus/extras/moonliteOST.png");
 				$image.position = Vector2(517.0, 191.0);
 				curButton = 2;
 			2:
-				$credits.texture = load("res://assets/images/menus/extras/creditsSelect.png");
-				$ost.texture = load("res://assets/images/menus/extras/ostNormal.png");
+				$selector.position.y = $credits.position.y;
 				$image.texture = load("res://assets/images/menus/extras/credits.png");
 				$image.position = Vector2(517.0, 327.0);
 				curButton = 1;
@@ -37,14 +35,12 @@ func _process(_delta: float) -> void:
 		$AudioStreamPlayer.play();
 		match curButton: 
 			1:
-				$credits.texture = load("res://assets/images/menus/extras/creditsNormal.png");
-				$ost.texture = load("res://assets/images/menus/extras/ostSelect.png");
+				$selector.position.y = $ost.position.y;
 				$image.texture = load("res://assets/images/menus/extras/moonliteOST.png");
 				$image.position = Vector2(517.0, 191.0);
 				curButton = 2;
 			2:
-				$credits.texture = load("res://assets/images/menus/extras/creditsSelect.png");
-				$ost.texture = load("res://assets/images/menus/extras/ostNormal.png");
+				$selector.position.y = $credits.position.y;
 				$image.texture = load("res://assets/images/menus/extras/credits.png");
 				$image.position = Vector2(517.0, 327.0);
 				curButton = 1;

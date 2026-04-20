@@ -5,9 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://bmk6lsocx2yp7" path="res://assets/images/menus/background.png" id="4_6fngj"]
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="5_f7bos"]
 [ext_resource type="Texture2D" uid="uid://bixomq11jl8h0" path="res://assets/images/menus/mainMenu/blackBar.png" id="5_nhmca"]
-[ext_resource type="Texture2D" uid="uid://cowy04uh70xj8" path="res://assets/images/menus/extras/creditsNormal.png" id="5_y6mr5"]
-[ext_resource type="Texture2D" uid="uid://nsyqs755al2g" path="res://assets/images/menus/extras/ostNormal.png" id="6_y6mr5"]
+[ext_resource type="Texture2D" uid="uid://btmqu8rplj602" path="res://assets/images/menus/pause/selector.png" id="8_e7ljm"]
+[ext_resource type="Texture2D" uid="uid://b7uie6udlwe3j" path="res://assets/images/menus/extras/creditsText.png" id="8_kpyxi"]
 [ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="8_wynr6"]
+[ext_resource type="Texture2D" uid="uid://kvuaj8whpsdb" path="res://assets/images/menus/extras/ostText.png" id="9_e7ljm"]
 [ext_resource type="Texture2D" uid="uid://bn62vrjy1kcvk" path="res://assets/images/menus/extras/credits.png" id="9_kpyxi"]
 
 [node name="Extras" type="Control" unique_id=273225313]
@@ -65,17 +66,9 @@ position = Vector2(517, 327)
 texture = ExtResource("9_kpyxi")
 
 [node name="BlackBar" type="Sprite2D" parent="." unique_id=145763966]
-position = Vector2(-427, 61)
-scale = Vector2(1.082996, 1)
+position = Vector2(-413.5, 61)
+scale = Vector2(1.1103239, 1)
 texture = ExtResource("5_nhmca")
-
-[node name="credits" type="Sprite2D" parent="." unique_id=2102767984]
-position = Vector2(-368, -184)
-texture = ExtResource("5_y6mr5")
-
-[node name="ost" type="Sprite2D" parent="." unique_id=1208577024]
-position = Vector2(-352, 136)
-texture = ExtResource("6_y6mr5")
 
 [node name="text" type="Label" parent="." unique_id=111193624]
 layout_mode = 1
@@ -97,3 +90,16 @@ text = "EXTRAS"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=683464275]
 stream = ExtResource("8_wynr6")
 bus = &"SFX"
+
+[node name="selector" type="Sprite2D" parent="." unique_id=191346395]
+position = Vector2(-509.25, -184)
+scale = Vector2(1.1771243, 1)
+texture = ExtResource("8_e7ljm")
+
+[node name="credits" type="Sprite2D" parent="." unique_id=1628621099]
+position = Vector2(-512, -168)
+texture = ExtResource("8_kpyxi")
+
+[node name="ost" type="Sprite2D" parent="." unique_id=1724077938]
+position = Vector2(-568, 64)
+texture = ExtResource("9_e7ljm")
