@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dxidxd1nnsv6n"]
 
 [ext_resource type="Script" uid="uid://5nrcikqpq61i" path="res://source/scripts/menus/pause.gd" id="1_r32j8"]
-[ext_resource type="Texture2D" uid="uid://gwiry6njecp8" path="res://assets/images/menus/pause/black.png" id="2_ujp8j"]
-[ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="3_neq3a"]
-[ext_resource type="SpriteFrames" uid="uid://borx58d2jhbbr" path="res://assets/images/menus/pause/resume.xml" id="4_evub7"]
-[ext_resource type="SpriteFrames" uid="uid://dwhrprmhn57wl" path="res://assets/images/menus/pause/mainMenu.xml" id="5_j7o66"]
+[ext_resource type="Texture2D" uid="uid://b6u7xnovftni0" path="res://assets/images/menus/pause/sideThing.png" id="3_neq3a"]
+[ext_resource type="Texture2D" uid="uid://bi3hjy1jlpeok" path="res://assets/images/menus/pause/resumeNormal.png" id="4_evub7"]
+[ext_resource type="Texture2D" uid="uid://7xkpg7sxytld" path="res://assets/images/menus/pause/menuNormal.png" id="4_j7o66"]
+[ext_resource type="Texture2D" uid="uid://bjsub0fbcisj8" path="res://assets/images/menus/pause/mapNormal.png" id="6_kplfg"]
 [ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="6_x4d6k"]
 
 [node name="PauseMenu" type="Control" unique_id=850096116]
@@ -33,53 +33,31 @@ color = Color(0.28627452, 0.011764706, 0.5372549, 0.6666667)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=3931945]
 
-[node name="BLACk" type="Sprite2D" parent="." unique_id=1935721088]
-position = Vector2(-704, 0)
-texture = ExtResource("2_ujp8j")
-
-[node name="black" type="ColorRect" parent="." unique_id=679299276]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -960.0
-offset_top = -540.0
-offset_right = 960.0
-offset_bottom = -390.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="pauseText" type="Label" parent="." unique_id=2133704875]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -135.0
-offset_top = -490.5
-offset_right = 135.0
-offset_bottom = -437.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_neq3a")
-theme_override_font_sizes/font_size = 75
-text = "PAUSED"
-
-[node name="resume" type="AnimatedSprite2D" parent="." unique_id=560084480]
-position = Vector2(-632, -232)
-sprite_frames = ExtResource("4_evub7")
-animation = &"hover"
-autoplay = "hover"
-
-[node name="mainMenu" type="AnimatedSprite2D" parent="." unique_id=1944657725]
-position = Vector2(-632, 0)
-sprite_frames = ExtResource("5_j7o66")
-animation = &"basic"
-
 [node name="uiSounds" type="AudioStreamPlayer" parent="." unique_id=1688344321]
 stream = ExtResource("6_x4d6k")
 bus = &"SFX"
+
+[node name="ui" type="Control" parent="." unique_id=650186020]
+anchors_preset = 0
+offset_left = -436.0
+offset_top = 147.0
+offset_right = -396.0
+offset_bottom = 187.0
+rotation = 0.62831855
+
+[node name="resume" type="Sprite2D" parent="ui" unique_id=1162204773]
+position = Vector2(-402.9108, -335.89355)
+texture = ExtResource("4_evub7")
+
+[node name="menu" type="Sprite2D" parent="ui" unique_id=1384498634]
+position = Vector2(-218.9108, -55.893547)
+texture = ExtResource("4_j7o66")
+
+[node name="map" type="Sprite2D" parent="ui" unique_id=144852078]
+position = Vector2(-105.9108, 211.10646)
+texture = ExtResource("6_kplfg")
+
+[node name="sideThing" type="Sprite2D" parent="ui" unique_id=1912533202]
+position = Vector2(-496.75827, 98.86961)
+rotation = 0.017453292
+texture = ExtResource("3_neq3a")
