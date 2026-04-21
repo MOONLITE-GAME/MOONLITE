@@ -12,7 +12,10 @@ THE FIFTH ALPHA RELEASE: UI CLEAN UP
 
 ### Changed
 - Main Menu, Extras Menu, and Pause Menu Received Revamps!
-- Options Menu Received Some Adjustments
+- Options Menu Received Some Adjustments!
+
+### Fixed
+- Options menu buttons now use the correct texture when selected!
 
 ## [0.0.4] - 2026-04-19
 THE FORTH ALPHA RELEASE: PLATFORMING
