@@ -4,7 +4,6 @@ var curButton:int = 1;
 
 func _ready() -> void:
 	AudioServer.set_bus_volume_db(Volume.index, -10.0);
-	MusicEngine.loadSong("recordKeeper");
 	Stats.savePath = "user://Save1.json";
 	Camera.zoom = Vector2(1,1);
 	Camera.position = Vector2(960, 540);
@@ -44,5 +43,4 @@ func _process(_delta: float) -> void:
 		Stats.savePath = "user://Save" + str(curButton) + ".json";
 		Stats.loadStats();
 		AudioServer.set_bus_volume_db(Volume.index, Stats.volume);
-		MusicEngine.stopMusic();
-		get_tree().change_scene_to_file("res://source/scenes/menus/titleScreen.tscn");
+		get_tree().change_scene_to_file("res://source/scenes/menus/startUpMovie.tscn");
