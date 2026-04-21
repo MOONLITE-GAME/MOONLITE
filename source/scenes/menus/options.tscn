@@ -2,22 +2,17 @@
 
 [ext_resource type="Script" uid="uid://do3nfu0i10drk" path="res://source/scripts/menus/options.gd" id="1_dc1t4"]
 [ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="1_skxkw"]
-[ext_resource type="Texture2D" uid="uid://d2vygug8o4lc1" path="res://assets/images/menus/options/buttonsNormal/video.png" id="3_bspxn"]
-[ext_resource type="Texture2D" uid="uid://bfonl2dc0pmyq" path="res://assets/images/menus/options/buttonsNormal/audio.png" id="4_6o5yo"]
-[ext_resource type="Texture2D" uid="uid://dl17x2016vhqh" path="res://assets/images/menus/options/buttonsPressed/video.png" id="4_dt2iu"]
+[ext_resource type="Texture2D" uid="uid://dhrnhagfvll66" path="res://assets/images/menus/options/buttonsNormal/video.png" id="3_bspxn"]
+[ext_resource type="Texture2D" uid="uid://dvrviq7ekcdko" path="res://assets/images/menus/options/buttonsNormal/audio.png" id="4_6o5yo"]
+[ext_resource type="Texture2D" uid="uid://cwp4pdfn0neti" path="res://assets/images/menus/options/buttonsPressed/video.png" id="4_dt2iu"]
 [ext_resource type="Texture2D" uid="uid://bmk6lsocx2yp7" path="res://assets/images/menus/background.png" id="4_ihldu"]
-[ext_resource type="Texture2D" uid="uid://b88j2tkb8oyeu" path="res://assets/images/menus/options/buttonsNormal/controls.png" id="5_2jub0"]
-[ext_resource type="Texture2D" uid="uid://c02aumnvsiw78" path="res://assets/images/menus/options/buttonsHover/video.png" id="5_x5qme"]
-[ext_resource type="Texture2D" uid="uid://crau0umtkxkbe" path="res://assets/images/menus/options/buttonsNormal/other.png" id="6_0bb0g"]
-[ext_resource type="Texture2D" uid="uid://b6rpmx3f44r2d" path="res://assets/images/menus/options/buttonsNormal/exit.png" id="7_awilf"]
-[ext_resource type="Texture2D" uid="uid://bxqvhae3wo3e1" path="res://assets/images/menus/options/buttonsPressed/audio.png" id="7_ndxkh"]
-[ext_resource type="Texture2D" uid="uid://dp5g6wj58qcnp" path="res://assets/images/menus/options/buttonsHover/audio.png" id="8_88bwe"]
-[ext_resource type="Texture2D" uid="uid://lo2e8ujf3esx" path="res://assets/images/menus/options/buttonsPressed/controls.png" id="10_mrdco"]
-[ext_resource type="Texture2D" uid="uid://dj0dqt4aqk4lh" path="res://assets/images/menus/options/buttonsHover/controls.png" id="11_2lnf5"]
-[ext_resource type="Texture2D" uid="uid://blocx8mplb1i1" path="res://assets/images/menus/options/buttonsPressed/other.png" id="13_607mo"]
-[ext_resource type="Texture2D" uid="uid://832lwhjnee1v" path="res://assets/images/menus/options/buttonsHover/other.png" id="14_f0k05"]
-[ext_resource type="Texture2D" uid="uid://dklmx00fn5opr" path="res://assets/images/menus/options/buttonsPressed/exit.png" id="16_pxg2a"]
-[ext_resource type="Texture2D" uid="uid://chf5ba80743fw" path="res://assets/images/menus/options/buttonsHover/exit.png" id="17_ft7rn"]
+[ext_resource type="Texture2D" uid="uid://fqv4bis7eu1l" path="res://assets/images/menus/options/buttonsNormal/controls.png" id="5_2jub0"]
+[ext_resource type="Texture2D" uid="uid://mpjw06vly0ss" path="res://assets/images/menus/options/buttonsNormal/other.png" id="6_0bb0g"]
+[ext_resource type="Texture2D" uid="uid://bc6aukbhyyj77" path="res://assets/images/menus/options/buttonsNormal/exit.png" id="7_awilf"]
+[ext_resource type="Texture2D" uid="uid://blwhd31nw5x0a" path="res://assets/images/menus/options/buttonsPressed/audio.png" id="7_ndxkh"]
+[ext_resource type="Texture2D" uid="uid://tmp54al177vh" path="res://assets/images/menus/options/buttonsPressed/controls.png" id="10_mrdco"]
+[ext_resource type="Texture2D" uid="uid://bm06jk1yf5aup" path="res://assets/images/menus/options/buttonsPressed/other.png" id="13_607mo"]
+[ext_resource type="Texture2D" uid="uid://bdwnkxgwpptq3" path="res://assets/images/menus/options/buttonsPressed/exit.png" id="16_pxg2a"]
 [ext_resource type="Theme" uid="uid://dfx6nngf58wpr" path="res://assets/themes/scrollbar.tres" id="18_ndxkh"]
 
 [node name="Options" type="Control" unique_id=1032242193]
@@ -66,7 +61,8 @@ offset_right = -576.0
 offset_bottom = -252.0
 texture_normal = ExtResource("3_bspxn")
 texture_pressed = ExtResource("4_dt2iu")
-texture_hover = ExtResource("5_x5qme")
+texture_hover = ExtResource("4_dt2iu")
+texture_focused = ExtResource("4_dt2iu")
 
 [node name="audio" type="TextureButton" parent="." unique_id=345136199]
 layout_mode = 0
@@ -76,7 +72,8 @@ offset_right = -192.0
 offset_bottom = -252.0
 texture_normal = ExtResource("4_6o5yo")
 texture_pressed = ExtResource("7_ndxkh")
-texture_hover = ExtResource("8_88bwe")
+texture_hover = ExtResource("7_ndxkh")
+texture_focused = ExtResource("7_ndxkh")
 
 [node name="controls" type="TextureButton" parent="." unique_id=1421887629]
 layout_mode = 0
@@ -86,7 +83,8 @@ offset_right = 192.0
 offset_bottom = -252.0
 texture_normal = ExtResource("5_2jub0")
 texture_pressed = ExtResource("10_mrdco")
-texture_hover = ExtResource("11_2lnf5")
+texture_hover = ExtResource("10_mrdco")
+texture_focused = ExtResource("10_mrdco")
 
 [node name="other" type="TextureButton" parent="." unique_id=722085001]
 layout_mode = 0
@@ -96,7 +94,8 @@ offset_right = 576.0
 offset_bottom = -252.0
 texture_normal = ExtResource("6_0bb0g")
 texture_pressed = ExtResource("13_607mo")
-texture_hover = ExtResource("14_f0k05")
+texture_hover = ExtResource("13_607mo")
+texture_focused = ExtResource("13_607mo")
 
 [node name="exit" type="TextureButton" parent="." unique_id=314202990]
 layout_mode = 0
@@ -106,7 +105,8 @@ offset_right = 960.0
 offset_bottom = -252.0
 texture_normal = ExtResource("7_awilf")
 texture_pressed = ExtResource("16_pxg2a")
-texture_hover = ExtResource("17_ft7rn")
+texture_hover = ExtResource("16_pxg2a")
+texture_focused = ExtResource("16_pxg2a")
 
 [node name="Video Settings" type="ScrollContainer" parent="." unique_id=72996900]
 visible = false
