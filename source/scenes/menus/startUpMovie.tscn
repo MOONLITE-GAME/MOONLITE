@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://chbim4qpyhbql"]
 
 [ext_resource type="Script" uid="uid://cdolhwkj1ggm0" path="res://source/scripts/menus/startUp.gd" id="1_4xq67"]
-[ext_resource type="VideoStream" uid="uid://gtrvk8ykcnot" path="res://assets/videos/startUp.ogv" id="1_wwc07"]
 [ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="2_e7yyq"]
+[ext_resource type="VideoStream" uid="uid://dg7ew41svgig0" path="res://assets/videos/intro.ogv" id="3_4xq67"]
 
 [node name="StartUpMovie" type="Control" unique_id=354828065]
 layout_mode = 3
@@ -92,7 +92,7 @@ offset_right = 960.0
 offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("1_wwc07")
+stream = ExtResource("3_4xq67")
 bus = &"SFX"
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
