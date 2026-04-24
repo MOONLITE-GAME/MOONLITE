@@ -96,3 +96,20 @@ func _process(delta: float) -> void:
 			$play.skew = 0;
 			$options.skew = 0;
 			$extras.skew = 0.25;
+
+func _on_play_area_mouse_entered() -> void:
+	curButton = 1;
+	if Input.is_action_pressed("Tap"):
+		get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
+		Stats.playerX = 0;
+		Stats.playerY = 0;
+
+func _on_options_area_mouse_entered() -> void:
+	curButton = 2;
+	if Input.is_action_pressed("Tap"):
+		get_tree().change_scene_to_file("res://source/scenes/menus/options.tscn");
+
+func _on_extras_mouse_entered() -> void:
+	curButton = 3;
+	if Input.is_action_pressed("Tap"):
+		get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");
