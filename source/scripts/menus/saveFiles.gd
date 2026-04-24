@@ -42,5 +42,10 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiSELECT"):
 		Stats.savePath = "user://Save" + str(curButton) + ".json";
 		Stats.loadStats();
+		
+		#Load Volume Settings
 		AudioServer.set_bus_volume_db(Volume.index, Stats.volume);
+		AudioServer.set_bus_volume_db(Volume.musIndex, Stats.musicVolume);
+		AudioServer.set_bus_volume_db(Volume.sfxIndex, Stats.sfxVolume);
+		
 		get_tree().change_scene_to_file("res://source/scenes/menus/startUpMovie.tscn");

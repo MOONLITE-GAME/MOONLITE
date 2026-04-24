@@ -37,6 +37,8 @@ var charName:String;
 var debug:bool = true;
 var attacking:bool = false;
 var volume:float;
+var musicVolume:float;
+var sfxVolume:float;
 var inDialogue:bool = false;
 var moving:bool;
 var canClimb:bool = false;
@@ -53,6 +55,8 @@ func saveStats():
 	data.item = item;
 	volume = AudioServer.get_bus_volume_db(Volume.index);
 	data.volume = volume;
+	data.musicVolume = musicVolume;
+	data.sfxVolume = sfxVolume;
 	data.fullscreen = fullscreen;
 	data.freecam = Camera.freeCam;
 
@@ -101,6 +105,18 @@ func loadStats():
 			volume = data.volume;
 		else:
 			volume = -5.0;
+			saveStats();
+			
+		if "musicVolume" in data:
+			musicVolume = data.musicVolume;
+		else:
+			musicVolume = 0.0;
+			saveStats();
+			
+		if "sfxVolume" in data:
+			sfxVolume = data.sfxVolume;
+		else:
+			sfxVolume = 0.0;
 			saveStats();
 			
 		if "fullscreen" in data:

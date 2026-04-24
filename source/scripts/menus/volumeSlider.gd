@@ -11,3 +11,7 @@ func _ready() -> void:
 	
 func _on_value_changed(value:float):
 	AudioServer.set_bus_volume_db(busIndex, linear_to_db(value));
+	Stats.volume = AudioServer.get_bus_volume_db(0);
+	Stats.musicVolume = AudioServer.get_bus_volume_db(1);
+	Stats.sfxVolume = AudioServer.get_bus_volume_db(2);
+	Stats.saveStats();

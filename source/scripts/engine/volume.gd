@@ -1,6 +1,8 @@
 extends Node
 
 var index = AudioServer.get_bus_index("Master");
+var musIndex = AudioServer.get_bus_index("Music");
+var sfxIndex = AudioServer.get_bus_index("SFX");
 var muted:bool = false;
 
 func _process(_delta: float) -> void:

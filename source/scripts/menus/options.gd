@@ -61,6 +61,7 @@ func _on_other_pressed() -> void:
 	page = "Other";
 
 func _on_exit_pressed() -> void:
+	Stats.saveStats();
 	get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
 
 # VIDEO SETTINGS
