@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://blwhd31nw5x0a" path="res://assets/images/menus/options/buttonsPressed/audio.png" id="7_ndxkh"]
 [ext_resource type="Texture2D" uid="uid://tmp54al177vh" path="res://assets/images/menus/options/buttonsPressed/controls.png" id="10_mrdco"]
 [ext_resource type="Texture2D" uid="uid://bm06jk1yf5aup" path="res://assets/images/menus/options/buttonsPressed/other.png" id="13_607mo"]
+[ext_resource type="PackedScene" uid="uid://bb3k8wuuhgdl3" path="res://source/scenes/menus/volumeSlider.tscn" id="15_pfoog"]
 [ext_resource type="Texture2D" uid="uid://bdwnkxgwpptq3" path="res://assets/images/menus/options/buttonsPressed/exit.png" id="16_pxg2a"]
 [ext_resource type="Theme" uid="uid://dfx6nngf58wpr" path="res://assets/themes/scrollbar.tres" id="18_ndxkh"]
 
@@ -139,7 +140,6 @@ theme_override_font_sizes/font_size = 75
 text = "FREECAM"
 
 [node name="Audio Settings" type="ScrollContainer" parent="." unique_id=1981296859]
-visible = false
 layout_mode = 0
 offset_left = -600.0
 offset_top = -238.0
@@ -156,11 +156,35 @@ theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 75
 text = "AUDIO SETTINGS"
 
-[node name="Label" type="Label" parent="Audio Settings/VBoxContainer" unique_id=1764126240]
+[node name="MasterText" type="Label" parent="Audio Settings/VBoxContainer" unique_id=157932954]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 40
-text = "There's nothing here... Nothing at all..."
+text = "Master Volume"
+
+[node name="Master" parent="Audio Settings/VBoxContainer" unique_id=397176036 instance=ExtResource("15_pfoog")]
+layout_mode = 2
+busName = "Master"
+
+[node name="MusicText" type="Label" parent="Audio Settings/VBoxContainer" unique_id=520499450]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
+theme_override_font_sizes/font_size = 40
+text = "Music Volume"
+
+[node name="Music" parent="Audio Settings/VBoxContainer" unique_id=1147401182 instance=ExtResource("15_pfoog")]
+layout_mode = 2
+busName = "Music"
+
+[node name="SFXText" type="Label" parent="Audio Settings/VBoxContainer" unique_id=403286346]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
+theme_override_font_sizes/font_size = 40
+text = "SFX Volume"
+
+[node name="SFX" parent="Audio Settings/VBoxContainer" unique_id=1527155868 instance=ExtResource("15_pfoog")]
+layout_mode = 2
+busName = "SFX"
 
 [node name="Control Settings" type="ScrollContainer" parent="." unique_id=206442280]
 visible = false
@@ -187,6 +211,7 @@ theme_override_font_sizes/font_size = 40
 text = "There's nothing here... Nothing at all..."
 
 [node name="Other Settings" type="ScrollContainer" parent="." unique_id=1966454781]
+visible = false
 layout_mode = 0
 offset_left = -600.0
 offset_top = -238.0
