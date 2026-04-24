@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c4sp01sjjc2kr" path="res://source/scripts/menus/credits.gd" id="1_hi6pi"]
 [ext_resource type="FontFile" uid="uid://cyiuhqffedas" path="res://assets/fonts/NextUps.ttf" id="1_krn7s"]
+[ext_resource type="Texture2D" uid="uid://bc6aukbhyyj77" path="res://assets/images/menus/options/buttonsNormal/exit.png" id="3_7jw14"]
 
 [node name="Credits" type="Control" unique_id=992630827]
 layout_mode = 3
@@ -136,3 +137,14 @@ THE LINUX COMMUNITY
 
 
 THANK YOU FOR PLAYING"
+
+[node name="exit" type="TextureButton" parent="." unique_id=62240603]
+visible = false
+layout_mode = 0
+offset_left = 576.0
+offset_top = 253.0
+offset_right = 960.0
+offset_bottom = 541.0
+texture_normal = ExtResource("3_7jw14")
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

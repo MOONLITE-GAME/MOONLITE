@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="8_wynr6"]
 [ext_resource type="Texture2D" uid="uid://kvuaj8whpsdb" path="res://assets/images/menus/extras/ostText.png" id="9_e7ljm"]
 [ext_resource type="Texture2D" uid="uid://bn62vrjy1kcvk" path="res://assets/images/menus/extras/credits.png" id="9_kpyxi"]
+[ext_resource type="Texture2D" uid="uid://bc6aukbhyyj77" path="res://assets/images/menus/options/buttonsNormal/exit.png" id="11_ehyas"]
 
 [node name="Extras" type="Control" unique_id=273225313]
 layout_mode = 3
@@ -97,9 +98,30 @@ scale = Vector2(1.1771243, 1)
 texture = ExtResource("8_e7ljm")
 
 [node name="credits" type="Sprite2D" parent="." unique_id=1628621099]
+visible = false
 position = Vector2(-512, -168)
 texture = ExtResource("8_kpyxi")
 
 [node name="ost" type="Sprite2D" parent="." unique_id=1724077938]
 position = Vector2(-568, 64)
 texture = ExtResource("9_e7ljm")
+
+[node name="creditsButton" type="TextureButton" parent="." unique_id=1852516860]
+layout_mode = 0
+offset_left = -899.0
+offset_top = -281.0
+offset_right = -124.0
+offset_bottom = -55.0
+texture_normal = ExtResource("8_kpyxi")
+
+[node name="exit" type="TextureButton" parent="." unique_id=1451651422]
+visible = false
+layout_mode = 0
+offset_left = -960.0
+offset_top = 253.0
+offset_right = -576.0
+offset_bottom = 541.0
+texture_normal = ExtResource("11_ehyas")
+
+[connection signal="pressed" from="creditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

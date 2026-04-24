@@ -6,6 +6,9 @@ var curButton:int = 1;
 func _ready() -> void:
 	if OS.get_name() == "Web":
 		canVisitOST = false;
+	if Stats.mobile:
+		$exit.visible = true;
+		
 	$selector.position.y = $credits.position.y;
 
 func _on_credits_pressed() -> void:
@@ -53,3 +56,10 @@ func _process(_delta: float) -> void:
 					_on_ost_pressed();
 				else:
 					pass;
+
+
+func _on_credits_button_pressed() -> void:
+	_on_credits_pressed();
+
+func _on_exit_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");

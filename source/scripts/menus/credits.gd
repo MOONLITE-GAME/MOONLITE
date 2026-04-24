@@ -5,6 +5,9 @@ var scrollSpeed:float = 75.0;
 func _ready() -> void:
 	MusicEngine.stopMusic();
 	MusicEngine.loadSong("bopeeboMoonlite");
+	
+	if Stats.mobile:
+		$exit.visible = true;
 
 func _process(delta: float) -> void:
 	$credits.position.y -= delta * scrollSpeed;
@@ -14,3 +17,7 @@ func _process(delta: float) -> void:
 		MusicEngine.stopMusic();
 		MusicEngine.loadSong("titleScreen");
 		get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");
+
+
+func _on_exit_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");
