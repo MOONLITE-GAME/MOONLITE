@@ -13,7 +13,7 @@ func _ready() -> void:
 	Camera.limit_top = -10000000;
 	Camera.zoom = Vector2(1,1);
 	Camera.position = Vector2(960, 540);
-	$selector.position.y = $play.position.y;
+	$selector.position.x = $play.position.x;
 
 func _process(delta: float) -> void:
 	$text.position.x -= textSpeed * delta;
@@ -48,29 +48,29 @@ func _process(delta: float) -> void:
 		12:
 			$text.text = "NOT FUNDED BY THE IDF";
 			
-	if Input.is_action_just_pressed("uiDOWN"):
+	if Input.is_action_just_pressed("uiRIGHT"):
 		$AudioStreamPlayer.play();
 		match curButton:
 			1:
-				$selector.position.y = $options.position.y;
+				$selector.position.x = $options.position.x;
 				curButton = 2;
 			2:
-				$selector.position.y = $extras.position.y;
+				$selector.position.x = $extras.position.x;
 				curButton = 3;
 			3:
-				$selector.position.y = $play.position.y;
+				$selector.position.x = $play.position.x;
 				curButton = 1;
-	if Input.is_action_just_pressed("uiUP"):
+	if Input.is_action_just_pressed("uiLEFT"):
 		$AudioStreamPlayer.play();
 		match curButton:
 			1:
-				$selector.position.y = $extras.position.y;
+				$selector.position.x = $extras.position.x;
 				curButton = 3;
 			2:
-				$selector.position.y = $play.position.y;
+				$selector.position.x = $play.position.x;
 				curButton = 1;
 			3:
-				$selector.position.y = $options.position.y;
+				$selector.position.x = $options.position.x;
 				curButton = 2;
 	if Input.is_action_just_pressed("uiSELECT"):
 		match curButton:
