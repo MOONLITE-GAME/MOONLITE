@@ -79,6 +79,24 @@ theme_override_fonts/font = ExtResource("2_e7yyq")
 theme_override_font_sizes/font_size = 50
 text = "PRESS SPACE TO CONTINUE"
 
+[node name="tap" type="Label" parent="." unique_id=2054535506]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -381.0
+offset_top = -22.0
+offset_right = 381.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_e7yyq")
+theme_override_font_sizes/font_size = 50
+text = "TAP THE SCREEN TO CONTINUE"
+
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=120525468]
 layout_mode = 1
 anchors_preset = 8

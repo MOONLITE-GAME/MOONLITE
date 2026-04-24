@@ -9,6 +9,9 @@
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="6_tnbyt"]
 [ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="7_n6640"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2a0hl"]
+size = Vector2(588.25, 180)
+
 [node name="Control" type="Control" unique_id=1719337781]
 layout_mode = 3
 anchors_preset = 8
@@ -47,14 +50,32 @@ sprite_frames = ExtResource("3_xr8q8")
 animation = &"save1 hover"
 autoplay = "save1 hover"
 
+[node name="save1Area" type="Area2D" parent="save1" unique_id=2094458252]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="save1/save1Area" unique_id=2058271888]
+position = Vector2(-11.5, -18)
+shape = SubResource("RectangleShape2D_2a0hl")
+
 [node name="save2" type="AnimatedSprite2D" parent="." unique_id=434538931]
 sprite_frames = ExtResource("4_1ajv1")
 animation = &"save2 basic"
+
+[node name="save2Area" type="Area2D" parent="save2" unique_id=482844469]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="save2/save2Area" unique_id=380959834]
+position = Vector2(-6, -6)
+shape = SubResource("RectangleShape2D_2a0hl")
 
 [node name="save3" type="AnimatedSprite2D" parent="." unique_id=399526658]
 position = Vector2(0, 248)
 sprite_frames = ExtResource("5_1aatk")
 animation = &"save3 basic"
+
+[node name="save3Area" type="Area2D" parent="save3" unique_id=1654404567]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="save3/save3Area" unique_id=916438819]
+position = Vector2(3, 4)
+shape = SubResource("RectangleShape2D_2a0hl")
 
 [node name="blackBar" type="ColorRect" parent="." unique_id=98911342]
 layout_mode = 0
@@ -84,3 +105,7 @@ text = "CHOOSE A SAVE FILE"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=257566454]
 stream = ExtResource("7_n6640")
 bus = &"SFX"
+
+[connection signal="mouse_entered" from="save1/save1Area" to="." method="_on_save_1_area_mouse_entered"]
+[connection signal="mouse_entered" from="save2/save2Area" to="." method="_on_save_area_2_mouse_entered"]
+[connection signal="mouse_entered" from="save3/save3Area" to="." method="_on_save_3_area_mouse_entered"]

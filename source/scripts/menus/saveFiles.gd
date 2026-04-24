@@ -49,3 +49,42 @@ func _process(_delta: float) -> void:
 		AudioServer.set_bus_volume_db(Volume.sfxIndex, Stats.sfxVolume);
 		
 		get_tree().change_scene_to_file("res://source/scenes/menus/startUpMovie.tscn");
+
+func _on_save_1_area_mouse_entered() -> void:
+	if Input.is_action_pressed("Tap"):
+		curButton = 1;
+		Stats.savePath = "user://Save" + str(curButton) + ".json";
+		Stats.loadStats();
+		
+		#Load Volume Settings
+		AudioServer.set_bus_volume_db(Volume.index, Stats.volume);
+		AudioServer.set_bus_volume_db(Volume.musIndex, Stats.musicVolume);
+		AudioServer.set_bus_volume_db(Volume.sfxIndex, Stats.sfxVolume);
+		
+		get_tree().change_scene_to_file("res://source/scenes/menus/startUpMovie.tscn");
+
+func _on_save_area_2_mouse_entered() -> void:
+	if Input.is_action_pressed("Tap"):	
+		curButton = 2;
+		Stats.savePath = "user://Save" + str(curButton) + ".json";
+		Stats.loadStats();
+		
+		#Load Volume Settings
+		AudioServer.set_bus_volume_db(Volume.index, Stats.volume);
+		AudioServer.set_bus_volume_db(Volume.musIndex, Stats.musicVolume);
+		AudioServer.set_bus_volume_db(Volume.sfxIndex, Stats.sfxVolume);
+		
+		get_tree().change_scene_to_file("res://source/scenes/menus/startUpMovie.tscn");
+
+func _on_save_3_area_mouse_entered() -> void:
+	if Input.is_action_pressed("Tap"):
+		curButton = 3;
+		Stats.savePath = "user://Save" + str(curButton) + ".json";
+		Stats.loadStats();
+		
+		#Load Volume Settings
+		AudioServer.set_bus_volume_db(Volume.index, Stats.volume);
+		AudioServer.set_bus_volume_db(Volume.musIndex, Stats.musicVolume);
+		AudioServer.set_bus_volume_db(Volume.sfxIndex, Stats.sfxVolume);
+		
+		get_tree().change_scene_to_file("res://source/scenes/menus/startUpMovie.tscn");

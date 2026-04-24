@@ -27,6 +27,15 @@ grow_vertical = 2
 script = ExtResource("1_dkpco")
 metadata/_edit_use_anchors_ = true
 
+[node name="bgPurp" type="ColorRect" parent="." unique_id=557512762]
+visible = false
+layout_mode = 0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0.28627452, 0.011764706, 0.5372549, 1)
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1740842994]
 layout_mode = 1
 anchors_preset = 8

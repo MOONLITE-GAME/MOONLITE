@@ -8,10 +8,13 @@ func _ready() -> void:
 	$AnyButton.visible = false;
 	await get_tree().create_timer(waitTime).timeout;
 	canContinue = true;
-	$AnyButton.visible = true;
+	if !Stats.mobile:
+		$AnyButton.visible = true;
+	else:
+		$tap.visible = true;
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("uiSELECT") and canContinue:
+	if (event.is_action_pressed("uiSELECT") or event.is_action_pressed("Tap")) and canContinue:
 		$VideoStreamPlayer.play();
 		watchingMovie = true;
 	if event.is_action_pressed("SkipCutscene") and watchingMovie:
