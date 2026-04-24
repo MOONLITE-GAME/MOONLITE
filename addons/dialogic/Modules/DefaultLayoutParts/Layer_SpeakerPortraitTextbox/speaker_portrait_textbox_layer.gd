@@ -37,8 +37,8 @@ enum NameLabelColorModes {GLOBAL_COLOR, CHARACTER_COLOR, CUSTOM_COLOR}
 @export_group('Box')
 @export_subgroup("Box")
 @export_file('*.tres') var box_panel: String = this_folder.path_join("default_stylebox.tres")
-@export var box_modulate_global_color: bool = true
-@export var box_modulate_custom_color: Color = Color(0.47247135639191, 0.31728461384773, 0.16592600941658)
+@export var box_modulate_global_color: bool = false;
+@export var box_modulate_custom_color: Color = Color(0.471, 0.318, 0.165, 0.0)
 @export var box_size: Vector2 = Vector2(600, 160)
 @export var box_distance: int = 25
 
@@ -46,7 +46,7 @@ enum NameLabelColorModes {GLOBAL_COLOR, CHARACTER_COLOR, CUSTOM_COLOR}
 @export_subgroup('Portrait')
 @export var portrait_stretch_factor: float = 0.3
 @export var portrait_position: LimitedAlignments = LimitedAlignments.LEFT
-@export var portrait_bg_modulate: Color = Color(0, 0, 0, 0.5137255191803)
+@export var portrait_bg_modulate: Color = Color(0.0, 0.0, 0.0, 0.0)
 
 
 ## Called by dialogic whenever export overrides might change
