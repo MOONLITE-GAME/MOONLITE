@@ -187,7 +187,6 @@ theme_override_font_sizes/font_size = 40
 text = "There's nothing here... Nothing at all..."
 
 [node name="Other Settings" type="ScrollContainer" parent="." unique_id=1966454781]
-visible = false
 layout_mode = 0
 offset_left = -600.0
 offset_top = -238.0
@@ -198,17 +197,17 @@ theme = ExtResource("18_ndxkh")
 [node name="VBoxContainer" type="VBoxContainer" parent="Other Settings" unique_id=1273442449]
 layout_mode = 2
 
-[node name="Video" type="Label" parent="Other Settings/VBoxContainer" unique_id=1032763313]
+[node name="OTHER" type="Label" parent="Other Settings/VBoxContainer" unique_id=1032763313]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 75
 text = "OTHER SETTINGS"
 
-[node name="Label" type="Label" parent="Other Settings/VBoxContainer" unique_id=794862468]
+[node name="SaveFile" type="Button" parent="Other Settings/VBoxContainer" unique_id=1071870262]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_skxkw")
 theme_override_font_sizes/font_size = 40
-text = "There's nothing here... Nothing at all..."
+text = "CHANGE SAVE FILE"
 
 [connection signal="pressed" from="video" to="." method="_on_video_pressed"]
 [connection signal="pressed" from="audio" to="." method="_on_audio_pressed"]
@@ -216,4 +215,5 @@ text = "There's nothing here... Nothing at all..."
 [connection signal="pressed" from="other" to="." method="_on_other_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="toggled" from="Video Settings/VBoxContainer/fullscreen" to="." method="_on_fullscreen_toggled"]
-[connection signal="toggled" from="Video Settings/VBoxContainer/freecam" to="." method="_on_check_box_toggled"]
+[connection signal="toggled" from="Video Settings/VBoxContainer/freecam" to="." method="_on_freecam_toggled"]
+[connection signal="pressed" from="Other Settings/VBoxContainer/SaveFile" to="." method="_on_save_file_pressed"]

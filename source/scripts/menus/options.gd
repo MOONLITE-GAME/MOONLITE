@@ -48,16 +48,6 @@ func _input(event: InputEvent) -> void:
 			$"Control Settings".visible = false;
 			$"Other Settings".visible = true;
 
-func _on_fullscreen_toggled(toggled_on: bool) -> void:
-	Stats.fullscreen = toggled_on;
-	Stats.saveStats();
-	Stats.loadStats();
-
-func _on_check_box_toggled(toggled_on: bool) -> void:
-	Camera.freeCam = toggled_on;
-	Stats.saveStats();
-	Stats.loadStats();
-
 func _on_video_pressed() -> void:
 	page = "Video";
 
@@ -72,3 +62,19 @@ func _on_other_pressed() -> void:
 
 func _on_exit_pressed() -> void:
 	get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
+
+# VIDEO SETTINGS
+func _on_fullscreen_toggled(toggled_on: bool) -> void:
+	Stats.fullscreen = toggled_on;
+	Stats.saveStats();
+	Stats.loadStats();
+
+func _on_freecam_toggled(toggled_on: bool) -> void:
+	Camera.freeCam = toggled_on;
+	Stats.saveStats();
+	Stats.loadStats();
+
+# OTHER SETTINGS
+func _on_save_file_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/saveFiles.tscn");
+	MusicEngine.stopMusic();
