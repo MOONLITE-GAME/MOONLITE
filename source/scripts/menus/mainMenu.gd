@@ -13,7 +13,7 @@ func _ready() -> void:
 	Camera.limit_top = -10000000;
 	Camera.zoom = Vector2(1,1);
 	Camera.position = Vector2(960, 540);
-	$selector.position.x = $play.position.x;
+	$selector.position.x = -592.0;
 
 func _process(delta: float) -> void:
 	$text.position.x -= textSpeed * delta;
@@ -52,25 +52,25 @@ func _process(delta: float) -> void:
 		$AudioStreamPlayer.play();
 		match curButton:
 			1:
-				$selector.position.x = $options.position.x;
+				$selector.position.x = 0.0;
 				curButton = 2;
 			2:
-				$selector.position.x = $extras.position.x;
+				$selector.position.x = 592.0;
 				curButton = 3;
 			3:
-				$selector.position.x = $play.position.x;
+				$selector.position.x = -592.0;
 				curButton = 1;
 	if Input.is_action_just_pressed("uiLEFT"):
 		$AudioStreamPlayer.play();
 		match curButton:
 			1:
-				$selector.position.x = $extras.position.x;
+				$selector.position.x = 592.0;
 				curButton = 3;
 			2:
-				$selector.position.x = $play.position.x;
+				$selector.position.x = -592.0;
 				curButton = 1;
 			3:
-				$selector.position.x = $options.position.x;
+				$selector.position.x = 0.0;
 				curButton = 2;
 	if Input.is_action_just_pressed("uiSELECT"):
 		match curButton:
@@ -82,34 +82,15 @@ func _process(delta: float) -> void:
 				get_tree().change_scene_to_file("res://source/scenes/menus/options.tscn");
 			3:
 				get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");
-				
-	match curButton:
-		1:
-			$play.skew = 0.25;
-			$options.skew = 0;
-			$extras.skew = 0;
-		2:
-			$play.skew = 0;
-			$options.skew = 0.25;
-			$extras.skew = 0;
-		3:
-			$play.skew = 0;
-			$options.skew = 0;
-			$extras.skew = 0.25;
 
-func _on_play_area_mouse_entered() -> void:
-	curButton = 1;
-	if Input.is_action_pressed("Tap"):
-		get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
-		Stats.playerX = 0;
-		Stats.playerY = 0;
 
-func _on_options_area_mouse_entered() -> void:
-	curButton = 2;
-	if Input.is_action_pressed("Tap"):
-		get_tree().change_scene_to_file("res://source/scenes/menus/options.tscn");
+func _on_play_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
+	Stats.playerX = 0;
+	Stats.playerY = 0;
 
-func _on_extras_mouse_entered() -> void:
-	curButton = 3;
-	if Input.is_action_pressed("Tap"):
-		get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");
+func _on_options_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/options.tscn");
+	
+func _on_extras_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");
