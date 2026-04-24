@@ -16,7 +16,13 @@
 [ext_resource type="Texture2D" uid="uid://1bw2n7uivw4j" path="res://assets/images/menus/mainMenu/frame.png" id="10_v25pk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2jfu"]
-size = Vector2(370.58813, 234.11768)
+size = Vector2(517.647, 234.11768)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7ssp"]
+size = Vector2(614.11786, 225.88234)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wj8xn"]
+size = Vector2(575.29395, 204.70593)
 
 [node name="MainMenu" type="Control" unique_id=1096639473]
 layout_mode = 3
@@ -128,7 +134,7 @@ texture = ExtResource("6_th02w")
 [node name="playArea" type="Area2D" parent="play" unique_id=1100631474]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="play/playArea" unique_id=1513227850]
-position = Vector2(-2.941162, 15.882324)
+position = Vector2(-5.8823547, 15.882324)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_v2jfu")
 
@@ -137,25 +143,25 @@ position = Vector2(0, 419)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("7_wspa4")
 
-[node name="optionsArea" type="Area2D" parent="options" unique_id=1904257294]
+[node name="optionsArea" type="Area2D" parent="options" unique_id=592331945]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="options/optionsArea" unique_id=1471558888]
-position = Vector2(-2.941162, 15.882324)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="options/optionsArea" unique_id=1047829735]
+position = Vector2(2.3527832, -11.764648)
 scale = Vector2(1.0000002, 1.0000002)
-shape = SubResource("RectangleShape2D_v2jfu")
+shape = SubResource("RectangleShape2D_w7ssp")
 
 [node name="extras" type="Sprite2D" parent="." unique_id=332038106]
 position = Vector2(592, 419)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("8_v25pk")
 
-[node name="extras" type="Area2D" parent="extras" unique_id=2011493189]
+[node name="extrasArea" type="Area2D" parent="extras" unique_id=1313571316]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="extras/extras" unique_id=365735918]
-position = Vector2(-2.941162, 15.882324)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="extras/extrasArea" unique_id=1055385875]
+position = Vector2(1.7646484, 1.1765137)
 scale = Vector2(1.0000002, 1.0000002)
-shape = SubResource("RectangleShape2D_v2jfu")
+shape = SubResource("RectangleShape2D_wj8xn")
 
 [connection signal="mouse_entered" from="play/playArea" to="." method="_on_play_area_mouse_entered"]
 [connection signal="mouse_entered" from="options/optionsArea" to="." method="_on_options_area_mouse_entered"]
-[connection signal="mouse_entered" from="extras/extras" to="." method="_on_extras_mouse_entered"]
+[connection signal="mouse_entered" from="extras/extrasArea" to="." method="_on_extras_mouse_entered"]
