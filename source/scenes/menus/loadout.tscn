@@ -112,9 +112,20 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="sprite" type="Sprite2D" parent="weaponIcon" unique_id=940652152]
+[node name="sprite" type="TextureButton" parent="weaponIcon" unique_id=159725974]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = -240.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(2.0489178, 2.048918)
-texture = ExtResource("2_0nhdv")
+texture_normal = ExtResource("2_0nhdv")
 
 [node name="text" type="Label" parent="weaponIcon" unique_id=2032331669]
 layout_mode = 1
@@ -185,6 +196,7 @@ offset_right = 960.0
 offset_bottom = -251.0
 texture_normal = ExtResource("7_qgxdf")
 
+[connection signal="pressed" from="weaponIcon/sprite" to="." method="_on_sprite_pressed"]
 [connection signal="pressed" from="arrowLeft" to="." method="_on_arrow_left_pressed"]
 [connection signal="pressed" from="arrowRight" to="." method="_on_arrow_right_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
