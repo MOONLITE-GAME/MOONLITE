@@ -82,3 +82,17 @@ func _process(delta: float) -> void:
 				get_tree().change_scene_to_file("res://source/scenes/menus/options.tscn");
 			3:
 				get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");
+				
+	match curButton:
+		1:
+			$play.skew = 0.25;
+			$options.skew = 0;
+			$extras.skew = 0;
+		2:
+			$play.skew = 0;
+			$options.skew = 0.25;
+			$extras.skew = 0;
+		3:
+			$play.skew = 0;
+			$options.skew = 0;
+			$extras.skew = 0.25;
