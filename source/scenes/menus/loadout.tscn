@@ -189,6 +189,7 @@ stream = ExtResource("6_drpnl")
 bus = &"SFX"
 
 [node name="exit" type="TextureButton" parent="." unique_id=1943992147]
+visible = false
 layout_mode = 0
 offset_left = 576.0
 offset_top = -539.0

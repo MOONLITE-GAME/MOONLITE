@@ -85,6 +85,7 @@ rotation = 3.1415927
 texture = ExtResource("3_n5tpk")
 
 [node name="exit" type="TextureButton" parent="." unique_id=943794779]
+visible = false
 layout_mode = 0
 offset_left = 576.0
 offset_top = -540.0
