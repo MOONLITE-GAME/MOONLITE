@@ -20,4 +20,6 @@ func _process(delta: float) -> void:
 
 
 func _on_exit_pressed() -> void:
+	MusicEngine.stopMusic();
+	MusicEngine.loadSong("titleScreen");
 	get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");

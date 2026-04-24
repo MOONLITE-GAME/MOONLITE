@@ -82,6 +82,10 @@ func _process(delta: float) -> void:
 				get_tree().change_scene_to_file("res://source/scenes/menus/options.tscn");
 			3:
 				get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");
+	
+	if Input.is_action_just_pressed("uiEXIT"):
+		if !OS.get_name() == "Web":
+			get_tree().quit();
 
 
 func _on_play_button_pressed() -> void:
