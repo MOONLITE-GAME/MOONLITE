@@ -7,6 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://ce11qb3g0xn1b" path="res://icon.png" id="4_jm11n"]
 [ext_resource type="Texture2D" uid="uid://l6p6ruvw6pkm" path="res://assets/shared/images/hud/healthbar.png" id="5_oh3fd"]
 [ext_resource type="Texture2D" uid="uid://dvhgfe7mmtoa6" path="res://assets/shared/images/hud/healthbarFrame.png" id="6_4dksr"]
+[ext_resource type="Texture2D" uid="uid://cq3ywrdu2wve7" path="res://assets/shared/images/ui/mobileButtons/jump.png" id="8_gqc3m"]
+[ext_resource type="Texture2D" uid="uid://nd4n0xr0x8bu" path="res://assets/shared/images/ui/mobileButtons/slide.png" id="9_keags"]
+[ext_resource type="Texture2D" uid="uid://1pijbapj5co1" path="res://assets/shared/images/ui/mobileButtons/left.png" id="10_oj8a2"]
+[ext_resource type="Texture2D" uid="uid://h5kwwl745inn" path="res://assets/shared/images/ui/mobileButtons/right.png" id="11_qj7ol"]
+[ext_resource type="Texture2D" uid="uid://dl3cmh0fwql15" path="res://assets/shared/images/ui/mobileButtons/interact.png" id="12_2f4nb"]
+[ext_resource type="Texture2D" uid="uid://twkwq1onb243" path="res://assets/shared/images/ui/mobileButtons/attack.png" id="13_x21l0"]
 
 [node name="Hud" type="Control" unique_id=242897047]
 layout_mode = 3
@@ -65,3 +71,70 @@ offset_bottom = 1031.05
 theme_override_fonts/font = ExtResource("3_y50ka")
 theme_override_font_sizes/font_size = 75
 text = "MOONLITE"
+
+[node name="mobile" type="Control" parent="." unique_id=2091223158]
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 740.0
+offset_right = 80.0
+offset_bottom = 780.0
+
+[node name="main" type="Control" parent="mobile" unique_id=1370824760]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.6, 0.6)
+
+[node name="jump" type="TextureButton" parent="mobile/main" unique_id=492481310]
+layout_mode = 0
+offset_left = 212.00003
+offset_top = 1333.0
+offset_right = 425.00003
+offset_bottom = 1539.0
+texture_normal = ExtResource("8_gqc3m")
+
+[node name="slide" type="TextureButton" parent="mobile/main" unique_id=1346570954]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 1746.0001
+offset_right = 424.0
+offset_bottom = 1952.0001
+texture_normal = ExtResource("9_keags")
+
+[node name="left" type="TextureButton" parent="mobile/main" unique_id=62331145]
+layout_mode = 0
+offset_top = 1539.0
+offset_right = 213.0
+offset_bottom = 1745.0
+texture_normal = ExtResource("10_oj8a2")
+
+[node name="right" type="TextureButton" parent="mobile/main" unique_id=755576989]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 1539.0
+offset_right = 639.0
+offset_bottom = 1745.0
+texture_normal = ExtResource("11_qj7ol")
+
+[node name="interact" type="TextureButton" parent="mobile/main" unique_id=813915403]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 1539.0
+offset_right = 426.0
+offset_bottom = 1745.0
+texture_normal = ExtResource("12_2f4nb")
+
+[node name="attack" type="TextureButton" parent="mobile" unique_id=1024362261]
+layout_mode = 0
+offset_left = 1547.0
+offset_top = 919.0
+offset_right = 1760.0
+offset_bottom = 1125.0
+texture_normal = ExtResource("13_x21l0")
+
+[connection signal="pressed" from="mobile/main/jump" to="." method="_on_jump_pressed"]
+[connection signal="pressed" from="mobile/main/slide" to="." method="_on_slide_pressed"]
+[connection signal="pressed" from="mobile/main/left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="mobile/main/right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="mobile/main/interact" to="." method="_on_interact_pressed"]
+[connection signal="pressed" from="mobile/attack" to="." method="_on_attack_pressed"]

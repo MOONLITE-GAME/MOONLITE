@@ -6,7 +6,7 @@ var charPath:String = "res://assets/data/characters/";
 var assetPath:String;
 var character:String;
 var fullscreen:bool;
-var mobile:bool = false;
+var mobile:bool = true;
 
 # vars for character stats
 var health:int;
