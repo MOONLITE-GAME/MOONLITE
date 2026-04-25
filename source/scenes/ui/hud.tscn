@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://h5kwwl745inn" path="res://assets/shared/images/ui/mobileButtons/right.png" id="11_qj7ol"]
 [ext_resource type="Texture2D" uid="uid://dl3cmh0fwql15" path="res://assets/shared/images/ui/mobileButtons/interact.png" id="12_2f4nb"]
 [ext_resource type="Texture2D" uid="uid://twkwq1onb243" path="res://assets/shared/images/ui/mobileButtons/attack.png" id="13_x21l0"]
+[ext_resource type="Texture2D" uid="uid://dbfdv6f021tgh" path="res://assets/shared/images/ui/mobileButtons/dash.png" id="14_keags"]
+[ext_resource type="Texture2D" uid="uid://dfqbv7j8a2cjj" path="res://assets/shared/images/ui/mobileButtons/pause.png" id="15_oj8a2"]
 
 [node name="Hud" type="Control" unique_id=242897047]
 layout_mode = 3
@@ -134,6 +136,30 @@ offset_bottom = 1437.0
 scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("13_x21l0")
 
+[node name="dash" type="TextureButton" parent="mobile" unique_id=1946532591]
+layout_mode = 0
+offset_left = 1520.0
+offset_top = 1231.0
+offset_right = 1733.0
+offset_bottom = 1437.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("14_keags")
+
+[node name="pause" type="TextureButton" parent="mobile" unique_id=129820670]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1997.5
+offset_top = 129.0
+offset_right = 2210.5
+offset_bottom = 335.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("15_oj8a2")
+
 [connection signal="button_down" from="mobile/main/jump" to="." method="_on_jump_pressed"]
 [connection signal="button_up" from="mobile/main/jump" to="." method="_on_jump_release"]
 [connection signal="button_down" from="mobile/main/slide" to="." method="_on_slide_pressed"]
@@ -146,3 +172,7 @@ texture_normal = ExtResource("13_x21l0")
 [connection signal="button_up" from="mobile/main/interact" to="." method="_on_interact_release"]
 [connection signal="button_down" from="mobile/attack" to="." method="_on_attack_pressed"]
 [connection signal="button_up" from="mobile/attack" to="." method="_on_attack_release"]
+[connection signal="button_down" from="mobile/dash" to="." method="_on_dash_button_down"]
+[connection signal="button_up" from="mobile/dash" to="." method="_on_dash_button_up"]
+[connection signal="button_down" from="mobile/pause" to="." method="_on_pause_button_down"]
+[connection signal="button_up" from="mobile/pause" to="." method="_on_pause_button_up"]

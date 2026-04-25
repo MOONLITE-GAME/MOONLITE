@@ -62,3 +62,16 @@ func _on_interact_release() -> void:
 
 func _on_attack_release() -> void:
 	Input.action_release("BasicAttack");
+
+func _on_dash_button_down() -> void:
+	Input.action_press("Dash");
+
+func _on_dash_button_up() -> void:
+	Input.action_release("Dash");
+
+func _on_pause_button_down() -> void:
+	Input.action_press("Pause");
+
+func _on_pause_button_up() -> void:
+	Input.action_release("Pause");
+	
