@@ -81,9 +81,10 @@ offset_bottom = 780.0
 
 [node name="main" type="Control" parent="mobile" unique_id=1370824760]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.6, 0.6)
+offset_left = -351.0
+offset_top = -309.0
+offset_right = -311.0
+offset_bottom = -269.0
 
 [node name="jump" type="TextureButton" parent="mobile/main" unique_id=492481310]
 layout_mode = 0
@@ -126,15 +127,22 @@ texture_normal = ExtResource("12_2f4nb")
 
 [node name="attack" type="TextureButton" parent="mobile" unique_id=1024362261]
 layout_mode = 0
-offset_left = 1547.0
-offset_top = 919.0
-offset_right = 1760.0
-offset_bottom = 1125.0
+offset_left = 1867.0001
+offset_top = 1231.0
+offset_right = 2080.0
+offset_bottom = 1437.0
+scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("13_x21l0")
 
-[connection signal="pressed" from="mobile/main/jump" to="." method="_on_jump_pressed"]
-[connection signal="pressed" from="mobile/main/slide" to="." method="_on_slide_pressed"]
-[connection signal="pressed" from="mobile/main/left" to="." method="_on_left_pressed"]
-[connection signal="pressed" from="mobile/main/right" to="." method="_on_right_pressed"]
-[connection signal="pressed" from="mobile/main/interact" to="." method="_on_interact_pressed"]
-[connection signal="pressed" from="mobile/attack" to="." method="_on_attack_pressed"]
+[connection signal="button_down" from="mobile/main/jump" to="." method="_on_jump_pressed"]
+[connection signal="button_up" from="mobile/main/jump" to="." method="_on_jump_release"]
+[connection signal="button_down" from="mobile/main/slide" to="." method="_on_slide_pressed"]
+[connection signal="button_up" from="mobile/main/slide" to="." method="_on_slide_release"]
+[connection signal="button_down" from="mobile/main/left" to="." method="_on_left_pressed"]
+[connection signal="button_up" from="mobile/main/left" to="." method="_on_left_release"]
+[connection signal="button_down" from="mobile/main/right" to="." method="_on_right_pressed"]
+[connection signal="button_up" from="mobile/main/right" to="." method="_on_right_release"]
+[connection signal="button_down" from="mobile/main/interact" to="." method="_on_interact_pressed"]
+[connection signal="button_up" from="mobile/main/interact" to="." method="_on_interact_release"]
+[connection signal="button_down" from="mobile/attack" to="." method="_on_attack_pressed"]
+[connection signal="button_up" from="mobile/attack" to="." method="_on_attack_release"]

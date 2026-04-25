@@ -44,3 +44,21 @@ func _on_interact_pressed() -> void:
 
 func _on_attack_pressed() -> void:
 	Input.action_press("BasicAttack");
+	
+func _on_jump_release() -> void:
+	Input.action_release("Jump");
+
+func _on_slide_release() -> void:
+	Input.action_release("Slide");
+
+func _on_left_release() -> void:
+	Input.action_release("Left");
+
+func _on_right_release() -> void:
+	Input.action_release("Right");
+
+func _on_interact_release() -> void:
+	Input.action_release("Interact");
+
+func _on_attack_release() -> void:
+	Input.action_release("BasicAttack");
