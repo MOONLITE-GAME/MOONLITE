@@ -10,6 +10,7 @@ body:
       options:
         - Itch.io (Web/HTML5)
         - Windows (Downloadable Build)
+        - Android
         - Compiled from GitHub Source Code
     validations:
       required: true
