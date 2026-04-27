@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cvbh4nrwgw04k" path="res://assets/sounds/beep.ogg" id="2_w6ads"]
 
 [node name="DebugDisplay" type="CanvasLayer" unique_id=852444424]
+visible = false
 script = ExtResource("1_w6ads")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1889839500]
