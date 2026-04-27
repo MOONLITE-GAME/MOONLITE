@@ -4,7 +4,7 @@ var canVisitOST:bool = true;
 var curButton:int = 1;
 
 func _ready() -> void:
-	if OS.get_name() == "Web":
+	if OS.get_name() == "Web" or Stats.mobile:
 		canVisitOST = false;
 	if Stats.mobile:
 		$exit.visible = true;

@@ -4,15 +4,19 @@ All notable changes will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.0.5] - 2026-??-??
-THE FIFTH ALPHA RELEASE: UI CLEAN UP
+## [0.0.5] - 2026-04-26
+THE FIFTH ALPHA RELEASE: UI CLEAN UP & ANDROID RELEASE
 
 ### Added
 - New Intro Sequence
+- Official Android Support!
+- Tons of New Settings
 
 ### Changed
 - Main Menu, Extras Menu, and Pause Menu Received Revamps!
 - Options Menu Received Some Adjustments!
+- Most Buttons Can Now Be Clicked
+- Attack Button is now `Enter` rather than `Left Mouse Button`
 
 ### Fixed
 - Options menu buttons now use the correct texture when selected!
