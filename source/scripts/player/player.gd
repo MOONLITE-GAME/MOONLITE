@@ -81,6 +81,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
+	
 	if Input.is_action_just_pressed("Left") and not Stats.inDialogue and not Slide.sliding:
 		dir = "Left";
 	elif Input.is_action_just_pressed("Right") and not Stats.inDialogue and not Slide.sliding:
