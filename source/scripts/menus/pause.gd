@@ -14,14 +14,11 @@ func _process(_delta: float) -> void:
 			$uiSounds.play();
 			match curButton:
 				1:
-					$ui/selector.position.y = $ui/map.position.y;
-					curButton = 3;
+					$ui/selector.position.y = $ui/menu.position.y;
+					curButton = 2;
 				2:
 					$ui/selector.position.y = $ui/resume.position.y;
 					curButton = 1;
-				3:
-					$ui/selector.position.y = $ui/menu.position.y;
-					curButton = 2;
 					
 		if Input.is_action_just_pressed("uiDOWN"):
 			$uiSounds.play();
@@ -30,9 +27,6 @@ func _process(_delta: float) -> void:
 					$ui/selector.position.y = $ui/menu.position.y;
 					curButton = 2;
 				2:
-					$ui/selector.position.y = $ui/map.position.y;
-					curButton = 3;
-				3:
 					$ui/selector.position.y = $ui/resume.position.y;
 					curButton = 1;
 		
@@ -61,3 +55,13 @@ func pause():
 func resume():
 	get_tree().paused = false;
 	$".".visible = false;
+
+
+func _on_resume_button_pressed() -> void:
+	if get_tree().paused:
+		resume();
+		
+func _on_menu_button_pressed() -> void:
+	if get_tree().paused:
+			resume();
+			get_tree().change_scene_to_file("res://source/scenes/menus/titleScreen.tscn");

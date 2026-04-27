@@ -96,14 +96,33 @@ position = Vector2(24, -256)
 texture = ExtResource("4_o3qc2")
 
 [node name="resume" type="Sprite2D" parent="ui" unique_id=390091268]
+visible = false
 position = Vector2(20, -256)
 texture = ExtResource("4_j7o66")
 
+[node name="resumeButton" type="TextureButton" parent="ui" unique_id=1191943563]
+layout_mode = 0
+offset_left = -295.0
+offset_top = -351.0
+offset_right = 334.0
+offset_bottom = -160.0
+texture_normal = ExtResource("4_j7o66")
+
 [node name="menu" type="Sprite2D" parent="ui" unique_id=482252463]
+visible = false
 position = Vector2(20, 0)
 texture = ExtResource("5_x4d6k")
 
+[node name="menuButton" type="TextureButton" parent="ui" unique_id=527847842]
+layout_mode = 0
+offset_left = -234.0
+offset_top = -97.0
+offset_right = 275.0
+offset_bottom = 97.0
+texture_normal = ExtResource("5_x4d6k")
+
 [node name="map" type="Sprite2D" parent="ui" unique_id=1920477661]
+visible = false
 position = Vector2(20, 256)
 texture = ExtResource("6_kplfg")
 
@@ -138,3 +157,6 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_evub7")
 theme_override_font_sizes/font_size = 75
 text = "PAUSE"
+
+[connection signal="pressed" from="ui/resumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="ui/menuButton" to="." method="_on_menu_button_pressed"]
