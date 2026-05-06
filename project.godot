@@ -15,7 +15,8 @@ config/version="0.0.5"
 run/main_scene="uid://d3yy05k4icstv"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/image="uid://b5xf8qnqb02tm"
-config/icon="uid://ce11qb3g0xn1b"
+config/icon="uid://ckx2s73jm5621"
+config/windows_native_icon="res://art/icons/icon.ico"
 
 [audio]
 
