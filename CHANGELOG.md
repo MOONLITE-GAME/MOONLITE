@@ -10,6 +10,9 @@ THE SIXTH ALPHA RELEASE: BUG FIXES AND ADJUSTMENTS
 ### Added
 - New Icons for the game!
 
+### Fixed
+- A bug where the reload and loadout crates didn't work on mobile
+
 ## [0.0.5] - 2026-04-26
 THE FIFTH ALPHA RELEASE: UI CLEAN UP & ANDROID RELEASE
 
