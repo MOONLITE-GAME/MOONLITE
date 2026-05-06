@@ -13,5 +13,9 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		print("CharacterBody2D exited");
 	
 func _process(_delta: float) -> void:
-	if !Stats.attacking and Input.is_action_just_pressed("BasicAttack") and inDestructionRadius:
-		get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
+	if Stats.mobile:
+		if Stats.attacking and Input.is_action_just_pressed("BasicAttack") and inDestructionRadius:
+			get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
+	else:
+		if !Stats.attacking and Input.is_action_just_pressed("BasicAttack") and inDestructionRadius:
+			get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");

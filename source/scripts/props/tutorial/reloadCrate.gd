@@ -13,5 +13,9 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		print("CharacterBody2D exited");
 	
 func _process(_delta: float) -> void:
-	if !Stats.attacking and Input.is_action_just_pressed("BasicAttack") and inDestructionRadius:
-		get_tree().reload_current_scene();
+	if Stats.mobile:
+		if Stats.attacking and Input.is_action_just_pressed("BasicAttack") and inDestructionRadius:
+			get_tree().reload_current_scene();
+	else:
+		if !Stats.attacking and Input.is_action_just_pressed("BasicAttack") and inDestructionRadius:
+			get_tree().reload_current_scene();
