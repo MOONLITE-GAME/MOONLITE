@@ -25,6 +25,8 @@ func updateWeapon():
 			$weaponIcon.texture = load("res://assets/shared/images/hud/weaponIcons/hammer.png");
 		"Ground Pound":
 			$weaponIcon.texture = load("res://assets/shared/images/hud/weaponIcons/groundPound.png");
+		"Projectile":
+			$weaponIcon.texture = load("res://assets/shared/images/hud/weaponIcons/projectile.png");
 
 
 func _on_jump_pressed() -> void:

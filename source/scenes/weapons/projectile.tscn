@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://rhrc6e5riee6"]
+
+[ext_resource type="Script" uid="uid://2m3tj1mye8lc" path="res://source/scripts/items/weapons/projectile.gd" id="1_400ka"]
+[ext_resource type="Texture2D" uid="uid://crh0m3dvria43" path="res://assets/shared/images/weapons/projectiles/blueBallOfDoomAndDispair.png" id="1_qossm"]
+
+[node name="Projectile" type="Node2D" unique_id=1100452424]
+script = ExtResource("1_400ka")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=648406188]
+texture = ExtResource("1_qossm")

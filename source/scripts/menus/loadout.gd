@@ -1,7 +1,7 @@
 extends Control
 
 var curWeapon:int = 1;
-var maxWeapon:int = 3;
+var maxWeapon:int = 4;
 
 func _ready() -> void:
 	curWeapon = 1;
@@ -49,6 +49,9 @@ func _process(_delta: float) -> void:
 		3:
 			Stats.weapon = "Ground Pound";
 			Stats.weaponType = "Ground Pound";
+		4:
+			Stats.weapon = "Blue Ball";
+			Stats.weaponType = "Projectile";
 			
 	match Stats.weaponType:
 		"Sword":
@@ -57,6 +60,8 @@ func _process(_delta: float) -> void:
 			$weaponIcon/sprite.texture_normal = load("res://assets/shared/images/hud/weaponIcons/hammer.png");
 		"Ground Pound":
 			$weaponIcon/sprite.texture_normal = load("res://assets/shared/images/hud/weaponIcons/groundPound.png");
+		"Projectile":
+			$weaponIcon/sprite.texture_normal = load("res://assets/shared/images/hud/weaponIcons/projectile.png");
 		
 
 

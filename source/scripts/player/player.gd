@@ -87,7 +87,7 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_pressed("Right") and not Stats.inDialogue and not Slide.sliding:
 		dir = "Right";
 		
-	if Input.is_action_just_pressed("BasicAttack") and Stats.attacking == false and not Dash.dodging and not Slide.sliding and not Stats.inDialogue:
+	if Input.is_action_just_pressed("BasicAttack") and Stats.attacking == false and not Dash.dodging and not Slide.sliding and not Stats.inDialogue and not Stats.weaponType == "Projectile":
 		Stats.attacking = true;
 		$AudioStreamPlayer.stream = $Weapon.baseAttackSound;
 		$AudioStreamPlayer.play();
@@ -121,6 +121,26 @@ func _physics_process(delta: float) -> void:
 
 		else:
 			await get_tree().create_timer($Weapon.attackCooldown).timeout;
+
+		Stats.attacking = false;
+		
+	if Input.is_action_just_pressed("BasicAttack") and Stats.attacking == false and not Dash.dodging and not Slide.sliding and not Stats.inDialogue and Stats.weaponType == "Projectile":
+		Stats.attacking = true;
+		$AudioStreamPlayer.stream = $Weapon.baseAttackSound;
+		$AudioStreamPlayer.play();
+		
+		var projectile = Projectile.new();
+		
+		projectile.position = position;
+		
+		if dir == "Left":
+			projectile.moveLeft();
+		else:
+			projectile.moveRight();
+		
+		$Weapon.baseAttack();
+
+		await get_tree().create_timer($Weapon.attackCooldown).timeout;
 
 		Stats.attacking = false;
 		
@@ -171,6 +191,8 @@ func getWeapon():
 			$Weapon.set_script(load("res://source/scripts/items/weapons/Rebounder.gd"));
 		"Ground Pound":
 			$Weapon.set_script(load("res://source/scripts/items/weapons/groundPound.gd"));
+		"Blue Ball":
+			$Weapon.set_script(load("res://source/scripts/items/weapons/blueBallOfDoomAndDispair.gd"));
 			
 	$Weapon._ready();
 	Stats.weaponType = $Weapon.weaponType;

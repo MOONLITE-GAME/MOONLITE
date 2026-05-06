@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2gc3i078s0tk"
-path="res://.godot/imported/speedBoost.png-1cd87f4a45cdaca815accacc3cc3f375.ctex"
+uid="uid://crh0m3dvria43"
+path="res://.godot/imported/blueBallOfDoomAndDispair.png-df9866710794e4007f2dbfb75607d134.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/shared/images/hud/weaponIcons/speedBoost.png"
-dest_files=["res://.godot/imported/speedBoost.png-1cd87f4a45cdaca815accacc3cc3f375.ctex"]
+source_file="res://assets/shared/images/weapons/projectiles/blueBallOfDoomAndDispair.png"
+dest_files=["res://.godot/imported/blueBallOfDoomAndDispair.png-df9866710794e4007f2dbfb75607d134.ctex"]
 
 [params]
 
