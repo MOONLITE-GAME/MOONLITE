@@ -1,0 +1,28 @@
+QOL:
+	
+	1. Making slide a toggle button instead of a set movement length
+	2. Make Ground pound cooldown less longer
+	3. Add a sound for sprinting
+	4. Footstep noises (very faint ones)
+	5. Add more experimental interaction objects (EX. a slot machine)
+	6. things that can damage health (Ex. a Spike(s), enemys, etc)
+	7.music for the parkour room (this current music is already driving me crazy so its better to have varity)
+	
+	-TheSearcher213
+	(THESE ARE SUGGESTIONS)
+	
+NON PRIOITY FIXES:
+	
+	1. "Press E to interact" text is gone (it is very helpful for those playing this for the first time.)
+	
+BUGS:
+	NONE
+
+TO DO: (FOR ALL DEVS INCLUDING MYSELF)
+	1. Moonlite Sprite to show different weapons (example. Rebounder 'hammer', Ground Pound 'showing none')
+	2. work on QOL (suggestions at top)
+	3. grind the fuck away for updating
+	4. update the export after newest release
+	5. Playtest, Inspect, Report, Repeat.
+	
+--THIS REPORT WAS HAND-TYPED BY THESEARCHER213
