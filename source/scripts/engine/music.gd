@@ -38,3 +38,7 @@ func loadSong(songName):
 func stopMusic():
 	stream = null;
 	stop();
+
+
+func _on_finished() -> void:
+	play();

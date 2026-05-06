@@ -1,8 +1,13 @@
 extends Node2D
 
+var rng = RandomNumberGenerator.new();
+var musRNG:int;
+
 func _ready() -> void:
 	Camera.limit_bottom = 1080;
 	Camera.limit_left = 0;
+	MusicEngine.stopMusic();
+	getNewMusic();
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ScrollUp"):
@@ -15,3 +20,23 @@ func _process(delta: float) -> void:
 	if not Camera.freeCam:
 		Camera.position.x = Stats.playerX;
 		Camera.position.y = Stats.playerY;
+
+func getNewMusic():
+	musRNG = rng.randi_range(1, 5);
+	
+	match musRNG:
+		1:
+			$MUSIC.stream = load("res://assets/music/bopeeboMoonlite.ogg");
+		2:
+			$MUSIC.stream = load("res://assets/music/ridge.ogg");
+		3:
+			$MUSIC.stream = load("res://assets/music/saveFiles.ogg");
+		4:
+			$MUSIC.stream = load("res://assets/music/titleScreen.ogg");
+		5:
+			$MUSIC.stream = load("res://assets/music/tutorial.ogg");
+	
+	$MUSIC.play();
+
+func _on_music_finished() -> void:
+	getNewMusic();

@@ -88,3 +88,8 @@ position = Vector2(2032, -1531)
 
 [node name="Crate5" parent="." unique_id=1802738590 instance=ExtResource("7_tm0x1")]
 position = Vector2(2794, -2207)
+
+[node name="MUSIC" type="AudioStreamPlayer" parent="." unique_id=1478775075]
+bus = &"Music"
+
+[connection signal="finished" from="MUSIC" to="." method="_on_music_finished"]
