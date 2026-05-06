@@ -5,3 +5,8 @@ func _process(_delta: float) -> void:
 		get_tree().change_scene_to_file(targetRoom);
 		Stats.playerX = targetX;
 		Stats.playerY = targetY;
+		
+	if inside:
+		$popup.visible = true;
+	else:
+		$popup.visible = false;

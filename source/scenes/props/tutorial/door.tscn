@@ -16,7 +16,6 @@ scale = Vector2(0.41372335, 1.1124041)
 texture = ExtResource("1_od8iu")
 
 [node name="popup" type="Label" parent="." unique_id=656029088]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

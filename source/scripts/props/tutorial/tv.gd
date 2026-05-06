@@ -13,11 +13,13 @@ func _process(_delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		inDestructionRadius = true;
+		$interactText.visible = true;
 		print("CharacterBody2D entered");
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		inDestructionRadius = false;
+		$interactText.visible = false;
 		print("CharacterBody2D exited");
 
 func _on_video_stream_player_finished() -> void:
