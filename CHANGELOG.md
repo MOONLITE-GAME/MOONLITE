@@ -10,6 +10,9 @@ THE SIXTH ALPHA RELEASE: BUG FIXES AND ADJUSTMENTS
 ### Added
 - New Icons for the game!
 
+### Changed
+- Attack Key is bound to `Q` alongside `Enter`
+
 ### Fixed
 - A bug where the reload and loadout crates didn't work on mobile
 
