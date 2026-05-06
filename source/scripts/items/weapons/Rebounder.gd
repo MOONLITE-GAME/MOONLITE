@@ -8,7 +8,7 @@ func _ready():
 	baseAttackSound = load("res://assets/shared/sounds/items/weapons/hammerOfZoomin.ogg");
 	exAttackSound = baseAttackSound;
 	affectsVelocity = true;
-	velocityTime = 3.5;
+	velocityTime = 1.5;
 	weaponType = "Hammer";
 
 func baseAttack():
