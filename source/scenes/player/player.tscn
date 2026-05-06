@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0plg3jli2b86"]
 
 [ext_resource type="Script" uid="uid://fgnxdqefplmo" path="res://source/scripts/player/player.gd" id="1_kb210"]
-[ext_resource type="SpriteFrames" uid="uid://bwr2bhtuo6u28" path="res://assets/shared/images/characters/playable/moonlite.xml" id="1_uevig"]
+[ext_resource type="SpriteFrames" uid="uid://dtk4rompyx6px" path="res://assets/shared/images/characters/playable/moonlite.xml" id="1_uevig"]
 [ext_resource type="Script" uid="uid://bwwscuo1vocsh" path="res://source/scripts/items/weapons/baseWeapon.gd" id="3_ysf2y"]
 [ext_resource type="Script" uid="uid://cmeu8n4ljkex5" path="res://source/scripts/items/basicItem.gd" id="4_h4f0s"]
 [ext_resource type="PackedScene" uid="uid://dxidxd1nnsv6n" path="res://source/scenes/menus/pauseMenu.tscn" id="5_h4f0s"]
@@ -16,17 +16,17 @@ scale = Vector2(0.879999, 0.879999)
 script = ExtResource("1_kb210")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=118235366]
-position = Vector2(240, 0)
+position = Vector2(240.90938, 0)
 sprite_frames = ExtResource("1_uevig")
 animation = &"idle right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=466554286]
-position = Vector2(-18, 3)
+position = Vector2(-17.999998, -45.863697)
 shape = SubResource("CapsuleShape2D_uevig")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=99910279]
+debug_color = Color(0.63746715, 0.24641398, 0.9999998, 0.41960785)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=217296495]
+bus = &"SFX"
 
 [node name="Weapon" type="Node" parent="." unique_id=978391263]
 script = ExtResource("3_ysf2y")

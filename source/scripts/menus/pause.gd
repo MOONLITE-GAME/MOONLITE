@@ -2,31 +2,32 @@ extends Control;
 
 var curButton:int = 1;
 
+func _ready() -> void:
+	$ui/selector.position.y = $ui/resume.position.y;
+
 func _process(_delta: float) -> void:
-	checkPauseInput();
+	if not Stats.inDialogue:
+		checkPauseInput();
 	
 	if get_tree().paused:
 		if Input.is_action_just_pressed("uiUP"):
 			$uiSounds.play();
 			match curButton:
 				1:
-					$resume.play_backwards("hover");
-					$mainMenu.play("hover");
+					$ui/selector.position.y = $ui/menu.position.y;
 					curButton = 2;
 				2:
-					$mainMenu.play_backwards("hover");
-					$resume.play("hover");
+					$ui/selector.position.y = $ui/resume.position.y;
 					curButton = 1;
+					
 		if Input.is_action_just_pressed("uiDOWN"):
 			$uiSounds.play();
 			match curButton:
 				1:
-					$resume.play_backwards("hover");
-					$mainMenu.play("hover");
+					$ui/selector.position.y = $ui/menu.position.y;
 					curButton = 2;
 				2:
-					$mainMenu.play_backwards("hover");
-					$resume.play("hover");
+					$ui/selector.position.y = $ui/resume.position.y;
 					curButton = 1;
 		
 		if Input.is_action_just_pressed("uiSELECT"):
@@ -54,3 +55,13 @@ func pause():
 func resume():
 	get_tree().paused = false;
 	$".".visible = false;
+
+
+func _on_resume_button_pressed() -> void:
+	if get_tree().paused:
+		resume();
+		
+func _on_menu_button_pressed() -> void:
+	if get_tree().paused:
+			resume();
+			get_tree().change_scene_to_file("res://source/scenes/menus/titleScreen.tscn");

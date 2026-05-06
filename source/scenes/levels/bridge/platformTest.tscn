@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://bxdspjqjvayhy"]
+
+[ext_resource type="Script" uid="uid://dcm71mgpfnoar" path="res://source/scripts/levels/bridge/platformTest.gd" id="1_ixnc4"]
+[ext_resource type="PackedScene" uid="uid://0plg3jli2b86" path="res://source/scenes/player/player.tscn" id="1_ujdbb"]
+[ext_resource type="PackedScene" uid="uid://bimx1pu04h7ls" path="res://source/scenes/props/tutorial/floor.tscn" id="2_1ncyg"]
+[ext_resource type="PackedScene" uid="uid://c1cbfl86s4o2w" path="res://source/scenes/props/tutorial/respawnCrate.tscn" id="4_gl14v"]
+[ext_resource type="PackedScene" uid="uid://b3ocxukv16fku" path="res://source/scenes/props/tutorial/climbableFloor.tscn" id="5_sjq5b"]
+[ext_resource type="PackedScene" uid="uid://brtaeonitllg0" path="res://source/scenes/props/tutorial/door.tscn" id="6_6qe7x"]
+[ext_resource type="PackedScene" uid="uid://dtc7aowsdnx3l" path="res://source/scenes/props/tutorial/crate.tscn" id="7_tm0x1"]
+
+[node name="PlatformTest" type="Node2D" unique_id=619799371]
+script = ExtResource("1_ixnc4")
+
+[node name="Floor" parent="." unique_id=622707432 instance=ExtResource("2_1ncyg")]
+position = Vector2(4252, 1142)
+scale = Vector2(7.4799986, 1)
+
+[node name="Door" parent="." unique_id=1904273369 instance=ExtResource("6_6qe7x")]
+position = Vector2(2949, -2332)
+targetRoom = "res://source/scenes/levels/bridge/tutorial.tscn"
+targetX = 2696.0
+targetY = -754.0
+
+[node name="ClimbableFloor12" parent="." unique_id=1027604807 instance=ExtResource("5_sjq5b")]
+position = Vector2(2932, -2055)
+scale = Vector2(5.640005, 1)
+
+[node name="Player" parent="." unique_id=1975751171 instance=ExtResource("1_ujdbb")]
+
+[node name="ReloadCrate" parent="." unique_id=189451403 instance=ExtResource("4_gl14v")]
+position = Vector2(136, 862)
+
+[node name="ClimbableFloor" parent="." unique_id=798359888 instance=ExtResource("5_sjq5b")]
+position = Vector2(4435, 431)
+scale = Vector2(5.640005, 1)
+
+[node name="ClimbableFloor2" parent="." unique_id=1274407608 instance=ExtResource("5_sjq5b")]
+position = Vector2(1966, 786)
+scale = Vector2(6.0000052, 1)
+
+[node name="ClimbableFloor3" parent="." unique_id=632215849 instance=ExtResource("5_sjq5b")]
+position = Vector2(3014, 515)
+scale = Vector2(7.040005, 1)
+
+[node name="ClimbableFloor4" parent="." unique_id=982219684 instance=ExtResource("5_sjq5b")]
+position = Vector2(5225, 32)
+scale = Vector2(5.640005, 1)
+
+[node name="ClimbableFloor5" parent="." unique_id=308764765 instance=ExtResource("5_sjq5b")]
+position = Vector2(4295, -299)
+scale = Vector2(5.640005, 1)
+
+[node name="ClimbableFloor6" parent="." unique_id=903147173 instance=ExtResource("5_sjq5b")]
+position = Vector2(3219, -462)
+scale = Vector2(5.640005, 1)
+
+[node name="ClimbableFloor7" parent="." unique_id=1378193158 instance=ExtResource("5_sjq5b")]
+position = Vector2(2167, -660)
+scale = Vector2(5.640005, 1)
+
+[node name="ClimbableFloor8" parent="." unique_id=1160604342 instance=ExtResource("5_sjq5b")]
+position = Vector2(778.00006, -708)
+scale = Vector2(5.640005, 1)
+
+[node name="ClimbableFloor9" parent="." unique_id=1509227193 instance=ExtResource("5_sjq5b")]
+position = Vector2(1901, -1382)
+scale = Vector2(5.640005, 1)
+
+[node name="ClimbableFloor10" parent="." unique_id=1752733794 instance=ExtResource("5_sjq5b")]
+position = Vector2(57, -1467)
+scale = Vector2(5.640005, 1)
+
+[node name="ClimbableFloor11" parent="." unique_id=709481733 instance=ExtResource("5_sjq5b")]
+position = Vector2(1280, -2078)
+scale = Vector2(5.640005, 1)
+
+[node name="Crate" parent="." unique_id=1446622805 instance=ExtResource("7_tm0x1")]
+position = Vector2(3106, -621)
+
+[node name="Crate2" parent="." unique_id=176369125 instance=ExtResource("7_tm0x1")]
+position = Vector2(3375, -620)
+
+[node name="Crate3" parent="." unique_id=1645981413 instance=ExtResource("7_tm0x1")]
+position = Vector2(1792, -1536)
+
+[node name="Crate4" parent="." unique_id=1570673029 instance=ExtResource("7_tm0x1")]
+position = Vector2(2032, -1531)
+
+[node name="Crate5" parent="." unique_id=1802738590 instance=ExtResource("7_tm0x1")]
+position = Vector2(2794, -2207)

@@ -1,9 +1,15 @@
-extends Control;
-
-func _ready() -> void:
-	$EasterEggTime.text = ""; # i still haven't reimplemented the screensaver easter egg, so this text goes unused lol
+extends CanvasLayer;
 
 func _process(_delta: float) -> void:
 	if $".".visible:
 		$FPS.text = "FPS: " + str(Engine.get_frames_per_second());
 		$Coordinates.text = "X:" + str(roundf(Stats.playerX)) + ", Y:" + str(roundf(Stats.playerY));
+		$CamCoords.text = "Cam X:" + str(roundf(Camera.position.x)) + ", Cam Y:" + str(roundf(Camera.position.y));
+		$InDialogue.text = "Dialogue: " + str(Stats.inDialogue);
+
+	if Input.is_action_just_pressed("DebugDisplay"):
+		$AudioStreamPlayer.play();
+		if visible:
+			visible = false;
+		else:
+			visible = true;

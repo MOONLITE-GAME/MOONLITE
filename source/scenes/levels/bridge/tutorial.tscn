@@ -7,9 +7,18 @@
 [ext_resource type="PackedScene" uid="uid://b72ogqmrm4gms" path="res://source/scenes/enemies/tutorial/dummy.tscn" id="5_t7sh1"]
 [ext_resource type="PackedScene" uid="uid://c1cbfl86s4o2w" path="res://source/scenes/props/tutorial/respawnCrate.tscn" id="6_tjwqx"]
 [ext_resource type="PackedScene" uid="uid://r0wniyac3b28" path="res://source/scenes/props/tutorial/loadoutCrate.tscn" id="7_1a1tr"]
+[ext_resource type="PackedScene" uid="uid://bmvkpdwwugwt1" path="res://source/scenes/props/tutorial/radio.tscn" id="8_1f0t5"]
+[ext_resource type="PackedScene" uid="uid://c85q5v5fq0vgq" path="res://source/scenes/props/tutorial/tv.tscn" id="9_t2m6m"]
+[ext_resource type="PackedScene" uid="uid://brtaeonitllg0" path="res://source/scenes/props/tutorial/door.tscn" id="10_efh0g"]
 
 [node name="Tutorial" type="Node2D" unique_id=616210905]
 script = ExtResource("1_xoycb")
+
+[node name="Door" parent="." unique_id=941278625 instance=ExtResource("10_efh0g")]
+position = Vector2(2279, 803)
+targetRoom = "res://source/scenes/levels/bridge/platformTest.tscn"
+targetX = 100.0
+targetY = 100.0
 
 [node name="Floor" parent="." unique_id=622707432 instance=ExtResource("2_122ua")]
 position = Vector2(4152, 1138)
@@ -47,10 +56,20 @@ position = Vector2(2553, 884)
 position = Vector2(2964, 780)
 
 [node name="Crate9" parent="." unique_id=1222488629 instance=ExtResource("4_1kgaq")]
-position = Vector2(2718, 572)
+position = Vector2(2590, 513)
 
 [node name="ReloadCrate" parent="." unique_id=655693080 instance=ExtResource("6_tjwqx")]
 position = Vector2(-868, 881)
 
 [node name="ReloadCrate2" parent="." unique_id=280044963 instance=ExtResource("7_1a1tr")]
 position = Vector2(-194, 876)
+
+[node name="Crate10" parent="." unique_id=649272189 instance=ExtResource("4_1kgaq")]
+position = Vector2(3401, 633)
+
+[node name="Radio" parent="." unique_id=1376089764 instance=ExtResource("8_1f0t5")]
+position = Vector2(3395, 459)
+can_sleep = false
+
+[node name="Tv" parent="." unique_id=950352930 instance=ExtResource("9_t2m6m")]
+position = Vector2(2965, 533)

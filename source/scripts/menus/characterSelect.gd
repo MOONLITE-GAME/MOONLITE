@@ -7,6 +7,9 @@ var chr:String;
 func _ready() -> void:
 	chr = "moonlite";
 	loadCharData(chr);
+	
+	if Stats.mobile:
+		$exit.visible = true;
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiLEFT"):
@@ -58,3 +61,10 @@ func loadCharData(character:String):
 		
 		if "name" in data:
 			$charName.text = data.name;
+
+func _on_exit_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
+	
+func _on_character_pressed() -> void:
+	Stats.character = chr;
+	get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");

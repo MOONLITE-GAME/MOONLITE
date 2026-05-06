@@ -6,6 +6,7 @@ var charPath:String = "res://assets/data/characters/";
 var assetPath:String;
 var character:String;
 var fullscreen:bool;
+var mobile:bool = false; # SET TO TRUE BEFORE MOBILE EXPORTS
 
 # vars for character stats
 var health:int;
@@ -24,6 +25,10 @@ var attackLeft:String;
 var attackRight:String;
 var dodgeLeft:String;
 var dodgeRight:String;
+var attackRunLeft:String;
+var attackRunRight:String;
+var slideLeft:String;
+var slideRight:String;
 
 # vars for general data
 var playerX:float;
@@ -33,6 +38,11 @@ var charName:String;
 var debug:bool = true;
 var attacking:bool = false;
 var volume:float;
+var musicVolume:float;
+var sfxVolume:float;
+var inDialogue:bool = false;
+var moving:bool;
+var canClimb:bool = false;
 
 func saveStats():
 	SaveIcon.showIcon();
@@ -46,7 +56,10 @@ func saveStats():
 	data.item = item;
 	volume = AudioServer.get_bus_volume_db(Volume.index);
 	data.volume = volume;
+	data.musicVolume = musicVolume;
+	data.sfxVolume = sfxVolume;
 	data.fullscreen = fullscreen;
+	data.freecam = Camera.freeCam;
 
 	var json_string = JSON.stringify(data);
 	file.store_string(json_string);
@@ -95,10 +108,28 @@ func loadStats():
 			volume = -5.0;
 			saveStats();
 			
+		if "musicVolume" in data:
+			musicVolume = data.musicVolume;
+		else:
+			musicVolume = 0.0;
+			saveStats();
+			
+		if "sfxVolume" in data:
+			sfxVolume = data.sfxVolume;
+		else:
+			sfxVolume = 0.0;
+			saveStats();
+			
 		if "fullscreen" in data:
 			fullscreen = data.fullscreen;
 		else:
 			fullscreen = false;
+			saveStats();
+			
+		if "freecam" in data:
+			Camera.freeCam = data.freecam;
+		else:
+			Camera.freeCam = false;
 			saveStats();
 
 	else:
@@ -155,6 +186,14 @@ func loadCharJSON():
 			dodgeLeft = data.dodgeLeft;
 		if "dodgeRight" in data:
 			dodgeRight = data.dodgeRight;
+		if "attackRunLeft" in data:
+			attackRunLeft = data.attackRunLeft;
+		if "attackRunRight" in data:
+			attackRunRight = data.attackRunRight;
+		if "slideLeft" in data:
+			slideLeft = data.slideLeft;
+		if "slideRight" in data:
+			slideRight = data.slideRight; 
 
 	else:
 		print("File does not exist.");

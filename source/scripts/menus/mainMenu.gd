@@ -7,6 +7,13 @@ var textSpeed:float = 350.0;
 
 func _ready() -> void:
 	rndmString = stringRNG.randi_range(1, 12);
+	Camera.limit_bottom = 10000000;
+	Camera.limit_right = 10000000;
+	Camera.limit_left = -10000000;
+	Camera.limit_top = -10000000;
+	Camera.zoom = Vector2(1,1);
+	Camera.position = Vector2(960, 540);
+	$selector.position.x = -592.0;
 
 func _process(delta: float) -> void:
 	$text.position.x -= textSpeed * delta;
@@ -17,7 +24,7 @@ func _process(delta: float) -> void:
 
 	match rndmString:
 		1:
-			$text.text = "VERSION ALPHA 0.0.3 - LINUX AND SOME OTHER SHIT PROBABLY";
+			$text.text = "VERSION ALPHA 0.0.6 - Bug Fixes and Adjustments";
 		2:
 			$text.text = "BROUGHT TO YOU BY RED ECLIPSE STUDIO";
 		3:
@@ -41,39 +48,29 @@ func _process(delta: float) -> void:
 		12:
 			$text.text = "NOT FUNDED BY THE IDF";
 			
-	if Input.is_action_just_pressed("uiDOWN"):
+	if Input.is_action_just_pressed("uiRIGHT"):
+		$AudioStreamPlayer.play();
 		match curButton:
 			1:
-				$AudioStreamPlayer.play();
-				$play.play_backwards("hover");
-				$options.play("hover");
+				$selector.position.x = 0.0;
 				curButton = 2;
 			2:
-				$AudioStreamPlayer.play();
-				$options.play_backwards("hover");
-				$extras.play("hover");
+				$selector.position.x = 592.0;
 				curButton = 3;
 			3:
-				$AudioStreamPlayer.play();
-				$extras.play_backwards("hover");
-				$play.play("hover");
+				$selector.position.x = -592.0;
 				curButton = 1;
-	if Input.is_action_just_pressed("uiUP"):
+	if Input.is_action_just_pressed("uiLEFT"):
+		$AudioStreamPlayer.play();
 		match curButton:
 			1:
-				$AudioStreamPlayer.play();
-				$play.play_backwards("hover");
-				$extras.play("hover");
+				$selector.position.x = 592.0;
 				curButton = 3;
 			2:
-				$AudioStreamPlayer.play();
-				$options.play_backwards("hover");
-				$play.play("hover");
+				$selector.position.x = -592.0;
 				curButton = 1;
 			3:
-				$AudioStreamPlayer.play();
-				$extras.play_backwards("hover");
-				$options.play("hover");
+				$selector.position.x = 0.0;
 				curButton = 2;
 	if Input.is_action_just_pressed("uiSELECT"):
 		match curButton:
@@ -85,3 +82,19 @@ func _process(delta: float) -> void:
 				get_tree().change_scene_to_file("res://source/scenes/menus/options.tscn");
 			3:
 				get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");
+	
+	if Input.is_action_just_pressed("uiEXIT"):
+		if !OS.get_name() == "Web":
+			get_tree().quit();
+
+
+func _on_play_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
+	Stats.playerX = 0;
+	Stats.playerY = 0;
+
+func _on_options_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/options.tscn");
+	
+func _on_extras_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/extras.tscn");

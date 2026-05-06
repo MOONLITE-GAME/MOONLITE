@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="moonlite.png">
+	<!-- Created with Adobe Animate version 24.0.13.5 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="moonlite0000" x="0" y="0" width="1172" height="779" frameX="-37" frameY="0" frameWidth="1209" frameHeight="794"/>
+	<SubTexture name="moonlite0001" x="0" y="0" width="1172" height="779" frameX="-37" frameY="0" frameWidth="1209" frameHeight="794"/>
+	<SubTexture name="moonlite0002" x="0" y="0" width="1172" height="779" frameX="-37" frameY="0" frameWidth="1209" frameHeight="794"/>
+	<SubTexture name="moonlite0003" x="0" y="0" width="1172" height="779" frameX="-37" frameY="0" frameWidth="1209" frameHeight="794"/>
+	<SubTexture name="moonlite0004" x="0" y="0" width="1172" height="779" frameX="-37" frameY="0" frameWidth="1209" frameHeight="794"/>
+	<SubTexture name="moonlite0005" x="1172" y="0" width="1186" height="790" frameX="-23" frameY="0" frameWidth="1209" frameHeight="794"/>
+	<SubTexture name="moonlite0006" x="1172" y="0" width="1186" height="790" frameX="-23" frameY="0" frameWidth="1209" frameHeight="794"/>
+	<SubTexture name="moonlite0007" x="1172" y="0" width="1186" height="790" frameX="-23" frameY="0" frameWidth="1209" frameHeight="794"/>
+	<SubTexture name="moonlite0008" x="1172" y="0" width="1186" height="790" frameX="-23" frameY="0" frameWidth="1209" frameHeight="794"/>
+	<SubTexture name="moonlite0009" x="1172" y="0" width="1186" height="790" frameX="-23" frameY="0" frameWidth="1209" frameHeight="794"/>
+	<SubTexture name="moonlite0010" x="2358" y="0" width="1209" height="794"/>
+	<SubTexture name="moonlite0011" x="2358" y="0" width="1209" height="794"/>
+	<SubTexture name="moonlite0012" x="2358" y="0" width="1209" height="794"/>
+	<SubTexture name="moonlite0013" x="2358" y="0" width="1209" height="794"/>
+	<SubTexture name="moonlite0014" x="2358" y="0" width="1209" height="794"/>
+</TextureAtlas>

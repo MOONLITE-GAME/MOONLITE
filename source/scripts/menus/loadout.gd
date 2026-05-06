@@ -6,6 +6,10 @@ var maxWeapon:int = 3;
 func _ready() -> void:
 	curWeapon = 1;
 	$weaponIcon/text.text = Stats.weapon;
+	Camera.position = Vector2(960, 540);
+	
+	if Stats.mobile:
+		$exit.visible = true;
 
 func _process(_delta: float) -> void:
 	$weaponIcon/text.text = Stats.weapon;
@@ -48,9 +52,28 @@ func _process(_delta: float) -> void:
 			
 	match Stats.weaponType:
 		"Sword":
-			$weaponIcon/sprite.texture = load("res://assets/shared/images/hud/weaponIcons/sword.png");
+			$weaponIcon/sprite.texture_normal = load("res://assets/shared/images/hud/weaponIcons/sword.png");
 		"Hammer":
-			$weaponIcon/sprite.texture = load("res://assets/shared/images/hud/weaponIcons/hammer.png");
+			$weaponIcon/sprite.texture_normal = load("res://assets/shared/images/hud/weaponIcons/hammer.png");
 		"Ground Pound":
-			$weaponIcon/sprite.texture = load("res://assets/shared/images/hud/weaponIcons/groundPound.png");
+			$weaponIcon/sprite.texture_normal = load("res://assets/shared/images/hud/weaponIcons/groundPound.png");
 		
+
+
+func _on_arrow_left_pressed() -> void:
+	$AudioStreamPlayer.play();
+	curWeapon = curWeapon - 1;
+	if curWeapon == 0:
+		curWeapon = maxWeapon;
+
+func _on_arrow_right_pressed() -> void:
+	$AudioStreamPlayer.play();
+	curWeapon = curWeapon + 1;
+	if curWeapon > maxWeapon:
+		curWeapon = 1;
+
+func _on_exit_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
+
+func _on_sprite_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");

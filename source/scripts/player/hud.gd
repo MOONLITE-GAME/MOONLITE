@@ -5,14 +5,12 @@ func _ready() -> void:
 	Stats.loadCharJSON();
 	updateWeapon();
 	$charName.text = Stats.charName;
+	
+	if !Stats.mobile:
+		$mobile.visible = false;
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("DebugDisplay"):
-		$debugDisplay/AudioStreamPlayer.play();
-		if $debugDisplay.visible:
-			$debugDisplay.visible = false;
-		else:
-			$debugDisplay.visible = true;
+	pass;
 	
 func setHealth(health):
 	$healthBar.value = health;
@@ -27,3 +25,53 @@ func updateWeapon():
 			$weaponIcon.texture = load("res://assets/shared/images/hud/weaponIcons/hammer.png");
 		"Ground Pound":
 			$weaponIcon.texture = load("res://assets/shared/images/hud/weaponIcons/groundPound.png");
+
+
+func _on_jump_pressed() -> void:
+	Input.action_press("Jump");
+
+func _on_slide_pressed() -> void:
+	Input.action_press("Slide");
+
+func _on_left_pressed() -> void:
+	Input.action_press("Left");
+
+func _on_right_pressed() -> void:
+	Input.action_press("Right");
+
+func _on_interact_pressed() -> void:
+	Input.action_press("Interact");
+
+func _on_attack_pressed() -> void:
+	Input.action_press("BasicAttack");
+	
+func _on_jump_release() -> void:
+	Input.action_release("Jump");
+
+func _on_slide_release() -> void:
+	Input.action_release("Slide");
+
+func _on_left_release() -> void:
+	Input.action_release("Left");
+
+func _on_right_release() -> void:
+	Input.action_release("Right");
+
+func _on_interact_release() -> void:
+	Input.action_release("Interact");
+
+func _on_attack_release() -> void:
+	Input.action_release("BasicAttack");
+
+func _on_dash_button_down() -> void:
+	Input.action_press("Dash");
+
+func _on_dash_button_up() -> void:
+	Input.action_release("Dash");
+
+func _on_pause_button_down() -> void:
+	Input.action_press("Pause");
+
+func _on_pause_button_up() -> void:
+	Input.action_release("Pause");
+	

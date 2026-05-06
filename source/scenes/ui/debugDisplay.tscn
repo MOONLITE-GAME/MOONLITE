@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dtt4andy8x6y7"]
+
+[ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="1_km6th"]
+[ext_resource type="Script" uid="uid://eiaqd56hrv22" path="res://source/scripts/player/debugDisplay.gd" id="1_w6ads"]
+[ext_resource type="AudioStream" uid="uid://cvbh4nrwgw04k" path="res://assets/sounds/beep.ogg" id="2_w6ads"]
+
+[node name="DebugDisplay" type="CanvasLayer" unique_id=852444424]
+visible = false
+script = ExtResource("1_w6ads")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1889839500]
+offset_right = 275.0
+offset_bottom = 183.0
+color = Color(0.38039216, 0.38039216, 0.38039216, 0.54901963)
+
+[node name="FPS" type="Label" parent="." unique_id=260947426]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_km6th")
+theme_override_font_sizes/font_size = 25
+text = "FPS:"
+
+[node name="Coordinates" type="Label" parent="." unique_id=226197732]
+offset_top = 48.0
+offset_right = 146.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("1_km6th")
+theme_override_font_sizes/font_size = 25
+text = "X:"
+
+[node name="CamCoords" type="Label" parent="." unique_id=946535579]
+offset_top = 96.0
+offset_right = 147.0
+offset_bottom = 119.0
+theme_override_fonts/font = ExtResource("1_km6th")
+theme_override_font_sizes/font_size = 25
+text = "Cam Coords"
+
+[node name="InDialogue" type="Label" parent="." unique_id=1497811409]
+offset_top = 144.0
+offset_right = 176.0
+offset_bottom = 188.0
+theme_override_fonts/font = ExtResource("1_km6th")
+theme_override_font_sizes/font_size = 25
+text = "Dialogue"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1591639944]
+stream = ExtResource("2_w6ads")
+bus = &"SFX"

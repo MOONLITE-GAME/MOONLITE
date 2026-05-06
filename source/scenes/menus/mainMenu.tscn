@@ -1,13 +1,19 @@
 [gd_scene format=3 uid="uid://dhqdnl16d6jll"]
 
 [ext_resource type="Script" uid="uid://qbydevetvdcn" path="res://source/scripts/menus/mainMenu.gd" id="1_dkpco"]
-[ext_resource type="Texture2D" uid="uid://drp665nfyfkkj" path="res://assets/images/menus/purp.png" id="1_fh34g"]
-[ext_resource type="Texture2D" uid="uid://d2awtxg6065dr" path="res://assets/images/menus/mainMenu/logo.png" id="2_nwa14"]
+[ext_resource type="Texture2D" uid="uid://nkwbc1dtk6jx" path="res://assets/images/menus/mainMenu/dark.png" id="2_th02w"]
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="3_h1l53"]
-[ext_resource type="SpriteFrames" uid="uid://c47v0374ke0p" path="res://assets/images/menus/mainMenu/play.xml" id="5_5baup"]
-[ext_resource type="SpriteFrames" uid="uid://clg86p02v2qsp" path="res://assets/images/menus/mainMenu/options.xml" id="6_hah2e"]
-[ext_resource type="SpriteFrames" uid="uid://dm8fkdeg7jp4" path="res://assets/images/menus/mainMenu/extras.xml" id="7_fg8t5"]
+[ext_resource type="Texture2D" uid="uid://dfug7qfou3fb0" path="res://assets/images/menus/mainMenu/blur.png" id="3_wspa4"]
+[ext_resource type="Texture2D" uid="uid://kmm4v1ms7gxq" path="res://assets/images/menus/mainMenu/purpleBlur.png" id="6_7mr6w"]
+[ext_resource type="Texture2D" uid="uid://dqmy0m5smwjek" path="res://assets/images/menus/mainMenu/ball.png" id="6_jbjar"]
+[ext_resource type="Texture2D" uid="uid://dakq1cnfaj2ix" path="res://assets/images/menus/mainMenu/play.png" id="6_th02w"]
+[ext_resource type="Texture2D" uid="uid://btmqu8rplj602" path="res://assets/images/menus/pause/selector.png" id="6_wspa4"]
+[ext_resource type="Texture2D" uid="uid://cymc43daj3234" path="res://assets/images/menus/mainMenu/options.png" id="7_wspa4"]
+[ext_resource type="Texture2D" uid="uid://dsust6b0qio0u" path="res://assets/images/menus/mainMenu/railing.png" id="8_6jrp6"]
 [ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="8_th02w"]
+[ext_resource type="Texture2D" uid="uid://cppgtaljy6f4x" path="res://assets/images/menus/mainMenu/extras.png" id="8_v25pk"]
+[ext_resource type="SpriteFrames" uid="uid://dcv5l4gbfjpgt" path="res://assets/images/menus/mainMenu/moonlite.xml" id="9_v2jfu"]
+[ext_resource type="Texture2D" uid="uid://1bw2n7uivw4j" path="res://assets/images/menus/mainMenu/frame.png" id="10_v25pk"]
 
 [node name="MainMenu" type="Control" unique_id=1096639473]
 layout_mode = 3
@@ -19,8 +25,10 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dkpco")
+metadata/_edit_use_anchors_ = true
 
 [node name="bgPurp" type="ColorRect" parent="." unique_id=557512762]
+visible = false
 layout_mode = 0
 offset_left = -960.0
 offset_top = -540.0
@@ -28,49 +36,132 @@ offset_right = 960.0
 offset_bottom = 540.0
 color = Color(0.28627452, 0.011764706, 0.5372549, 1)
 
-[node name="purp" type="Sprite2D" parent="." unique_id=1072281407]
-position = Vector2(-568, 5)
-texture = ExtResource("1_fh34g")
-
-[node name="Logo" type="Sprite2D" parent="." unique_id=292178732]
-position = Vector2(-564.00024, -390.99994)
-scale = Vector2(0.6297297, 0.62972975)
-texture = ExtResource("2_nwa14")
-
-[node name="blackBar" type="ColorRect" parent="." unique_id=2045428743]
-layout_mode = 0
-offset_left = -960.0
-offset_top = 390.0
-offset_right = 960.0
-offset_bottom = 540.0
-color = Color(0, 0, 0, 1)
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1740842994]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -798.2
+offset_top = -450.3
+offset_right = 798.2
+offset_bottom = -297.69998
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18431373, 0.18431373, 0.18431373, 1)
 
 [node name="text" type="Label" parent="." unique_id=1083842379]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = 967.0
-offset_top = 444.0
+offset_top = -400.5
 offset_right = 1997.0
-offset_bottom = 497.0
+offset_bottom = -347.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_h1l53")
 theme_override_font_sizes/font_size = 75
 text = "This is some dope ass text"
 
-[node name="extras" type="AnimatedSprite2D" parent="." unique_id=1525199067]
-position = Vector2(-596, 224)
-sprite_frames = ExtResource("7_fg8t5")
-animation = &"basic"
+[node name="bg" type="Sprite2D" parent="." unique_id=795870382]
+texture = ExtResource("2_th02w")
 
-[node name="options" type="AnimatedSprite2D" parent="." unique_id=1421202323]
-position = Vector2(-596, 56)
-sprite_frames = ExtResource("6_hah2e")
-animation = &"basic"
+[node name="frame" type="Sprite2D" parent="." unique_id=955804519]
+position = Vector2(1, -375)
+texture = ExtResource("10_v25pk")
 
-[node name="play" type="AnimatedSprite2D" parent="." unique_id=14595198]
-position = Vector2(-596, -120)
-sprite_frames = ExtResource("5_5baup")
-animation = &"hover"
-autoplay = "hover"
+[node name="whiteBlur" type="Sprite2D" parent="." unique_id=723958983]
+position = Vector2(-8, -378.00006)
+scale = Vector2(0.65647924, 0.65647924)
+texture = ExtResource("3_wspa4")
+
+[node name="purpleFog" type="Sprite2D" parent="." unique_id=1270270625]
+position = Vector2(51, -1)
+scale = Vector2(0.7097783, 0.7097783)
+texture = ExtResource("6_7mr6w")
+
+[node name="orb" type="Sprite2D" parent="." unique_id=1456751215]
+position = Vector2(0, 200)
+texture = ExtResource("6_jbjar")
+
+[node name="railing" type="Sprite2D" parent="." unique_id=1159580621]
+position = Vector2(0, 240)
+texture = ExtResource("8_6jrp6")
+
+[node name="moonlite" type="AnimatedSprite2D" parent="." unique_id=138428073]
+position = Vector2(-288, 32)
+sprite_frames = ExtResource("9_v2jfu")
+animation = &"moonlite"
+autoplay = "moonlite"
+frame_progress = 0.5829991
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1357520103]
 stream = ExtResource("8_th02w")
 bus = &"SFX"
+
+[node name="blackBar" type="ColorRect" parent="." unique_id=2045428743]
+layout_mode = 0
+offset_left = -960.0
+offset_top = 258.0
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0, 0, 0, 1)
+
+[node name="selector" type="Sprite2D" parent="." unique_id=407314239]
+position = Vector2(-592, 410.00006)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("6_wspa4")
+
+[node name="play" type="Sprite2D" parent="." unique_id=486370410]
+visible = false
+position = Vector2(-592, 403)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("6_th02w")
+
+[node name="options" type="Sprite2D" parent="." unique_id=1460456201]
+visible = false
+position = Vector2(0, 419)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("7_wspa4")
+
+[node name="extras" type="Sprite2D" parent="." unique_id=332038106]
+visible = false
+position = Vector2(592, 419)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("8_v25pk")
+
+[node name="playButton" type="TextureButton" parent="." unique_id=488785467]
+layout_mode = 0
+offset_left = -746.0
+offset_top = 288.00003
+offset_right = -383.0
+offset_bottom = 559.0
+scale = Vector2(0.85, 0.85)
+texture_normal = ExtResource("6_th02w")
+
+[node name="optionsButton" type="TextureButton" parent="." unique_id=426840605]
+layout_mode = 0
+offset_left = -257.00006
+offset_top = 335.00006
+offset_right = 348.99994
+offset_bottom = 532.00006
+scale = Vector2(0.85, 0.85)
+texture_normal = ExtResource("7_wspa4")
+
+[node name="extrasButton" type="TextureButton" parent="." unique_id=85756435]
+layout_mode = 0
+offset_left = 351.00003
+offset_top = 338.00003
+offset_right = 919.0
+offset_bottom = 528.0
+scale = Vector2(0.85, 0.85)
+texture_normal = ExtResource("8_v25pk")
+
+[connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="optionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="extrasButton" to="." method="_on_extras_button_pressed"]

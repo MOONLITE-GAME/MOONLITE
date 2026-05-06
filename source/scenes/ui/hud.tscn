@@ -7,8 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://ce11qb3g0xn1b" path="res://icon.png" id="4_jm11n"]
 [ext_resource type="Texture2D" uid="uid://l6p6ruvw6pkm" path="res://assets/shared/images/hud/healthbar.png" id="5_oh3fd"]
 [ext_resource type="Texture2D" uid="uid://dvhgfe7mmtoa6" path="res://assets/shared/images/hud/healthbarFrame.png" id="6_4dksr"]
-[ext_resource type="Script" uid="uid://eiaqd56hrv22" path="res://source/scripts/player/debugDisplay.gd" id="8_hahbu"]
-[ext_resource type="AudioStream" uid="uid://cvbh4nrwgw04k" path="res://assets/sounds/beep.ogg" id="9_w6dlt"]
+[ext_resource type="Texture2D" uid="uid://cq3ywrdu2wve7" path="res://assets/shared/images/ui/mobileButtons/jump.png" id="8_gqc3m"]
+[ext_resource type="Texture2D" uid="uid://nd4n0xr0x8bu" path="res://assets/shared/images/ui/mobileButtons/slide.png" id="9_keags"]
+[ext_resource type="Texture2D" uid="uid://1pijbapj5co1" path="res://assets/shared/images/ui/mobileButtons/left.png" id="10_oj8a2"]
+[ext_resource type="Texture2D" uid="uid://h5kwwl745inn" path="res://assets/shared/images/ui/mobileButtons/right.png" id="11_qj7ol"]
+[ext_resource type="Texture2D" uid="uid://dl3cmh0fwql15" path="res://assets/shared/images/ui/mobileButtons/interact.png" id="12_2f4nb"]
+[ext_resource type="Texture2D" uid="uid://twkwq1onb243" path="res://assets/shared/images/ui/mobileButtons/attack.png" id="13_x21l0"]
+[ext_resource type="Texture2D" uid="uid://dbfdv6f021tgh" path="res://assets/shared/images/ui/mobileButtons/dash.png" id="14_keags"]
+[ext_resource type="Texture2D" uid="uid://dfqbv7j8a2cjj" path="res://assets/shared/images/ui/mobileButtons/pause.png" id="15_oj8a2"]
 
 [node name="Hud" type="Control" unique_id=242897047]
 layout_mode = 3
@@ -68,47 +74,105 @@ theme_override_fonts/font = ExtResource("3_y50ka")
 theme_override_font_sizes/font_size = 75
 text = "MOONLITE"
 
-[node name="debugDisplay" type="Control" parent="." unique_id=515432406]
-visible = false
+[node name="mobile" type="Control" parent="." unique_id=2091223158]
 anchors_preset = 0
-offset_left = -388.0
-offset_top = 1085.0
-offset_right = -348.0
-offset_bottom = 1125.0
-script = ExtResource("8_hahbu")
+offset_left = 40.0
+offset_top = 740.0
+offset_right = 80.0
+offset_bottom = 780.0
 
-[node name="ColorRect" type="ColorRect" parent="debugDisplay" unique_id=868912309]
+[node name="main" type="Control" parent="mobile" unique_id=1370824760]
+anchors_preset = 0
+offset_left = -351.0
+offset_top = -309.0
+offset_right = -311.0
+offset_bottom = -269.0
+
+[node name="jump" type="TextureButton" parent="mobile/main" unique_id=492481310]
 layout_mode = 0
-offset_right = 275.0
-offset_bottom = 144.0
-color = Color(0.38039216, 0.38039216, 0.38039216, 0.54901963)
+offset_left = 212.00003
+offset_top = 1333.0
+offset_right = 425.00003
+offset_bottom = 1539.0
+texture_normal = ExtResource("8_gqc3m")
 
-[node name="FPS" type="Label" parent="debugDisplay" unique_id=1956220043]
+[node name="slide" type="TextureButton" parent="mobile/main" unique_id=1346570954]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("3_y50ka")
-theme_override_font_sizes/font_size = 25
-text = "FPS:"
+offset_left = 211.0
+offset_top = 1746.0001
+offset_right = 424.0
+offset_bottom = 1952.0001
+texture_normal = ExtResource("9_keags")
 
-[node name="Coordinates" type="Label" parent="debugDisplay" unique_id=314680248]
+[node name="left" type="TextureButton" parent="mobile/main" unique_id=62331145]
 layout_mode = 0
-offset_top = 48.0
-offset_right = 146.0
-offset_bottom = 92.0
-theme_override_fonts/font = ExtResource("3_y50ka")
-theme_override_font_sizes/font_size = 25
-text = "X:"
+offset_top = 1539.0
+offset_right = 213.0
+offset_bottom = 1745.0
+texture_normal = ExtResource("10_oj8a2")
 
-[node name="EasterEggTime" type="Label" parent="debugDisplay" unique_id=675246779]
+[node name="right" type="TextureButton" parent="mobile/main" unique_id=755576989]
 layout_mode = 0
-offset_top = 96.0
-offset_right = 176.0
-offset_bottom = 140.0
-theme_override_fonts/font = ExtResource("3_y50ka")
-theme_override_font_sizes/font_size = 25
-text = "ScrnSvr:"
+offset_left = 426.0
+offset_top = 1539.0
+offset_right = 639.0
+offset_bottom = 1745.0
+texture_normal = ExtResource("11_qj7ol")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="debugDisplay" unique_id=1745319617]
-stream = ExtResource("9_w6dlt")
-bus = &"SFX"
+[node name="interact" type="TextureButton" parent="mobile/main" unique_id=813915403]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 1539.0
+offset_right = 426.0
+offset_bottom = 1745.0
+texture_normal = ExtResource("12_2f4nb")
+
+[node name="attack" type="TextureButton" parent="mobile" unique_id=1024362261]
+layout_mode = 0
+offset_left = 1867.0001
+offset_top = 1231.0
+offset_right = 2080.0
+offset_bottom = 1437.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("13_x21l0")
+
+[node name="dash" type="TextureButton" parent="mobile" unique_id=1946532591]
+layout_mode = 0
+offset_left = 1520.0
+offset_top = 1231.0
+offset_right = 1733.0
+offset_bottom = 1437.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("14_keags")
+
+[node name="pause" type="TextureButton" parent="mobile" unique_id=129820670]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1997.5
+offset_top = 129.0
+offset_right = 2210.5
+offset_bottom = 335.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("15_oj8a2")
+
+[connection signal="button_down" from="mobile/main/jump" to="." method="_on_jump_pressed"]
+[connection signal="button_up" from="mobile/main/jump" to="." method="_on_jump_release"]
+[connection signal="button_down" from="mobile/main/slide" to="." method="_on_slide_pressed"]
+[connection signal="button_up" from="mobile/main/slide" to="." method="_on_slide_release"]
+[connection signal="button_down" from="mobile/main/left" to="." method="_on_left_pressed"]
+[connection signal="button_up" from="mobile/main/left" to="." method="_on_left_release"]
+[connection signal="button_down" from="mobile/main/right" to="." method="_on_right_pressed"]
+[connection signal="button_up" from="mobile/main/right" to="." method="_on_right_release"]
+[connection signal="button_down" from="mobile/main/interact" to="." method="_on_interact_pressed"]
+[connection signal="button_up" from="mobile/main/interact" to="." method="_on_interact_release"]
+[connection signal="button_down" from="mobile/attack" to="." method="_on_attack_pressed"]
+[connection signal="button_up" from="mobile/attack" to="." method="_on_attack_release"]
+[connection signal="button_down" from="mobile/dash" to="." method="_on_dash_button_down"]
+[connection signal="button_up" from="mobile/dash" to="." method="_on_dash_button_up"]
+[connection signal="button_down" from="mobile/pause" to="." method="_on_pause_button_down"]
+[connection signal="button_up" from="mobile/pause" to="." method="_on_pause_button_up"]

@@ -4,5 +4,10 @@ func _ready() -> void:
 	print("Playing as character: " + Stats.character);
 	MusicEngine.stopMusic();
 	MusicEngine.loadSong("tutorial");
-	$Player/Camera2D.limit_left = -1150;
-	$Player/Camera2D.limit_bottom = 1080;
+	Camera.limit_left = -1150;
+	Camera.limit_bottom = 1080;
+	
+func _process(_delta: float) -> void:
+	if not Camera.freeCam:
+		Camera.position.x = Stats.playerX;
+		Camera.position.y = Stats.playerY;

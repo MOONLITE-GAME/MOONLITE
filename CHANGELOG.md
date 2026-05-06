@@ -4,13 +4,64 @@ All notable changes will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.03] - 2026-04-??
-THE THIRD ALPHA RELEASE: LINUX BUILD, WEAPON ADJUSTMENTS, AND MORE
+## [0.0.6] - 2026-05-??
+THE SIXTH ALPHA RELEASE: BUG FIXES AND ADJUSTMENTS
 
 ### Added
+- New Icons for the game!
+
+### Changed
+- Attack Key is bound to `Q` alongside `Enter`
+
+### Fixed
+- A bug where the reload and loadout crates didn't work on mobile
+
+## [0.0.5] - 2026-04-26
+THE FIFTH ALPHA RELEASE: UI CLEAN UP & ANDROID RELEASE
+
+### Added
+- New Intro Sequence
+- Official Android Support!
+- Tons of New Settings
+
+### Changed
+- Main Menu, Extras Menu, and Pause Menu Received Revamps!
+- Options Menu Received Some Adjustments!
+- Most Buttons Can Now Be Clicked
+- Attack Button is now `Enter` rather than `Left Mouse Button`
+
+### Fixed
+- Options menu buttons now use the correct texture when selected!
+
+## [0.0.4] - 2026-04-19
+THE FORTH ALPHA RELEASE: PLATFORMING
+
+### Added
+- New room with platforming stuff!
+- New Warp object!
+- New Slide Mechanic!
+	- This brings two new animations for playable characters: `slideLeft` and `slideRight`
+- New Options Menu Revamp!
+- New Cursor Sprite!
+- New Controller Support (Doesn't fully work on all menus. This will be fixed next update!)
+
+### Changed
+- debugDisplay is now a global scene
+
+## [0.0.3] - 2026-04-11
+THE THIRD ALPHA RELEASE: LINUX BUILD, WEAPON ADJUSTMENTS, AND INTERACTABLE PROPS
+
+### Added
+- New Attack Walking Animations for Playable Characters!
+- New Interactable Props in Tutorial
 - Debug Display (Press ~ or F3 to access it in game!)
 - New crate that reloads the current scene!
 - New crate that brings you to the loadout select screen!
+- New Dialogue System in Game! 
+	- This system utilizes the [Dialogic Plugin!](https://github.com/dialogic-godot/dialogic)
+- The Ability to Mute the Game! (Keybind is 0)
+- New `Stats.inDialogue` variable!
+	- Freezes the player's movement and actions until set to false! Perfect for cutscenes (and of course, dialogue!)
 
 ### Changed
 - Hammer of Zoomin' has been renamed to "Rebounder"
