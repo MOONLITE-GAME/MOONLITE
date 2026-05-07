@@ -86,6 +86,10 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("uiEXIT"):
 		if !OS.get_name() == "Web":
 			get_tree().quit();
+			
+	if Input.is_action_just_pressed("DebugMenu"):
+		MusicEngine.stopMusic();
+		get_tree().change_scene_to_file("res://source/scenes/menus/debug/weaponCreator.tscn");
 
 
 func _on_play_button_pressed() -> void:
