@@ -146,10 +146,17 @@ func _physics_process(delta: float) -> void:
 	Stats.playerX = position.x; # TODO: Make sure these don't break the game when we implement warps to other rooms.
 	Stats.playerY = position.y; # it happened with AGWYPaaB and broke some shit lmao
 	
+	if Stats.health <= 0:
+		get_tree().change_scene_to_file("res://source/scenes/player/gameOver.tscn");
+		Camera.position = Vector2(960, 540);
+	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Slide") and not Stats.inDialogue and is_on_floor():
 		Slide.sliding = true;
 		Slide.slide();
+	
+	if event.is_action_pressed("Kill"):
+		Stats.health = 0;
 
 
 func loadChar():

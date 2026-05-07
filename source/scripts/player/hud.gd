@@ -10,7 +10,7 @@ func _ready() -> void:
 		$mobile.visible = false;
 
 func _process(_delta: float) -> void:
-	pass;
+	setHealth(Stats.health);
 	
 func setHealth(health):
 	$healthBar.value = health;

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b3ocxukv16fku" path="res://source/scenes/props/tutorial/climbableFloor.tscn" id="5_sjq5b"]
 [ext_resource type="PackedScene" uid="uid://brtaeonitllg0" path="res://source/scenes/props/tutorial/door.tscn" id="6_6qe7x"]
 [ext_resource type="PackedScene" uid="uid://dtc7aowsdnx3l" path="res://source/scenes/props/tutorial/crate.tscn" id="7_tm0x1"]
+[ext_resource type="PackedScene" uid="uid://dhke6qvjorpjn" path="res://source/scenes/props/global/spike.tscn" id="8_al3tg"]
 
 [node name="PlatformTest" type="Node2D" unique_id=619799371]
 script = ExtResource("1_ixnc4")
@@ -91,5 +92,8 @@ position = Vector2(2794, -2207)
 
 [node name="MUSIC" type="AudioStreamPlayer" parent="." unique_id=1478775075]
 bus = &"Music"
+
+[node name="Spike" parent="." unique_id=1055624447 instance=ExtResource("8_al3tg")]
+position = Vector2(1119, 976)
 
 [connection signal="finished" from="MUSIC" to="." method="_on_music_finished"]
