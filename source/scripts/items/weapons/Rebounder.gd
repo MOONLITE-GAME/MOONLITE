@@ -14,4 +14,3 @@ func _ready():
 func baseAttack():
 	velocityX = -bonkSpeed;
 	velocityY = -bonkSpeed;
-#Note to E-DubzNG to change the name soon. (delete when changed) - A Skeleton you know.

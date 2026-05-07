@@ -2,6 +2,11 @@ extends Control;
 
 var startUp:bool = true;
 
+var weaponName:String;
+var damage:String;
+var weaponType:String;
+
+
 func _ready() -> void:
 	startUp = true;
 	$welcomePopUp.visible = true;
@@ -11,4 +16,8 @@ func _on_new_pressed() -> void:
 	$welcomePopUp.visible = false;
 
 func _on_open_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_name_text_changed() -> void:
 	pass # Replace with function body.

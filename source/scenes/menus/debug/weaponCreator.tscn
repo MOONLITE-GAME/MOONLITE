@@ -33,6 +33,68 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5019608)
 
+[node name="nameText" type="Label" parent="." unique_id=268519056]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.5
+offset_top = -154.5
+offset_right = -71.5
+offset_bottom = -85.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Weapon Name:"
+
+[node name="name" type="TextEdit" parent="." unique_id=1198081014]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -165.0
+offset_right = 450.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+placeholder_text = "NAME"
+
+[node name="damageNum" type="SpinBox" parent="." unique_id=1086708321]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 100.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="damageText" type="Label" parent="." unique_id=532888004]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -410.5
+offset_top = -34.5
+offset_right = -69.5
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Base Damage:"
+
 [node name="welcomePopUp" type="Control" parent="." unique_id=509832562]
 visible = false
 anchors_preset = 0
@@ -127,5 +189,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Open Existing"
 
+[connection signal="text_changed" from="name" to="." method="_on_name_text_changed"]
 [connection signal="pressed" from="welcomePopUp/New" to="." method="_on_new_pressed"]
 [connection signal="pressed" from="welcomePopUp/Open" to="." method="_on_open_pressed"]
