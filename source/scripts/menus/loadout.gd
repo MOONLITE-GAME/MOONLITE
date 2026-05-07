@@ -1,28 +1,48 @@
 extends Control
 
-var curWeapon:int = 1;
-var maxWeapon:int = 3;
+var curWeapon:int;
+var maxWeapon:int = -1;
+var dir = "data/weapons/";
+var normDir = "res://assets/";
+
+func getWeapons():
+	if DirAccess.dir_exists_absolute(normDir + dir):
+		var arr = DirAccess.get_files_at(normDir+dir);
+		print(arr);
+		print(arr[curWeapon]);
 
 func _ready() -> void:
-	curWeapon = 1;
+	curWeapon = 0;
 	$weaponIcon/text.text = Stats.weapon;
+	
+	if DirAccess.dir_exists_absolute(normDir + dir):
+		maxWeapon = -1;
+		for i in DirAccess.get_files_at(normDir + dir):
+			maxWeapon = maxWeapon + 1;
+			print(str(maxWeapon));
+			
 	Camera.position = Vector2(960, 540);
 	
 	if Stats.mobile:
 		$exit.visible = true;
 
 func _process(_delta: float) -> void:
+	$confirm.text = "Max Weapons: " + str(maxWeapon) + " Cur Weapon: " + str(curWeapon);
+	
 	$weaponIcon/text.text = Stats.weapon;
 	if Input.is_action_just_pressed("uiLEFT"):
 		$AudioStreamPlayer.play();
 		curWeapon = curWeapon - 1;
-		if curWeapon == 0:
+		getWeapons();
+		if curWeapon == -1:
 			curWeapon = maxWeapon;
 	if Input.is_action_just_pressed("uiRIGHT"):
 		$AudioStreamPlayer.play();
-		curWeapon = curWeapon + 1;
-		if curWeapon > maxWeapon:
-			curWeapon = 1;
+		if curWeapon == maxWeapon:
+			curWeapon = 0;
+		else:
+			curWeapon = curWeapon + 1;
+		getWeapons();
 	if Input.is_action_pressed("uiLEFT"):
 		$Arrow.modulate = Color("00ffff");
 	else:
@@ -38,17 +58,6 @@ func _process(_delta: float) -> void:
 	
 	if Input.is_action_just_pressed("uiEXIT"):
 		get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
-		
-	match curWeapon:
-		1:
-			Stats.weapon = "Dark Sword";
-			Stats.weaponType = "Sword"; # TODO: make this read from a script rather than just setting the value here.
-		2:
-			Stats.weapon = "Rebounder";
-			Stats.weaponType = "Hammer";
-		3:
-			Stats.weapon = "Ground Pound";
-			Stats.weaponType = "Ground Pound";
 			
 	match Stats.weaponType:
 		"Sword":
@@ -63,14 +72,14 @@ func _process(_delta: float) -> void:
 func _on_arrow_left_pressed() -> void:
 	$AudioStreamPlayer.play();
 	curWeapon = curWeapon - 1;
-	if curWeapon == 0:
+	if curWeapon == -1:
 		curWeapon = maxWeapon;
 
 func _on_arrow_right_pressed() -> void:
 	$AudioStreamPlayer.play();
 	curWeapon = curWeapon + 1;
-	if curWeapon > maxWeapon:
-		curWeapon = 1;
+	if curWeapon >= maxWeapon:
+		curWeapon = 0;
 
 func _on_exit_pressed() -> void:
 	get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
