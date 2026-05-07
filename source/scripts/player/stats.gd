@@ -164,7 +164,7 @@ func loadCharJSON():
 			charName = data.name;
 
 		if "path" in data:
-			assetPath = "res://" + data.path;
+			assetPath = data.path;
 			print(assetPath);
 
 		if "element" in data:

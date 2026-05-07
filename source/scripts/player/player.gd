@@ -161,7 +161,14 @@ func _input(event: InputEvent) -> void:
 
 func loadChar():
 	Stats.loadCharJSON();
-	$AnimatedSprite2D.sprite_frames = load(Stats.assetPath);
+	var modDir:String = "res://mods/sexMod/"; # make this eventually check every folder in mods folder
+	var regDir:String = "res://assets/";
+	#var spritesheet:String;
+	
+	if FileAccess.file_exists(modDir+Stats.assetPath):
+		$AnimatedSprite2D.sprite_frames = load(modDir+Stats.assetPath);
+	else:
+		$AnimatedSprite2D.sprite_frames = load(regDir+Stats.assetPath);
 	print("Now Playing as: " + Stats.character);
 	
 func getWeapon():

@@ -1,7 +1,7 @@
 {
 	"name": "MOONLITE",
 	"element": "Magic",
-	"path": "assets/shared/images/characters/playable/moonlite.xml",
+	"path": "shared/images/characters/playable/moonlite.xml",
 	"idleLeft": "idle left",
 	"idleRight": "idle right",
 	"runLeft": "run left",
