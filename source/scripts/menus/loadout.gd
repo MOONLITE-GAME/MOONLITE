@@ -4,10 +4,11 @@ var curWeapon:int;
 var maxWeapon:int = -1;
 var dir = "data/weapons/";
 var normDir = "res://assets/";
+var arr;
 
 func getWeapons():
 	if DirAccess.dir_exists_absolute(normDir + dir):
-		var arr = DirAccess.get_files_at(normDir+dir);
+		arr = DirAccess.get_files_at(normDir+dir);
 		print(arr);
 		print(arr[curWeapon]);
 
@@ -30,12 +31,15 @@ func _process(_delta: float) -> void:
 	$confirm.text = "Max Weapons: " + str(maxWeapon) + " Cur Weapon: " + str(curWeapon);
 	
 	$weaponIcon/text.text = Stats.weapon;
+	
 	if Input.is_action_just_pressed("uiLEFT"):
 		$AudioStreamPlayer.play();
 		curWeapon = curWeapon - 1;
 		getWeapons();
+		getWeaponData();
 		if curWeapon == -1:
 			curWeapon = maxWeapon;
+			
 	if Input.is_action_just_pressed("uiRIGHT"):
 		$AudioStreamPlayer.play();
 		if curWeapon == maxWeapon:
@@ -43,6 +47,8 @@ func _process(_delta: float) -> void:
 		else:
 			curWeapon = curWeapon + 1;
 		getWeapons();
+		getWeaponData();
+		
 	if Input.is_action_pressed("uiLEFT"):
 		$Arrow.modulate = Color("00ffff");
 	else:
@@ -67,8 +73,29 @@ func _process(_delta: float) -> void:
 		"Ground Pound":
 			$weaponIcon/sprite.texture_normal = load("res://assets/shared/images/hud/weaponIcons/groundPound.png");
 		
-
-
+func getWeaponData():
+	SaveIcon.showIcon();
+	var path = normDir+dir+arr[curWeapon];
+	
+	if FileAccess.file_exists(path):
+		print(path);
+		print("Yep. it exists");
+		var file = FileAccess.open(path, FileAccess.READ);
+		var jsonString = file.get_as_text();
+		var json = JSON.new();
+		var parseResult = json.parse(jsonString);
+		
+		if not parseResult == OK:
+			print("Shit, it doesn't work. God damn it.");
+			return;
+			
+		var data = json.get_data();
+			
+		if "weaponName" in data:
+			Stats.weapon = data.weaponName;
+		if "weaponType" in data:
+			Stats.weaponType = data.weaponType;
+		
 func _on_arrow_left_pressed() -> void:
 	$AudioStreamPlayer.play();
 	curWeapon = curWeapon - 1;
