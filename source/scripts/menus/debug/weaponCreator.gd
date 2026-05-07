@@ -1,9 +1,11 @@
 extends Control;
 
 var startUp:bool = true;
+var saving:bool = false;
 
 var weaponName:String;
-var damage:String;
+var damage:float;
+var attackCooldown:float;
 var weaponType:String;
 
 
@@ -18,6 +20,44 @@ func _on_new_pressed() -> void:
 func _on_open_pressed() -> void:
 	pass # Replace with function body.
 
-
 func _on_name_text_changed() -> void:
-	pass # Replace with function body.
+	weaponName = $ui/name.text;
+
+func _on_damage_num_value_changed(value: float) -> void:
+	damage = value;
+
+func _on_cooldown_value_changed(value: float) -> void:
+	attackCooldown = value;
+
+func _on_weapon_type_item_selected(index: int) -> void:
+	match index:
+		0:
+			weaponType = "Sword";
+		1:
+			weaponType = "Hammer"
+		2:
+			weaponType = "Ground Pound";
+		3:
+			weaponName = "Projectile";
+
+func _on_save_pressed() -> void:
+	saving = true;
+	$FileDialog.visible = true;
+
+func _on_file_dialog_file_selected(path: String) -> void:
+	SaveIcon.showIcon();
+	
+	var file = FileAccess.open(path, FileAccess.WRITE);
+	
+	var data = {};
+	
+	data.weaponName = weaponName;
+	data.damage = damage;
+	data.attackCooldown = attackCooldown;
+	data.weaponType = weaponType;
+	
+	var jsonString = JSON.stringify(data);
+	file.store_string(jsonString);
+	
+	saving = false;
+	$FileDialog.visible = false;

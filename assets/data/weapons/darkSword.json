@@ -1,4 +1,1 @@
-{
-	"Name": "Dark Sword",
-	"Damage": 20
-}
+{"attackCooldown":1.0,"damage":20.0,"weaponName":"Dark Sword","weaponType":"Sword"}

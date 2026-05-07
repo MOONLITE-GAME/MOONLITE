@@ -70,6 +70,7 @@ offset_bottom = -95.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
+text = "NAME"
 placeholder_text = "NAME"
 
 [node name="damageNum" type="SpinBox" parent="ui" unique_id=1086708321]
@@ -146,7 +147,6 @@ offset_bottom = 240.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
-selected = 0
 item_count = 4
 popup/item_0/text = "Sword"
 popup/item_0/id = 0
@@ -276,6 +276,17 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Open Existing"
 
+[node name="FileDialog" type="FileDialog" parent="." unique_id=1535669901]
+oversampling_override = 1.0
+title = "Save Weapon"
+initial_position = 2
+use_native_dialog = true
+
 [connection signal="text_changed" from="ui/name" to="." method="_on_name_text_changed"]
+[connection signal="value_changed" from="ui/damageNum" to="." method="_on_damage_num_value_changed"]
+[connection signal="value_changed" from="ui/cooldown" to="." method="_on_cooldown_value_changed"]
+[connection signal="item_selected" from="ui/weaponType" to="." method="_on_weapon_type_item_selected"]
+[connection signal="pressed" from="ui/save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="welcomePopUp/New" to="." method="_on_new_pressed"]
 [connection signal="pressed" from="welcomePopUp/Open" to="." method="_on_open_pressed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
