@@ -33,67 +33,154 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5019608)
 
-[node name="nameText" type="Label" parent="." unique_id=268519056]
+[node name="ui" type="Control" parent="." unique_id=899766273]
+anchors_preset = 0
+offset_left = 21.0
+offset_top = -152.0
+offset_right = 61.0
+offset_bottom = -112.0
+
+[node name="nameText" type="Label" parent="ui" unique_id=268519056]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -440.5
-offset_top = -154.5
-offset_right = -71.5
-offset_bottom = -85.5
+offset_left = -460.5
+offset_top = -174.5
+offset_right = -91.5
+offset_bottom = -105.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Weapon Name:"
 
-[node name="name" type="TextEdit" parent="." unique_id=1198081014]
+[node name="name" type="TextEdit" parent="ui" unique_id=1198081014]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -165.0
-offset_right = 450.0
-offset_bottom = -75.0
+offset_left = -70.0
+offset_top = -185.0
+offset_right = 430.0
+offset_bottom = -95.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 placeholder_text = "NAME"
 
-[node name="damageNum" type="SpinBox" parent="." unique_id=1086708321]
+[node name="damageNum" type="SpinBox" parent="ui" unique_id=1086708321]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -20.0
-offset_right = 100.0
-offset_bottom = 30.0
+offset_left = -70.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="damageText" type="Label" parent="." unique_id=532888004]
+[node name="damageText" type="Label" parent="ui" unique_id=532888004]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -410.5
-offset_top = -34.5
-offset_right = -69.5
-offset_bottom = 34.5
+offset_left = -430.5
+offset_top = -54.5
+offset_right = -89.5
+offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Base Damage:"
+
+[node name="cooldown" type="SpinBox" parent="ui" unique_id=1191928231]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = 64.0
+offset_right = 80.0
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="cooldownText" type="Label" parent="ui" unique_id=327202409]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -363.5
+offset_top = 49.5
+offset_right = -22.5
+offset_bottom = 118.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Cool Down:"
+
+[node name="weaponType" type="OptionButton" parent="ui" unique_id=1294374883]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = 163.0
+offset_right = 314.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+selected = 0
+item_count = 4
+popup/item_0/text = "Sword"
+popup/item_0/id = 0
+popup/item_1/text = "Hammer"
+popup/item_1/id = 1
+popup/item_2/text = "Ground Pound"
+popup/item_2/id = 2
+popup/item_3/text = "Projectile"
+popup/item_3/id = 3
+
+[node name="weaponTypeText" type="Label" parent="ui" unique_id=2084263899]
+layout_mode = 0
+offset_left = -409.0
+offset_top = 182.0
+offset_right = -69.0
+offset_bottom = 251.0
+theme_override_font_sizes/font_size = 50
+text = "Weapon Type:"
+
+[node name="save" type="Button" parent="ui" unique_id=952954507]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = 277.5
+offset_right = -4.0
+offset_bottom = 354.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "SAVE"
 
 [node name="welcomePopUp" type="Control" parent="." unique_id=509832562]
 visible = false
@@ -189,6 +276,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Open Existing"
 
-[connection signal="text_changed" from="name" to="." method="_on_name_text_changed"]
+[connection signal="text_changed" from="ui/name" to="." method="_on_name_text_changed"]
 [connection signal="pressed" from="welcomePopUp/New" to="." method="_on_new_pressed"]
 [connection signal="pressed" from="welcomePopUp/Open" to="." method="_on_open_pressed"]
