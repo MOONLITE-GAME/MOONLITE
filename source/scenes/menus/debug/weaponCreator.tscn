@@ -34,11 +34,18 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.5019608)
 
 [node name="ui" type="Control" parent="." unique_id=899766273]
-anchors_preset = 0
-offset_left = 21.0
-offset_top = -152.0
-offset_right = 61.0
-offset_bottom = -112.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 36.0
+offset_top = -348.0
+offset_right = 76.0
+offset_bottom = -308.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="nameText" type="Label" parent="ui" unique_id=268519056]
 layout_mode = 1
@@ -166,6 +173,52 @@ offset_bottom = 251.0
 theme_override_font_sizes/font_size = 50
 text = "Weapon Type:"
 
+[node name="velocity" type="CheckBox" parent="ui" unique_id=1398218462]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -279.0
+offset_top = 259.5
+offset_right = 119.0
+offset_bottom = 336.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Affects Velocity"
+
+[node name="velocityTimeText" type="Label" parent="ui" unique_id=1729366153]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -424.5
+offset_top = 345.5
+offset_right = -83.5
+offset_bottom = 414.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Velocity Time:"
+
+[node name="velocityTime" type="SpinBox" parent="ui" unique_id=712467582]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = 360.0
+offset_right = 80.0
+offset_bottom = 410.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="audio" type="Button" parent="ui" unique_id=292883062]
 layout_mode = 1
 anchors_preset = 8
@@ -174,9 +227,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -342.0
-offset_top = 273.5
+offset_top = 441.5
 offset_right = 214.0
-offset_bottom = 350.5
+offset_bottom = 518.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
@@ -190,9 +243,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -132.0
-offset_top = 373.5
+offset_top = 541.5
 offset_right = -4.0
-offset_bottom = 450.5
+offset_bottom = 618.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
@@ -305,13 +358,24 @@ initial_position = 1
 file_mode = 0
 use_native_dialog = true
 
+[node name="exit" type="Button" parent="." unique_id=1832959135]
+layout_mode = 0
+offset_left = 863.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = -463.0
+theme_override_font_sizes/font_size = 50
+text = "Exit"
+
 [connection signal="text_changed" from="ui/name" to="." method="_on_name_text_changed"]
 [connection signal="value_changed" from="ui/damageNum" to="." method="_on_damage_num_value_changed"]
 [connection signal="value_changed" from="ui/cooldown" to="." method="_on_cooldown_value_changed"]
 [connection signal="item_selected" from="ui/weaponType" to="." method="_on_weapon_type_item_selected"]
+[connection signal="value_changed" from="ui/velocityTime" to="." method="_on_velocity_time_value_changed"]
 [connection signal="pressed" from="ui/audio" to="." method="_on_audio_pressed"]
 [connection signal="pressed" from="ui/save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="welcomePopUp/New" to="." method="_on_new_pressed"]
 [connection signal="pressed" from="welcomePopUp/Open" to="." method="_on_open_pressed"]
 [connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
 [connection signal="file_selected" from="Audio" to="." method="_on_audio_file_selected"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

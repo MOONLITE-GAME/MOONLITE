@@ -8,7 +8,7 @@ var damage:float;
 var attackCooldown:float;
 var weaponType:String;
 var weaponSound:String;
-
+var velocityTime:float;
 
 func _ready() -> void:
 	startUp = true;
@@ -57,6 +57,7 @@ func _on_file_dialog_file_selected(path: String) -> void:
 	data.attackCooldown = attackCooldown;
 	data.weaponType = weaponType;
 	data.weaponSound = weaponSound;
+	data.velocityTime = velocityTime;
 	
 	var jsonString = JSON.stringify(data);
 	file.store_string(jsonString);
@@ -70,3 +71,9 @@ func _on_audio_pressed() -> void:
 func _on_audio_file_selected(path: String) -> void:
 	weaponSound = path;
 	$Audio.visible = false;
+
+func _on_velocity_time_value_changed(value: float) -> void:
+	velocityTime = value;
+
+func _on_exit_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
