@@ -65,7 +65,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_36nla")
 theme_override_font_sizes/font_size = 25
-text = "PRESS E OR ENTER TO INTERACT"
+text = "PRESS E TO INTERACT"
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
