@@ -7,6 +7,7 @@ var weaponName:String;
 var damage:float;
 var attackCooldown:float;
 var weaponType:String;
+var weaponSound:String;
 
 
 func _ready() -> void:
@@ -55,9 +56,17 @@ func _on_file_dialog_file_selected(path: String) -> void:
 	data.damage = damage;
 	data.attackCooldown = attackCooldown;
 	data.weaponType = weaponType;
+	data.weaponSound = weaponSound;
 	
 	var jsonString = JSON.stringify(data);
 	file.store_string(jsonString);
 	
 	saving = false;
 	$FileDialog.visible = false;
+
+func _on_audio_pressed() -> void:
+	$Audio.visible = true;
+
+func _on_audio_file_selected(path: String) -> void:
+	weaponSound = path;
+	$Audio.visible = false;
