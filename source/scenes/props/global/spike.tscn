@@ -6,8 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4eyv"]
 size = Vector2(65, 165)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_r4eyv"]
-radius = 80.09994
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88nmw"]
+size = Vector2(65, 20)
 
 [node name="Spike" type="StaticBody2D" unique_id=1055624447]
 script = ExtResource("1_8ttpq")
@@ -19,7 +19,8 @@ shape = SubResource("RectangleShape2D_r4eyv")
 [node name="Area2D" type="Area2D" parent="." unique_id=301011679]
 
 [node name="collision" type="CollisionShape2D" parent="Area2D" unique_id=882966412]
-shape = SubResource("CircleShape2D_r4eyv")
+position = Vector2(0.5, -73)
+shape = SubResource("RectangleShape2D_88nmw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2102997760]
 position = Vector2(-1.9073486e-06, 7.6293945e-06)
