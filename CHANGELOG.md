@@ -12,6 +12,7 @@ THE SIXTH ALPHA RELEASE: BUG FIXES AND ADJUSTMENTS
 
 ### Changed
 - Attack Key is bound to `Q` alongside `Enter`
+- Weapons are now data driven rather than hardcoded
 
 ### Fixed
 - A bug where the reload and loadout crates didn't work on mobile
