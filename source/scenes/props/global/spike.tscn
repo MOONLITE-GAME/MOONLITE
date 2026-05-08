@@ -1,38 +1,30 @@
 [gd_scene format=3 uid="uid://dhke6qvjorpjn"]
 
 [ext_resource type="Script" uid="uid://bhu6n2rbcptf6" path="res://source/scripts/props/global/spike.gd" id="1_8ttpq"]
+[ext_resource type="Texture2D" uid="uid://7xcsbt4mko72" path="res://assets/levels/bridge/images/tutorial/spike.png" id="2_88nmw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4eyv"]
-size = Vector2(257, 20)
+size = Vector2(65, 165)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r4eyv"]
-radius = 110.909874
+radius = 80.09994
 
 [node name="Spike" type="StaticBody2D" unique_id=1055624447]
 script = ExtResource("1_8ttpq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=464730850]
-position = Vector2(0.5, 0)
+position = Vector2(0.5, 3.5)
 shape = SubResource("RectangleShape2D_r4eyv")
-
-[node name="Label" type="Label" parent="." unique_id=164830134]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -127.5
-offset_top = -11.5
-offset_right = 127.5
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "i am a spike. fear me. i am pointy"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=301011679]
 
 [node name="collision" type="CollisionShape2D" parent="Area2D" unique_id=882966412]
 shape = SubResource("CircleShape2D_r4eyv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2102997760]
+position = Vector2(-1.9073486e-06, 7.6293945e-06)
+scale = Vector2(0.31466517, 0.31466514)
+texture = ExtResource("2_88nmw")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

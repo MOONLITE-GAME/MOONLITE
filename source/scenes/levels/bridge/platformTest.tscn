@@ -94,6 +94,6 @@ position = Vector2(2794, -2207)
 bus = &"Music"
 
 [node name="Spike" parent="." unique_id=1055624447 instance=ExtResource("8_al3tg")]
-position = Vector2(1119, 976)
+position = Vector2(1119, 936)
 
 [connection signal="finished" from="MUSIC" to="." method="_on_music_finished"]
