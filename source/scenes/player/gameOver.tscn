@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bivaa1rh8qhur"]
 
+[ext_resource type="Script" uid="uid://2vqt0ilos36i" path="res://source/scripts/player/gameover.gd" id="1_888hy"]
 [ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="1_q1r1r"]
 [ext_resource type="AudioStream" uid="uid://ojyqoox7qmy1" path="res://assets/sounds/death.ogg" id="2_u7b66"]
 
@@ -12,6 +13,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_888hy")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=789966757]
 layout_mode = 1
