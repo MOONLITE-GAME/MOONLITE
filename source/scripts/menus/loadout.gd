@@ -10,7 +10,8 @@ func getWeapons():
 	if DirAccess.dir_exists_absolute(normDir + dir):
 		arr = DirAccess.get_files_at(normDir+dir);
 		print(arr);
-		print(arr[curWeapon]);
+		Stats.weaponFile = arr[curWeapon].left(-5);
+		print(Stats.weaponFile);
 
 func _ready() -> void:
 	curWeapon = 0;

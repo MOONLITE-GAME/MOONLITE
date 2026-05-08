@@ -178,13 +178,9 @@ func getWeapon():
 		getWeapon();
 	
 	print(Stats.weapon);
-	match Stats.weapon:
-		"Dark Sword":
-			$Weapon.set_script(load("res://source/scripts/items/weapons/darkSword.gd"));
-		"Rebounder": 
-			$Weapon.set_script(load("res://source/scripts/items/weapons/Rebounder.gd"));
-		"Ground Pound":
-			$Weapon.set_script(load("res://source/scripts/items/weapons/groundPound.gd"));
-			
-	$Weapon._ready();
-	Stats.weaponType = $Weapon.weaponType;
+	
+	var scriptPath:String = "res://source/scripts/items/weapons/" + Stats.weaponFile + ".gd";
+	
+	if FileAccess.file_exists(scriptPath):
+		$Weapon.set_script(load(scriptPath));	
+		$Weapon._ready();

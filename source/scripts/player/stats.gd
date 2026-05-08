@@ -13,6 +13,7 @@ var health:int;
 var maxHealth:int;
 var weapon:String;
 var weaponType:String;
+var weaponFile:String;
 var item:String;
 var itemType:String;
 
