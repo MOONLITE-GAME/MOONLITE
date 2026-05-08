@@ -158,7 +158,6 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Kill"):
 		Stats.health = 0;
 
-
 func loadChar():
 	Stats.loadCharJSON();
 	var modDir:String = "res://mods/sexMod/"; # make this eventually check every folder in mods folder
