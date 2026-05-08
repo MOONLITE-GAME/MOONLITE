@@ -67,7 +67,7 @@ position = Vector2(517, 327)
 texture = ExtResource("9_kpyxi")
 
 [node name="BlackBar" type="Sprite2D" parent="." unique_id=145763966]
-position = Vector2(-413.5, 61)
+position = Vector2(-414.5, 61)
 scale = Vector2(1.1103239, 1)
 texture = ExtResource("5_nhmca")
 
