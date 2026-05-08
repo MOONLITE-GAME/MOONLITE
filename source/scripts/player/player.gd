@@ -89,7 +89,7 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("BasicAttack") and Stats.attacking == false and not Dash.dodging and not Slide.sliding and not Stats.inDialogue:
 		Stats.attacking = true;
-		$AudioStreamPlayer.stream = $Weapon.baseAttackSound;
+		$AudioStreamPlayer.stream = load(Stats.weaponSound);
 		$AudioStreamPlayer.play();
 		match Stats.moving:
 			true:
@@ -115,12 +115,12 @@ func _physics_process(delta: float) -> void:
 				velocity.x = -$Weapon.velocityX;
 				velocity.y = $Weapon.velocityY;
 
-			await get_tree().create_timer($Weapon.velocityTime).timeout;
+			await get_tree().create_timer(Stats.velocityTime).timeout;
 			velocity.x = 0;
 			velocity.y = 0;
 
 		else:
-			await get_tree().create_timer($Weapon.attackCooldown).timeout;
+			await get_tree().create_timer(Stats.weaponCooldown).timeout;
 
 		Stats.attacking = false;
 		

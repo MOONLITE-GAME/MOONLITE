@@ -22,6 +22,8 @@ func _ready() -> void:
 		for i in DirAccess.get_files_at(normDir + dir):
 			maxWeapon = maxWeapon + 1;
 			print(str(maxWeapon));
+			getWeapons();
+			getWeaponData();
 			
 	Camera.position = Vector2(960, 540);
 	
@@ -96,6 +98,14 @@ func getWeaponData():
 			Stats.weapon = data.weaponName;
 		if "weaponType" in data:
 			Stats.weaponType = data.weaponType;
+		if "attackCooldown" in data:
+			Stats.weaponCooldown = data.attackCooldown;
+		if "damage" in data:
+			Stats.weaponDamage = data.damage;
+		if "velocityTime" in data:
+			Stats.velocityTime = data.velocityTime;
+		if "weaponSound" in data:
+			Stats.weaponSound = data.weaponSound;
 		
 func _on_arrow_left_pressed() -> void:
 	$AudioStreamPlayer.play();

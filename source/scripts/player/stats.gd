@@ -11,9 +11,6 @@ var mobile:bool = false; # SET TO TRUE BEFORE MOBILE EXPORTS
 # vars for character stats
 var health:int;
 var maxHealth:int;
-var weapon:String;
-var weaponType:String;
-var weaponFile:String;
 var item:String;
 var itemType:String;
 
@@ -44,6 +41,15 @@ var sfxVolume:float;
 var inDialogue:bool = false;
 var moving:bool;
 var canClimb:bool = false;
+
+# weapon data
+var weapon:String;
+var weaponType:String;
+var weaponFile:String;
+var weaponCooldown:float;
+var weaponDamage:float;
+var weaponSound:String;
+var velocityTime:float;
 
 func saveStats():
 	SaveIcon.showIcon();
