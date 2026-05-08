@@ -77,3 +77,4 @@ func _on_velocity_time_value_changed(value: float) -> void:
 
 func _on_exit_pressed() -> void:
 	get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
+	MusicEngine.loadSong("titleScreen");
