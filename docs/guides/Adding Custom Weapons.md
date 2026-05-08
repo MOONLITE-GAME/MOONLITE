@@ -22,4 +22,4 @@ After your script extends Weapon, put a function in there called `_ready()` and 
 
 Now when you enter the game, your weapon should be on the loadout screen!
 
-As for making your weapon do stuff, you're on your own :P (that's why there's custom scripts!')
+As for making your weapon do stuff, you're on your own :P (that's why there's custom scripts!)
