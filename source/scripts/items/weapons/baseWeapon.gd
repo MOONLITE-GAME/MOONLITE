@@ -8,7 +8,7 @@ var exAttackSound:AudioStream = load("res://assets/shared/sounds/items/weapons/s
 var weaponType:String = "Sword";
 
 func baseAttack():
-	print(baseDamage);
+	print(Stats.weaponDamage);
 
 func exAttack():
 	pass;
