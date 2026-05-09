@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ltx71s3onurl"]
 
+[ext_resource type="Script" uid="uid://c3i3moohvmqq5" path="res://source/scripts/props/tutorial/slotMachine.gd" id="1_l8by3"]
 [ext_resource type="SpriteFrames" uid="uid://bcfk2pyvrs45o" path="res://assets/levels/bridge/images/tutorial/slots.xml" id="1_xu6ie"]
 [ext_resource type="Texture2D" uid="uid://c1uku6jgf23v8" path="res://assets/levels/bridge/images/tutorial/slotMachine.png" id="1_y53g5"]
 [ext_resource type="Texture2D" uid="uid://cy2wc2c2dbbse" path="res://assets/levels/bridge/images/tutorial/slotLever.png" id="2_8ux6e"]
@@ -8,9 +9,10 @@
 size = Vector2(352, 432)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xu6ie"]
-size = Vector2(385, 457)
+size = Vector2(506, 457)
 
 [node name="SlotMachine" type="StaticBody2D" unique_id=328944734]
+script = ExtResource("1_l8by3")
 
 [node name="slot1" type="AnimatedSprite2D" parent="." unique_id=2018777939]
 position = Vector2(-83, -75)
@@ -44,5 +46,8 @@ shape = SubResource("RectangleShape2D_y53g5")
 [node name="Area2D" type="Area2D" parent="." unique_id=679585436]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1523534691]
-position = Vector2(1.5, -2.5)
+position = Vector2(14, -2.5)
 shape = SubResource("RectangleShape2D_xu6ie")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
