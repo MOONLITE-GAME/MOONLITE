@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ltx71s3onurl"]
+
+[ext_resource type="SpriteFrames" uid="uid://bcfk2pyvrs45o" path="res://assets/levels/bridge/images/tutorial/slots.xml" id="1_xu6ie"]
+[ext_resource type="Texture2D" uid="uid://c1uku6jgf23v8" path="res://assets/levels/bridge/images/tutorial/slotMachine.png" id="1_y53g5"]
+[ext_resource type="Texture2D" uid="uid://cy2wc2c2dbbse" path="res://assets/levels/bridge/images/tutorial/slotLever.png" id="2_8ux6e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y53g5"]
+size = Vector2(352, 432)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xu6ie"]
+size = Vector2(385, 457)
+
+[node name="SlotMachine" type="StaticBody2D" unique_id=328944734]
+
+[node name="slot1" type="AnimatedSprite2D" parent="." unique_id=2018777939]
+position = Vector2(-83, -75)
+sprite_frames = ExtResource("1_xu6ie")
+animation = &"slot normal"
+autoplay = "slot normal"
+
+[node name="slot2" type="AnimatedSprite2D" parent="." unique_id=549557914]
+position = Vector2(0, -75)
+sprite_frames = ExtResource("1_xu6ie")
+animation = &"slot normal"
+autoplay = "slot normal"
+
+[node name="slot3" type="AnimatedSprite2D" parent="." unique_id=675564324]
+position = Vector2(85, -75)
+sprite_frames = ExtResource("1_xu6ie")
+animation = &"slot normal"
+autoplay = "slot normal"
+
+[node name="lever" type="Sprite2D" parent="." unique_id=2079751191]
+position = Vector2(216, -48)
+texture = ExtResource("2_8ux6e")
+
+[node name="slotMachineBody" type="Sprite2D" parent="." unique_id=1167890095]
+texture = ExtResource("1_y53g5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=535764211]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_y53g5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=679585436]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1523534691]
+position = Vector2(1.5, -2.5)
+shape = SubResource("RectangleShape2D_xu6ie")

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://brtaeonitllg0" path="res://source/scenes/props/tutorial/door.tscn" id="6_6qe7x"]
 [ext_resource type="PackedScene" uid="uid://dtc7aowsdnx3l" path="res://source/scenes/props/tutorial/crate.tscn" id="7_tm0x1"]
 [ext_resource type="PackedScene" uid="uid://dhke6qvjorpjn" path="res://source/scenes/props/global/spike.tscn" id="8_al3tg"]
+[ext_resource type="PackedScene" uid="uid://ltx71s3onurl" path="res://source/scenes/props/tutorial/slotMachine.tscn" id="9_jsboh"]
 
 [node name="PlatformTest" type="Node2D" unique_id=619799371]
 script = ExtResource("1_ixnc4")
@@ -25,6 +26,9 @@ targetY = -754.0
 [node name="ClimbableFloor12" parent="." unique_id=1027604807 instance=ExtResource("5_sjq5b")]
 position = Vector2(2932, -2055)
 scale = Vector2(5.640005, 1)
+
+[node name="SlotMachine" parent="." unique_id=328944734 instance=ExtResource("9_jsboh")]
+position = Vector2(5582, 824)
 
 [node name="Player" parent="." unique_id=1975751171 instance=ExtResource("1_ujdbb")]
 
