@@ -26,7 +26,6 @@ func rollDatShit():
 	print(str(slot1Result));
 	print(str(slot2Result));
 	print(str(slot3Result));
-	rolling = false;
 	
 	match slot1Result:
 		1:
@@ -57,7 +56,29 @@ func rollDatShit():
 			$slot3.play("something");
 		4:
 			$slot3.play("seven");
-
+			
+	await get_tree().create_timer(1.0).timeout;
+	results();
+	rolling = false;
+			
+		
+func results():
+	if slot1Result == 1 or slot2Result == 1 or slot3Result == 1:
+		Stats.health = -10000;
+	
+	if slot1Result == 2 and slot2Result == 2 and slot3Result == 2: 
+		Stats.health = -10000;
+		
+	if slot1Result == 2 or slot2Result == 2 or slot3Result == 2:
+		Stats.health = Stats.health - 10;
+		
+	if slot1Result == 3 or slot2Result == 3 or slot3Result == 3:
+		Stats.health = Stats.health + 10;
+	
+	if slot1Result == 4 and slot2Result == 4 and slot3Result == 4:
+		Stats.maxHealth = 1000;
+		Stats.health = Stats.maxHealth;
+		
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		intoTheRadius = false;
