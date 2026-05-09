@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="slots.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="slot normal0000" x="214" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0000" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0001" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0002" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0003" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0004" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0005" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0006" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0007" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0008" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0009" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0010" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0011" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0012" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0013" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0014" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0015" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0016" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0017" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0018" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0019" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0020" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0021" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0022" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0023" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0024" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0025" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0026" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0027" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0028" x="321" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="slot moving0029" x="107" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="nothing0000" x="0" y="162" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="something0000" x="0" y="0" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="seven0000" x="107" y="162" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+	<SubTexture name="loss0000" x="214" y="162" width="107" height="162" frameX="2" frameY="2" frameWidth="103" frameHeight="158"/>
+</TextureAtlas>
