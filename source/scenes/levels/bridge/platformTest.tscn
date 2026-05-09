@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dtc7aowsdnx3l" path="res://source/scenes/props/tutorial/crate.tscn" id="7_tm0x1"]
 [ext_resource type="PackedScene" uid="uid://dhke6qvjorpjn" path="res://source/scenes/props/global/spike.tscn" id="8_al3tg"]
 [ext_resource type="PackedScene" uid="uid://ltx71s3onurl" path="res://source/scenes/props/tutorial/slotMachine.tscn" id="9_jsboh"]
+[ext_resource type="PackedScene" uid="uid://bwsvkym4r0hyv" path="res://source/scenes/props/tutorial/note.tscn" id="10_sgd73"]
 
 [node name="PlatformTest" type="Node2D" unique_id=619799371]
 script = ExtResource("1_ixnc4")
@@ -29,6 +30,10 @@ scale = Vector2(5.640005, 1)
 
 [node name="SlotMachine" parent="." unique_id=328944734 instance=ExtResource("9_jsboh")]
 position = Vector2(5819, 829)
+
+[node name="Note" parent="SlotMachine" unique_id=460468682 instance=ExtResource("10_sgd73")]
+position = Vector2(-667, -82)
+dialogue = "slotMachineNote"
 
 [node name="Player" parent="." unique_id=1975751171 instance=ExtResource("1_ujdbb")]
 

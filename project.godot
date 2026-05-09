@@ -43,6 +43,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "dummyDialogueTutorial": "res://assets/data/dialogue/dummyDialogueTutorial.dtl",
+"slotMachineNote": "res://assets/data/dialogue/slotMachineNote.dtl",
 "test": "res://assets/data/dialogue/test.dtl"
 }
 layout/style_directory={
@@ -89,6 +90,7 @@ audio/channel_defaults={
 }
 animations/join_default="Instant In"
 animations/leave_default="Instant Out"
+glossary/default_case_sensitive=true
 
 [display]
 

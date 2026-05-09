@@ -1,0 +1,9 @@
+set {isDone} = false
+RULES\:
+If you get a checkmark, you gain 10 health
+If you get an X, you lose 10 health
+If you get 3 Xs, you die
+If you get a single L, you die
+If you get three 7s, you get a ton of health lol.
+Attack the slot machine to play!
+set {isDone} = true
