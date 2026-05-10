@@ -28,12 +28,12 @@ targetY = -754.0
 position = Vector2(2932, -2055)
 scale = Vector2(5.640005, 1)
 
+[node name="Note" parent="." unique_id=460468682 instance=ExtResource("10_sgd73")]
+position = Vector2(5152, 747)
+dialogue = "slotMachineNote"
+
 [node name="SlotMachine" parent="." unique_id=328944734 instance=ExtResource("9_jsboh")]
 position = Vector2(5819, 829)
-
-[node name="Note" parent="SlotMachine" unique_id=460468682 instance=ExtResource("10_sgd73")]
-position = Vector2(-667, -82)
-dialogue = "slotMachineNote"
 
 [node name="Player" parent="." unique_id=1975751171 instance=ExtResource("1_ujdbb")]
 

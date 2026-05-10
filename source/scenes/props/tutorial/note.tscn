@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c5lk3vc50ne48" path="res://assets/levels/bridge/images/tutorial/note.png" id="1_6dbc4"]
 [ext_resource type="Script" uid="uid://wa51sb07ufoq" path="res://source/scripts/props/tutorial/note.gd" id="2_y4n4e"]
+[ext_resource type="Texture2D" uid="uid://bik2dy22dnt8h" path="res://assets/levels/bridge/images/tutorial/rules.png" id="3_5h8na"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dbc4"]
 size = Vector2(370, 304)
@@ -15,6 +16,13 @@ texture = ExtResource("1_6dbc4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1179658958]
 position = Vector2(1, 3)
 shape = SubResource("RectangleShape2D_6dbc4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1633879159]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=955227837]
+position = Vector2(988.99994, 617)
+scale = Vector2(0.6208333, 0.62083316)
+texture = ExtResource("3_5h8na")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
