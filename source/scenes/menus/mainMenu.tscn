@@ -98,7 +98,8 @@ position = Vector2(-288, 32)
 sprite_frames = ExtResource("9_v2jfu")
 animation = &"moonlite"
 autoplay = "moonlite"
-frame_progress = 0.5829991
+frame = 14
+frame_progress = 0.730843
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1357520103]
 stream = ExtResource("8_th02w")

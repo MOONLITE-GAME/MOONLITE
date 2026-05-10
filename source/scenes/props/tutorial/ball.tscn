@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bsrbrrygdvs5n"]
+
+[ext_resource type="Texture2D" uid="uid://bxrnrgfl7uedk" path="res://assets/levels/bridge/images/tutorial/ball.png" id="1_677c5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_677c5"]
+radius = 83.64807
+
+[node name="Ball" type="RigidBody2D" unique_id=2084170654]
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=601695072]
+texture = ExtResource("1_677c5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1533986311]
+shape = SubResource("CircleShape2D_677c5")
