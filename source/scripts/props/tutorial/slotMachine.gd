@@ -88,8 +88,7 @@ func results():
 		Stats.health = Stats.health + 10;
 	
 	if slot1Result == 4 and slot2Result == 4 and slot3Result == 4:
-		Stats.maxHealth = 1000;
-		Stats.health = Stats.maxHealth;
+		Stats.health = 100000;
 		
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D:
