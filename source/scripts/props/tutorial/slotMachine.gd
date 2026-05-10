@@ -69,10 +69,22 @@ func results():
 	if slot1Result == 2 and slot2Result == 2 and slot3Result == 2: 
 		Stats.health = -10000;
 		
-	if slot1Result == 2 or slot2Result == 2 or slot3Result == 2:
+	if slot1Result == 2:
 		Stats.health = Stats.health - 10;
 		
-	if slot1Result == 3 or slot2Result == 3 or slot3Result == 3:
+	if slot2Result == 2:
+		Stats.health = Stats.health - 10;
+		
+	if slot3Result == 2:
+		Stats.health = Stats.health - 10;
+		
+	if slot1Result == 3:
+		Stats.health = Stats.health + 10;
+		
+	if slot2Result == 3:
+		Stats.health = Stats.health + 10;
+		
+	if slot3Result == 3:
 		Stats.health = Stats.health + 10;
 	
 	if slot1Result == 4 and slot2Result == 4 and slot3Result == 4:
