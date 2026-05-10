@@ -27,6 +27,8 @@ var attackRunLeft:String;
 var attackRunRight:String;
 var slideLeft:String;
 var slideRight:String;
+var hitboxScaleX:float;
+var hitboxScaleY:float;
 
 # vars for general data
 var playerX:float;

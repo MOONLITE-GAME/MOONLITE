@@ -9,6 +9,8 @@ THE SIXTH ALPHA RELEASE: BUG FIXES AND ADJUSTMENTS
 
 ### Added
 - New Icons for the game!
+- Slot Machine
+- Added a game over screen
 
 ### Changed
 - Attack Key is bound to `Q` alongside `Enter`
