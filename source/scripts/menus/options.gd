@@ -79,3 +79,7 @@ func _on_freecam_toggled(toggled_on: bool) -> void:
 func _on_save_file_pressed() -> void:
 	get_tree().change_scene_to_file("res://source/scenes/menus/saveFiles.tscn");
 	MusicEngine.stopMusic();
+
+func _on_slide_toggle_toggled(toggled_on: bool) -> void:
+	Stats.slideToggle = toggled_on;
+	Stats.saveStats();

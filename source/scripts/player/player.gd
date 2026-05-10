@@ -151,7 +151,10 @@ func _physics_process(delta: float) -> void:
 		Camera.position = Vector2(960, 540);
 	
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Slide") and not Stats.inDialogue and is_on_floor():
+	if event.is_action_pressed("Slide") and not Stats.inDialogue and is_on_floor() and not Stats.slideToggle:
+		Slide.sliding = true;
+		Slide.slide();
+	if event.is_action_released("Slide") and not Stats.inDialogue and is_on_floor() and Stats.slideToggle:
 		Slide.sliding = true;
 		Slide.slide();
 	

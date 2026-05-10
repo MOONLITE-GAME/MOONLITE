@@ -110,6 +110,7 @@ texture_hover = ExtResource("16_pxg2a")
 texture_focused = ExtResource("16_pxg2a")
 
 [node name="Video Settings" type="ScrollContainer" parent="." unique_id=72996900]
+visible = false
 layout_mode = 0
 offset_left = -600.0
 offset_top = -238.0
@@ -223,7 +224,6 @@ ATTACK - ENTER / Square (PlayStation) / X (Xbox)
 INTERACT - E / TRIANGLE (PlayStation)/ Y (Xbox) "
 
 [node name="Other Settings" type="ScrollContainer" parent="." unique_id=1966454781]
-visible = false
 layout_mode = 0
 offset_left = -600.0
 offset_top = -238.0
@@ -243,8 +243,14 @@ text = "OTHER SETTINGS"
 [node name="SaveFile" type="Button" parent="Other Settings/VBoxContainer" unique_id=1071870262]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_skxkw")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 75
 text = "CHANGE SAVE FILE"
+
+[node name="slideToggle" type="CheckBox" parent="Other Settings/VBoxContainer" unique_id=386306328]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_skxkw")
+theme_override_font_sizes/font_size = 75
+text = "Slide Toggle (Kinda Buggy)"
 
 [connection signal="pressed" from="video" to="." method="_on_video_pressed"]
 [connection signal="pressed" from="audio" to="." method="_on_audio_pressed"]
@@ -254,3 +260,4 @@ text = "CHANGE SAVE FILE"
 [connection signal="toggled" from="Video Settings/VBoxContainer/fullscreen" to="." method="_on_fullscreen_toggled"]
 [connection signal="toggled" from="Video Settings/VBoxContainer/freecam" to="." method="_on_freecam_toggled"]
 [connection signal="pressed" from="Other Settings/VBoxContainer/SaveFile" to="." method="_on_save_file_pressed"]
+[connection signal="toggled" from="Other Settings/VBoxContainer/slideToggle" to="." method="_on_slide_toggle_toggled"]

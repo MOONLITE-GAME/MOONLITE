@@ -6,6 +6,7 @@ var charPath:String = "res://assets/data/characters/";
 var assetPath:String;
 var character:String;
 var fullscreen:bool;
+var slideToggle:bool;
 var mobile:bool = false; # SET TO TRUE BEFORE MOBILE EXPORTS
 
 # vars for character stats
@@ -67,6 +68,7 @@ func saveStats():
 	data.sfxVolume = sfxVolume;
 	data.fullscreen = fullscreen;
 	data.freecam = Camera.freeCam;
+	data.slideToggle = slideToggle;
 
 	var json_string = JSON.stringify(data);
 	file.store_string(json_string);
@@ -137,6 +139,12 @@ func loadStats():
 			Camera.freeCam = data.freecam;
 		else:
 			Camera.freeCam = false;
+			saveStats();
+		
+		if "slideToggle" in data:
+			slideToggle = data.slideToggle;
+		else:
+			slideToggle = false;
 			saveStats();
 
 	else:
