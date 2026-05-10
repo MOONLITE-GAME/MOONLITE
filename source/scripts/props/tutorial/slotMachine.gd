@@ -63,7 +63,7 @@ func rollDatShit():
 			
 		
 func results():
-	if slot1Result == 1 or slot2Result == 1 or slot3Result == 1:
+	if slot1Result == 1 and slot2Result == 1 and slot3Result == 1:
 		Stats.health = -10000;
 	
 	if slot1Result == 2 and slot2Result == 2 and slot3Result == 2: 
