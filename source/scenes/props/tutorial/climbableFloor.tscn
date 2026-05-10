@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3ocxukv16fku"]
 
-[ext_resource type="Texture2D" uid="uid://cjtj67ix7ug14" path="res://icon.svg" id="1_5p52n"]
 [ext_resource type="Script" uid="uid://7gfdpvlcuueq" path="res://source/scripts/props/tutorial/climbableFloor.gd" id="1_e82r6"]
+[ext_resource type="Texture2D" uid="uid://dx2wcjp307qhg" path="res://assets/levels/bridge/images/tutorial/floor.png" id="2_e82r6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p52n"]
 size = Vector2(127, 126)
@@ -13,7 +13,9 @@ size = Vector2(20, 62)
 script = ExtResource("1_e82r6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1674782201]
-texture = ExtResource("1_5p52n")
+position = Vector2(-0.4999981, 0.9999962)
+scale = Vector2(0.06614583, 0.5338983)
+texture = ExtResource("2_e82r6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=214935537]
 position = Vector2(-0.5, 1)
