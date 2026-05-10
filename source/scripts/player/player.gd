@@ -146,7 +146,7 @@ func _physics_process(delta: float) -> void:
 	Stats.playerX = position.x; # TODO: Make sure these don't break the game when we implement warps to other rooms.
 	Stats.playerY = position.y; # it happened with AGWYPaaB and broke some shit lmao
 	
-	if Stats.health <= 0:
+	if Stats.health <= 0 and not Stats.inDialogue:
 		get_tree().change_scene_to_file("res://source/scenes/player/gameOver.tscn");
 		Camera.position = Vector2(960, 540);
 	
