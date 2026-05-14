@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://efq7pq2vufr4" path="res://source/scripts/menus/charSelect.gd" id="1_hdgmp"]
 [ext_resource type="PackedScene" uid="uid://dt0faors64kqe" path="res://source/scenes/menus/characterSelect/bg/moonlite.tscn" id="1_pidak"]
-[ext_resource type="Texture2D" uid="uid://bq0lniraj12m7" path="res://assets/images/menus/charSelect/characterArt/moonlite.png" id="2_hdgmp"]
+[ext_resource type="SpriteFrames" uid="uid://2n0t27qxjwqk" path="res://assets/images/menus/charSelect/characterArt/moonlite.xml" id="3_t4vjq"]
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="4_t4vjq"]
 
 [node name="NewCharacterSelect" type="Control" unique_id=75394662]
@@ -17,9 +17,12 @@ script = ExtResource("1_hdgmp")
 [node name="bg" parent="." unique_id=797295154 instance=ExtResource("1_pidak")]
 position = Vector2(984, 560)
 
-[node name="character" type="Sprite2D" parent="." unique_id=1517233728]
-position = Vector2(1439, 581)
-texture = ExtResource("2_hdgmp")
+[node name="character" type="AnimatedSprite2D" parent="." unique_id=947062369]
+position = Vector2(1443, 525)
+sprite_frames = ExtResource("3_t4vjq")
+animation = &"moonlite"
+autoplay = "moonlite"
+frame_progress = 0.6350716
 
 [node name="ui" type="Control" parent="." unique_id=1721802860]
 z_index = 4096
