@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://efq7pq2vufr4" path="res://source/scripts/menus/charSelect.gd" id="1_hdgmp"]
 [ext_resource type="PackedScene" uid="uid://dt0faors64kqe" path="res://source/scenes/menus/characterSelect/bg/moonlite.tscn" id="1_pidak"]
 [ext_resource type="Texture2D" uid="uid://bq0lniraj12m7" path="res://assets/images/menus/charSelect/characterArt/moonlite.png" id="2_hdgmp"]
+[ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="4_t4vjq"]
 
 [node name="NewCharacterSelect" type="Control" unique_id=75394662]
 layout_mode = 3
@@ -51,3 +52,37 @@ offset_top = 930.0
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 1)
+
+[node name="charSelectText" type="Label" parent="ui" unique_id=2018491622]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 590.5
+offset_top = 13.5
+offset_right = 1289.5
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_t4vjq")
+theme_override_font_sizes/font_size = 75
+text = "WHO'S IT GONNA BE?"
+
+[node name="characterName" type="Label" parent="ui" unique_id=259767778]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 872.5
+offset_top = 949.5
+offset_right = 1007.5
+offset_bottom = 1002.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_t4vjq")
+theme_override_font_sizes/font_size = 75
+text = "asd"
