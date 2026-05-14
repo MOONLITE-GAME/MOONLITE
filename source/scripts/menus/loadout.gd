@@ -66,7 +66,7 @@ func _process(_delta: float) -> void:
 		get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");
 	
 	if Input.is_action_just_pressed("uiEXIT"):
-		get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
+		get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect/moonlite.tscn");
 			
 	match Stats.weaponType:
 		"Sword":

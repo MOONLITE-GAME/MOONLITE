@@ -75,7 +75,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("uiSELECT"):
 		match curButton:
 			1:
-				get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
+				Stats.character = "moonlite";
+				get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect/moonlite.tscn");
 				Stats.playerX = 0;
 				Stats.playerY = 0;
 			2:

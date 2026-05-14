@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq0lniraj12m7"
-path="res://.godot/imported/moonlite.png-002f6012745adc71d94590e6d7babb6e.ctex"
+uid="uid://d007w07s2qsft"
+path="res://.godot/imported/yellowLight.png-19ff9f4fc2e578d7aeb44b518305f4af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/menus/charSelect/characterArt/moonlite.png"
-dest_files=["res://.godot/imported/moonlite.png-002f6012745adc71d94590e6d7babb6e.ctex"]
+source_file="res://assets/images/menus/charSelect/bg/moonlite/yellowLight.png"
+dest_files=["res://.godot/imported/yellowLight.png-19ff9f4fc2e578d7aeb44b518305f4af.ctex"]
 
 [params]
 
