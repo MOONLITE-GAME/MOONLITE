@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dt0faors64kqe"]
+
+[ext_resource type="Texture2D" uid="uid://vtv6jatsyi3v" path="res://assets/images/menus/charSelect/bg/moonlite/sky.png" id="1_e131e"]
+[ext_resource type="Texture2D" uid="uid://j1e26oxv3l1x" path="res://assets/images/menus/charSelect/bg/moonlite/skyline.png" id="2_4sv6m"]
+[ext_resource type="Texture2D" uid="uid://bse4u6f274hcl" path="res://assets/images/menus/charSelect/bg/moonlite/building.png" id="3_u4pwx"]
+[ext_resource type="Texture2D" uid="uid://d1nypb1mr5l2g" path="res://assets/images/menus/charSelect/fg/fog.png" id="4_7p48c"]
+[ext_resource type="Texture2D" uid="uid://dtgt5rj7rtvpt" path="res://assets/images/menus/charSelect/bg/moonlite/car.png" id="4_jb5f5"]
+[ext_resource type="Texture2D" uid="uid://dcqgahiweok1w" path="res://assets/images/menus/charSelect/bg/moonlite/road.png" id="4_u2knn"]
+[ext_resource type="Texture2D" uid="uid://bhan4s8h4cbos" path="res://assets/images/menus/charSelect/bg/moonlite/redLight.png" id="6_85s6j"]
+
+[node name="Moonlite" type="Node2D" unique_id=797295154]
+
+[node name="sky" type="Sprite2D" parent="." unique_id=161397380]
+texture = ExtResource("1_e131e")
+
+[node name="skyline" type="Sprite2D" parent="." unique_id=1468441532]
+texture = ExtResource("2_4sv6m")
+
+[node name="building" type="Sprite2D" parent="." unique_id=667536524]
+position = Vector2(-328, 14)
+texture = ExtResource("3_u4pwx")
+
+[node name="road" type="Sprite2D" parent="." unique_id=418181463]
+position = Vector2(0, 496)
+texture = ExtResource("4_u2knn")
+
+[node name="car" type="Sprite2D" parent="." unique_id=1637621531]
+position = Vector2(-1440, 232)
+texture = ExtResource("4_jb5f5")
+
+[node name="stopLight" type="Sprite2D" parent="." unique_id=1772835535]
+position = Vector2(56, 32)
+texture = ExtResource("6_85s6j")
+
+[node name="fg" type="Sprite2D" parent="." unique_id=505684832]
+z_index = 1
+position = Vector2(35, 244)
+texture = ExtResource("4_7p48c")

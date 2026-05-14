@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bjy8mkamh82je" path="res://source/scripts/menus/characterSelect.gd" id="1_s2ff4"]
 [ext_resource type="Texture2D" uid="uid://38eyywovghhp" path="res://assets/images/menus/charSelect/arrow.png" id="3_n5tpk"]
 [ext_resource type="Texture2D" uid="uid://bc6aukbhyyj77" path="res://assets/images/menus/options/buttonsNormal/exit.png" id="4_m2oyo"]
-[ext_resource type="Texture2D" uid="uid://cf4j6x16qjj6c" path="res://assets/images/menus/charSelect/characterArt/moonlite.png" id="5_kyyxe"]
+[ext_resource type="Texture2D" uid="uid://bq0lniraj12m7" path="res://assets/images/menus/charSelect/characterArt/moonlite.png" id="5_kyyxe"]
 
 [node name="CharacterSelect" type="Control" unique_id=1411044065]
 layout_mode = 3
