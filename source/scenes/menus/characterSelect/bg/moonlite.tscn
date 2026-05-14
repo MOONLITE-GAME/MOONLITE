@@ -8,6 +8,54 @@
 [ext_resource type="Texture2D" uid="uid://dcqgahiweok1w" path="res://assets/images/menus/charSelect/bg/moonlite/road.png" id="4_u2knn"]
 [ext_resource type="Texture2D" uid="uid://bhan4s8h4cbos" path="res://assets/images/menus/charSelect/bg/moonlite/redLight.png" id="6_85s6j"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7p48c"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_7p48c"]
+_limits = [0.0, 0.3, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.26130652, 0.21235956), 0.0, 0.0, 0, 0, Vector2(0.5075377, 0.3), 0.0, 0.0, 0, 0, Vector2(0.8241206, 0.19550563), 0.0, 0.0, 0, 0, Vector2(1, 0.09775281), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_qowfw"]
+curve = SubResource("Curve_7p48c")
+
+[sub_resource type="Gradient" id="Gradient_hri3g"]
+colors = PackedColorArray(1, 1, 1, 0.078431375, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_es2va"]
+gradient = SubResource("Gradient_hri3g")
+
+[sub_resource type="Curve" id="Curve_a3b5p"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_jrx55"]
+_limits = [0.0, 30.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.32663316, 27.303371), 0.0, 0.0, 0, 0, Vector2(0.4723618, 27.303371), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_2gv58"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_e86ul"]
+curve_x = SubResource("Curve_a3b5p")
+curve_y = SubResource("Curve_jrx55")
+curve_z = SubResource("Curve_2gv58")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7p48c"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -200, 0)
+emission_shape = 3
+emission_box_extents = Vector3(350, 1, 1)
+gravity = Vector3(0, 8000, 0)
+scale_min = 0.19999999
+scale_over_velocity_curve = SubResource("CurveXYZTexture_e86ul")
+color_initial_ramp = SubResource("GradientTexture1D_es2va")
+alpha_curve = SubResource("CurveTexture_qowfw")
+
 [node name="Moonlite" type="Node2D" unique_id=797295154]
 
 [node name="sky" type="Sprite2D" parent="." unique_id=161397380]
@@ -36,3 +84,14 @@ texture = ExtResource("6_85s6j")
 z_index = 1
 position = Vector2(35, 244)
 texture = ExtResource("4_7p48c")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1304458982]
+z_index = 2
+material = SubResource("CanvasItemMaterial_7p48c")
+position = Vector2(0, -91.00002)
+scale = Vector2(1.9999998, 1.6399999)
+amount = 1000
+lifetime = 0.5
+preprocess = 0.5
+visibility_rect = Rect2(-700, -205, 1400, 800)
+process_material = SubResource("ParticleProcessMaterial_7p48c")
