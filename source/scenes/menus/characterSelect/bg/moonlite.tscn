@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dtgt5rj7rtvpt" path="res://assets/images/menus/charSelect/bg/moonlite/car.png" id="4_jb5f5"]
 [ext_resource type="Texture2D" uid="uid://dcqgahiweok1w" path="res://assets/images/menus/charSelect/bg/moonlite/road.png" id="4_u2knn"]
 [ext_resource type="Texture2D" uid="uid://bhan4s8h4cbos" path="res://assets/images/menus/charSelect/bg/moonlite/redLight.png" id="6_85s6j"]
+[ext_resource type="AudioStream" uid="uid://dtwfjtwpedobb" path="res://assets/sounds/rainAmbience.ogg" id="8_qowfw"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7p48c"]
 blend_mode = 1
@@ -95,3 +96,9 @@ lifetime = 0.5
 preprocess = 0.5
 visibility_rect = Rect2(-700, -205, 1400, 800)
 process_material = SubResource("ParticleProcessMaterial_7p48c")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=395513998]
+stream = ExtResource("8_qowfw")
+volume_db = -25.213
+autoplay = true
+bus = &"SFX"
