@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cpxfh38q7avxu"]
 
+[ext_resource type="Script" uid="uid://efq7pq2vufr4" path="res://source/scripts/menus/charSelect.gd" id="1_hdgmp"]
 [ext_resource type="PackedScene" uid="uid://dt0faors64kqe" path="res://source/scenes/menus/characterSelect/bg/moonlite.tscn" id="1_pidak"]
 [ext_resource type="Texture2D" uid="uid://bq0lniraj12m7" path="res://assets/images/menus/charSelect/characterArt/moonlite.png" id="2_hdgmp"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hdgmp")
 
 [node name="bg" parent="." unique_id=797295154 instance=ExtResource("1_pidak")]
 position = Vector2(984, 560)
