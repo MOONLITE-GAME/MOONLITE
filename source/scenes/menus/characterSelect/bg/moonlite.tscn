@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dcqgahiweok1w" path="res://assets/images/menus/charSelect/bg/moonlite/road.png" id="4_u2knn"]
 [ext_resource type="Texture2D" uid="uid://bhan4s8h4cbos" path="res://assets/images/menus/charSelect/bg/moonlite/redLight.png" id="6_85s6j"]
 [ext_resource type="AudioStream" uid="uid://dtwfjtwpedobb" path="res://assets/sounds/rainAmbience.ogg" id="8_qowfw"]
+[ext_resource type="SpriteFrames" uid="uid://2n0t27qxjwqk" path="res://assets/images/menus/charSelect/characterArt/moonlite.xml" id="10_es2va"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7p48c"]
 blend_mode = 1
@@ -104,3 +105,10 @@ stream = ExtResource("8_qowfw")
 volume_db = -25.213
 autoplay = true
 bus = &"SFX"
+
+[node name="character" type="AnimatedSprite2D" parent="." unique_id=1056172337]
+position = Vector2(459, -35)
+sprite_frames = ExtResource("10_es2va")
+animation = &"moonlite"
+autoplay = "moonlite"
+frame_progress = 0.6350716
