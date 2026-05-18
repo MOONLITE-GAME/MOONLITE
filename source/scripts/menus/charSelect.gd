@@ -20,6 +20,7 @@ func _process(_delta: float) -> void:
 
 func updateChar():
 	charNode = load("res://source/scenes/menus/characterSelect/characters/" + characters[curChar] + ".tscn");
+	Stats.character = characters[curChar];
 	var instance = charNode.instantiate();
 	instance.position = Vector2(984, 560);
 	add_child(instance);
