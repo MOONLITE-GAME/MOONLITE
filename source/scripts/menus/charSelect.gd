@@ -1,8 +1,15 @@
 extends Control
 
+# TODO: Maybe don't hardcode this? We could have it read from data/characters, idk. Maybe we keep the array and just add characters from the data folder that aren't already in there.
+var characters:Array = ["moonlite", "locked", "locked", "locked", "locked", "locked", "locked", "locked"];
+var curChar:int = 0;
+var maxChar:int;
+var charNode;
+
 func _ready() -> void:
 	MusicEngine.stopMusic();
 	updateChar();
+	updateMaxChar();
 	
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiSELECT"):
@@ -12,4 +19,13 @@ func _process(_delta: float) -> void:
 		MusicEngine.loadSong("titleScreen");
 
 func updateChar():
+	charNode = load("res://source/scenes/menus/characterSelect/characters/" + characters[curChar] + ".tscn");
+	var instance = charNode.instantiate();
+	instance.position = Vector2(984, 560);
+	add_child(instance);
 	$ui/characterName.text = Stats.character;
+
+func updateMaxChar():
+	for i in characters:
+		maxChar = maxChar + 1;
+		print(str(maxChar));

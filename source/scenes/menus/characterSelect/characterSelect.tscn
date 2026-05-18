@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cpxfh38q7avxu"]
 
 [ext_resource type="Script" uid="uid://efq7pq2vufr4" path="res://source/scripts/menus/charSelect.gd" id="1_k8cst"]
-[ext_resource type="PackedScene" uid="uid://dt0faors64kqe" path="res://source/scenes/menus/characterSelect/bg/moonlite.tscn" id="2_pym6n"]
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="4_mqjyf"]
 
 [node name="NewCharacterSelect" type="Control" unique_id=75394662]
@@ -12,9 +11,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k8cst")
-
-[node name="bg" parent="." unique_id=797295154 instance=ExtResource("2_pym6n")]
-position = Vector2(984, 560)
 
 [node name="ui" type="Control" parent="." unique_id=1721802860]
 z_index = 4096
