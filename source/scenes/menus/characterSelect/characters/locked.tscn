@@ -3,12 +3,34 @@
 [ext_resource type="Texture2D" uid="uid://mj4fqdbym54x" path="res://assets/images/menus/charSelect/bg/locked/locked bg.png" id="1_1gqk1"]
 [ext_resource type="Script" uid="uid://deb7pl6f6f8ox" path="res://source/scripts/menus/characterSelect/locked.gd" id="1_f7mdv"]
 [ext_resource type="Texture2D" uid="uid://d27j3qjm04ukm" path="res://assets/images/menus/charSelect/characterArt/lock.png" id="2_e1vh3"]
+[ext_resource type="Shader" uid="uid://c62sn85xjym5n" path="res://source/shaders/wobble.gdshader" id="2_h6nuu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h6nuu"]
+shader = ExtResource("2_h6nuu")
+shader_parameter/noise_texture = ExtResource("1_1gqk1")
+shader_parameter/strength = 0.005
+shader_parameter/speed = Vector2(0.1, 0.05)
 
 [node name="Locked" type="Node2D" unique_id=1505301570]
 script = ExtResource("1_f7mdv")
 
+[node name="bgRed" type="ColorRect" parent="." unique_id=2022948843]
+offset_left = -951.0
+offset_top = -645.0
+offset_right = 1146.0
+offset_bottom = 590.0
+color = Color(0.6, 0, 0, 1)
+
 [node name="bg" type="Sprite2D" parent="." unique_id=191910290]
 texture = ExtResource("1_1gqk1")
+
+[node name="warp" type="ColorRect" parent="." unique_id=1339297888]
+material = SubResource("ShaderMaterial_h6nuu")
+offset_left = -870.0
+offset_top = -550.0
+offset_right = 963.0
+offset_bottom = 530.0
+color = Color(1, 1, 1, 0.45882353)
 
 [node name="lock" type="Sprite2D" parent="." unique_id=2035724748]
 texture = ExtResource("2_e1vh3")
