@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://u3xm428qoxx6"]
 
 [ext_resource type="Texture2D" uid="uid://mj4fqdbym54x" path="res://assets/images/menus/charSelect/bg/locked/locked bg.png" id="1_1gqk1"]
+[ext_resource type="Script" uid="uid://deb7pl6f6f8ox" path="res://source/scripts/menus/characterSelect/locked.gd" id="1_f7mdv"]
 [ext_resource type="Texture2D" uid="uid://d27j3qjm04ukm" path="res://assets/images/menus/charSelect/characterArt/lock.png" id="2_e1vh3"]
 
 [node name="Locked" type="Node2D" unique_id=1505301570]
+script = ExtResource("1_f7mdv")
 
 [node name="bg" type="Sprite2D" parent="." unique_id=191910290]
 texture = ExtResource("1_1gqk1")

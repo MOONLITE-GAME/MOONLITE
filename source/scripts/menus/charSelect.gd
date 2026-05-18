@@ -16,11 +16,13 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiSELECT"):
 		if Stats.character != "locked":
 			get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
+			
 	if Input.is_action_just_pressed("uiEXIT"):
 		get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
 		MusicEngine.loadSong("titleScreen");
 		
 	if Input.is_action_just_pressed("uiLEFT"):
+		$AudioStreamPlayer.play();
 		deleteChar();
 		curChar = curChar - 1;
 		updateChar();
@@ -28,12 +30,25 @@ func _process(_delta: float) -> void:
 			curChar = maxChar;	
 	
 	if Input.is_action_just_pressed("uiRIGHT"):
+		$AudioStreamPlayer.play();
 		deleteChar();
 		if curChar == maxChar:
 			curChar = 0;
 		else:
 			curChar = curChar + 1;
 		updateChar();
+		
+	if Input.is_action_pressed("uiLEFT"):
+		$ui/Arrow.modulate = Color("00ffff");
+		
+	else:
+		$ui/Arrow.modulate = Color("ffffffff");
+		
+	if Input.is_action_pressed("uiRIGHT"):
+		$ui/Arrow2.modulate = Color("00ffff");
+		
+	else:
+		$ui/Arrow2.modulate = Color("ffffff");
 
 func updateChar():
 	charNode = load("res://source/scenes/menus/characterSelect/characters/" + characters[curChar] + ".tscn");

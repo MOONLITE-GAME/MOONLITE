@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://dt0faors64kqe"]
 
-[ext_resource type="Texture2D" uid="uid://vtv6jatsyi3v" path="res://assets/images/menus/charSelect/bg/moonlite/sky.png" id="1_e131e"]
-[ext_resource type="Script" uid="uid://bhr8m5hwfma7k" path="res://source/scripts/menus/characterSelect/moonlite.gd" id="1_hri3g"]
-[ext_resource type="Texture2D" uid="uid://j1e26oxv3l1x" path="res://assets/images/menus/charSelect/bg/moonlite/skyline.png" id="2_4sv6m"]
-[ext_resource type="Texture2D" uid="uid://bse4u6f274hcl" path="res://assets/images/menus/charSelect/bg/moonlite/building.png" id="3_u4pwx"]
-[ext_resource type="Texture2D" uid="uid://d1nypb1mr5l2g" path="res://assets/images/menus/charSelect/fg/fog.png" id="4_7p48c"]
-[ext_resource type="Texture2D" uid="uid://dtgt5rj7rtvpt" path="res://assets/images/menus/charSelect/bg/moonlite/car.png" id="4_jb5f5"]
-[ext_resource type="Texture2D" uid="uid://dcqgahiweok1w" path="res://assets/images/menus/charSelect/bg/moonlite/road.png" id="4_u2knn"]
-[ext_resource type="Texture2D" uid="uid://bhan4s8h4cbos" path="res://assets/images/menus/charSelect/bg/moonlite/redLight.png" id="6_85s6j"]
-[ext_resource type="AudioStream" uid="uid://dtwfjtwpedobb" path="res://assets/sounds/rainAmbience.ogg" id="8_qowfw"]
-[ext_resource type="SpriteFrames" uid="uid://2n0t27qxjwqk" path="res://assets/images/menus/charSelect/characterArt/moonlite.xml" id="10_es2va"]
+[ext_resource type="Script" uid="uid://bhr8m5hwfma7k" path="res://source/scripts/menus/characterSelect/moonlite.gd" id="1_s1vck"]
+[ext_resource type="Texture2D" uid="uid://vtv6jatsyi3v" path="res://assets/images/menus/charSelect/bg/moonlite/sky.png" id="2_wlx8o"]
+[ext_resource type="Texture2D" uid="uid://j1e26oxv3l1x" path="res://assets/images/menus/charSelect/bg/moonlite/skyline.png" id="3_s161e"]
+[ext_resource type="Texture2D" uid="uid://bse4u6f274hcl" path="res://assets/images/menus/charSelect/bg/moonlite/building.png" id="4_dwab6"]
+[ext_resource type="Texture2D" uid="uid://dcqgahiweok1w" path="res://assets/images/menus/charSelect/bg/moonlite/road.png" id="5_ujnhu"]
+[ext_resource type="Texture2D" uid="uid://dtgt5rj7rtvpt" path="res://assets/images/menus/charSelect/bg/moonlite/car.png" id="6_ww5dc"]
+[ext_resource type="Texture2D" uid="uid://bhan4s8h4cbos" path="res://assets/images/menus/charSelect/bg/moonlite/redLight.png" id="7_abhph"]
+[ext_resource type="Texture2D" uid="uid://d1nypb1mr5l2g" path="res://assets/images/menus/charSelect/fg/fog.png" id="8_2hjdc"]
+[ext_resource type="AudioStream" uid="uid://dtwfjtwpedobb" path="res://assets/sounds/rainAmbience.ogg" id="9_kmeqs"]
+[ext_resource type="SpriteFrames" uid="uid://2n0t27qxjwqk" path="res://assets/images/menus/charSelect/characterArt/moonlite.xml" id="10_aosda"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7p48c"]
 blend_mode = 1
@@ -60,34 +60,34 @@ color_initial_ramp = SubResource("GradientTexture1D_es2va")
 alpha_curve = SubResource("CurveTexture_qowfw")
 
 [node name="Moonlite" type="Node2D" unique_id=797295154]
-script = ExtResource("1_hri3g")
+script = ExtResource("1_s1vck")
 
 [node name="sky" type="Sprite2D" parent="." unique_id=161397380]
-texture = ExtResource("1_e131e")
+texture = ExtResource("2_wlx8o")
 
 [node name="skyline" type="Sprite2D" parent="." unique_id=1468441532]
-texture = ExtResource("2_4sv6m")
+texture = ExtResource("3_s161e")
 
 [node name="building" type="Sprite2D" parent="." unique_id=667536524]
 position = Vector2(-328, 14)
-texture = ExtResource("3_u4pwx")
+texture = ExtResource("4_dwab6")
 
 [node name="road" type="Sprite2D" parent="." unique_id=418181463]
 position = Vector2(0, 496)
-texture = ExtResource("4_u2knn")
+texture = ExtResource("5_ujnhu")
 
 [node name="car" type="Sprite2D" parent="." unique_id=1637621531]
 position = Vector2(-1440, 232)
-texture = ExtResource("4_jb5f5")
+texture = ExtResource("6_ww5dc")
 
 [node name="stopLight" type="Sprite2D" parent="." unique_id=1772835535]
 position = Vector2(56, 32)
-texture = ExtResource("6_85s6j")
+texture = ExtResource("7_abhph")
 
 [node name="fg" type="Sprite2D" parent="." unique_id=505684832]
 z_index = 1
 position = Vector2(35, 244)
-texture = ExtResource("4_7p48c")
+texture = ExtResource("8_2hjdc")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1304458982]
 z_index = 2
@@ -101,14 +101,14 @@ visibility_rect = Rect2(-700, -205, 1400, 800)
 process_material = SubResource("ParticleProcessMaterial_7p48c")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=395513998]
-stream = ExtResource("8_qowfw")
+stream = ExtResource("9_kmeqs")
 volume_db = -25.213
 autoplay = true
 bus = &"SFX"
 
 [node name="character" type="AnimatedSprite2D" parent="." unique_id=1056172337]
 position = Vector2(459, -35)
-sprite_frames = ExtResource("10_es2va")
+sprite_frames = ExtResource("10_aosda")
 animation = &"moonlite"
 autoplay = "moonlite"
 frame_progress = 0.6350716
