@@ -14,7 +14,8 @@ func _ready() -> void:
 	
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiSELECT"):
-		get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
+		if Stats.character != "locked":
+			get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
 	if Input.is_action_just_pressed("uiEXIT"):
 		get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
 		MusicEngine.loadSong("titleScreen");
@@ -38,7 +39,7 @@ func updateChar():
 	charNode = load("res://source/scenes/menus/characterSelect/characters/" + characters[curChar] + ".tscn");
 	Stats.character = characters[curChar];
 	instance = charNode.instantiate();
-	instance.position = Vector2(984, 560);
+	#instance.position = Vector2(984, 560);
 	add_child(instance);
 	$ui/characterName.text = Stats.character;
 	print(curChar);
