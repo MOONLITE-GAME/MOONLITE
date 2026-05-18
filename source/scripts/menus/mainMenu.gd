@@ -40,13 +40,13 @@ func _process(delta: float) -> void:
 		8:
 			$text.text = "THIS ONE'S FOR YOU, HARAMBE";
 		9:
-			$text.text = "WARNING: THIS PRODUCT CONTAINS BLACK PEOPLE (literally)";
+			$text.text = "WARNING: THIS GAME HAS BAD WORDS!!!";
 		10:
-			$text.text = "IN LOVING MEMORY OF CHARLIE KIRK";
+			$text.text = "CHAPTER 1 IS COMING UP. WE WORKIN ON IT.";
 		11:
 			$text.text = "THE ANSWER IS DIVINE INTELLECT";
 		12:
-			$text.text = "NOT FUNDED BY THE IDF";
+			$text.text = "BROUGHT TO YOU BY SOME DUMBASSES";
 			
 	if Input.is_action_just_pressed("uiRIGHT"):
 		$AudioStreamPlayer.play();

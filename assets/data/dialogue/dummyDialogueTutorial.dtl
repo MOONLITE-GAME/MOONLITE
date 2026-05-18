@@ -1,6 +1,14 @@
 set {isDone} = false
-moonlite: Dude...
-moonlite: You look hella gay...
-dummy: Kill yourself
-moonlite: Okay... \:(
+moonlite: Hey buddy
+moonlite: How's life been?
+dummy: I haven't seen the sun in 15 years.
+dummy: Please let me out of this prison.
+dummy: I miss my family.
+dummy: I wanna see my kids again.
+dummy: God please.
+dummy: I'll do anything.
+dummy: PLEASE.
+moonlite: Um....
+moonlite: You want some milk?
+dummy: Fuck you.
 set {isDone} = true
