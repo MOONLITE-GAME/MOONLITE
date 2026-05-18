@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ee4hyuogstrj"]
+
+[ext_resource type="SpriteFrames" uid="uid://cpctxqycmipns" path="res://assets/shared/images/characters/playable/moonlite.xml" id="1_247yd"]
+[ext_resource type="Shader" uid="uid://c62sn85xjym5n" path="res://source/shaders/wobble.gdshader" id="2_b7opn"]
+[ext_resource type="Texture2D" uid="uid://cjtj67ix7ug14" path="res://icon.svg" id="3_ytjv0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ytjv0"]
+shader = ExtResource("2_b7opn")
+shader_parameter/noise_texture = ExtResource("3_ytjv0")
+shader_parameter/strength = 0.005
+shader_parameter/speed = Vector2(0.1, 0.05)
+
+[node name="ShaderTest" type="Node2D" unique_id=822120629]
+
+[node name="moonlite" type="AnimatedSprite2D" parent="." unique_id=103713725]
+position = Vector2(242, 24)
+sprite_frames = ExtResource("1_247yd")
+animation = &"idle right"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=440776884]
+material = SubResource("ShaderMaterial_ytjv0")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -963.0
+offset_top = -540.0
+offset_right = 963.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
