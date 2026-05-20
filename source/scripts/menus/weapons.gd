@@ -31,6 +31,7 @@ func _process(_delta: float) -> void:
 			$startGlow.visible = true;
 			
 	if Input.is_action_just_pressed("uiDOWN") or Input.is_action_just_pressed("uiUP"):
+		$AudioStreamPlayer.play();
 		match curButton:
 			1:
 				curButton = 2;

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d1orsu2uglym1" path="res://assets/images/menus/loadout/themes/back.png" id="3_tcprn"]
 [ext_resource type="Texture2D" uid="uid://crxy08kl16pn5" path="res://assets/images/menus/loadout/themes/start.png" id="4_agf4o"]
 [ext_resource type="Texture2D" uid="uid://brucshvr7waj7" path="res://assets/images/menus/loadout/cards/darkSword.png" id="5_4lar0"]
+[ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="6_drpnl"]
 [ext_resource type="SpriteFrames" uid="uid://bh0il78aedmhm" path="res://assets/images/menus/loadout/glow/cardGlow.xml" id="6_lplgm"]
 [ext_resource type="SpriteFrames" uid="uid://cknm53o614qq4" path="res://assets/images/menus/loadout/glow/startGlow.xml" id="7_peju7"]
 
@@ -54,3 +55,7 @@ position = Vector2(1681.5, 940.25)
 scale = Vector2(1.0231092, 1.0162455)
 sprite_frames = ExtResource("7_peju7")
 animation = &"start button glow instance 1"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1716470717]
+stream = ExtResource("6_drpnl")
+bus = &"SFX"
