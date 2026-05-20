@@ -15,7 +15,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiSELECT"):
 		if Stats.character != "locked":
-			get_tree().change_scene_to_file("res://source/scenes/menus/newLoadout.tscn");
+			get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
 			
 	if Input.is_action_just_pressed("uiEXIT"):
 		get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
