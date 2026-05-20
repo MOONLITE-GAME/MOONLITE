@@ -2,11 +2,9 @@
 
 [ext_resource type="SpriteFrames" uid="uid://cpctxqycmipns" path="res://assets/shared/images/characters/playable/moonlite.xml" id="1_247yd"]
 [ext_resource type="Shader" uid="uid://c62sn85xjym5n" path="res://source/shaders/wobble.gdshader" id="2_b7opn"]
-[ext_resource type="Texture2D" uid="uid://cjtj67ix7ug14" path="res://icon.svg" id="3_ytjv0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ytjv0"]
 shader = ExtResource("2_b7opn")
-shader_parameter/noise_texture = ExtResource("3_ytjv0")
 shader_parameter/strength = 0.005
 shader_parameter/speed = Vector2(0.1, 0.05)
 
