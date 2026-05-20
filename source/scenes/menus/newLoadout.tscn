@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://d4nkdhfttsicj"]
 
+[ext_resource type="Script" uid="uid://dp35r2t7y6mva" path="res://source/scripts/menus/weapons.gd" id="1_cx8h2"]
+
 [node name="NewLoadout" type="Control" unique_id=591109854]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cx8h2")
+
+[node name="bg" type="ColorRect" parent="." unique_id=776354782]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0

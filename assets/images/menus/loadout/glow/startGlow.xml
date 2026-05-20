@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="startGlow.png">
+	<!-- Created with Adobe Animate version 24.0.13.5 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="start button glow instance 10000" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10001" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10002" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10003" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10004" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10005" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10006" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10007" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10008" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10009" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10010" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10011" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10012" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10013" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10014" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10015" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10016" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10017" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10018" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10019" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10020" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10021" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10022" x="0" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10023" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10024" x="952" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10025" x="1428" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10026" x="0" y="277" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10027" x="476" y="277" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10028" x="952" y="277" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10029" x="1428" y="277" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10030" x="0" y="554" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10031" x="476" y="554" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10032" x="952" y="554" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10033" x="1428" y="554" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10034" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10035" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10036" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10037" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10038" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10039" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10040" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10041" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10042" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10043" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10044" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10045" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10046" x="476" y="0" width="476" height="277"/>
+	<SubTexture name="start button glow instance 10047" x="476" y="0" width="476" height="277"/>
+</TextureAtlas>
