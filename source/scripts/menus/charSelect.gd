@@ -9,6 +9,12 @@ var charNode;
 
 func _ready() -> void:
 	MusicEngine.stopMusic();
+	
+	if Stats.mobile:
+		$ui/exit.visible = true;
+	else:
+		$ui/exit.visible = false;
+		
 	updateChar();
 	updateMaxChar();
 	
@@ -68,3 +74,15 @@ func updateMaxChar():
 		
 func deleteChar():
 	instance.queue_free();
+
+func _on_exit_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/mainMenu.tscn");
+	MusicEngine.loadSong("titleScreen");
+
+func _on_area_2d_mouse_entered() -> void:
+	if Input.is_action_pressed("Tap"):
+		if Stats.character != "locked":
+			get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
+
+func _on_area_2d_mouse_exited() -> void:
+	pass # Replace with function body.

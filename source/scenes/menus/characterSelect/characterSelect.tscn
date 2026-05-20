@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://38eyywovghhp" path="res://assets/images/menus/charSelect/arrow.png" id="3_meh0v"]
 [ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="4_k8cst"]
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="4_mqjyf"]
+[ext_resource type="Texture2D" uid="uid://bc6aukbhyyj77" path="res://assets/images/menus/options/buttonsNormal/exit.png" id="5_pym6n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pym6n"]
+size = Vector2(1384, 790)
 
 [node name="NewCharacterSelect" type="Control" unique_id=75394662]
 layout_mode = 3
@@ -93,6 +97,23 @@ position = Vector2(1825, 540)
 rotation = -3.1415925
 texture = ExtResource("3_meh0v")
 
+[node name="exit" type="TextureButton" parent="ui" unique_id=1227670801]
+visible = false
+layout_mode = 0
+offset_right = 384.0
+offset_bottom = 288.0
+texture_normal = ExtResource("5_pym6n")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1807105184]
 stream = ExtResource("4_k8cst")
 bus = &"SFX"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1888113268]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1476638323]
+position = Vector2(7, 1)
+shape = SubResource("RectangleShape2D_pym6n")
+
+[connection signal="pressed" from="ui/exit" to="." method="_on_exit_pressed"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

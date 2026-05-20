@@ -5,6 +5,12 @@ var curButton:int = 1;
 func _ready() -> void:
 	# TODO: Make this read from json to avoid hardcoding!!!
 	Camera.position = Vector2(960, 540);
+	
+	if Stats.mobile:
+		$exit.visible = true;
+	else:
+		$exit.visible = false;
+	
 	if Stats.weaponFile == "":
 		Stats.weapon = "Dark Sword";
 		Stats.weaponFile = "darkSword";
@@ -13,13 +19,13 @@ func _ready() -> void:
 	print("Current Weapon: " + Stats.weapon);
 	print("Weapon File Name: " + Stats.weaponFile);
 		
-	$card.texture = load("res://assets/images/menus/loadout/cards/" + Stats.weaponFile + ".png");
+	$card.texture_normal = load("res://assets/images/menus/loadout/cards/" + Stats.weaponFile + ".png");
 	
 	if Stats.character == "moonlite":
 		$bg.color = Color("#A800FF");
 		$character.texture = load("res://assets/images/menus/loadout/characters/moonlite.png");
 		$uiBack.texture = load("res://assets/images/menus/loadout/themes/back.png");
-		$start.texture = load("res://assets/images/menus/loadout/themes/start.png");
+		$start.texture_normal = load("res://assets/images/menus/loadout/themes/start.png");
 
 func _process(_delta: float) -> void:
 	match curButton:
@@ -78,3 +84,12 @@ func getWeaponData():
 			Stats.velocityTime = data.velocityTime;
 		if "weaponSound" in data:
 			Stats.weaponSound = data.weaponSound;
+
+func _on_exit_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect/characterSelect.tscn");
+
+func _on_start_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");
+
+func _on_card_pressed() -> void:
+	get_tree().change_scene_to_file("res://source/scenes/menus/weaponSelect.tscn");

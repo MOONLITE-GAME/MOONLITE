@@ -120,7 +120,7 @@ func _on_arrow_right_pressed() -> void:
 		curWeapon = 0;
 
 func _on_exit_pressed() -> void:
-	get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect.tscn");
+	get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
 
 func _on_sprite_pressed() -> void:
 	get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");

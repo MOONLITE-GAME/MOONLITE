@@ -7,7 +7,7 @@ var assetPath:String;
 var character:String;
 var fullscreen:bool;
 var slideToggle:bool;
-var mobile:bool = false; # SET TO TRUE BEFORE MOBILE EXPORTS
+var mobile:bool = true; # SET TO TRUE BEFORE MOBILE EXPORTS
 
 # vars for character stats
 var health:int;

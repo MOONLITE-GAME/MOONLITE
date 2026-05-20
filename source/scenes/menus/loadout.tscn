@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="6_drpnl"]
 [ext_resource type="SpriteFrames" uid="uid://bh0il78aedmhm" path="res://assets/images/menus/loadout/glow/cardGlow.xml" id="6_lplgm"]
 [ext_resource type="SpriteFrames" uid="uid://cknm53o614qq4" path="res://assets/images/menus/loadout/glow/startGlow.xml" id="7_peju7"]
+[ext_resource type="Texture2D" uid="uid://bc6aukbhyyj77" path="res://assets/images/menus/options/buttonsNormal/exit.png" id="7_qgxdf"]
 
 [node name="NewLoadout" type="Control" unique_id=591109854]
 layout_mode = 3
@@ -31,14 +32,22 @@ texture = ExtResource("2_yghlk")
 position = Vector2(1373, 559)
 texture = ExtResource("3_tcprn")
 
-[node name="start" type="Sprite2D" parent="." unique_id=1972260137]
-position = Vector2(1678, 939)
-texture = ExtResource("4_agf4o")
+[node name="start" type="TextureButton" parent="." unique_id=1303671358]
+layout_mode = 0
+offset_left = 1463.0
+offset_top = 823.0
+offset_right = 1888.0
+offset_bottom = 1051.0
+texture_normal = ExtResource("4_agf4o")
 
-[node name="card" type="Sprite2D" parent="." unique_id=1284731651]
-position = Vector2(1387, 451)
+[node name="card" type="TextureButton" parent="." unique_id=1339555347]
+layout_mode = 0
+offset_left = 1203.0
+offset_top = 200.00002
+offset_right = 2203.0
+offset_bottom = 1600.0
 scale = Vector2(0.373, 0.373)
-texture = ExtResource("5_4lar0")
+texture_normal = ExtResource("5_4lar0")
 
 [node name="cardGlow" type="AnimatedSprite2D" parent="." unique_id=1309205240]
 visible = false
@@ -59,3 +68,16 @@ animation = &"start button glow instance 1"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1716470717]
 stream = ExtResource("6_drpnl")
 bus = &"SFX"
+
+[node name="exit" type="TextureButton" parent="." unique_id=7970817]
+visible = false
+layout_mode = 0
+offset_left = 1053.0
+offset_top = 780.0
+offset_right = 1437.0
+offset_bottom = 1068.0
+texture_normal = ExtResource("7_qgxdf")
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="card" to="." method="_on_card_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
