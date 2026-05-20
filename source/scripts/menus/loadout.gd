@@ -63,10 +63,10 @@ func _process(_delta: float) -> void:
 		$Arrow2.modulate = Color("ffffff");
 		
 	if Input.is_action_just_pressed("uiSELECT"):
-		get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");
+		get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
 	
 	if Input.is_action_just_pressed("uiEXIT"):
-		get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect/characterSelect.tscn");
+		get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
 			
 	match Stats.weaponType:
 		"Sword":
