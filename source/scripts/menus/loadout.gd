@@ -107,20 +107,20 @@ func getWeaponData():
 		if "weaponSound" in data:
 			Stats.weaponSound = data.weaponSound;
 		
-func _on_arrow_left_pressed() -> void:
-	$AudioStreamPlayer.play();
-	curWeapon = curWeapon - 1;
-	if curWeapon == -1:
-		curWeapon = maxWeapon;
-
-func _on_arrow_right_pressed() -> void:
-	$AudioStreamPlayer.play();
-	curWeapon = curWeapon + 1;
-	if curWeapon >= maxWeapon:
-		curWeapon = 0;
-
 func _on_exit_pressed() -> void:
 	get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
 
 func _on_sprite_pressed() -> void:
-	get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");
+	get_tree().change_scene_to_file("res://source/scenes/menus/loadout.tscn");
+
+func _on_arrow_left_button_down() -> void:
+	Input.action_press("uiLEFT");
+
+func _on_arrow_left_button_up() -> void:
+	Input.action_release("uiLEFT");
+
+func _on_arrow_right_button_down() -> void:
+	Input.action_press("uiRIGHT");
+
+func _on_arrow_right_button_up() -> void:
+	Input.action_release("uiRIGHT");

@@ -199,6 +199,10 @@ offset_bottom = -251.0
 texture_normal = ExtResource("7_qgxdf")
 
 [connection signal="pressed" from="weaponIcon/sprite" to="." method="_on_sprite_pressed"]
+[connection signal="button_down" from="arrowLeft" to="." method="_on_arrow_left_button_down"]
+[connection signal="button_up" from="arrowLeft" to="." method="_on_arrow_left_button_up"]
 [connection signal="pressed" from="arrowLeft" to="." method="_on_arrow_left_pressed"]
+[connection signal="button_down" from="arrowRight" to="." method="_on_arrow_right_button_down"]
+[connection signal="button_up" from="arrowRight" to="." method="_on_arrow_right_button_up"]
 [connection signal="pressed" from="arrowRight" to="." method="_on_arrow_right_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
