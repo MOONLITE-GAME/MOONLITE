@@ -1,11 +1,23 @@
 extends Control;
 
 var curButton:int = 1;
+var selectColor:Color = Color(18.892, 18.892, 18.892);
+var normColor:Color = Color("ffffff");
+
+const breakSpeed:float = -50.0;
+const relaxSpeed:float = 50.0;
 
 func _ready() -> void:
-	$ui/selector.position.y = $ui/resume.position.y;
+	$PauseMusicText._ready();
+	$ui/resumeButton.self_modulate = selectColor;
+	$ui/menuButton.self_modulate = normColor;
+	curButton = 1;
+	
+	$breakText.position.y = 547;
+	$relaxText.position.y = -884;
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	textSlide(delta);
 	if not Stats.inDialogue:
 		checkPauseInput();
 	
@@ -14,20 +26,24 @@ func _process(_delta: float) -> void:
 			$uiSounds.play();
 			match curButton:
 				1:
-					$ui/selector.position.y = $ui/menu.position.y;
+					$ui/menuButton.self_modulate = selectColor;
+					$ui/resumeButton.self_modulate = normColor;
 					curButton = 2;
 				2:
-					$ui/selector.position.y = $ui/resume.position.y;
+					$ui/resumeButton.self_modulate = selectColor;
+					$ui/menuButton.self_modulate = normColor;
 					curButton = 1;
 					
 		if Input.is_action_just_pressed("uiDOWN"):
 			$uiSounds.play();
 			match curButton:
 				1:
-					$ui/selector.position.y = $ui/menu.position.y;
+					$ui/menuButton.self_modulate = selectColor;
+					$ui/resumeButton.self_modulate = normColor;
 					curButton = 2;
 				2:
-					$ui/selector.position.y = $ui/resume.position.y;
+					$ui/resumeButton.self_modulate = selectColor;
+					$ui/menuButton.self_modulate = normColor;
 					curButton = 1;
 		
 		if Input.is_action_just_pressed("uiSELECT"):
@@ -49,6 +65,7 @@ func checkPauseInput():
 		resume();
 
 func pause():
+	_ready();
 	get_tree().paused = true;
 	$".".visible = true;
 
@@ -65,3 +82,12 @@ func _on_menu_button_pressed() -> void:
 	if get_tree().paused:
 			resume();
 			get_tree().change_scene_to_file("res://source/scenes/menus/titleScreen.tscn");
+			
+func textSlide(elapsed):
+	$breakText.position.y += breakSpeed * elapsed;
+	$relaxText.position.y += relaxSpeed * elapsed;
+
+	if $breakText.position.y < -1364:
+		print("Resetting Text");
+		$breakText.position.y = 547;
+		$relaxText.position.y = -884;

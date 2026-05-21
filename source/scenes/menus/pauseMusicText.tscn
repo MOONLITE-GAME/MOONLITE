@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c4mka02i3m4uo"]
+
+[ext_resource type="Script" uid="uid://77lv5eq6bwu8" path="res://source/scripts/menus/pauseMusicText.gd" id="1_jve30"]
+[ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="1_lyjwo"]
+
+[node name="PauseMusicText" type="Control" unique_id=259118012]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jve30")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=218683678]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -75.0
+offset_right = 960.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1847857076]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1260.0
+offset_top = -33.0
+offset_right = 2404.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_fonts/font = ExtResource("1_lyjwo")
+theme_override_font_sizes/font_size = 75
+text = "NOW PLAYING: SONG - ARTIST"

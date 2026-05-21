@@ -27,12 +27,16 @@ func getNewMusic():
 	match musRNG:
 		1:
 			$MUSIC.stream = load("res://assets/music/bopeeboMoonlite.ogg");
+			MusicEngine.title = "Bopeebo (Moonlite Mix) (Instrumental)";
 		2:
 			$MUSIC.stream = load("res://assets/music/saveFiles.ogg");
+			MusicEngine.title = "Record Keeper";
 		3:
 			$MUSIC.stream = load("res://assets/music/titleScreen.ogg");
+			MusicEngine.title = "MOONLITE (Main Theme)"
 		4:
 			$MUSIC.stream = load("res://assets/music/tutorial.ogg");
+			MusicEngine.title = "A Tutorial (Remastered)";
 	
 	$MUSIC.play();
 

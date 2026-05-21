@@ -29,7 +29,7 @@ func loadSong(songName):
 			
 
 		stream = load(assetPath);
-		print("Song Loaded!");
+		print("Song (" + title + " by " + artist + ")" + " Loaded!");
 		play();
 
 	else:

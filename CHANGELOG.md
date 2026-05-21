@@ -4,6 +4,16 @@ All notable changes will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0] - 2026-??-??
+CHAPTER 1 RELEASE
+
+### Added
+- Brand New Pause Menu Revamp (Again...)
+	- Now features what song is playing!
+
+### Changed
+- MusicEngine process mode is now `Always` rather than `Inherit` meaning music plays on the pause menu!
+
 ## [0.0.7] - 2026-05-20
 THE SEVENTH ALPHA RELEASE: MORE UI STUFF
 
