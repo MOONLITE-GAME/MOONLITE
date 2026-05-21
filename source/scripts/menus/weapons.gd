@@ -49,7 +49,10 @@ func _process(_delta: float) -> void:
 			1:
 				get_tree().change_scene_to_file("res://source/scenes/menus/weaponSelect.tscn");
 			2:
-				get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");
+				if Stats.hasSeenIntro:
+					get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");
+				else:
+					get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial/story/intro.tscn");
 	
 	if Input.is_action_just_pressed("uiEXIT"):
 		get_tree().change_scene_to_file("res://source/scenes/menus/characterSelect/characterSelect.tscn");
