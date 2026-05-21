@@ -4,11 +4,18 @@ var curButton:int = 1;
 var selectColor:Color = Color(18.892, 18.892, 18.892);
 var normColor:Color = Color("ffffff");
 
+const breakSpeed:float = -50.0;
+const relaxSpeed:float = 50.0;
+
 func _ready() -> void:
 	$ui/resumeButton.self_modulate = selectColor;
 	$ui/menuButton.scale = Vector2(1.0, 1.0);
+	
+	$breakText.position.y = 547;
+	$relaxText.position.y = -884;
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	textSlide(delta);
 	if not Stats.inDialogue:
 		checkPauseInput();
 	
@@ -72,3 +79,12 @@ func _on_menu_button_pressed() -> void:
 	if get_tree().paused:
 			resume();
 			get_tree().change_scene_to_file("res://source/scenes/menus/titleScreen.tscn");
+			
+func textSlide(elapsed):
+	$breakText.position.y += breakSpeed * elapsed;
+	$relaxText.position.y += relaxSpeed * elapsed;
+
+	if $breakText.position.y < -1364:
+		print("Resetting Text");
+		$breakText.position.y = 547;
+		$relaxText.position.y = -884;
