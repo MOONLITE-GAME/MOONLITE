@@ -10,7 +10,8 @@ const relaxSpeed:float = 50.0;
 func _ready() -> void:
 	$PauseMusicText.getSongData();
 	$ui/resumeButton.self_modulate = selectColor;
-	$ui/menuButton.scale = Vector2(1.0, 1.0);
+	$ui/menuButton.self_modulate = normColor;
+	curButton = 1;
 	
 	$breakText.position.y = 547;
 	$relaxText.position.y = -884;
