@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://co7upryobyeqg" path="res://assets/images/menus/pause/moonlite.png" id="4_hge0i"]
 [ext_resource type="Texture2D" uid="uid://e2h5c4m7a7rs" path="res://assets/images/menus/pause/resume.png" id="4_j7o66"]
 [ext_resource type="Texture2D" uid="uid://btmqu8rplj602" path="res://assets/images/menus/pause/selector.png" id="4_o3qc2"]
-[ext_resource type="Texture2D" uid="uid://ds8suoj031ump" path="res://assets/images/menus/pause/watchGlow.png" id="5_osc7h"]
 [ext_resource type="Texture2D" uid="uid://chhvytrx8a6p7" path="res://assets/images/menus/pause/menu.png" id="5_x4d6k"]
 [ext_resource type="Texture2D" uid="uid://d0mbff47xlk1x" path="res://assets/images/menus/pause/map.png" id="6_kplfg"]
 [ext_resource type="Texture2D" uid="uid://c4msxlw2vb2u" path="res://assets/images/menus/pause/resumePurp.png" id="6_tisa8"]
 [ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="6_x4d6k"]
+[ext_resource type="Texture2D" uid="uid://6c33qsensacn" path="res://assets/images/menus/pause/watchGlow.png" id="7_exu6a"]
 [ext_resource type="Texture2D" uid="uid://ccf78lx5p2von" path="res://assets/images/menus/pause/menuPurp.png" id="8_yp82n"]
 [ext_resource type="FontFile" uid="uid://620651hd70ch" path="res://assets/fonts/vcr.ttf" id="13_3g7xk"]
 
@@ -179,7 +179,7 @@ texture = ExtResource("4_hge0i")
 
 [node name="glow" type="Sprite2D" parent="." unique_id=273490510]
 position = Vector2(1, 28)
-texture = ExtResource("5_osc7h")
+texture = ExtResource("7_exu6a")
 
 [node name="ui" type="Control" parent="." unique_id=650186020]
 layout_mode = 1
