@@ -14,3 +14,4 @@ func _process(delta: float) -> void:
 	
 	if $Label.position.x < -2676:
 		$Label.position.x = 1260;	
+		getSongData();
