@@ -1,9 +1,12 @@
 extends Control;
 
 var curButton:int = 1;
+var selectColor:Color = Color(18.892, 18.892, 18.892);
+var normColor:Color = Color("ffffff");
 
 func _ready() -> void:
-	$ui/selector.position.y = $ui/resume.position.y;
+	$ui/resumeButton.self_modulate = selectColor;
+	$ui/menuButton.scale = Vector2(1.0, 1.0);
 
 func _process(_delta: float) -> void:
 	if not Stats.inDialogue:
@@ -14,20 +17,24 @@ func _process(_delta: float) -> void:
 			$uiSounds.play();
 			match curButton:
 				1:
-					$ui/selector.position.y = $ui/menu.position.y;
+					$ui/menuButton.self_modulate = selectColor;
+					$ui/resumeButton.self_modulate = normColor;
 					curButton = 2;
 				2:
-					$ui/selector.position.y = $ui/resume.position.y;
+					$ui/resumeButton.self_modulate = selectColor;
+					$ui/menuButton.self_modulate = normColor;
 					curButton = 1;
 					
 		if Input.is_action_just_pressed("uiDOWN"):
 			$uiSounds.play();
 			match curButton:
 				1:
-					$ui/selector.position.y = $ui/menu.position.y;
+					$ui/menuButton.self_modulate = selectColor;
+					$ui/resumeButton.self_modulate = normColor;
 					curButton = 2;
 				2:
-					$ui/selector.position.y = $ui/resume.position.y;
+					$ui/resumeButton.self_modulate = selectColor;
+					$ui/menuButton.self_modulate = normColor;
 					curButton = 1;
 		
 		if Input.is_action_just_pressed("uiSELECT"):

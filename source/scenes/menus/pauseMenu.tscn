@@ -3,12 +3,15 @@
 [ext_resource type="Script" uid="uid://5nrcikqpq61i" path="res://source/scripts/menus/pause.gd" id="1_r32j8"]
 [ext_resource type="Shader" uid="uid://bp4h1k2wrfhqk" path="res://source/shaders/grayscale.gdshader" id="2_kplfg"]
 [ext_resource type="FontFile" uid="uid://c76tohecdo3xg" path="res://assets/fonts/5by7.ttf" id="4_evub7"]
+[ext_resource type="Texture2D" uid="uid://co7upryobyeqg" path="res://assets/images/menus/pause/moonlite.png" id="4_hge0i"]
 [ext_resource type="Texture2D" uid="uid://e2h5c4m7a7rs" path="res://assets/images/menus/pause/resume.png" id="4_j7o66"]
 [ext_resource type="Texture2D" uid="uid://btmqu8rplj602" path="res://assets/images/menus/pause/selector.png" id="4_o3qc2"]
-[ext_resource type="Texture2D" uid="uid://grujshgfynca" path="res://assets/images/menus/pause/splat.png" id="4_tisa8"]
+[ext_resource type="Texture2D" uid="uid://ds8suoj031ump" path="res://assets/images/menus/pause/watchGlow.png" id="5_osc7h"]
 [ext_resource type="Texture2D" uid="uid://chhvytrx8a6p7" path="res://assets/images/menus/pause/menu.png" id="5_x4d6k"]
 [ext_resource type="Texture2D" uid="uid://d0mbff47xlk1x" path="res://assets/images/menus/pause/map.png" id="6_kplfg"]
+[ext_resource type="Texture2D" uid="uid://c4msxlw2vb2u" path="res://assets/images/menus/pause/resumePurp.png" id="6_tisa8"]
 [ext_resource type="AudioStream" uid="uid://x4e1qkace8nl" path="res://assets/sounds/ui_tick.ogg" id="6_x4d6k"]
+[ext_resource type="Texture2D" uid="uid://ccf78lx5p2von" path="res://assets/images/menus/pause/menuPurp.png" id="8_yp82n"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_o3qc2"]
 shader = ExtResource("2_kplfg")
@@ -51,13 +54,21 @@ offset_right = 960.0
 offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.6, 0, 1, 0.5019608)
+color = Color(0, 0, 0, 0.5019608)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=3931945]
 
 [node name="uiSounds" type="AudioStreamPlayer" parent="." unique_id=1688344321]
 stream = ExtResource("6_x4d6k")
 bus = &"SFX"
+
+[node name="moonlite" type="Sprite2D" parent="." unique_id=1550075047]
+position = Vector2(-335, 192)
+texture = ExtResource("4_hge0i")
+
+[node name="glow" type="Sprite2D" parent="." unique_id=273490510]
+position = Vector2(1, 28)
+texture = ExtResource("5_osc7h")
 
 [node name="ui" type="Control" parent="." unique_id=650186020]
 layout_mode = 1
@@ -73,26 +84,10 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="splat" type="Sprite2D" parent="ui" unique_id=2143484233]
-texture = ExtResource("4_tisa8")
-
-[node name="blackBar" type="ColorRect" parent="ui" unique_id=794345185]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -350.0
-offset_top = -540.0
-offset_right = 350.0
-offset_bottom = 540.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
 [node name="selector" type="Sprite2D" parent="ui" unique_id=1695077466]
-position = Vector2(24, -256)
+visible = false
+position = Vector2(-1, -231)
+scale = Vector2(0.5625, 0.56250006)
 texture = ExtResource("4_o3qc2")
 
 [node name="resume" type="Sprite2D" parent="ui" unique_id=390091268]
@@ -101,12 +96,19 @@ position = Vector2(20, -256)
 texture = ExtResource("4_j7o66")
 
 [node name="resumeButton" type="TextureButton" parent="ui" unique_id=1191943563]
-layout_mode = 0
-offset_left = -295.0
-offset_top = -351.0
-offset_right = 334.0
-offset_bottom = -160.0
-texture_normal = ExtResource("4_j7o66")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = -284.0
+offset_right = 213.0
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_tisa8")
 
 [node name="menu" type="Sprite2D" parent="ui" unique_id=482252463]
 visible = false
@@ -114,12 +116,19 @@ position = Vector2(20, 0)
 texture = ExtResource("5_x4d6k")
 
 [node name="menuButton" type="TextureButton" parent="ui" unique_id=527847842]
-layout_mode = 0
-offset_left = -234.0
-offset_top = -97.0
-offset_right = 275.0
-offset_bottom = 97.0
-texture_normal = ExtResource("5_x4d6k")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.5
+offset_top = -79.5
+offset_right = 136.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_yp82n")
 
 [node name="map" type="Sprite2D" parent="ui" unique_id=1920477661]
 visible = false
@@ -156,7 +165,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_evub7")
 theme_override_font_sizes/font_size = 75
-text = "PAUSE"
+text = "PAUSED"
 
 [connection signal="pressed" from="ui/resumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="ui/menuButton" to="." method="_on_menu_button_pressed"]
