@@ -38,10 +38,12 @@ Slide="*uid://bkwmstlw8s8de"
 [dialogic]
 
 directories/dch_directory={
+"3dMoonlite": "res://assets/data/dialogue/characters/3dMoonlite.dch",
 "dummy": "res://assets/data/dialogue/characters/dummy.dch",
 "moonlite": "res://assets/data/dialogue/characters/moonlite.dch"
 }
 directories/dtl_directory={
+"3dMoonlite": "res://assets/data/dialogue/3dMoonlite.dtl",
 "dummyDialogueTutorial": "res://assets/data/dialogue/dummyDialogueTutorial.dtl",
 "slotMachineNote": "res://assets/data/dialogue/slotMachineNote.dtl",
 "test": "res://assets/data/dialogue/test.dtl"
