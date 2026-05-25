@@ -11,6 +11,43 @@
 [ext_resource type="PackedScene" uid="uid://c85q5v5fq0vgq" path="res://source/scenes/props/tutorial/tv.tscn" id="9_t2m6m"]
 [ext_resource type="PackedScene" uid="uid://brtaeonitllg0" path="res://source/scenes/props/tutorial/door.tscn" id="10_efh0g"]
 
+[sub_resource type="Animation" id="Animation_efh0g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2dare"]
+resource_name = "fadein"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mc0vk"]
+_data = {
+&"RESET": SubResource("Animation_efh0g"),
+&"fadein": SubResource("Animation_2dare")
+}
+
 [node name="Tutorial" type="Node2D" unique_id=616210905]
 script = ExtResource("1_xoycb")
 
@@ -29,7 +66,7 @@ position = Vector2(3996.9998, 860)
 scale = Vector2(0.72, 0.72)
 
 [node name="Player" parent="." unique_id=1975751171 instance=ExtResource("3_cgh68")]
-position = Vector2(195, 245)
+position = Vector2(194.99998, 844.99994)
 
 [node name="Crate" parent="." unique_id=189451403 instance=ExtResource("4_1kgaq")]
 position = Vector2(1017, 884)
@@ -73,3 +110,16 @@ can_sleep = false
 
 [node name="Tv" parent="." unique_id=950352930 instance=ExtResource("9_t2m6m")]
 position = Vector2(2965, 533)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=929370477]
+libraries/ = SubResource("AnimationLibrary_mc0vk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=387999016]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1296397761]
+z_index = 4096
+offset_left = -1437.0
+offset_top = -585.0
+offset_right = 4793.0
+offset_bottom = 1776.0
+color = Color(0, 0, 0, 1)
