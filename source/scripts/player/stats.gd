@@ -52,6 +52,9 @@ var weaponDamage:float;
 var weaponSound:String;
 var velocityTime:float;
 
+# story stats
+var hasSeenIntro:bool;
+
 func saveStats():
 	SaveIcon.showIcon();
 	var file = FileAccess.open(savePath, FileAccess.WRITE);
@@ -69,6 +72,7 @@ func saveStats():
 	data.fullscreen = fullscreen;
 	data.freecam = Camera.freeCam;
 	data.slideToggle = slideToggle;
+	data.hasSeenIntro = hasSeenIntro;
 
 	var json_string = JSON.stringify(data);
 	file.store_string(json_string);
@@ -145,6 +149,12 @@ func loadStats():
 			slideToggle = data.slideToggle;
 		else:
 			slideToggle = false;
+			saveStats();
+			
+		if "hasSeenIntro" in data:
+			hasSeenIntro = data.hasSeenIntro;
+		else:
+			hasSeenIntro = false;
 			saveStats();
 
 	else:

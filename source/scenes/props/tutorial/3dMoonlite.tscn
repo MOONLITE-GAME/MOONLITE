@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://da7btd2axkjky"]
+
+[ext_resource type="Texture2D" uid="uid://36ujs0b6utkx" path="res://assets/levels/bridge/images/tutorial/3dMoonlite.png" id="1_826a3"]
+[ext_resource type="Script" uid="uid://cohpd6muxo1xk" path="res://source/scripts/props/tutorial/3dMoonlite.gd" id="1_srn0y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_srn0y"]
+size = Vector2(812, 851)
+
+[node name="3dMoonlite" type="Node2D" unique_id=748396944]
+script = ExtResource("1_srn0y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1610986815]
+texture = ExtResource("1_826a3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=897340952]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1699489036]
+position = Vector2(18, 35.5)
+shape = SubResource("RectangleShape2D_srn0y")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

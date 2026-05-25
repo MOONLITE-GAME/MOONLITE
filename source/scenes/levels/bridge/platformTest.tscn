@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dhke6qvjorpjn" path="res://source/scenes/props/global/spike.tscn" id="8_al3tg"]
 [ext_resource type="PackedScene" uid="uid://ltx71s3onurl" path="res://source/scenes/props/tutorial/slotMachine.tscn" id="9_jsboh"]
 [ext_resource type="PackedScene" uid="uid://bwsvkym4r0hyv" path="res://source/scenes/props/tutorial/note.tscn" id="10_sgd73"]
+[ext_resource type="PackedScene" uid="uid://da7btd2axkjky" path="res://source/scenes/props/tutorial/3dMoonlite.tscn" id="11_igm22"]
 
 [node name="PlatformTest" type="Node2D" unique_id=619799371]
 script = ExtResource("1_ixnc4")
@@ -34,6 +35,10 @@ dialogue = "slotMachineNote"
 
 [node name="SlotMachine" parent="." unique_id=328944734 instance=ExtResource("9_jsboh")]
 position = Vector2(5819, 829)
+
+[node name="3dMoonlite" parent="." unique_id=748396944 instance=ExtResource("11_igm22")]
+position = Vector2(195, -1821)
+scale = Vector2(0.68, 0.68)
 
 [node name="Player" parent="." unique_id=1975751171 instance=ExtResource("1_ujdbb")]
 
@@ -77,7 +82,7 @@ position = Vector2(1901, -1382)
 scale = Vector2(5.640005, 1)
 
 [node name="ClimbableFloor10" parent="." unique_id=1752733794 instance=ExtResource("5_sjq5b")]
-position = Vector2(57, -1467)
+position = Vector2(422, -1467)
 scale = Vector2(5.640005, 1)
 
 [node name="ClimbableFloor11" parent="." unique_id=709481733 instance=ExtResource("5_sjq5b")]
