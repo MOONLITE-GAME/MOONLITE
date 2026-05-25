@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://mvxc0n15nom2" path="res://source/scripts/levels/bridge/story/intro.gd" id="1_oc25r"]
 [ext_resource type="Texture2D" uid="uid://cak1uhjwsf0fl" path="res://assets/levels/bridge/images/tutorial/story/intro0001.png" id="1_qe70p"]
+[ext_resource type="AudioStream" uid="uid://b7nuc2anbwjja" path="res://assets/levels/bridge/sounds/tutorial/notification.ogg" id="3_lh5x1"]
+[ext_resource type="AudioStream" uid="uid://bab5xxvkk6ltj" path="res://assets/levels/bridge/sounds/tutorial/laser.ogg" id="4_drfng"]
+[ext_resource type="AudioStream" uid="uid://8a4p82wdcqcj" path="res://assets/levels/bridge/sounds/tutorial/glassBreaks.ogg" id="4_wwsg3"]
+[ext_resource type="AudioStream" uid="uid://7smmhdqp1t53" path="res://assets/levels/bridge/sounds/tutorial/thud.ogg" id="5_tlv5i"]
 
 [sub_resource type="Animation" id="Animation_qe70p"]
 length = 0.001
@@ -53,3 +57,19 @@ color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=682184713]
 libraries/ = SubResource("AnimationLibrary_lh5x1")
+
+[node name="ding" type="AudioStreamPlayer" parent="." unique_id=1587485849]
+stream = ExtResource("3_lh5x1")
+bus = &"SFX"
+
+[node name="glassShatter" type="AudioStreamPlayer" parent="." unique_id=1554044231]
+stream = ExtResource("4_wwsg3")
+bus = &"SFX"
+
+[node name="laser" type="AudioStreamPlayer" parent="." unique_id=1057421422]
+stream = ExtResource("4_drfng")
+bus = &"SFX"
+
+[node name="thud" type="AudioStreamPlayer" parent="." unique_id=1676468315]
+stream = ExtResource("5_tlv5i")
+bus = &"SFX"

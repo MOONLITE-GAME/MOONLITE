@@ -17,8 +17,21 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("uiSELECT") and Dialogic.VAR.isDone:
 		curFrame = curFrame + 1;
 		
+		if curFrame == 3:
+			$ding.play();
+		
 		if curFrame == 5:
 			Dialogic.start("tutorialIntro");
-		
+			
+		if curFrame == 7:
+			$ding.play();
+			$glassShatter.play();
+			
+		if curFrame == 11:
+			$ding.play();
+			
+		if curFrame == 13:
+			$laser.play();
+
 		if curFrame == 17:
 			get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");
