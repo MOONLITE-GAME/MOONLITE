@@ -6,6 +6,7 @@ func _ready() -> void:
 	MusicEngine.loadSong("tutorial");
 	$AnimationPlayer.play("fadein");
 	Stats.health = Stats.maxHealth;
+	Camera.zoom = Vector2(1.0, 1.0);
 	Camera.limit_left = -1150;
 	Camera.limit_bottom = 1080;
 	

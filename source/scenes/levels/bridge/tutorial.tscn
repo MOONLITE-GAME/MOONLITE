@@ -69,47 +69,47 @@ scale = Vector2(0.72, 0.72)
 position = Vector2(194.99998, 844.99994)
 
 [node name="Crate" parent="." unique_id=189451403 instance=ExtResource("4_1kgaq")]
-position = Vector2(1017, 884)
+position = Vector2(1017, 924)
 
 [node name="Crate2" parent="." unique_id=1248369434 instance=ExtResource("4_1kgaq")]
-position = Vector2(1428, 780)
+position = Vector2(1428, 820)
 
 [node name="Crate3" parent="." unique_id=393445998 instance=ExtResource("4_1kgaq")]
-position = Vector2(1182, 572)
+position = Vector2(1182, 612)
 
 [node name="Crate4" parent="." unique_id=1314429825 instance=ExtResource("4_1kgaq")]
-position = Vector2(1769, 884)
+position = Vector2(1769, 924)
 
 [node name="Crate5" parent="." unique_id=1969226317 instance=ExtResource("4_1kgaq")]
-position = Vector2(2180, 780)
+position = Vector2(2180, 820)
 
 [node name="Crate6" parent="." unique_id=512593508 instance=ExtResource("4_1kgaq")]
-position = Vector2(1934, 572)
+position = Vector2(1934, 612)
 
 [node name="Crate7" parent="." unique_id=2096050251 instance=ExtResource("4_1kgaq")]
-position = Vector2(2553, 884)
+position = Vector2(2553, 924)
 
 [node name="Crate8" parent="." unique_id=246015173 instance=ExtResource("4_1kgaq")]
-position = Vector2(2964, 780)
+position = Vector2(2964, 820)
 
 [node name="Crate9" parent="." unique_id=1222488629 instance=ExtResource("4_1kgaq")]
-position = Vector2(2590, 513)
+position = Vector2(2590, 553)
 
 [node name="ReloadCrate" parent="." unique_id=655693080 instance=ExtResource("6_tjwqx")]
-position = Vector2(-868, 881)
+position = Vector2(-868, 921)
 
 [node name="ReloadCrate2" parent="." unique_id=280044963 instance=ExtResource("7_1a1tr")]
-position = Vector2(-194, 876)
+position = Vector2(-194, 916)
 
 [node name="Crate10" parent="." unique_id=649272189 instance=ExtResource("4_1kgaq")]
-position = Vector2(3401, 633)
+position = Vector2(3401, 673)
 
 [node name="Radio" parent="." unique_id=1376089764 instance=ExtResource("8_1f0t5")]
-position = Vector2(3395, 459)
+position = Vector2(3395, 499)
 can_sleep = false
 
 [node name="Tv" parent="." unique_id=950352930 instance=ExtResource("9_t2m6m")]
-position = Vector2(2965, 533)
+position = Vector2(2965, 573)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=929370477]
 libraries/ = SubResource("AnimationLibrary_mc0vk")

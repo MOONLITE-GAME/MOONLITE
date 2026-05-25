@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://b3t85tk5u5lke"]
+
+[ext_resource type="Script" uid="uid://85sda6amrol7" path="res://source/scripts/levels/bridge/moonliteBandageCutscene.gd" id="1_tt6dt"]
+[ext_resource type="PackedScene" uid="uid://bimx1pu04h7ls" path="res://source/scenes/props/tutorial/floor.tscn" id="3_hlode"]
+[ext_resource type="PackedScene" uid="uid://dtc7aowsdnx3l" path="res://source/scenes/props/tutorial/crate.tscn" id="6_f2dye"]
+[ext_resource type="PackedScene" uid="uid://r0wniyac3b28" path="res://source/scenes/props/tutorial/loadoutCrate.tscn" id="8_lcc0e"]
+[ext_resource type="SpriteFrames" uid="uid://cuupu4edvhtas" path="res://assets/levels/bridge/images/tutorial/moonliteIntro.xml" id="10_tt6dt"]
+
+[sub_resource type="Animation" id="Animation_efh0g"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2dare"]
+resource_name = "fadein"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mc0vk"]
+_data = {
+&"RESET": SubResource("Animation_efh0g"),
+&"fadein": SubResource("Animation_2dare")
+}
+
+[node name="Tutorial" type="Node2D" unique_id=616210905]
+script = ExtResource("1_tt6dt")
+
+[node name="Floor" parent="." unique_id=622707432 instance=ExtResource("3_hlode")]
+position = Vector2(4152, 1138)
+scale = Vector2(5.5200024, 1)
+
+[node name="Crate" parent="." unique_id=189451403 instance=ExtResource("6_f2dye")]
+position = Vector2(1017, 934)
+
+[node name="ReloadCrate2" parent="." unique_id=280044963 instance=ExtResource("8_lcc0e")]
+position = Vector2(-194, 934)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=929370477]
+libraries/ = SubResource("AnimationLibrary_mc0vk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=387999016]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1296397761]
+z_index = 4096
+offset_left = -1437.0
+offset_top = -585.0
+offset_right = 4793.0
+offset_bottom = 1776.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1453031033]
+position = Vector2(264, 758)
+sprite_frames = ExtResource("10_tt6dt")
+animation = &"moonlite intro animation full"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1985849695]
+offset = Vector2(415.805, 754.82)
+zoom = Vector2(1.675, 1.675)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

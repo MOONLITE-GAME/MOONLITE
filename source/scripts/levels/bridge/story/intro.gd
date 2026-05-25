@@ -34,4 +34,4 @@ func _process(_delta: float) -> void:
 			$laser.play();
 
 		if curFrame == 17:
-			get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorial.tscn");
+			get_tree().change_scene_to_file("res://source/scenes/levels/bridge/tutorialBandageAnimation.tscn");
