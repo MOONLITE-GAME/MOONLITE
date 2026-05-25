@@ -46,7 +46,8 @@ directories/dtl_directory={
 "3dMoonlite": "res://assets/data/dialogue/3dMoonlite.dtl",
 "dummyDialogueTutorial": "res://assets/data/dialogue/dummyDialogueTutorial.dtl",
 "slotMachineNote": "res://assets/data/dialogue/slotMachineNote.dtl",
-"test": "res://assets/data/dialogue/test.dtl"
+"test": "res://assets/data/dialogue/test.dtl",
+"tutorialIntro": "res://assets/data/dialogue/tutorial/tutorialIntro.dtl"
 }
 layout/style_directory={
 "": "res://assets/data/dialogue/styles/default.tres",
