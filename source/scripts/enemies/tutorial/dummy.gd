@@ -14,6 +14,7 @@ var hit:String;
 func _ready() -> void:
 	loadData("res://assets/data/characters/enemies/tutorial/dummy.json");
 	$AnimatedSprite2D.play(idleLeft);
+	Dialogic.VAR.isDone = false;
 
 func _process(_delta: float) -> void:
 	if inside:
